@@ -1,5 +1,4 @@
 <?php  # get the mongo db name out of the env
-echo "TEST";
 /**
  * Index
  *
