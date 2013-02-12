@@ -1,0 +1,110 @@
+#summary{
+	background: #F9F9F9;
+	border-radius: 2px;
+	padding: 10px 0;
+	border: 1px solid #EEE;
+}
+
+#summary > *{
+	font-size: 12px;
+}
+h1.header{
+	padding: 0 22px 10px 10px;
+	margin: 0;
+	line-height: 2em;
+	border-bottom: 1px solid #ECECEC;
+}
+
+.row .row{
+	margin: 0;
+	padding: 10px 22px;
+}
+
+#summary div.row{
+	border: 1px solid #F3F3F3;
+	border-width: 1px 0;
+}
+#summary .columns{
+	text-align: left;
+	font-size: 11px;
+}
+
+#summary div.total.row .columns{
+	font-size: 14px;
+	line-height: 48px;
+	text-transform: uppercase;
+	color: #0A8BCE;
+}
+
+#summary div.total.row .eight{
+	text-align: center;
+}
+
+iframe.stripe-button-frame{
+	margin: auto;
+}
+
+#stripePay{
+	margin: 10px 0 0 0;
+}
+#stripePay *{
+	text-align: center !important;
+	margin: auto !important;
+}
+
+.columns{
+	padding: 0 10px;
+}
+#shipping_pane{
+	border: 1px solid #ECECEC;
+	border-radius: 5px;
+	position: relative;
+	padding: 0;
+}
+
+h1.subheader{
+	margin: 0;
+	background: #0A8BCE;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 10px 20px;
+	border: 1px solid #0A8BCE;
+	color: #EEE;
+	margin-bottom: 20px;
+}
+h1.subheader.profile{
+	background: #A2CF02;
+	border: 1px solid #A2CF02;
+}
+#shipping_pane label{
+	font-size: 11px;
+	font-weight: 700;
+}
+
+.product_description{
+	font-size: 18px;
+	text-align: center;
+	line-height: 1.2em;
+}
+
+.product_description a{
+	color: #666;
+}
+
+.product_description a:hover{
+	text-decoration: underline;
+}
+
+.product_desc{
+	padding: 0 10px 10px 10px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.payment_container{
+	padding: 0 20px 20px 20px;
+}
+.payment_container > div{
+	float: right;
+}

@@ -1,0 +1,33 @@
+#schoolLogo{
+	background: #FFF;
+	padding: 10px;
+	border: solid 2px #222;
+	width: auto;
+	height: 120px;
+}
+
+#schoolGraphics{
+	margin-top: -120px;
+	left: 0px;
+	text-align: center;
+}
+
+div#content.wrapper{
+	margin-top: 0;
+}
+
+#schoolContainer.row{
+	position: relative;
+	padding-top: 20px;
+	margin: 0;
+}
+
+div#content.wrapper > div.row > .columns:last-child{
+	padding-left: 10px;
+}
+#schoolName{
+	font-size: 18px;
+	text-align: center;
+}
+
+#map { height: 280px; }

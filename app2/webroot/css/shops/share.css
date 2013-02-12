@@ -1,0 +1,22 @@
+div > a.choice{
+	height: auto;
+	display: block;
+	width: 60%;
+	margin: auto;
+	padding: 20px 40px;
+	font-size: 24px;
+	background: url('/images/bg/glasspane.jpg') no-repeat;
+	color: #000;
+}
+div > a.choice:first-child{
+	width: 80%;
+	padding: 40px;
+	background: #3B5998;
+	color: #FFF;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+#facebookauthorize{
+	color: #3B5998;
+}
