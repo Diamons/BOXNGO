@@ -11,6 +11,7 @@
 		public function autocomplete(){
 			$this->layout = "json";
 			$courses = $this->Course->find("all", array("conditions" => array("\$or" => array(
+				array("Course.course_number" => array("\$regex" => ".*".$this->request->query['query'].".*")),
 				array("Course.professor" => array("\$regex" => ".*".$this->request->query['query'].".*")),
 				array("Course.number" => array("\$regex" => ".*".$this->request->query['query'].".*")),
 				array("Course.description" => array("\$regex" => ".*".$this->request->query['query'].".*")),
