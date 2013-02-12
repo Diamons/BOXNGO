@@ -77,7 +77,6 @@ if (!defined('CAKE_CORE_INCLUDE_PATH')) {
 	if (!include ('Cake' . DS . 'bootstrap.php')) {
 		$failed = true;
 	}
-	print_r($failed);
 } else {
 	if (!include (CAKE_CORE_INCLUDE_PATH . DS . 'Cake' . DS . 'bootstrap.php')) {
 		$failed = true;
