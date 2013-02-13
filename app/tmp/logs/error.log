@@ -20,3 +20,424 @@ Stack Trace:
 #10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #11 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2013-02-12 21:24:52 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 79626241 bytes) in [C:\wamp\www\boxngo2\lib\Cake\basics.php, line 116]
+2013-02-12 21:24:52 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 79626241 bytes)
+Request URL: /api/update
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 116)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 116, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 116, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 02:10:13 Error: Fatal Error (4): syntax error, unexpected '<', expecting ')' in [C:\wamp\www\boxngo2\app\View\Concierges\concierge.ctp, line 29]
+2013-02-13 02:10:13 Error: [FatalErrorException] syntax error, unexpected '<', expecting ')'
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 02:10:15 Error: Fatal Error (4): syntax error, unexpected '<', expecting ')' in [C:\wamp\www\boxngo2\app\View\Concierges\concierge.ctp, line 29]
+2013-02-13 02:10:15 Error: [FatalErrorException] syntax error, unexpected '<', expecting ')'
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 02:13:23 Error: [BadRequestException] The request has been black-holed
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(ConciergesController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ConciergesController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-02-13 02:19:19 Error: [BadRequestException] The request has been black-holed
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(234): SecurityComponent->blackHole(Object(ConciergesController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(ConciergesController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-02-13 02:50:45 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\boxngo2\app\Controller\ConciergesController.php, line 11]
+2013-02-13 02:50:45 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\box...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\box...', 11, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\box...', 11, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 02:51:01 Error: [BadRequestException] The request has been black-holed
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(ConciergesController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ConciergesController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-02-13 02:51:10 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(14): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college()
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-13 02:51:43 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Concierges\books.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Concierges\\books.ctp',
+)
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName('books')
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('books', NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Controller->render('books')
+#3 [internal function]: ConciergesController->hunter_college()
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-13 02:53:48 Error: [BadRequestException] The request has been black-holed
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(ConciergesController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ConciergesController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-02-13 02:54:30 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Concierges\books.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Concierges\\books.ctp',
+)
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName('books')
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('books', NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Controller->render('books')
+#3 [internal function]: ConciergesController->hunter_college()
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-13 02:54:46 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(14): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college()
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-13 02:55:36 Error: [BadRequestException] The request has been black-holed
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(ConciergesController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ConciergesController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-02-13 02:56:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Course.full_text' in 'where clause'
+Request URL: /api/autocomplete?query=asi
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Course`...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Course`...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Course`...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Course), Array)
+#5 C:\wamp\www\boxngo2\app\Controller\ApisController.php(25): Model->find('all', Array)
+#6 [internal function]: ApisController->autocomplete()
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ApisController), Array)
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-13 02:56:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Course.full_text' in 'where clause'
+Request URL: /api/autocomplete?query=asia
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Course`...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Course`...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Course`...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Course), Array)
+#5 C:\wamp\www\boxngo2\app\Controller\ApisController.php(25): Model->find('all', Array)
+#6 [internal function]: ApisController->autocomplete()
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ApisController), Array)
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-13 02:56:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Course.full_text' in 'where clause'
+Request URL: /api/autocomplete?query=asian
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Course`...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Course`...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Course`...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Course), Array)
+#5 C:\wamp\www\boxngo2\app\Controller\ApisController.php(25): Model->find('all', Array)
+#6 [internal function]: ApisController->autocomplete()
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ApisController), Array)
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-13 02:57:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Course.full_text' in 'where clause'
+Request URL: /api/autocomplete?query=asian
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Course`...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Course`...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Course`...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Course), Array)
+#5 C:\wamp\www\boxngo2\app\Controller\ApisController.php(25): Model->find('all', Array)
+#6 [internal function]: ApisController->autocomplete()
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ApisController), Array)
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-13 02:57:29 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [C:\wamp\www\boxngo2\app\Model\Course.php, line 3]
+2013-02-13 02:57:29 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /api/autocomplete?query=asian
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 3, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 3, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 03:02:34 Error: [BadRequestException] The request has been black-holed
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(ConciergesController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ConciergesController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-02-13 03:03:48 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Concierges\books.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Concierges\\books.ctp',
+)
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName('books')
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('books', NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Controller->render('books')
+#3 [internal function]: ConciergesController->hunter_college()
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-13 03:04:28 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Concierges\books.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Concierges\\books.ctp',
+)
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName('books')
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('books', NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Controller->render('books')
+#3 [internal function]: ConciergesController->hunter_college()
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-13 03:05:01 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Concierges\books.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Concierges\\books.ctp',
+)
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName('books')
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('books', NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Controller->render('books')
+#3 [internal function]: ConciergesController->hunter_college()
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-13 03:07:42 Error: [MissingActionException] Action ConciergesController::1111() could not be found.
+Exception Attributes: array (
+  'controller' => 'ConciergesController',
+  'action' => '1111',
+)
+Request URL: /concierges/1111
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-13 03:07:55 Error: [MissingActionException] Action ConciergesController::1111() could not be found.
+Exception Attributes: array (
+  'controller' => 'ConciergesController',
+  'action' => '1111',
+)
+Request URL: /concierges/1111
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-13 03:07:57 Error: [MissingActionException] Action ConciergesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ConciergesController',
+  'action' => 'index',
+)
+Request URL: /concierges/
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-13 03:08:36 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 48844117 bytes) in [C:\wamp\www\boxngo2\lib\Cake\Utility\Debugger.php, line 614]
+2013-02-13 03:08:36 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 48844117 bytes)
+Request URL: /concierges/hunter_college
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 614)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 614, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 614, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 03:09:49 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Concierges\books.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Concierges\\books.ctp',
+)
+Request URL: /concierges/hunter_college/5280
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName('books')
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('books', NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Controller->render('books')
+#3 [internal function]: ConciergesController->hunter_college('5280')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-13 03:10:12 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Concierges\books.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Concierges\\books.ctp',
+)
+Request URL: /concierges/hunter_college/5280
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName('books')
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('books', NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Controller->render('books')
+#3 [internal function]: ConciergesController->hunter_college('5280')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-13 08:11:32 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 119019521 bytes) in [C:\wamp\www\boxngo2\app\View\Concierges\books.ctp, line 23]
+2013-02-13 08:11:32 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 119019521 bytes)
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 23)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 23, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 23, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 08:11:56 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 119019521 bytes) in [C:\wamp\www\boxngo2\app\View\Concierges\books.ctp, line 23]
+2013-02-13 08:11:56 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 119019521 bytes)
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 23)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 23, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 23, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 08:19:08 Error: Fatal Error (4): syntax error, unexpected T_ENDIF in [C:\wamp\www\boxngo2\app\View\Concierges\books.ctp, line 33]
+2013-02-13 08:19:08 Error: [FatalErrorException] syntax error, unexpected T_ENDIF
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 33, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 33, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 08:19:24 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\boxngo2\app\View\Concierges\books.ctp, line 52]
+2013-02-13 08:19:24 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 52, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 52, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 08:19:48 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\boxngo2\app\View\Concierges\books.ctp, line 52]
+2013-02-13 08:19:48 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 52, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 52, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-13 08:22:35 Error: [MissingActionException] Action DashboardsController::<pre class=() could not be found.
+Exception Attributes: array (
+  'controller' => 'DashboardsController',
+  'action' => '<pre class=',
+)
+Request URL: /dashboard/%3Cpre%20class=
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DashboardsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

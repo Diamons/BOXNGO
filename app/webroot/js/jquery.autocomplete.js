@@ -395,14 +395,13 @@
                 options = that.options;
 
             response = that.isLocal ? that.getSuggestionsLocal(q) : that.cachedResponse[q];
-
             if (response && $.isArray(response.suggestions)) {
                 that.suggestions = response.suggestions;
                 that.suggest();
             } else if (!that.isBadQuery(q)) {
                 options.onSearchStart.call(that.element, q);
                 options.params[options.paramName] = q;
-                $.ajax({
+			    $.ajax({
                     url: options.serviceUrl,
                     data: options.params,
                     type: options.type,

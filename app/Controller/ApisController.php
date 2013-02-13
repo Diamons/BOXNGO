@@ -10,15 +10,20 @@
 		
 		public function autocomplete(){
 			$this->layout = "json";
-			$courses = $this->Course->find("all", array("conditions" => array("\$or" => array(
-				array("Course.course_number" => array("\$regex" => ".*".$this->request->query['query'].".*")),
-				array("Course.professor" => array("\$regex" => ".*".$this->request->query['query'].".*")),
-				array("Course.number" => array("\$regex" => ".*".$this->request->query['query'].".*")),
-				array("Course.description" => array("\$regex" => ".*".$this->request->query['query'].".*")),
-				array("Course.professor" => array("\$regex" => ".*".$this->request->query['query'].".*"))
-			))));
-			foreach($courses as $a){
-				$results['suggestions'][] = array('value' => $a['Course']['fulltext'], 'data' => $a['Course']['code']);
+			
+			//Query format
+			$queries = explode(" ", $this->request->query['query']);
+			$regexString = "^";
+			foreach($queries as $q => $val){
+				$regexString .= "(?=.*".$val.")";
+			}
+			$regexString .= ".*$/i";
+			
+			$regex = new MongoRegex($regexString); 
+			$courses = $this->Course->find("all", array("conditions" => array(
+				"Course.full_text" => $regex)
+			));			foreach($courses as $a){
+				$results['suggestions'][] = array('value' => $a['Course']['full_text'], 'data' => $a['Course']['code']);
 			}
 			$results['query'] = $this->request->query['query'];
 			$this->set("results", $results);

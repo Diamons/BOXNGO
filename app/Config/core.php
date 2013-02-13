@@ -280,7 +280,7 @@ Cache::config('_cake_model_', array(
 Configure::write('Facebook.appId','116996495106723');
 Configure::write('Facebook.secret', '616842b8158d5beb8a0d0ee771dfe9d0');
 
-if(stristr(env('HTTP_HOST'), 'boxngo.herokuapp.com')){ 
+if(stristr(env('HTTP_HOST'), 'boxngo.local')){ 
     Configure::write('debug', 2); 
 }else{ 
     Configure::write('debug', 0); 
