@@ -7,16 +7,19 @@
 }
 
 #content.wrapper .columns {
-	padding: 0 5px;
+	padding: 0;
 }
-
-#content.wrapper{
+#content.wrapper.bordered{
 	background: #FAFAFA;
 	border-radius: 5px;
 	border: 1px solid #ECECEC;
 }
 #content.wrapper > div.row >.columns{
 	padding: 20px;
+}
+
+.book_listings > .listing{
+	padding-left: 10px;
 }
 
 #content.wrapper div.row .columns:first-child{
@@ -75,11 +78,60 @@
 
 #content.wrapper .accordion .active .content > .row > .columns:last-child{
 	padding: 0;
-	padding-left: 25px;
+	padding-left: 12px;
 }
 
 .panel.callout{
 	background: #B4EEB4;
 	border: 1px solid #86C67C;
 	border-radius: 6px;
+}
+
+.usermessage{
+	padding: 12px 18px;
+	margin-bottom: 10px;
+}
+
+.usermessage {
+	font-size: 9pt;
+	margin-top: 20px;
+}
+
+.category > .price{
+	float: right;
+	color: #EB6841;
+	font-size: 9pt;
+	display: block;
+}
+
+.concierge_image{
+	background-size:100%;
+	position: relative;
+	height: 561px;
+}
+
+#ConciergeSearch{
+	position: absolute;
+	width: 100%;
+	top: 450px;
+	padding: 20px;
+	background: rgba(0,0,0,.5);
+}
+
+#ConciergeSearch input[type="submit"]{
+	float: none;
+	margin: 0;
+	margin-left: 20px;
+	padding: 12px 30px;
+}
+#ConciergeSearch input[type="text"]{
+	margin: 0;
+	height: 40px;
+	overflow: hidden;
+}
+
+.try{
+	text-align: center;
+	color: #FFF;
+	padding-top: 10px;
 }

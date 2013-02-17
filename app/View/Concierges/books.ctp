@@ -2,7 +2,7 @@
 	echo $this->Html->css(array('searches/search', 'pages/main', 'concierges/concierge'));
 	$this->end();
 ?>
-<div id="content" class="wrapper">
+<div id="content" class="wrapper bordered">
 	<div class="row">
 		<div class="main_books nine columns">
 			<h1>Books Used in <?php echo $searched['Course']['course_number']; ?> Classes</h1>
@@ -41,6 +41,7 @@
 															</a>
 															<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($books[$i]['listings'][$k]['Shop']['id']));?>"><?php echo nl2br(h($books[$i]['listings'][$k]['Shop']['name'])); ?></a></h1>
 															<div class="userlisted">
+																<div class="category"><span class="price">$<?php echo $books[$i]['listings'][$k]['Shop']['price']; ?></span></div>
 																<span class="typicn user"></span> <a href="/users/profile/<?php echo $books[$i]['listings'][$k]['User']['id']; ?>"><?php echo $books[$i]['listings'][$k]['User']['display_name']; ?></a>
 															</div>
 														</div>
@@ -51,6 +52,9 @@
 											<?php endif; ?>
 											<?php endfor;
 									endif; ?>
+									<div class="row">
+										<a class="usermessage" href="/shops/shoplist">List One Like This</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -60,6 +64,7 @@
 				</ul>
 			<?php }
 			?>
+			<div class="fb-comments" data-href="<?php echo "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-num-posts="2" data-width="814"></div>
 		</div>
 		<div class="similar_classes three columns">
 			<?php foreach($similar as $s){ ?>

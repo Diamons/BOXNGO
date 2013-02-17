@@ -9,7 +9,7 @@
 					$(this).addClass('loading');
 				},
 				onSearchComplete: function(){
-					$(this).removeClass('loading');
+					$(this).delay(5000).removeClass('loading');
 				},
 				onSelect: function(result){
 					$("#CourseCourseNumber").val(result.data);
@@ -23,8 +23,15 @@ echo $this->Html->css(array('concierges/concierge'));
 $this->end();
 ?> 
 <div id="content" class="wrapper">
-	<?php echo $this->Form->create("Course"); ?>
-	<?php echo $this->Form->input("Course.query"); ?>
-	<?php echo $this->Form->input("Course.course_number", array("label" => false, "style" => "display: none;")); ?>
-	<?php echo $this->Form->end("Find"); ?>
+	<div style="background: url('/images/schools/concierge/huntercollege.png')" class="concierge_image">
+		<?php echo $this->Form->create("Course", array("id" => "ConciergeSearch", "class" => "custom", "inputDefaults" => array("label" => false))); ?>
+		<div class="row">
+			<div class="ten columns"><?php echo $this->Form->input("Course.query", array("placeholder" => "Search by section, description, and even  professor!")); ?><?php echo $this->Form->input("Course.course_number", array("style" => "display: none;")); ?></div>
+			<div class="two columns"><?php echo $this->Form->submit("Find my Class"); ?></div>
+		</div>
+		<div class="try">Try it Out: <a href="/concierges/hunter_college/0023">AFPRL 236.00 Section 001 - African Amer Lit with Professor Gregg, Veronica
+</a></div>
+		<?php echo $this->Form->end(); ?>
+		
+	</div>
 </div>

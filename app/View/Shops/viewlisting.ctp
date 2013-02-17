@@ -43,7 +43,7 @@
 <div class="wrapper" id="content">
 	<div class="row">
 		<div class="eight columns">
-			<?php if($auth['id'] == $listing['Shop']['user_id']) { ?>
+			<?php if(isset($auth) && $auth['id'] == $listing['Shop']['user_id']) { ?>
 				<a id="edit" href="/shops/edit/<?php echo $listing['Shop']['id']; ?>">Edit this Listing</a>
 			<?php } ?>
 			<div>

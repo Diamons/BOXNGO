@@ -441,3 +441,324 @@ Stack Trace:
 #1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DashboardsController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-02-14 01:18:05 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-14 01:27:02 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0001
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0001')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-14 01:27:59 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-14 01:33:54 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-14 02:09:38 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-14 02:22:54 Error: [MissingActionException] Action ConciergesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ConciergesController',
+  'action' => 'index',
+)
+Request URL: /concierges/
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-15 00:44:09 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0002
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0002')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-15 01:26:05 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-15 01:26:08 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-15 01:26:15 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-15 02:14:41 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-15 02:14:43 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-16 20:39:50 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3195): ConnectionManager::getDataSource('test')
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1107): Model->setDataSource('test')
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('shops')
+#5 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): Model->getDataSource()
+#6 C:\wamp\www\boxngo2\app\Controller\PagesController.php(78): Model->find('all', Array)
+#7 [internal function]: PagesController->display('home')
+#8 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-02-16 21:43:02 Error: [MissingActionException] Action ConciergesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ConciergesController',
+  'action' => 'index',
+)
+Request URL: /concierges
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-16 21:53:06 Error: [MissingActionException] Action ConciergesController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'ConciergesController',
+  'action' => 'images',
+)
+Request URL: /concierges/images/schools/concierge/huntercollege.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-16 22:57:15 Error: [BadRequestException] The request has been black-holed
+Request URL: /concierges/hunter_college/
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(ConciergesController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ConciergesController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-02-16 22:57:27 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0022
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0022')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-16 22:57:36 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0022
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0022')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-16 22:57:45 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0022
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0022')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-16 22:59:27 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0022
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0022')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-16 22:59:30 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0022
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0022')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-16 23:00:38 Error: [BadRequestException] The request has been black-holed
+Request URL: /concierges/hunter_college/
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(ConciergesController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ConciergesController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-02-17 00:37:38 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-17 00:37:55 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-17 00:37:57 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-17 00:38:02 Error: [MongoCursorException] couldn't send command
+Request URL: /concierges/hunter_college/0023
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1010): MongoCursor->count(true)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): MongodbSource->read(Object(Course), Array)
+#2 C:\wamp\www\boxngo2\app\Controller\ConciergesController.php(16): Model->find('all', Array)
+#3 [internal function]: ConciergesController->hunter_college('0023')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ConciergesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
