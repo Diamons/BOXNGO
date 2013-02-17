@@ -20,7 +20,7 @@ $this->end();
 			</div>
 		</div>
 		<div class="nine columns">
-			<a href="/users"><img id="coverBanner" src="/images/cover.png" /></a>
+			<a href="/concierges/hunter_college"><img id="coverBanner" src="/images/cover.png" /></a>
 			<div id="listings">
 				<?php if(!empty($listings)): ?>
 					<?php 
