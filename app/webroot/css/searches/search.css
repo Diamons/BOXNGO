@@ -2,7 +2,7 @@
 	margin: 35px 0;
 }
 
-#content.wrapper .columns{
+#content.wrapper .columns, #dashboard.wrapper .dashwrapper .columns{
 	padding: 0 15px;
 }
 

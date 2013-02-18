@@ -1,5 +1,5 @@
 <?php $this->start('css');
-echo $this->Html->css(array('searches/search'));
+echo $this->Html->css(array('searches/search', 'dashboard/favorites'));
 $this->end(); ?>	
 <?php if(!empty($favorites)){ ?>
 		<?php for($i = 0; $i < count($favorites); $i++): ?>
@@ -17,9 +17,7 @@ $this->end(); ?>
 				</a>
 				<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $favorites[$i]['Shop']['id'];?>"><?php echo nl2br(h($favorites[$i]['Shop']['name'])); ?></a></h1>
 				
-				<div class="listing_box">$<?php echo $favorites[$i]['Shop']['price']; ?></div>
 				<div class="listing_box"><a class="addfavoriteused" data-listingid="<?php echo $favorites[$i]['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span></a></div>
-				<div class="rating">No Rating</div>
 				
 			</div>
 		</div>

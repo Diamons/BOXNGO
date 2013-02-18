@@ -70,18 +70,19 @@
 				$this->Session->setFlash("Unfortunately we can't find that listing. The seller may have run out of stock. Please contact Support if you believe this is a mistake.", "flash_warning");
 				$this->redirect($this->referer());
 			} else {
-				if(!$this->School->sameSchool($this->Auth->user('username'), $listing['User']['username'])){
+				if(!$this->School->sameSchool($this->Auth->user('username'), $listing['User']['username']) || $this->Auth->user('id') == $listing['User']['id']){
 					$this->Session->setFlash("Unfortunately you guys aren't in the same school! Currently we do not support interschool trading.", "flash_warning");
 					$this->redirect($this->referer());
 				
 				}else{
-					$userSchool = split("@", $this->Auth->user('username'));
-					$school = $this->School->find("first", array("conditions" => array("School.domain" => $userSchool[1])));
+					$school = $this->School->getSchool($this->Auth->user('username'));
 					$this->set("school", $school);
 					$this->set("listing", $listing);
 					
 					if($this->request->data && $this->request->is('post')){
 						parent::sendTradeEmail($listing['User']['username'],$this->Auth->user('username'), "BOX'NGO Trade Request :: ".$listing['Shop']['name'], $listing['Shop']['id'], $this->request->data['Message']['message'], $this->request->data['Message']['contact']); 
+						$trade['Trade'] = array('shop_id' => $listing['Shop']['id'], 'user_id' => $this->Auth->user('id'), 'message' => $this->request->data['Message']['message'], 'contact' => $this->request->data['Message']['contact']);
+						$this->Trade->save($trade);
 						$this->redirect('/shops/viewlisting/'.$listingid);
 					} else {
 					}
@@ -112,7 +113,9 @@
 					$this->Favorite->recursive = -1;
 					$this->set("favorite", $this->Favorite->find("first", array("conditions" => array("Favorite.user_id" => $this->Auth->user('id'), "Favorite.shop_id" => $listingid))));
 				}
-				$this->set("listing", $listing);
+				
+				$sameSchool = $this->School->sameSchool($this->Auth->user('username'), $listing['User']['username']);
+				$this->set(compact("listing", "sameSchool"));
 			}
 		}
 		

@@ -762,3 +762,13 @@ Stack Trace:
 #6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
 #7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2013-02-18 20:29:00 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [C:\wamp\www\boxngo2\app\Controller\ShopsController.php, line 79]
+2013-02-18 20:29:00 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /shops/trade/25
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 79)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 79, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 79, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
