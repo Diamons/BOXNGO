@@ -1,7 +1,7 @@
 <?php
 	class ShopsController extends AppController{
 		
-		var $uses = array('Shop', 'Image', 'Payment', 'School', 'Shopview', 'Facebook', 'Category', 'Favorite', 'Message', 'Thread');
+		var $uses = array('Shop', 'Image', 'Payment', 'School', 'Shopview', 'Facebook', 'Category', 'Favorite', 'Message', 'Thread', 'Trade');
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->Auth->allow('viewlisting');
@@ -70,7 +70,7 @@
 				$this->Session->setFlash("Unfortunately we can't find that listing. The seller may have run out of stock. Please contact Support if you believe this is a mistake.", "flash_warning");
 				$this->redirect($this->referer());
 			} else {
-				if(!$this->School->sameSchool($this->Auth->user('username'), $listing['User']['username']) || $this->Auth->user('id') == $listing['User']['id']){
+				if(!$this->School->sameSchool($this->Auth->user('username'), $listing['User']['username']) && ($this->Auth->user('id') == $listing['User']['id'] && $this->Auth->user('role') !== "admin")){
 					$this->Session->setFlash("Unfortunately you guys aren't in the same school! Currently we do not support interschool trading.", "flash_warning");
 					$this->redirect($this->referer());
 				

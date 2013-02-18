@@ -772,3 +772,93 @@ Stack Trace:
 #3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-02-18 21:33:26 Error: Fatal Error (1): Call to a member function save() on a non-object in [C:\wamp\www\boxngo2\app\Controller\ShopsController.php, line 85]
+2013-02-18 21:33:26 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /shops/trade/25
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\box...', 85)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\box...', 85, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\box...', 85, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-18 21:48:34 Error: [MissingActionException] Action DashboardsController::mytrades() could not be found.
+Exception Attributes: array (
+  'controller' => 'DashboardsController',
+  'action' => 'mytrades',
+)
+Request URL: /dashboard/mytrades
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DashboardsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-18 21:49:45 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\boxngo2\app\Controller\DashboardsController.php, line 64]
+2013-02-18 21:49:45 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /dashboard/mytrades
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 64)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 64, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 64, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-18 21:49:53 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\boxngo2\app\Controller\DashboardsController.php, line 64]
+2013-02-18 21:49:53 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /dashboard/mytrades
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\box...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\box...', 64, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\box...', 64, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-18 21:50:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Shop.trade_id' in 'on clause'
+Request URL: /dashboard/mytrades
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Trade`....', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Trade`....', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Trade`....', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Trade), Array)
+#5 C:\wamp\www\boxngo2\app\Controller\DashboardsController.php(64): Model->find('all', Array)
+#6 [internal function]: DashboardsController->mytrades()
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(DashboardsController), Array)
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(DashboardsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-18 22:17:23 Error: [MissingActionException] Action PromotionsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PromotionsController',
+  'action' => 'index',
+)
+Request URL: /promotions
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-18 22:24:56 Error: [MissingActionException] Action PromotionsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PromotionsController',
+  'action' => 'index',
+)
+Request URL: /promotions
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-18 22:25:12 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Promotions\february2013.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Promotions\\february2013.ctp',
+)
+Request URL: /promotions/february2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

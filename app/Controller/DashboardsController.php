@@ -1,6 +1,6 @@
 <?php
 	class DashboardsController extends AppController{
-		var $uses = array('Favorite', 'Shop', 'Order', 'User', 'Image', 'Message', 'Thread');
+		var $uses = array('Favorite', 'Shop', 'Order', 'User', 'Image', 'Message', 'Thread', 'Trade');
 		
 		public function beforeFilter(){
 			parent::beforeFilter();
@@ -58,6 +58,15 @@
 				$orders[$i]['Image'] = $a['Image'];
 			}
 			$this->set("orders", $orders);
+		}
+		
+		public function mytrades(){
+			$trades = $this->Trade->find("all", array("conditions" => array("Trade.user_id" => $this->Auth->user('id'))));
+			for($i = 0; $i < count($trades); $i++){
+				$a = $this->Image->getShopImage($trades[$i]['Trade']['shop_id']);
+				$trades[$i]['Image'] = $a['Image'];
+			}
+			$this->set("trades", $trades);
 		}
 		
 		public function myfavorites(){
