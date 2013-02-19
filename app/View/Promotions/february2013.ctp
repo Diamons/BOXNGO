@@ -14,7 +14,7 @@ $this->end();
 		<div class="promotion_wrapper">
 			<div>
 				<?php if($promotion['february2013.step1'] == true){ ?><img class="check" src="/images/checkmarkbox.png" /><?php } ?>
-				<h1><a href="http://theboxngo.com/users" target="_blank">Step 1 - Register and activate your account on BOX'NGO!</a></h1>
+				<h1><a href="http://theboxngo.com/users" target="_blank">Step 1 - Login to your account on BOX'NGO!</a></h1>
 				If you haven't done so already, head over to the registration page to register on BOX'NGO! Go to your email inbox and click the activation link! Come back to this page once you've logged in using your BOX'NGO account.
 			</div>
 			<div>
