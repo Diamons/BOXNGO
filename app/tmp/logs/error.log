@@ -894,3 +894,90 @@ Stack Trace:
 #1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-02-19 02:39:52 Error: [BadRequestException] The request has been black-holed
+Request URL: /promotions/february2013/step1
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(234): SecurityComponent->blackHole(Object(PromotionsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(PromotionsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-02-19 02:40:06 Error: [BadRequestException] The request has been black-holed
+Request URL: /promotions/february2013/step1
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(234): SecurityComponent->blackHole(Object(PromotionsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(PromotionsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-02-19 02:50:31 Error: Fatal Error (1): Call to a member function read() on a non-object in [C:\wamp\www\boxngo2\app\Controller\PromotionsController.php, line 24]
+2013-02-19 02:50:31 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /promotions/february2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\box...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\box...', 24, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\box...', 24, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-19 03:46:04 Error: [MissingTableException] Table promotions for model Promotion was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'promotions',
+  'class' => 'Promotion',
+  'ds' => 'test',
+)
+Request URL: /promotions/february2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('promotions')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#3 C:\wamp\www\boxngo2\lib\Cake\View\Helper\FormHelper.php(446): FormHelper->_introspectModel('Promotion', 'fields')
+#4 C:\wamp\www\boxngo2\app\View\Promotions\february2013.ctp(114): FormHelper->create(Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#6 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#7 C:\wamp\www\boxngo2\lib\Cake\View\View.php(470): View->_render('C:\wamp\www\box...')
+#8 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-02-19 03:46:20 Error: [MissingTableException] Table promotions for model Promotion was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'promotions',
+  'class' => 'Promotion',
+  'ds' => 'test',
+)
+Request URL: /promotions/february2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('promotions')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#3 C:\wamp\www\boxngo2\lib\Cake\View\Helper\FormHelper.php(446): FormHelper->_introspectModel('Promotion', 'fields')
+#4 C:\wamp\www\boxngo2\app\View\Promotions\february2013.ctp(114): FormHelper->create('Promotion')
+#5 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#6 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#7 C:\wamp\www\boxngo2\lib\Cake\View\View.php(470): View->_render('C:\wamp\www\box...')
+#8 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-02-19 04:07:41 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/promotion/february2013/prize1.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
