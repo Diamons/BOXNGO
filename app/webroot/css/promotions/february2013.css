@@ -1,0 +1,104 @@
+@import url(http://fonts.googleapis.com/css?family=Rokkitt);
+#content.wrapper{
+	background: url('/images/promotions/february2013/bg.jpg') no-repeat;
+	height: 1050px;
+	padding: 20px;
+	border-radius: 9px;
+}
+
+.promotion_wrapper{
+	width: 700px;
+	margin: auto;
+}
+#content.wrapper > div > div{
+	display: block;
+	min-height: 175px;
+	background: rgba(255,255,255,.9);
+	padding: 10px 20px 30px 20px;
+	-moz-box-shadow: 0 0 15px #888;
+	-webkit-box-shadow: 0 0 15px#888;
+	box-shadow: 0 0 15px #888;
+	margin-bottom: 10px;
+}
+#content.wrapper div.about{
+	display: block;
+	margin: 0;
+	padding: 30px;
+	color: #FFF;
+	width: 700px;
+	margin: auto;
+	background: rgba(90,124,194,.8);
+	-moz-box-shadow: 0 0 15px #888;
+	-webkit-box-shadow: 0 0 15px#888;
+	box-shadow: 0 0 15px #888;
+	margin-bottom: 20px;
+}
+
+#content.wrapper .about h1{
+	text-align: center;
+	font-size: 34pt;
+	color: #FFF;
+}
+
+#content.wrapper h1{
+	font-family: 'Rokkitt', serif;
+}
+
+#content.wrapper > div > div h1{
+	font-size: 26px;
+	color: #585858;
+	line-height: 1em;
+	margin: 10px 0;
+}
+
+#content.wrapper img.check{
+	float: left;
+	padding: 20px 25px;
+}
+
+#EntryFebruary2013submitForm{
+	display: none;
+}
+
+#EntryFebruary2013submitForm .row{
+	min-width: 0;
+	border-radius: 5px;
+	overflow: hidden;
+	background: rgba(0,0,0,.7);
+	margin-bottom: 10px;
+}
+#EntryFebruary2013submitForm div.input{
+	background: rgba(0,0,0,.7);
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+#EntryFebruary2013submitForm .row div.input{
+	border-radius: 0;
+	background: transparent;
+}
+
+#EntryFebruary2013submitForm label{
+	color: #FFF;
+}
+
+#redeem{
+	float: none;
+	width: 100%;
+	display:  block;
+	margin: 0;
+	margin-top: 20px;
+	padding: 15px;
+}
+
+.about .prize{
+	float: left;
+	height: 180px;
+	margin-right: 20px;
+}
+
+.about > p{
+	font-size: 11px;
+	margin-top: 20px;
+}
