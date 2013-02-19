@@ -64,18 +64,18 @@
 <div id="content" class="wrapper">
 		<div class="about">
 			<h1>FREE Charm Give-a-way!</h1>
-			We're giving out free Chinese scriptured charms that are sure to dazzle. No catch, no tricks. Simply follow the 3 easy steps and we'll ship you a charm in the mail! All we ask is that you give BOX'NGO 
+			We're giving out free Chinese scriptured charms that are sure to dazzle. No catch, no tricks. Simply follow the 3 easy steps and we'll ship you a charm in the mail!
 		</div>
 		<div>
-			<h1><a href="#">Step 1 - Register and activate your account on BOX'NGO!</a></h1>
+			<h1><a href="http://theboxngo.com/users" target="_blank">Step 1 - Register and activate your account on BOX'NGO!</a></h1>
 			If you haven't done so already, head over to the registration page to register on BOX'NGO!
 		</div>
 		<div>
-			<h1><a href="#">Step 2 - Like our Facebook Page!</a></h1>
+			<h1><a href="http://www.facebook.com/theboxngo" target="_blank">Step 2 - Like our Facebook Page!</a></h1>
 			Visit our Facebook page using your Facebook account and like the BOX'NGO page!
 		</div>
 		<div>
-			<h1><a href='#' onClick="FacebookInviteFriends();">Step 3 - Invite 3 Friends!</a></h1>
+			<h1><a href='#' onClick="FacebookInviteFriends();">Step 3 - Invite 3 Friends! (Click Here)</a></h1>
 			 Invite 3 of your friends to check out BOX'NGO!
 		</div>
 </div>
