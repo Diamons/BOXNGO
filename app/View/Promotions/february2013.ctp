@@ -165,10 +165,11 @@
 				<h1><a href='#' onClick="FacebookInviteFriends();">Step 3 - Invite 3 Friends! (Click Here)</a></h1>
 				 Invite 3 of your friends to check out BOX'NGO! Once you invite 3 friends, this page will refresh and you'll be able to redeem your charms!
 			</div>
+		<?php if($promotion['february2013.step3'] == true){ ?>	
 			<form>
 				<input id="redeem" type="submit" value="Click here to Redeem your Free Charm!" />
 			</form>
-		<?php if($promotion['february2013.step3'] == true){ ?>
+		
 			<?php echo $this->Form->create("Entry", array("id" => "EntryFebruary2013submitForm", "url" => "/promotions/february2013submit")); ?>
 			<?php echo $this->Form->input("Entry.first_name"); ?>
 			<?php echo $this->Form->input("Entry.last_name"); ?>
