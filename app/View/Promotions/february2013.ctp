@@ -55,9 +55,8 @@
 	#content.wrapper div.about{
 		display: block;
 		margin: 0;
-		padding: 40px;
+		padding: 30px;
 		color: #FFF;
-		
 		width: 700px;
 		margin: auto;
 		background: rgba(90,124,194,.8);
@@ -98,6 +97,7 @@
 		border-radius: 5px;
 		overflow: hidden;
 		background: rgba(0,0,0,.7);
+		margin-bottom: 10px;
 	}
 	#EntryFebruary2013submitForm div.input{
 		background: rgba(0,0,0,.7);
@@ -130,13 +130,17 @@
 		margin-right: 20px;
 	}
 	
+	.about > p{
+		font-size: 11px;
+		margin-top: 20px;
+	}
+	
 </style>
-<?php debug($promotion); ?>
 <div id="content" class="wrapper">
 		<div class="clearfix about">
 			<img class="prize" src="/images/promotions/february2013/prize1.png" /><h1>FREE Charm Give-a-way!</h1>
-			We're giving out free Chinese scriptured charms that are sure to dazzle. No catch, no tricks. Simply follow the 3 easy steps and we'll ship you a charm in the mail!* 
-			<p style="font-size:11px;">*Limited quantities available.</p>
+			We're giving out free Chinese scriptured charms that are sure to dazzle. No catch, no tricks. Simply follow the 3 easy steps and we'll ship you a charm in the mail!*
+			<p>*Limited quantities available. Promotion expires February 28th, 2013 at 11:59 PM GMT -5.</p>
 		</div>
 		<div class="promotion_wrapper">
 			<div>
@@ -165,7 +169,7 @@
 				<input id="redeem" type="submit" value="Click here to Redeem your Free Charm!" />
 			</form>
 		<?php if($promotion['february2013.step3'] == true){ ?>
-			<?php echo $this->Form->create("Entry", array("action" => "february2013submit")); ?>
+			<?php echo $this->Form->create("Entry", array("id" => "EntryFebruary2013submitForm", "url" => "/promotions/february2013submit")); ?>
 			<?php echo $this->Form->input("Entry.first_name"); ?>
 			<?php echo $this->Form->input("Entry.last_name"); ?>
 			<?php echo $this->Form->input("Entry.street_address"); ?>
@@ -180,6 +184,7 @@
 					<?php echo $this->Form->input("Entry.zipcode"); ?>
 				</div>
 			</div>
+			<?php echo $this->Form->input("Entry.selection", array("label" => "Choose a charm (Fong, Wong, Zhu, Ma, Luo, Ou, Li, Liang, or Dai) or leave empty to receive a random charm")); ?>
 			<?php echo $this->Form->end("Redeem"); ?>
 		<?php } ?>
 		</div>
