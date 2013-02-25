@@ -238,7 +238,7 @@
 			$shopItems = array();
 			for($i=0;$i<count($userInfo['Shop']);$i++){
 				$shopTmp = $this->Shop->read(NULL,$userInfo['Shop'][$i]['id']);
-				if(!empty($shopTmp)){
+				if(!empty($shopTmp) && $shopTmp['Shop']['canview'] == 1){
 					$shopItems[$index] = $shopTmp;
 					$index++;
 				}
