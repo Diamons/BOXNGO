@@ -122,6 +122,7 @@
 		
 		public function manageaccount(){
 			if($this->request->is('post') || $this->request->is('put')){
+				$this->request->data['User']['display_name'] = Sanitize::html($this->request->data['User']['display_name'], array('remove' => true));
 				if($this->User->save($this->request->data)){
 					$this->Session->setFlash("Your information has been saved!", "flash_success");
 				}else{

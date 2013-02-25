@@ -1030,3 +1030,25 @@ Stack Trace:
 #7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
 #8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2013-02-25 00:32:20 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3195): ConnectionManager::getDataSource('test')
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1107): Model->setDataSource('test')
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('shops')
+#5 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): Model->getDataSource()
+#6 C:\wamp\www\boxngo2\app\Controller\PagesController.php(78): Model->find('all', Array)
+#7 [internal function]: PagesController->display('home')
+#8 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
