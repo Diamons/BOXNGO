@@ -1105,3 +1105,108 @@ Stack Trace:
 #7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2013-02-27 05:52:17 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Pages\display.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Pages\\display.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\PagesController.php(86): Controller->render(NULL)
+#3 [internal function]: PagesController->display('home')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-27 05:52:20 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Pages\display.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Pages\\display.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\PagesController.php(86): Controller->render(NULL)
+#3 [internal function]: PagesController->display('home')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-27 05:52:21 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Pages\display.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Pages\\display.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\PagesController.php(86): Controller->render(NULL)
+#3 [internal function]: PagesController->display('home')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-27 05:52:22 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Pages\display.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Pages\\display.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\PagesController.php(86): Controller->render(NULL)
+#3 [internal function]: PagesController->display('home')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-27 05:52:22 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Pages\display.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Pages\\display.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\PagesController.php(86): Controller->render(NULL)
+#3 [internal function]: PagesController->display('home')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-27 05:52:23 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Pages\display.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Pages\\display.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\PagesController.php(86): Controller->render(NULL)
+#3 [internal function]: PagesController->display('home')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-02-27 05:52:24 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Pages\display.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Pages\\display.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\wamp\www\boxngo2\app\Controller\PagesController.php(86): Controller->render(NULL)
+#3 [internal function]: PagesController->display('home')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}

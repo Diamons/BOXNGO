@@ -41,7 +41,7 @@
 </script>
 <?php $this->end();
 $this->start('css');
-echo $this->Html->css(array('searches/search', 'pages/main'));
+echo $this->Html->css(array('searches/search', 'pages/main_home'));
 $this->end();
 ?>
 <div id="content">

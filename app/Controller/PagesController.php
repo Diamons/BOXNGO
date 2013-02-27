@@ -75,8 +75,11 @@ class PagesController extends AppController {
 		}
 		
 		if($path[0] == "home"){
-			$this->set("listings", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 16)));
-			$this->set("categories", $this->Category->find("all"));
+			if($this->Auth->loggedIn()){
+				$this->set("listings", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 16)));
+				$this->set("categories", $this->Category->find("all"));
+				$path[0] = "home_user";
+			}
 		}
 		
 		$this->set(compact('page', 'subpage', 'title_for_layout'));

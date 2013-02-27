@@ -8,7 +8,7 @@ $this->end();
 	<div class="row">
 		<div id="categories" class="three columns">
 			<nav>
-				<div class="header"><span class="typicn feed enlarge"></span> Categories</div>
+				<div class="header"><span class="typicn feed"></span> Categories</div>
 				<ul>
 					<?php for($i = 0; $i < count($categories); $i++){ ?>
 						<li><a href="/search/browse/<?php echo  $categories[$i]['Category']['short_name']; ?>"><?php echo $categories[$i]['Category']['display_name']; ?></a></li>
