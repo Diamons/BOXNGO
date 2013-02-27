@@ -76,7 +76,7 @@
 						</ul>
 					</div>
 				<?php } ?>
-				<a href="/info/about">About Us</a>
+				<a id="list_item" href="/shops/shoplist">List Item</a>
 			</div>
 	</div>
 </header>

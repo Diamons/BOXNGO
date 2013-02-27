@@ -234,11 +234,11 @@ footer a.support:hover{
 	color: #0899FF;
 }
 
-#actions #register{
+#actions #list_item{
 	color: #EB6841;
 }
 
-#actions #register:hover{
+#actions #list_item:hover{
 	color: #CC333F;
 }
 
