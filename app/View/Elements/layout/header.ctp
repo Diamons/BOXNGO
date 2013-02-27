@@ -1,6 +1,10 @@
 <header>
 	<div class="row clearfix wrapper">
 			<div id="logo"><a href="<?php echo $this->webroot;?>"><img src="/logo.png" alt="BOX'NGO" /></a></div>
+			<div id="search_container">
+				<?php echo $this->Form->input('Search.query', array('placeholder' => 'Electronics, Textbooks, Jewelry, and more!')); ?>
+				<?php echo $this->Form->submit('Search', array('class' => 'mainpage', 'div'=>false)); ?>
+			</div>
 			<div id="actions">
 				<?php if(!isset($auth)){ ?>
 					<a id="register" href="<?php echo $this->webroot;?>users">Signup</a>
@@ -73,7 +77,6 @@
 					</div>
 				<?php } ?>
 				<a href="/info/about">About Us</a>
-				<a href="/">Home</a>
 			</div>
 	</div>
 </header>

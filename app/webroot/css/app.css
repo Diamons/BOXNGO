@@ -153,8 +153,8 @@ div#content.wrapper{
 	padding-right: 40px;
 }
 
-#search_container{
-	padding-left: 10px;
+#SearchQuery{
+	margin: 0;
 }
 
 header > div.wrapper{
@@ -192,7 +192,7 @@ footer a.support:hover{
 #logo{
 	height: 22px;
 	float: left;
-	width: 15%;
+	width: 12%;
 }
 
 #logo a{
@@ -204,11 +204,15 @@ footer a.support:hover{
 	padding-left: 4px;
 }
 
+#search_container{
+	width: 55%;
+	float: left;
+	margin-top: -4px;
+}
 #actions{
 	text-align: right;
-	padding-left: 200px;
 	float: left;
-	width: 85%;
+	width: 32%;
 }
 
 #actions > a{
@@ -481,7 +485,7 @@ form input[type="submit"]:hover, .usermessage:hover{
 form input[type="submit"].mainpage{
 	float: none;
 	-webkit-appearance: none;
-	display:block;
+	display:none;
 	margin: 0;
 	margin-left: 15px;
 	margin-top: -2px;

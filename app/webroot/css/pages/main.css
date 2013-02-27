@@ -111,41 +111,6 @@ h1.faq{
 	color: #000;
 }
 
-.features{
-	text-align: center;
-}
-
-.features > div{
-	display: inline-block;
-	background: rgba(0,0,0,.6);
-	padding: 10px;
-	border-radius: 6px;
-}
-
-.features > div a{
-	display: block;
-	border-radius: 5px;
-	min-width: 200px;
-	background: #A2CF02;
-	color: #FFF;
-	padding: 20px;
-	font-size: 24px;
-	transition: all .4s;
-	-moz-transition: all .4s; /* Firefox 4 */
-	-webkit-transition: all .4s; /* Safari and Chrome */
-	-o-transition: all .4s; /* Opera */
-}
-.features > div:first-child a{
-	background: #d0461d;
-}
-
-.features > div:first-child a:hover{
-	background: #952a0a;
-}
-.features > div a:hover{
-	background: #799b01;
-}
-
 div#content.wrapper{
 	margin-top: 0;
 }
@@ -305,11 +270,9 @@ img#coverBanner{
 	position: relative;
 }
 #welcome_container{
-	display: none;
 	float: left;
 	width: 35%;
 	height: 580px;
-	background: rgba(12,172,255,.8);
 	padding: 10px;
 	margin-top: 10px;
 }
@@ -318,7 +281,8 @@ img#coverBanner{
 	padding: 10px 0;
 	text-align: center;
 	float: left;
-	width: 65%;
+	width: 55%;
+	margin-right: 10%;
 	margin-top: 100px;
 	color: #FFF;
 }
@@ -327,11 +291,16 @@ img#coverBanner{
 	color: #FFF;
 	font-size: 60pt;
 	font-weight: lighter;
+	text-shadow: 0px 1px 4px #000000;
+	margin-bottom: 20px;
 }
 #boxngo_intro > h2{
 	font-size: 18px;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
+	line-height: 1.5em;
 	color: #FFF;
+	text-align: left;
+	font-weight: lighter;
 }
 
 #boxngo_intro span.feature{
@@ -359,9 +328,57 @@ img#coverBanner{
 	font-size: 64pt;
 }
 
-a#buy{
-	background: url('/images/bg/buy.png') no-repeat;
-	height: 200px;
-	width: 200px;
-	display: block;
+#welcome_container .row{
+	min-width: 0;
+}
+
+
+form#UserDisplayForm{
+	margin-top: 120px;
+}
+
+form#UserDisplayForm label[for="UserAccepttos"] {
+	display: inline-block;
+	margin-left: 10px;
+	color: #FFF;
+}
+
+label[for="UserAccepttos"]+div.error-message{
+	display: inline-block;
+	position: absolute;
+	margin-top: 2em;
+	left: 110px;
+}
+
+a.loginFacebookButton{
+	display: inline-block;
+	margin: auto;
+	margin-bottom: 20px;
+	background: url('/images/social/facebook_login.png') no-repeat;
+	width: 192px;
+	height: 33px;
+}
+
+.features.wrapper{
+	margin: 20px auto;
+}
+
+.features .columns{
+	padding: 10px 20px;
+}
+.features div{
+	text-align: left;
+	font-size: 10pt;
+	color: #888;
+}
+.features .columns h2, .features .columns i{
+	font-size: 24px;
+	display: inline-block;
+	color: #EB6841;
+	margin: 0;
+}
+
+.features .columns h2{
+	margin-left: 10px;
+	margin-bottom: 8px;
 }
