@@ -1,23 +1,10 @@
 <header>
 	<div class="row clearfix wrapper">
-		<div class="one columns">
 			<div id="logo"><a href="<?php echo $this->webroot;?>"><img src="/logo.png" alt="BOX'NGO" /></a></div>
-		</div>
-		<div id="search_container" class="five columns">
-			<div class="row">
-				<div class="eight columns">
-					<?php echo $this->Form->input('Search.query', array('placeholder' => 'Electronics, Textbooks, Jewelry, and more!')); ?>
-				</div>
-				<div class="three columns">
-					<?php echo $this->Form->submit('Search', array('class' => 'mainpage', 'div'=>false)); ?>
-				</div>
-			</div>
-		</div>
-		<div class="four columns">
-			<div id="actions">	
+			<div id="actions">
 				<?php if(!isset($auth)){ ?>
-				<a id="login" href="<?php echo $this->webroot;?>users">Login</a>
-				<a id="register" href="<?php echo $this->webroot;?>users">Signup</a>
+					<a id="register" href="<?php echo $this->webroot;?>users">Signup</a>
+					<a id="login" href="<?php echo $this->webroot;?>users">Login</a>
 				<?php } else { ?>
 					<div id="user_container">
 						Welcome back <a href="/users/profile"><?php echo $auth['username']; ?>!</a>
@@ -46,7 +33,7 @@
 										<div class="nine columns">
 											<h2>Inbox</h2>
 											<div class="subtext">
-											This is where all your messages you have sent and received are stored.
+												This is where all your messages you have sent and received are stored.
 											</div>
 										</div>
 									</div>
@@ -61,7 +48,7 @@
 										<div class="nine columns">
 											<h2>Profile</h2>
 											<div class="subtext">
-											This is where you can see your publically viewable profile.
+												This is where you can see your publically viewable profile.
 											</div>
 										</div>
 									</div>
@@ -76,7 +63,7 @@
 										<div class="nine columns">
 											<h2>Logout</h2>
 											<div class="subtext">
-											Logout of BOX'NGO. Be sure to come back and visit!
+												Logout of BOX'NGO. Be sure to come back and visit!
 											</div>
 										</div>
 									</div>
@@ -85,11 +72,8 @@
 						</ul>
 					</div>
 				<?php } ?>
+				<a href="/info/about">About Us</a>
+				<a href="/">Home</a>
 			</div>
-			<?php if(isset($auth)){ ?><div id="userMessageNotification"><a href="/dashboard/messages"><?php if($messages == 0) { echo "No unread messages."; } else { echo "<span>(".$messages.") New Messages</span>"; } ?></a></div><?php } ?>
-		</div>
-		<div class="two columns">
-			<a href="/shops/shoplist" id="sell" class="link sell_link"><i class="icon-edit"></i> New Listing</a>
-		</div>
 	</div>
 </header>

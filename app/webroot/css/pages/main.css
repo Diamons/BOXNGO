@@ -1,5 +1,7 @@
-#content.wrapper{
-	padding: 20px;
+#content{
+	height: 600px;
+	background: url('/images/bg/home.png') no-repeat -30px -300px;
+	margin: 0;
 }
 
 h1.faq{
@@ -297,4 +299,69 @@ img#coverBanner{
 	font-size: 9pt; 
 	display:block; 
 	float:right;
+}
+
+#content > div.wrapper{
+	position: relative;
+}
+#welcome_container{
+	display: none;
+	float: left;
+	width: 35%;
+	height: 580px;
+	background: rgba(12,172,255,.8);
+	padding: 10px;
+	margin-top: 10px;
+}
+
+#boxngo_intro{
+	padding: 10px 0;
+	text-align: center;
+	float: left;
+	width: 65%;
+	margin-top: 100px;
+	color: #FFF;
+}
+
+#boxngo_intro > h1{
+	color: #FFF;
+	font-size: 60pt;
+	font-weight: lighter;
+}
+#boxngo_intro > h2{
+	font-size: 18px;
+	margin-bottom: 5px;
+	color: #FFF;
+}
+
+#boxngo_intro span.feature{
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 0 20px;
+	color: #CCC;
+	font-size: 9pt;
+	border-right: 1px solid #FFF;
+}
+
+#boxngo_intro span.feature:last-child{
+	border: none;
+}
+
+.feature .feature_text{
+	text-align:left;
+	padding-top: 10px;
+}
+
+.feature .feature_text h3{
+
+}
+.enlarge{
+	font-size: 64pt;
+}
+
+a#buy{
+	background: url('/images/bg/buy.png') no-repeat;
+	height: 200px;
+	width: 200px;
+	display: block;
 }

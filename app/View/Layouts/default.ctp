@@ -11,7 +11,6 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-
 		echo $this->Html->css('foundation.min');
 		echo $this->Html->css('typicons');
 		echo $this->Html->css('font-awesome.min');
@@ -42,7 +41,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
 		<?php
-			echo $this->element('sql_dump');
+			//echo $this->element('sql_dump');
 		?>
 		<div class="push"></div>
 	</div>
