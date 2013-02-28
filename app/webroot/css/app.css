@@ -235,6 +235,7 @@ footer a.support:hover{
 }
 
 #actions #list_item{
+	font-weight: bolder;
 	color: #EB6841;
 }
 

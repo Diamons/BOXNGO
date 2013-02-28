@@ -1210,3 +1210,12 @@ Stack Trace:
 #6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2013-02-28 03:32:19 Error: [MissingControllerException] Controller class ManagerController could not be found.
+Exception Attributes: array (
+  'class' => 'ManagerController',
+  'plugin' => NULL,
+)
+Request URL: /manager/status
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
