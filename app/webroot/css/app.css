@@ -285,6 +285,10 @@ header > div.wrapper > nav{
 	margin-right: -10px;
 }
 
+.inline_logo{
+	margin-bottom: -5px;
+}
+
 header > div.wrapper > nav > div{
 	height: 100%;
 	padding: 14px 15px 15px 15px;

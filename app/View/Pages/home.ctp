@@ -47,9 +47,9 @@ $this->end();
 <div id="content">
 	<div class="wrapper">
 		<div id="boxngo_intro">
-			<h1>Buy. Sell. Trade.</h1>
-			<h2>Connect with students from all over the world and your own local campus. Buy from others online, sell your stuff to make money quickly and easily, and trade with other students from your campus all through <img style="margin-bottom:-5px;" src="/logo.png" alt="BOX'NGO">.</h2>
-			<h2>It's quick, easy, and FREE!</h2>
+			<h1>The Student Marketplace</h1>
+			<h2>Connect with students from all over the world and your own local campus. Buy from others online, sell your stuff to make money quickly and easily, and trade with other students from your campus.</h2>
+			<h2>Buy, sell, and trade, all with <img class="inline_logo" src="/logo.png" alt="BOX'NGO">. It's quick, easy, and FREE!</h2>
 		</div>
 		<div id="welcome_container">
 			<?php echo $this->Form->create('User', array('class'=>'custom', 'url' => '/users/', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
