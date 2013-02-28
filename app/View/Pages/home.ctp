@@ -58,7 +58,7 @@ $this->end();
 				</div>
 						<?php echo $this->Form->input('User.username', array('placeholder' => 'Enter your @EDU Email Address')); ?>
 						<?php echo $this->Form->input('User.passwordcreate', array('placeholder' => 'Password', 'type' => 'password')); ?>
-						<?php echo $this->Form->input('User.passwordconfirmation', array('placeholder' => 'Password', 'type'=>'password')); ?>
+						<?php echo $this->Form->input('User.passwordconfirmation', array('placeholder' => 'Confirm Password', 'type'=>'password')); ?>
 					<?php echo $this->Form->input('User.accepttos', array('label' => 'I accept the', 'type' => 'checkbox', 'value' => '1')); ?>
 					<a href="/info/tos">Terms of Service</a>
 					<?php echo $this->Form->end('Register', array('class' => 'submitButton registerButton')); ?>
