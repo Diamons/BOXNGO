@@ -39,8 +39,6 @@ class PagesController extends AppController {
 	public $name = 'Pages';
 
 /**
- * This controller does not use a model
- *
  * @var array
  */
 	public $uses = array('Shop', 'Category', 'Course');

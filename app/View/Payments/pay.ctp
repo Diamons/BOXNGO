@@ -3,15 +3,13 @@
 	echo $this->Html->css('payments/pay');
 	$this->end();
 ?>
+
 <div class="wrapper" id="content">
 	<div class="row">
-		<div class="product_desc">
-			<a href="<?php echo $this->webroot; ?>shops/viewlisting/<?php echo $listing['Shop']['id']; ?>"><?php echo nl2br(h($listing['Shop']['name'])); ?></a>
-		</div>
 		<div class="nine columns">
 			<div id="shipping_pane">
 				<?php echo $this->Form->create('Payment', array('action' => 'process/'.$listing['Shop']['id'])); ?>
-				<h1 class="subheader">Shipping Info</h1>
+				<h1 class="subheader">1. Shipping Information</h1>
 				<div class="row">
 					<div class="six columns"><?php echo $this->Form->input('Payment.firstName'); ?></div>
 					<div class="six columns"><?php echo $this->Form->input('Payment.lastName'); ?></div>
@@ -22,8 +20,12 @@
 					<div class="two columns"><?php echo $this->Form->input('Payment.state'); ?></div>
 					<div class="two columns"><?php echo $this->Form->input('Payment.zipcode', array('type' => 'text')); ?></div>
 				</div>
+			</div>
+			<div id="payment_options">
 				<div class="clearfix payment_container">
-					<div>
+					<h1 class="subheader">2. Payment Options</h1>
+					<?php echo $this->Form->input('Payment.coupon_code'); ?>
+					<div class="stripe_button">
 						<script src="https://button.stripe.com/v1/button.js" class="stripe-button"
 						  data-key="<?php echo $stripekey; ?>"
 						  data-amount="<?php echo ($listing['Shop']['price'] + $listing['Shop']['shipping']) * 100; ?>" data-description="<?php echo $listing['User']['username']; ?>">
@@ -36,6 +38,7 @@
 
 		<div class="three columns">
 			<div id="summary">
+					<a href="<?php echo $this->webroot; ?>shops/viewlisting/<?php echo $listing['Shop']['id']; ?>"><?php echo nl2br(h($listing['Shop']['name'])); ?></a>
 				<h1 class="header">Purchase Summary</h1>
 				<div class="row">
 					<div class="four columns">Shipping</div>
