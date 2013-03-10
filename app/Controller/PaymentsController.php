@@ -19,18 +19,17 @@ class PaymentsController extends AppController {
 					$this->redirect($this->referer());
 				}
 				
+				$coupon = NULL;
 				if($this->request->is('post') && !empty($this->request->data['Coupon']['code'])){
 					$this->Coupon->set($this->request->data);
 					if(!$this->Coupon->validates()){
-						$coupon = $this->Coupon->find("first", array("conditions" => array("Coupon.code" => $this->request->data['Coupon']['code'])));
-						$this->Session->setFlash("Your coupon has been applied!", "flash_success");
-					}
-					else
 						$this->Session->setFlash("That coupon was not valid! Please try again, or contact support if you believe this is an error.", "flash_error");
+					}else{
+						$coupon = $this->Coupon->find("first", array("conditions" => array("Coupon.code" => $this->request->data['Coupon']['code'])));
+					}
 				}
-				if(!isset($coupon))
-					$coupon = NULL;
-				$price = $this->Coupon->apply(array('id' => $listing['Shop']['id'], 'price' => $listing['Shop']['price'], 'shipping' => $listing['Shop']['shipping']), $coupon);
+				
+				$price = $this->Payment->paymentTotal(array('id' => $listing['Shop']['id'], 'price' => $listing['Shop']['price'], 'shipping' => $listing['Shop']['shipping']), $coupon);
 				if($price['applied'] == true)
 					$this->Session->setFlash("Your coupon has been applied!", "flash_success");
 				elseif(isset($coupon) && $price['applied'] == false)

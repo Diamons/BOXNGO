@@ -14,9 +14,4 @@
 			else
 				return false;
 		}
-		
-		public function apply($listing, $coupon){
-			debug($listing);
-			debug($coupon);
-		}
 	}
