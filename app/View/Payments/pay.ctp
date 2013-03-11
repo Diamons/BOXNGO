@@ -44,7 +44,11 @@
 					<div class="stripe_button">
 						<script src="https://button.stripe.com/v1/button.js" class="stripe-button"
 						  data-key="<?php echo $stripekey; ?>"
-						  data-amount="<?php echo ($price['Price']['total_price'] * 100); ?>" data-description="Buying <?php echo $listing['Shop']['name']; ?>">
+						  data-image="<?php echo $listing['Image'][0]['url']; ?>"
+ 						  data-amount="<?php echo ($price['Price']['total_price'] * 100); ?>" 
+						  data-name="<?php echo h($listing['Shop']['name']); ?>"
+						  data-description="<?php echo h($listing['Shop']['description']); ?>"
+						  >
 						</script>
 					</div>
 				</div>
@@ -64,9 +68,15 @@
 					<div class="four columns">Price</div>
 					<div class="eight columns"><b>$<?php echo $listing['Shop']['price']; ?></b></div>
 				</div>
+				<?php if($price['applied'] == true){ ?>
+				<div class="coupon_applied row">
+					<div class="four columns">Coupon</div>
+					<div class="eight columns"><b>-$<?php echo number_format($listing['Shop']['price'] - $price['Price']['total_price'], 2); ?></b></div>
+				</div>
+				<?php } ?>
 				<div class="total row">
 					<div class="four columns">Total</div>
-					<div class="eight columns"><b>$<?php echo number_format($listing['Shop']['price'] + $listing['Shop']['shipping'], 2); ?></b></div>
+					<div class="eight columns"><b>$<?php echo number_format($price['Price']['total_price'], 2); ?></b></div>
 				</div>
 			</div>
 		</div>
