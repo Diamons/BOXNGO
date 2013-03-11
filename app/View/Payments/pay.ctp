@@ -7,8 +7,8 @@
 <div class="wrapper" id="content">
 	<div class="row">
 		<div class="nine columns">
+			<?php echo $this->Form->create('Payment', array('action' => 'process/'.$listing['Shop']['id'])); ?>
 			<div id="shipping_pane">
-				<?php echo $this->Form->create('Payment', array('action' => 'process/'.$listing['Shop']['id'])); ?>
 				<h1 class="subheader">1. Shipping Information</h1>
 				<div class="row">
 					<div class="six columns"><?php echo $this->Form->input('Payment.firstName'); ?></div>
@@ -24,16 +24,17 @@
 			<div id="payment_options">
 				<div class="clearfix payment_container">
 					<h1 class="subheader">2. Payment Options</h1>
-					<?php echo $this->Form->input('Payment.coupon_code'); ?>
+					<div class="row">
+						<div class="twelve columns"><?php echo $this->Form->input('Payment.coupon_code'); ?></div></div>
 					<div class="stripe_button">
 						<script src="https://button.stripe.com/v1/button.js" class="stripe-button"
 						  data-key="<?php echo $stripekey; ?>"
 						  data-amount="<?php echo ($listing['Shop']['price'] + $listing['Shop']['shipping']) * 100; ?>" data-description="<?php echo $listing['User']['username']; ?>">
 						</script>
-						<?php echo $this->Form->end(); ?>
 					</div>
 				</div>
 			</div>
+			<?php echo $this->Form->end(); ?>
 		</div>
 
 		<div class="three columns">
@@ -53,7 +54,6 @@
 					<div class="eight columns"><b>$<?php echo number_format($listing['Shop']['price'] + $listing['Shop']['shipping'], 2); ?></b></div>
 				</div>
 			</div>
-			
 		</div>
 		
 	</div>

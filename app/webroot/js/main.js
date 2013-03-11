@@ -38,6 +38,9 @@ $(function(){
 		});
 	});
 	
+	$("#searchTrigger").on("click", function(){
+		$("#SearchIndexForm").submit();
+	});
 });
 
 function getDomain(){

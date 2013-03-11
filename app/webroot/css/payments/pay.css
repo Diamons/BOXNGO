@@ -63,7 +63,7 @@ h1.subheader.profile{
 	background: #A2CF02;
 	border: 1px solid #A2CF02;
 }
-#shipping_pane label{
+#shipping_pane label, #payment_options label{
 	font-size: 12px;
 	font-weight: 700;
 }
@@ -88,9 +88,7 @@ h1.subheader.profile{
 	font-size: 18px;
 }
 
-.payment_container .stripe-button-el{
-	margin: 10px 20px;
-}
-.payment_container > div{
+.payment_container .stripe_button{
 	float: right;
+	padding: 0 28px 22px 0;
 }

@@ -93,6 +93,18 @@ div.wrapper{
 	margin-left: 10px;
 }
 
+#searchTrigger{
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 5px;
+	top: 4px;
+}
+
+#searchTrigger:hover{
+	cursor: pointer;
+}
+
 #user_menu > li > a{
 	color: #CCC;
 	padding: 20px 8px;
@@ -208,6 +220,7 @@ footer a.support:hover{
 	width: 55%;
 	float: left;
 	margin-top: -4px;
+	position: relative;
 }
 #actions{
 	text-align: right;
