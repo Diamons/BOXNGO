@@ -36,14 +36,15 @@
 				return $results;
 			}else{
 				$results['applied'] = true;
-				if($coupon['Coupon']['percent_discount'] > 0)
+				if($coupon['Coupon']['percent_discount'] > 0){
 					$results['Price']['total_price'] = ($listing['price'] - $listing['price']*$coupon['Coupon']['percent_discount']) + $listing['shipping'];
-				elseif($coupon['Coupon']['amount_discount'] > 0)
+					$results['Price']['message'] = "Your coupon has been applied for a ".$coupon['Coupon']['percent_discount']."% discount.";
+				}elseif($coupon['Coupon']['amount_discount'] > 0){
 					$results['Price']['total_price'] -= $coupon['Coupon']['amount_discount'];
-
+					$results['Price']['message'] = "Your coupon has been applied for a $".$coupon['Coupon']['amount_discount']." discount.";
+				}
 				$this->useCoupon($coupon['Coupon']['id']);
 			}
-			debug($results);
 			return $results;
 		}
 

@@ -29,16 +29,22 @@
 					<h1 class="subheader">2. Payment Options</h1>
 					<div class="row">
 						<div class="eleven columns">
-							<?php echo $this->Form->input('Coupon.code'); ?>
+							<?php if($price['applied'] == FALSE){ ?>
+								<?php echo $this->Form->input('Coupon.code'); ?>
+							<?php }else{ ?>
+								<?php echo $price['Price']['message']; ?>
+							<?php } ?>
 						</div>
 						<div class="one columns">
-							<a href="#" id="applyCoupon">Apply</a>
+							<?php if($price['applied'] == FALSE){ ?>
+								<a href="#" id="applyCoupon">Apply</a>
+							<?php } ?>
 						</div>
 					</div>
 					<div class="stripe_button">
 						<script src="https://button.stripe.com/v1/button.js" class="stripe-button"
 						  data-key="<?php echo $stripekey; ?>"
-						  data-amount="<?php echo ($price['Price']['total_price'] * 100); ?>" data-description="<?php echo $listing['User']['username']; ?>">
+						  data-amount="<?php echo ($price['Price']['total_price'] * 100); ?>" data-description="Buying <?php echo $listing['Shop']['name']; ?>">
 						</script>
 					</div>
 				</div>
