@@ -2,12 +2,15 @@
 	$this->start('css');
 	echo $this->Html->css('payments/pay');
 	$this->end();
+	$this->start('scriptBottom');
+	echo $this->Html->script('payments/pay');
+	$this->end();
 ?>
 
 <div class="wrapper" id="content">
 	<div class="row">
 		<div class="nine columns">
-			<?php echo $this->Form->create('Payment', array('action' => 'process/'.$listing['Shop']['id'])); ?>
+			<?php echo $this->Form->create('Payment', array('id' => 'PaymentForm', 'data-coupon' => '/payments/pay/'.$listing['Shop']['id'], 'action' => 'process/'.$listing['Shop']['id'])); ?>
 			<div id="shipping_pane">
 				<h1 class="subheader">1. Shipping Information</h1>
 				<div class="row">
@@ -25,7 +28,13 @@
 				<div class="clearfix payment_container">
 					<h1 class="subheader">2. Payment Options</h1>
 					<div class="row">
-						<div class="twelve columns"><?php echo $this->Form->input('Payment.coupon_code'); ?></div></div>
+						<div class="eleven columns">
+							<?php echo $this->Form->input('Coupon.code'); ?>
+						</div>
+						<div class="one columns">
+							<a href="#" id="applyCoupon">Apply</a>
+						</div>
+					</div>
 					<div class="stripe_button">
 						<script src="https://button.stripe.com/v1/button.js" class="stripe-button"
 						  data-key="<?php echo $stripekey; ?>"

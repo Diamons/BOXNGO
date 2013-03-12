@@ -92,3 +92,30 @@ h1.subheader.profile{
 	float: right;
 	padding: 0 28px 22px 0;
 }
+
+.payment_container .stripe-button-el{
+	margin: 10px 20px;
+}
+
+.payment_container .stripe_button{
+	text-align: right;
+}
+
+#applyCoupon{
+	display: block;
+	margin-top: 23px;
+	padding: 6px 0;
+	text-align: center;
+	background: #5C5C5C;
+	color: #FFF;
+	font-size: 12px;
+	border-radius: 4px;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	-moz-transition: .2s;
+	transition: .2s;
+}
+
+#applyCoupon:hover{
+	background: #3299CC;
+}

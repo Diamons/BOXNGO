@@ -1,6 +1,6 @@
 <?php
 class PaymentsController extends AppController {
-	var $uses = array('Payment', 'Shop', 'Order');
+	var $uses = array('Coupon', 'Payment', 'Shop', 'Order');
 	var $components = array('Stripe.Stripe', 'Shipping.Shipping');
 	public function beforeFilter(){
 		parent::beforeFilter();
@@ -18,13 +18,30 @@ class PaymentsController extends AppController {
 					$this->Session->setFlash("You can't buy your own stuff silly!", "flash_warning");
 					$this->redirect($this->referer());
 				}
+				
+				$coupon = NULL;
+				if($this->request->is('post') && !empty($this->request->data['Coupon']['code'])){
+					$this->Coupon->set($this->request->data);
+					if(!$this->Coupon->validates()){
+						$this->Session->setFlash("That coupon was not valid! Please try again, or contact support if you believe this is an error.", "flash_error");
+					}else{
+						$coupon = $this->Coupon->find("first", array("conditions" => array("Coupon.code" => $this->request->data['Coupon']['code'])));
+					}
+				}
+				
+				$price = $this->Payment->paymentTotal(array('id' => $listing['Shop']['id'], 'price' => $listing['Shop']['price'], 'shipping' => $listing['Shop']['shipping']), $coupon);
+				if($price['applied'] == true)
+					$this->Session->setFlash("Your coupon has been applied!", "flash_success");
+				elseif(isset($coupon) && $price['applied'] == false)
+					$this->Session->setFlash($price['error_message'], "flash_error");
 				$this->set("stripekey", $this->Stripe->getKey());
+				$this->set("price", $price);
 				$this->set("listing", $listing);
 			} else {
 				$this->redirect($this->referer());
 			}
 		} else {
-				$this->redirect($this->referer());
+			$this->redirect($this->referer());
 		}
 	}
 	

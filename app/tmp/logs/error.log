@@ -1519,6 +1519,7 @@ Request URL: /phpMyAdmin-2.5.7-pl1/index.php
 Stack Trace:
 #0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< HEAD
 2013-03-07 03:25:15 Error: [MissingControllerException] Controller class PhpMyAdminController could not be found.
 Exception Attributes: array (
   'class' => 'PhpMyAdminController',
@@ -3717,12 +3718,145 @@ Exception Attributes: array (
   'class' => 'Mysql',
   'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
 ',
+=======
+2013-03-11 13:36:01 Error: [MissingTableException] Table users for model User was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'test',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('users')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#3 C:\wamp\www\boxngo2\lib\Cake\View\Helper\FormHelper.php(446): FormHelper->_introspectModel('User', 'fields')
+#4 C:\wamp\www\boxngo2\app\View\Pages\home.ctp(55): FormHelper->create('User', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#6 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#7 C:\wamp\www\boxngo2\lib\Cake\View\View.php(470): View->_render('C:\wamp\www\box...')
+#8 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('home', NULL)
+#9 C:\wamp\www\boxngo2\app\Controller\PagesController.php(84): Controller->render('home')
+#10 [internal function]: PagesController->display('home')
+#11 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#12 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-03-11 13:36:32 Error: [MissingTableException] Table users for model User was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'test',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('users')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#3 C:\wamp\www\boxngo2\lib\Cake\View\Helper\FormHelper.php(446): FormHelper->_introspectModel('User', 'fields')
+#4 C:\wamp\www\boxngo2\app\View\Pages\home.ctp(55): FormHelper->create('User', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#6 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#7 C:\wamp\www\boxngo2\lib\Cake\View\View.php(470): View->_render('C:\wamp\www\box...')
+#8 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('home', NULL)
+#9 C:\wamp\www\boxngo2\app\Controller\PagesController.php(84): Controller->render('home')
+#10 [internal function]: PagesController->display('home')
+#11 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#12 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-03-11 13:36:40 Error: [MissingTableException] Table users for model User was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'test',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('users')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\lib\Cake\View\Helper\FormHelper.php(197): Model->schema()
+#3 C:\wamp\www\boxngo2\lib\Cake\View\Helper\FormHelper.php(446): FormHelper->_introspectModel('User', 'fields')
+#4 C:\wamp\www\boxngo2\app\View\Pages\home.ctp(55): FormHelper->create('User', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#6 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#7 C:\wamp\www\boxngo2\lib\Cake\View\View.php(470): View->_render('C:\wamp\www\box...')
+#8 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('home', NULL)
+#9 C:\wamp\www\boxngo2\app\Controller\PagesController.php(84): Controller->render('home')
+#10 [internal function]: PagesController->display('home')
+#11 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#12 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-03-11 13:37:58 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
   'enabled' => true,
 )
 Request URL: /
 Stack Trace:
 #0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
 #1 C:\wamp\www\boxngo2\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\wamp\www\boxngo2\app\View\Elements\includes\wordpress.ctp(3): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#4 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\View\View.php(1210): View->_render('C:\wamp\www\box...', Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\View\View.php(413): View->_renderElement('C:\wamp\www\box...', Array, Array)
+#7 C:\wamp\www\boxngo2\app\View\Pages\home_user.ctp(19): View->element('includes\wordpr...')
+#8 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#9 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\View\View.php(470): View->_render('C:\wamp\www\box...')
+#11 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('home_user', NULL)
+#12 C:\wamp\www\boxngo2\app\Controller\PagesController.php(84): Controller->render('home_user')
+#13 [internal function]: PagesController->display('home')
+#14 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#15 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#16 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-03-11 13:42:20 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\wamp\www\boxngo2\app\View\Elements\includes\wordpress.ctp(3): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#4 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\View\View.php(1210): View->_render('C:\wamp\www\box...', Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\View\View.php(413): View->_renderElement('C:\wamp\www\box...', Array, Array)
+#7 C:\wamp\www\boxngo2\app\View\Pages\home_user.ctp(19): View->element('includes\wordpr...')
+#8 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#9 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\View\View.php(470): View->_render('C:\wamp\www\box...')
+#11 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('home_user', NULL)
+#12 C:\wamp\www\boxngo2\app\Controller\PagesController.php(84): Controller->render('home_user')
+#13 [internal function]: PagesController->display('home')
+#14 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#15 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#16 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-03-11 13:43:10 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+>>>>>>> 16d91c7b7337d3fefde0ecfa7b0fbba31c78e411
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+<<<<<<< HEAD
 #2 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3195): ConnectionManager::getDataSource('test')
 #3 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1107): Model->setDataSource('test')
 #4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('users')
@@ -3746,12 +3880,36 @@ Exception Attributes: array (
   'class' => 'Mysql',
   'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
 ',
+=======
+#2 C:\wamp\www\boxngo2\app\View\Elements\includes\wordpress.ctp(3): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#4 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\View\View.php(1210): View->_render('C:\wamp\www\box...', Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\View\View.php(413): View->_renderElement('C:\wamp\www\box...', Array, Array)
+#7 C:\wamp\www\boxngo2\app\View\Pages\home_user.ctp(19): View->element('includes\wordpr...')
+#8 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#9 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\View\View.php(470): View->_render('C:\wamp\www\box...')
+#11 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('home_user', NULL)
+#12 C:\wamp\www\boxngo2\app\Controller\PagesController.php(84): Controller->render('home_user')
+#13 [internal function]: PagesController->display('home')
+#14 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#15 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#16 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-03-11 13:43:47 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+>>>>>>> 16d91c7b7337d3fefde0ecfa7b0fbba31c78e411
   'enabled' => true,
 )
 Request URL: /
 Stack Trace:
 #0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
 #1 C:\wamp\www\boxngo2\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+<<<<<<< HEAD
 #2 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3195): ConnectionManager::getDataSource('test')
 #3 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1107): Model->setDataSource('test')
 #4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('users')
@@ -3779,3 +3937,201 @@ Request URL: /images/search.png
 Stack Trace:
 #0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+=======
+#2 C:\wamp\www\boxngo2\app\View\Elements\includes\wordpress.ctp(3): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#4 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\View\View.php(1210): View->_render('C:\wamp\www\box...', Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\View\View.php(413): View->_renderElement('C:\wamp\www\box...', Array, Array)
+#7 C:\wamp\www\boxngo2\app\View\Pages\home_user.ctp(19): View->element('includes\wordpr...')
+#8 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#9 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\View\View.php(470): View->_render('C:\wamp\www\box...')
+#11 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('home_user', NULL)
+#12 C:\wamp\www\boxngo2\app\Controller\PagesController.php(84): Controller->render('home_user')
+#13 [internal function]: PagesController->display('home')
+#14 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#15 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#16 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-03-11 13:45:31 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(261): Mysql->connect()
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\wamp\www\boxngo2\app\View\Elements\includes\wordpress.ctp(3): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#4 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\View\View.php(1210): View->_render('C:\wamp\www\box...', Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\View\View.php(413): View->_renderElement('C:\wamp\www\box...', Array, Array)
+#7 C:\wamp\www\boxngo2\app\View\Pages\home_user.ctp(19): View->element('includes\wordpr...')
+#8 C:\wamp\www\boxngo2\lib\Cake\View\View.php(947): include('C:\wamp\www\box...')
+#9 C:\wamp\www\boxngo2\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\box...', Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\View\View.php(470): View->_render('C:\wamp\www\box...')
+#11 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render('home_user', NULL)
+#12 C:\wamp\www\boxngo2\app\Controller\PagesController.php(84): Controller->render('home_user')
+#13 [internal function]: PagesController->display('home')
+#14 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#15 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#16 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-03-11 14:22:36 Error: Fatal Error (1): Call to a member function validates() on a non-object in [C:\wamp\www\boxngo2\app\Controller\PaymentsController.php, line 23]
+2013-03-11 14:22:36 Error: [FatalErrorException] Call to a member function validates() on a non-object
+Request URL: /payments/pay/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\box...', 23)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\box...', 23, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\box...', 23, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-11 14:22:51 Error: Fatal Error (1): Call to a member function validates() on a non-object in [C:\wamp\www\boxngo2\app\Controller\PaymentsController.php, line 23]
+2013-03-11 14:22:51 Error: [FatalErrorException] Call to a member function validates() on a non-object
+Request URL: /payments/pay/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\box...', 23)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\box...', 23, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\box...', 23, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-11 14:22:56 Error: Fatal Error (1): Call to a member function validates() on a non-object in [C:\wamp\www\boxngo2\app\Controller\PaymentsController.php, line 23]
+2013-03-11 14:22:56 Error: [FatalErrorException] Call to a member function validates() on a non-object
+Request URL: /payments/pay/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\box...', 23)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\box...', 23, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\box...', 23, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-11 14:33:59 Error: Fatal Error (4): syntax error, unexpected T_ELSE in [C:\wamp\www\boxngo2\app\Controller\PaymentsController.php, line 26]
+2013-03-11 14:33:59 Error: [FatalErrorException] syntax error, unexpected T_ELSE
+Request URL: /payments/pay/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 26)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 26, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 26, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-11 14:34:38 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\boxngo2\lib\Cake\Utility\Debugger.php, line 815]
+2013-03-11 14:34:38 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /payments/pay/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\box...', 815)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\box...', 815, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\box...', 815, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-11 14:35:28 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\boxngo2\lib\Cake\Utility\Debugger.php, line 548]
+2013-03-11 14:35:28 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /payments/pay/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\box...', 548)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\box...', 548, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\box...', 548, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-11 14:35:28 Error: Fatal Error (4): syntax error, unexpected T_EXIT, expecting T_FUNCTION in [C:\wamp\www\boxngo2\app\Model\Coupon.php, line 3]
+2013-03-11 14:35:28 Error: [FatalErrorException] syntax error, unexpected T_EXIT, expecting T_FUNCTION
+Request URL: /payments/pay/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 3, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 3, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-11 14:35:35 Error: Fatal Error (4): syntax error, unexpected T_EXIT, expecting T_FUNCTION in [C:\wamp\www\boxngo2\app\Model\Coupon.php, line 3]
+2013-03-11 14:35:35 Error: [FatalErrorException] syntax error, unexpected T_EXIT, expecting T_FUNCTION
+Request URL: /payments/pay/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 3, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 3, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-11 14:42:31 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [C:\wamp\www\boxngo2\app\Model\Coupon.php, line 11]
+2013-03-11 14:42:31 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /payments/pay/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 11, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 11, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-11 14:50:51 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW, expecting ')' in [C:\wamp\www\boxngo2\app\Controller\PaymentsController.php, line 25]
+2013-03-11 14:50:51 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW, expecting ')'
+Request URL: /payments/pay/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 25, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 25, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-10 17:53:15 Error: Fatal Error (1): Call to a member function applyCoupon() on a non-object in [C:\wamp\www\rr\app\Controller\PaymentsController.php, line 33]
+2013-03-10 17:53:15 Error: [FatalErrorException] Call to a member function applyCoupon() on a non-object
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\rr\...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\rr\...', 33, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\rr\...', 33, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-10 17:53:30 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'applyCoupon' at line 1
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('applyCoupon', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('applyCoupon', Array, Array)
+#3 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('applyCoupon', Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(799): DboSource->query('applyCoupon', Array, Object(Payment))
+#5 C:\wamp\www\rr\app\Controller\PaymentsController.php(33): Model->__call('applyCoupon', Array)
+#6 C:\wamp\www\rr\app\Controller\PaymentsController.php(33): Payment->applyCoupon(Array, NULL)
+#7 [internal function]: PaymentsController->pay('20')
+#8 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-10 17:58:09 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'applyCoupon' at line 1
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('applyCoupon', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('applyCoupon', Array, Array)
+#3 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('applyCoupon', Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(799): DboSource->query('applyCoupon', Array, Object(Payment))
+#5 C:\wamp\www\rr\app\Controller\PaymentsController.php(33): Model->__call('applyCoupon', Array)
+#6 C:\wamp\www\rr\app\Controller\PaymentsController.php(33): Payment->applyCoupon(Array, NULL)
+#7 [internal function]: PaymentsController->pay('20')
+#8 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-10 20:31:00 Error: Fatal Error (1): Call to undefined method DateTime::date() in [C:\wamp\www\rr\app\Model\Payment.php, line 17]
+2013-03-10 20:31:00 Error: [FatalErrorException] Call to undefined method DateTime::date()
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\rr\...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\rr\...', 17, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\rr\...', 17, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+>>>>>>> 16d91c7b7337d3fefde0ecfa7b0fbba31c78e411

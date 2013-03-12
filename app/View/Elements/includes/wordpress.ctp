@@ -1,6 +1,6 @@
 <?php
 	App::uses('ConnectionManager', 'Model');
-	$dataSource = ConnectionManager::getDataSource('default');
+	$dataSource = ConnectionManager::getDataSource('test');
 	$mysql = mysql_connect($dataSource->config['host'], $dataSource->config['login'], $dataSource->config['password']);
 	mysql_select_db($dataSource->config['database']);
 	
