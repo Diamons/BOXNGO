@@ -28,10 +28,10 @@ class PaymentsController extends AppController {
 						$coupon = $this->Coupon->find("first", array("conditions" => array("Coupon.code" => $this->request->data['Coupon']['code'])));
 					}
 				}
-				
 				$price = $this->Payment->paymentTotal(array('id' => $listing['Shop']['id'], 'price' => $listing['Shop']['price'], 'shipping' => $listing['Shop']['shipping']), $coupon);
 				if($price['applied'] == true)
 					$this->Session->setFlash("Your coupon has been applied!", "flash_success");
+				
 				elseif(isset($coupon) && $price['applied'] == false)
 					$this->Session->setFlash($price['error_message'], "flash_error");
 				$this->set("stripekey", $this->Stripe->getKey());

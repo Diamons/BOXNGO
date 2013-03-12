@@ -38,7 +38,7 @@
 					<div class="stripe_button">
 						<script src="https://button.stripe.com/v1/button.js" class="stripe-button"
 						  data-key="<?php echo $stripekey; ?>"
-						  data-amount="<?php echo ($listing['Shop']['price'] + $listing['Shop']['shipping']) * 100; ?>" data-description="<?php echo $listing['User']['username']; ?>">
+						  data-amount="<?php echo ($price['Price']['total_price'] * 100); ?>" data-description="<?php echo $listing['User']['username']; ?>">
 						</script>
 					</div>
 				</div>

@@ -7,6 +7,7 @@
 
 #summary > *{
 	font-size: 12px;
+	padding: 0 10px;
 }
 h1.header{
 	padding: 0 22px 10px 10px;
@@ -90,7 +91,6 @@ h1.subheader.profile{
 
 .payment_container .stripe_button{
 	float: right;
-	padding: 0 28px 22px 0;
 }
 
 .payment_container .stripe-button-el{

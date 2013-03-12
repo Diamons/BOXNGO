@@ -4135,3 +4135,227 @@ Stack Trace:
 #4 [internal function]: App::shutdown()
 #5 {main}
 >>>>>>> 16d91c7b7337d3fefde0ecfa7b0fbba31c78e411
+2013-03-12 08:37:01 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 29]
+2013-03-12 08:37:01 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:37:05 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 29]
+2013-03-12 08:37:05 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:37:16 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 29]
+2013-03-12 08:37:16 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF
+Request URL: /payments/
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:37:24 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 29]
+2013-03-12 08:37:24 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF
+Request URL: /users
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:38:57 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 29]
+2013-03-12 08:38:57 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF
+Request URL: /users
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:39:03 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 29]
+2013-03-12 08:39:03 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF
+Request URL: /users
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:39:15 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 29]
+2013-03-12 08:39:15 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF
+Request URL: /users
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:39:35 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF, expecting T_FUNCTION in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 29]
+2013-03-12 08:39:35 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF, expecting T_FUNCTION
+Request URL: /users
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:39:43 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF, expecting T_FUNCTION in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 29]
+2013-03-12 08:39:43 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF, expecting T_FUNCTION
+Request URL: /users
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 29, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:39:49 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF, expecting T_FUNCTION in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 30]
+2013-03-12 08:39:49 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF, expecting T_FUNCTION
+Request URL: /users
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 30)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 30, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 30, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:55:17 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 42]
+2013-03-12 08:55:17 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 42, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 42, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:55:27 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 42]
+2013-03-12 08:55:27 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 42, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 42, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:55:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'PRIMARY'
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Payment), Array, Array)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1591): Model->save(Array, Array)
+#5 C:\wamp\www\boxngo2\app\Model\Payment.php(57): Model->saveField('status', 2)
+#6 C:\wamp\www\boxngo2\app\Model\Payment.php(27): Payment->markExpired('1')
+#7 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(32): Payment->paymentTotal(Array, Array)
+#8 [internal function]: PaymentsController->pay('20')
+#9 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-12 08:57:19 Error: Fatal Error (4): syntax error, unexpected T_ELSEIF in [C:\wamp\www\boxngo2\app\Controller\PaymentsController.php, line 36]
+2013-03-12 08:57:19 Error: [FatalErrorException] syntax error, unexpected T_ELSEIF
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 36, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 36, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-12 08:59:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'PRIMARY'
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Payment), Array, Array)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1591): Model->save(Array, Array)
+#5 C:\wamp\www\boxngo2\app\Model\Payment.php(62): Model->saveField('status', 2)
+#6 C:\wamp\www\boxngo2\app\Model\Payment.php(32): Payment->markExpired('1')
+#7 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(33): Payment->paymentTotal(Array, Array)
+#8 [internal function]: PaymentsController->pay('20')
+#9 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-12 09:01:12 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'PRIMARY'
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Payment), Array, Array)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1591): Model->save(Array, Array)
+#5 C:\wamp\www\boxngo2\app\Model\Payment.php(63): Model->saveField('status', 2)
+#6 C:\wamp\www\boxngo2\app\Model\Payment.php(32): Payment->markExpired('1')
+#7 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(33): Payment->paymentTotal(Array, Array)
+#8 [internal function]: PaymentsController->pay('20')
+#9 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-12 09:04:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'PRIMARY'
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1734): DboSource->create(Object(Payment), Array, Array)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1591): Model->save(Array, Array)
+#5 C:\wamp\www\boxngo2\app\Model\Payment.php(64): Model->saveField('status', 2)
+#6 C:\wamp\www\boxngo2\app\Model\Payment.php(32): Payment->markExpired('1')
+#7 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(33): Payment->paymentTotal(Array, Array)
+#8 [internal function]: PaymentsController->pay('20')
+#9 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-03-12 09:06:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Coupon.payment_id' in 'on clause'
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Payment...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Payment...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Payment...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2674): DboSource->read(Object(Payment), Array)
+#5 C:\wamp\www\boxngo2\app\Model\Payment.php(7): Model->find('first', Array)
+#6 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(14): Payment->userBoughtAlready('26', '20')
+#7 [internal function]: PaymentsController->pay('20')
+#8 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-12 09:07:55 Error: Fatal Error (1): Class 'CouponModel' not found in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 64]
+2013-03-12 09:07:55 Error: [FatalErrorException] Class 'CouponModel' not found
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Class 'CouponMo...', 'C:\wamp\www\box...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'CouponMo...', 'C:\wamp\www\box...', 64, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'CouponMo...', 'C:\wamp\www\box...', 64, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
