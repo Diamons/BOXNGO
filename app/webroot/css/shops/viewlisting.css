@@ -6,7 +6,7 @@
 	background: #ECECEC;
 }
 #listingPics img{
-	display: block;
+	display: none;
 	margin: auto;
 	height: 100%;
 }
