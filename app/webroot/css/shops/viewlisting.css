@@ -11,6 +11,10 @@
 	height: 100%;
 }
 
+#listingPics img.show{
+	display: block;
+}
+
 #listingPics > *{
 	height: 100% !important;
 }
