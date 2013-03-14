@@ -56,7 +56,7 @@
 			if($this->request->is('post')){
 				$this->request->data['Entry']['promotion'] = "march2013madness";
 				if($this->Entry->save($this->request->data)){
-					$this->Session->setFlash("Congratulations!", "flash_success");
+					$this->Session->setFlash("To redeem, simply use the coupon during checkout!", "flash_success");
 					$this->set("entered", "true");
 				}
 				else
