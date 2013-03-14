@@ -4,7 +4,8 @@ echo $this->Html->css(array('promotions/march2013'));
 $this->end();
 $this->start('scriptBottom');
 	echo'<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>';
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "cffa0d8a-32aa-4e85-aabf-01228a58cf29"});</script>';
 $this->end();
 ?>
 <div id="content" class="wrapper">
