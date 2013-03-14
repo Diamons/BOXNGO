@@ -1,6 +1,6 @@
 <?php
 	App::uses('ConnectionManager', 'Model');
-	$dataSource = ConnectionManager::getDataSource('test');
+	$dataSource = ConnectionManager::getDataSource('default');
 	$mysql = mysql_connect($dataSource->config['host'], $dataSource->config['login'], $dataSource->config['password']);
 	mysql_select_db($dataSource->config['database']);
 	
@@ -8,9 +8,9 @@
 		while ($row = mysql_fetch_assoc($result)) { ?>
 			<div class="blog_post">
 				<a href="<?php echo $row['guid']; ?>"><?php echo $row['post_title']; ?></a>
-				<span class="date"><?php echo $this->Time->timeAgoInWords($row['post_date'], array('format' => 'F jS, Y', 'end' => '+1 month')); ?></span>
+				
 				<div class="excerpt">
-					<?php echo trim(substr($row['post_content'], 0, 300))."..."; ?>
+					<span class="date"><?php echo $this->Time->timeAgoInWords($row['post_date'], array('format' => 'F jS, Y', 'end' => '+1 month')); ?></span> - <?php echo trim(substr($row['post_content'], 0, 300))."..."; ?>
 				</div>
 			</div>
 <?php	}

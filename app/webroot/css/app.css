@@ -366,15 +366,12 @@ header span.notification{
 }
 
 .blog_post{
-	margin-top: 15px;
-	border: 6px solid #DADADA;
-	border-radius: 15px;
 	padding: 15px;
+	border-bottom: 1px solid #DDD;
 }
 
-.blog_post:first-child{
-	margin-top: 30px;
-	border: 6px solid #EB6841;
+.blog_post img{
+	display: none;
 }
 
 .blog_post > a{
@@ -382,6 +379,10 @@ header span.notification{
 	color: #000;
 	font-weight: bold;
 	font-size: 9pt;
+}
+
+.blog_post p{
+	margin: 0;
 }
 
 .blog_post > span.date{
