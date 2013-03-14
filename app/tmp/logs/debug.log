@@ -1404,3 +1404,14 @@ MongodbSource::__destruct() - APP\Plugin\Mongodb\Model\Datasource\MongodbSource.
 2013-03-13 23:41:39 Debug: Stripe: charge id ch_1SJ7NMSShLT3Pp
 2013-03-14 00:40:05 Debug: Stripe: charge id ch_1SK3eBORGW2pMS
 2013-03-14 00:56:30 Debug: Stripe: charge id ch_1SKK4g2AzSobfI
+2013-03-14 03:24:37 Debug: Notice (8): Undefined variable: entered in [C:\wamp\www\boxngo2\app\View\Promotions\march2013.ctp, line 17]
+Trace:
+include - APP\View\Promotions\march2013.ctp, line 17
+View::_evaluate() - CORE\Cake\View\View.php, line 947
+View::_render() - CORE\Cake\View\View.php, line 909
+View::render() - CORE\Cake\View\View.php, line 470
+Controller::render() - CORE\Cake\Controller\Controller.php, line 947
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 161
+[main] - APP\webroot\index.php, line 92
+

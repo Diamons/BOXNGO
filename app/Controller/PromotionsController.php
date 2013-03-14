@@ -4,13 +4,14 @@
 		public $components = array('Cookie');
 		
 		public function beforeFilter(){
-			$this->Auth->allow('february2013');
-			$this->Security->unlockedActions = array('february2013');
 			parent::beforeFilter();
-			
-			
+			$this->Security->unlockedActions = array('february2013', 'march2013');
+			$this->Auth->allow('february2013','march2013');			
 		}
 		public function february2013($step=NULL){
+
+			$this->Session->setFlash("This promotion has ended.", "flash_warning");
+
 			if($this->Auth->loggedin()){
 				$unique = $this->Entry->find("first", array("conditions" => array("Entry.user_id" => $this->Auth->user('id'))));
 				if(!empty($unique)){
@@ -48,5 +49,20 @@
 			}
 			
 			$this->redirect('/');
+		}
+
+		public function march2013(){
+			$this->set("entered", "false");
+			if($this->request->is('post')){
+				$this->request->data['Entry']['promotion'] = "march2013madness";
+				if($this->Entry->save($this->request->data)){
+					$this->Session->setFlash("Congratulations!", "flash_success");
+					$this->set("entered", "true");
+				}
+				else
+					$this->Session->setFlash("Please correct the errors below." , "flash_error");
+			}
+			
+			$this->set("title_for_layout", "Get 15% Off Your First Purchase!");
 		}
 	}

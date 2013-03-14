@@ -4876,3 +4876,668 @@ Stack Trace:
 #3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-03-14 02:46:40 Error: [MissingViewException] View file "C:\wamp\www\boxngo2\app\View\Promotions\march2013.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Promotions\\march2013.ctp',
+)
+Request URL: /promotions/march2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(467): View->_getViewFileName(NULL)
+#1 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(947): View->render(NULL, NULL)
+#2 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-03-14 03:07:59 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/promotions/march2013/bg.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:08:05 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/promotions/march2013/bg.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:21:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:21:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:22:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:22:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:23:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:24:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:25:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:26:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:27:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:27:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:27:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:27:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:27:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:27:33 Error: [BadRequestException] The request has been black-holed
+Request URL: /promotions/march2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(PromotionsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PromotionsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-03-14 03:27:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:27:36 Error: [BadRequestException] The request has been black-holed
+Request URL: /promotions/march2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(PromotionsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PromotionsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-03-14 03:27:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:27:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:27:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:27:58 Error: [BadRequestException] The request has been black-holed
+Request URL: /promotions/march2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(PromotionsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PromotionsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-03-14 03:28:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:28:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:28:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:28:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:28:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:28:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:28:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:30:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:31:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:31:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:31:57 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:32:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:32:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:32:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:32:46 Error: [BadRequestException] The request has been black-holed
+Request URL: /promotions/march2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(PromotionsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PromotionsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-03-14 03:32:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:32:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:33:22 Error: [BadRequestException] The request has been black-holed
+Request URL: /promotions/march2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(PromotionsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PromotionsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-03-14 03:33:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:33:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:33:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:33:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:34:05 Error: [BadRequestException] The request has been black-holed
+Request URL: /promotions/march2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(PromotionsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PromotionsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-03-14 03:34:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:34:39 Error: [BadRequestException] The request has been black-holed
+Request URL: /promotions/march2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(PromotionsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PromotionsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-03-14 03:34:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:34:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:34:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:35:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:35:16 Error: [BadRequestException] The request has been black-holed
+Request URL: /promotions/march2013
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(237): SecurityComponent->blackHole(Object(PromotionsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(PromotionsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-03-14 03:35:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:35:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:36:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:36:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:36:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:36:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:37:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:37:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:37:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:38:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:38:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:38:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:38:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:38:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:38:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:39:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-03-14 03:39:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/promotions/march2013.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
