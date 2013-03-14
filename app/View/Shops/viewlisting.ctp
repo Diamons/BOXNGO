@@ -69,13 +69,16 @@
 			<div id="description">
 				<?php echo nl2br(h($listing['Shop']['description'])); ?>
 			</div>
-			<div class="row">
+			<div id="similarItems" class="panel row">
+				<h4>Similar Items</h4>
 				<?php for($i = 0; $i < count($relatedItems); $i++){ ?>
-					
+					<div class="two columns">
+						<a href="/shops/viewlisting/<?php echo $relatedItems[$i]['Shop']['id']; ?>"><img src="<?php echo $relatedItems[$i]['Image'][0]['url']; ?>/convert?w=180&height=120&fit=crop" /><h5><?php echo $relatedItems[$i]['Shop']['name']; ?></h5></a>
+					</div>
 				<?php } ?>
 			</div>
 			<div id="reviews" class="row">
-				<div class="fb-comments" data-href="<?php echo "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-num-posts="2" data-width="700"></div>
+				<div class="fb-comments" data-href="<?php echo "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-num-posts="2" data-width="760"></div>
 			</div>
 		</div>
 		<div class="four columns">

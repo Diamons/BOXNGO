@@ -87,9 +87,9 @@ div.user_info{
 }
 
 #reviews{
-	padding: 10px 40px;
+	padding: 10px 0;
 	border-top: 1px solid #DDD;
-	margin-top: 60px;
+	margin-top: 20px;
 }
 
 #buy{
@@ -182,4 +182,29 @@ a#edit:hover{
 
 .avatar{
 	border-radius: 7px;
+}
+
+#similarItems{
+	margin-top: 5px;
+	padding: 10px;
+}
+
+#similarItems > .columns a{
+	padding: 0 5px;
+	display: block;
+}
+
+#similarItems h5{
+	margin: 0;
+	overflow-y: hidden;
+	max-height: 1em;
+	font-size: 11px;
+	color: inherit;
+}
+
+#similarItems h4{
+	display: none;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #666;
 }

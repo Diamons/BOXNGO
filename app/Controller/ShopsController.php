@@ -114,8 +114,10 @@
 					$this->set("favorite", $this->Favorite->find("first", array("conditions" => array("Favorite.user_id" => $this->Auth->user('id'), "Favorite.shop_id" => $listingid))));
 				}
 				
+				$relatedItems = $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 6));
+				$this->set("categories", $this->Category->find("all"));
 				$sameSchool = $this->School->sameSchool($this->Auth->user('username'), $listing['User']['username']);
-				$this->set(compact("listing", "sameSchool"));
+				$this->set(compact("listing", "sameSchool", "relatedItems"));
 			}
 		}
 		
