@@ -458,6 +458,11 @@ form input[type="submit"], .usermessage{
 	border-radius: 4px;
 }
 
+#sendmessage form input[type="submit"]{
+	margin: 0;
+	margin-top: 20px;
+}
+
 form input[type="submit"]:hover, .usermessage:hover{
 	cursor: pointer;
 	background: #FF7E00;

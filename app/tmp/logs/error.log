@@ -4369,3 +4369,510 @@ Stack Trace:
 #3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-03-13 23:36:36 Error: [CakeException] The required amount or stripeToken fields are missing.
+Request URL: /payments/process/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(52): StripeComponent->charge(Array)
+#1 [internal function]: PaymentsController->process('20')
+#2 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-03-13 23:51:06 Error: [BadRequestException] The request has been black-holed
+Request URL: /payments/process/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(234): SecurityComponent->blackHole(Object(PaymentsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(PaymentsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(131): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(183): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-03-14 00:03:03 Error: [MissingTableException] Table used_coupons for model UsedCoupon was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'used_coupons',
+  'class' => 'UsedCoupon',
+  'ds' => 'default',
+)
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('used_coupons')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1656): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(34): Model->save(Array)
+#3 [internal function]: PaymentsController->pay('20')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-14 00:03:19 Error: [MissingTableException] Table used_coupons for model UsedCoupon was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'used_coupons',
+  'class' => 'UsedCoupon',
+  'ds' => 'default',
+)
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('used_coupons')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1656): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(34): Model->save(Array)
+#3 [internal function]: PaymentsController->pay('20')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-14 00:04:33 Error: [MissingTableException] Table used_coupons for model UsedCoupon was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'used_coupons',
+  'class' => 'UsedCoupon',
+  'ds' => 'default',
+)
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('used_coupons')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1656): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(34): Model->save(Array)
+#3 [internal function]: PaymentsController->pay('20')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-14 00:05:15 Error: [MissingTableException] Table used_coupons for model UsedCoupon was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'used_coupons',
+  'class' => 'UsedCoupon',
+  'ds' => 'default',
+)
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('used_coupons')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1656): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(34): Model->save(Array)
+#3 [internal function]: PaymentsController->pay('20')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-14 00:05:36 Error: [MissingTableException] Table used_coupons for model UsedCoupon was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'used_coupons',
+  'class' => 'UsedCoupon',
+  'ds' => 'default',
+)
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('used_coupons')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1656): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(34): Model->save(Array)
+#3 [internal function]: PaymentsController->pay('20')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-14 00:08:08 Error: [MissingTableException] Table used_coupons for model UsedCoupon was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'used_coupons',
+  'class' => 'UsedCoupon',
+  'ds' => 'default',
+)
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3217): Model->setSource('used_coupons')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1656): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(34): Model->save(Array)
+#3 [internal function]: PaymentsController->pay('20')
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-03-14 00:25:07 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:25:07 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:26:42 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:26:42 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:26:52 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:26:52 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:27:07 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:27:07 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:27:11 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:27:11 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:27:32 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:27:32 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:27:34 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:27:34 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:27:50 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 42]
+2013-03-14 00:27:50 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 42, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 42, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:27:52 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 42]
+2013-03-14 00:27:52 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 42, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 42, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:28:15 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:28:15 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:28:31 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:28:31 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:28:41 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:28:41 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:28:42 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:28:42 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:28:51 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:28:51 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:28:52 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:28:52 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:28:57 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'userBoughtAlready' at line 1
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('userBoughtAlrea...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('userBoughtAlrea...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('userBoughtAlrea...', Array, Array)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(799): DboSource->query('userBoughtAlrea...', Array, Object(AppModel))
+#5 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(14): Model->__call('userBoughtAlrea...', Array)
+#6 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(14): AppModel->userBoughtAlready('26', '20')
+#7 [internal function]: PaymentsController->pay('20')
+#8 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-14 00:29:11 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'paymentTotal' at line 1
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('paymentTotal', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('paymentTotal', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('paymentTotal', Array, Array)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(799): DboSource->query('paymentTotal', Array, Object(Payment))
+#5 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(31): Model->__call('paymentTotal', Array)
+#6 C:\wamp\www\boxngo2\app\Controller\PaymentsController.php(31): Payment->paymentTotal(Array, NULL)
+#7 [internal function]: PaymentsController->pay('20')
+#8 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-03-14 00:29:20 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:29:20 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:29:26 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 40]
+2013-03-14 00:29:26 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 40, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 40, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:29:58 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:29:58 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:20 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:21 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:22 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:22 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:22 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:22 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:23 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:23 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:23 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:23 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:23 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:23 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:27 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:27 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:27 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:27 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:29 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:29 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:30 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:30 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:30 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:30 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:30:30 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 41]
+2013-03-14 00:30:30 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 41, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:31:33 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 40]
+2013-03-14 00:31:33 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 40, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 40, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:37:08 Error: Fatal Error (1): Call to undefined function redirect() in [C:\wamp\www\boxngo2\app\Controller\PaymentsController.php, line 54]
+2013-03-14 00:37:08 Error: [FatalErrorException] Call to undefined function redirect()
+Request URL: /payments/process/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\box...', 54)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\box...', 54, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\box...', 54, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:39:06 Error: Fatal Error (4): syntax error, unexpected ',' in [C:\wamp\www\boxngo2\app\Controller\PaymentsController.php, line 52]
+2013-03-14 00:39:06 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /payments/process/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 52, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 52, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:47:03 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 46]
+2013-03-14 00:47:03 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 46)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 46, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 46, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-03-14 00:47:14 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in [C:\wamp\www\boxngo2\app\Model\Payment.php, line 46]
+2013-03-14 00:47:14 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING
+Request URL: /payments/pay/20
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(183): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 46)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 46, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 46, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

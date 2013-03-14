@@ -1,6 +1,6 @@
 <?php
 class PaymentsController extends AppController {
-	var $uses = array('Coupon', 'Payment', 'Shop', 'Order');
+	var $uses = array('Coupon', 'Payment', 'Shop', 'Order', 'UsedCoupon');
 	var $components = array('Stripe.Stripe', 'Shipping.Shipping');
 	public function beforeFilter(){
 		parent::beforeFilter();
@@ -28,10 +28,11 @@ class PaymentsController extends AppController {
 						$coupon = $this->Coupon->find("first", array("conditions" => array("Coupon.code" => $this->request->data['Coupon']['code'])));
 					}
 				}
-				$price = $this->Payment->paymentTotal(array('id' => $listing['Shop']['id'], 'price' => $listing['Shop']['price'], 'shipping' => $listing['Shop']['shipping']), $coupon);
-				if($price['applied'] == true)
+				$price = $this->Payment->paymentTotal(array('id' => $listing['Shop']['id'], 'user_id' => $this->Auth->user('id'), 'price' => $listing['Shop']['price'], 'shipping' => $listing['Shop']['shipping']), $coupon);
+				if($price['applied'] == true){
 					$this->Session->setFlash("Your coupon has been applied!", "flash_success");
-				
+					$this->UsedCoupon->save(array('UsedCoupon' => array('user_id' => $this->Auth->user('id'), 'coupon_id' => $coupon['Coupon']['id'])));
+				}
 				elseif(isset($coupon) && $price['applied'] == false)
 					$this->Session->setFlash($price['error_message'], "flash_error");
 				$this->set("stripekey", $this->Stripe->getKey());
@@ -46,6 +47,13 @@ class PaymentsController extends AppController {
 	}
 	
 	public function process($listingId = NULL){
+		if(isset($this->request->data['Coupon']['code'])){
+			$coupon = $this->Coupon->find("first", array("conditions" => array("Coupon.code" => $this->request->data['Coupon']['code'])));
+			if(!$this->UsedCoupon->alreadyUsed($this->Auth->user('id'), $coupon['Coupon']['id'], true)){
+				$this->Session->setFlash("A coupon error has occurred." , "flash_error");
+				$this->redirect($this->referer());
+			}
+		}
 		if(isset($listingId) && !empty($listingId) && $this->request->is('post') && !empty($this->request->data)){
 			$listing = $this->Shop->find("first", array("conditions" => array("Shop.id" => $listingId, "Shop.canview" => 1)));
 			if(!empty($listing)){
@@ -59,6 +67,9 @@ class PaymentsController extends AppController {
 					$this->request->data['Payment']['shop_amount'] = $listing['Shop']['price'];
 					if(!$this->Payment->save($this->request->data)){
 						parent::sendEmail("shahruksemail@gmail.com", "BOX'NGO! URGENT! THIS [PAYMENT] DID NOT SAVE!", "error", $this->request->data);
+					}else{
+						$usedCoupon = $this->UsedCoupon->find("first", array("conditions" => array("UsedCoupon.user_id" => $this->Auth->user('id'), "UsedCoupon.coupon_id" => $coupon['Coupon']['id'])));
+						$usedCoupon['UsedCoupon']['payment_id'] = $this->Payment->id;
 					}
 					$order = array();
 					$order['Order']['seller_id'] = $listing['User']['id'];
@@ -72,6 +83,9 @@ class PaymentsController extends AppController {
 						parent::sendEmail("shahruksemail@gmail.com", "BOX'NGO! URGENT! THIS [ORDER] DID NOT SAVE!", "error", $this->request->data);
 					} else {
 						parent::sendEmail($listing['User']['username'], "[IMPORTANT] You have an order on BOX'NGO!", "order");
+						parent::sendEmail($this->Auth->user('username'), "Order Confirmation for BOX'NGO!", "orderconfirmation", $listing);
+						$usedCoupon['UsedCoupon']['order_id'] = $this->Order->id;
+						$this->UsedCoupon->save($usedCoupon);
 						$this->Shop->reduceQuantity($listing['Shop']['id']);
 						$this->Session->setFlash("You have successfully purchased that item.", "flash_success");
 						$this->redirect(array('controller' => 'dashboard', 'action' => 'managepurchases', $listingId));

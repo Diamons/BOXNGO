@@ -91,3 +91,19 @@ h1.section{
 #favorites > .row, #shopItems > .row{
 	margin-bottom: 35px;
 }
+
+#sendUserMessage{
+	display: block;
+	padding: 5px;
+	padding-left: 30px;
+	border-radius: 9px;
+	margin: auto;
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+#sendUserMessage i{
+	color: #fd823f;
+	display: inline-block;
+	margin-right: 20px;
+}

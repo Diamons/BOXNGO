@@ -32,5 +32,7 @@
 
 a.manageorderButton{
 	border-bottom: 1px solid #DDD;
-	padding-bottom: 4px;
+	padding-bottom: 4px 8px;
+	margin-bottom: 8px;
+	display: inline-block;
 }

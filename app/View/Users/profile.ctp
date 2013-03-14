@@ -12,6 +12,7 @@ $this->end();
 		<div class="userInfo three columns">
 			<h3 class="username"><?php echo $userInfo['User']['display_name']; ?>'s Profile</h3>
 			<img src="<?php echo $userInfo['User']['profilepic']; ?>" class="avatar" />
+			<a id="sendUserMessage" href="#" data-reveal-id="sendmessage"><i class="icon-envelope"></i> Send Message</a>
 			<section class="stats_info">
 				<?php if(!empty($school['School']['name'])){ ?><span>Attending <?php echo nl2br(h($school['School']['name'])); ?></span><?php } ?>
 				<div><a id="itemslistedView" href="javascript: void(0);"><div class="value"><?php echo count($userInfo['Shop']); ?></div>Items Listed</a></div>
@@ -97,4 +98,14 @@ $this->end();
 			</div>
 		</div>
 	</div>
+</div>
+<div id="sendmessage" class="reveal-modal small">
+  <h2>Message <?php echo $userInfo['User']['display_name']; ?></h2>
+  <p>
+	<?php echo $this->Form->create("Message", array("url" => "/users/message/".$userInfo['User']['id'])); ?>
+	<?php echo $this->Form->input("Thread.subject", array("type" => "text")); ?>
+	<?php echo $this->Form->input("Thread.message", array("type" => "textarea")); ?>
+	<?php echo $this->Form->end("Send Message"); ?>
+  </p>
+  <a class="close-reveal-modal">&#215;</a>
 </div>

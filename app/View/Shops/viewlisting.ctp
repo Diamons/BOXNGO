@@ -23,7 +23,7 @@
 			var map = L.map('map').setView([<?php echo $school['School']['latitude'].",".$school['School']['longitude']; ?>], 14);
 			L.tileLayer('http://{s}.tile.cloudmade.com/7ced7f56137c4570ac85691831b04c56/997/256/{z}/{x}/{y}.png', {
     attribution: ''}).addTo(map);
-			var popup = L.popup().setLatLng([<?php echo $school['School']['latitude'].",".$school['School']['longitude']; ?>]).setContent('<?php echo $school['School']['name']; ?>').openOn(map);
+			var popup = L.circle([<?php echo $school['School']['latitude'].",".$school['School']['longitude']; ?>], 220, {color: 'red', fillColor: '#f03', fillOpacity: 0.5}).addTo(map);
 		});
 	</script>
 <?php
@@ -68,6 +68,11 @@
 			</div>
 			<div id="description">
 				<?php echo nl2br(h($listing['Shop']['description'])); ?>
+			</div>
+			<div class="row">
+				<?php for($i = 0; $i < count($relatedItems); $i++){ ?>
+					
+				<?php } ?>
 			</div>
 			<div id="reviews" class="row">
 				<div class="fb-comments" data-href="<?php echo "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-num-posts="2" data-width="700"></div>

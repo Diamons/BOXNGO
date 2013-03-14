@@ -1400,3 +1400,7 @@ MongodbSource::disconnect() - APP\Plugin\Mongodb\Model\Datasource\MongodbSource.
 MongodbSource::__destruct() - APP\Plugin\Mongodb\Model\Datasource\MongodbSource.php, line 148
 [main] - [internal], line ??
 
+2013-03-13 23:41:09 Debug: Stripe: charge id ch_1SJ6uktGk5mNyh
+2013-03-13 23:41:39 Debug: Stripe: charge id ch_1SJ7NMSShLT3Pp
+2013-03-14 00:40:05 Debug: Stripe: charge id ch_1SK3eBORGW2pMS
+2013-03-14 00:56:30 Debug: Stripe: charge id ch_1SKK4g2AzSobfI

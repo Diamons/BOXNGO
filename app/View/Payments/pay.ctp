@@ -33,6 +33,7 @@
 								<?php echo $this->Form->input('Coupon.code'); ?>
 							<?php }else{ ?>
 								<?php echo $price['Price']['message']; ?>
+								<?php echo $this->Form->hidden('Coupon.code'); ?>
 							<?php } ?>
 						</div>
 						<div class="one columns">

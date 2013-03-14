@@ -5,6 +5,7 @@ $this->end();
 ?>
 <div id="dashmenu"><span>Manage my Orders</span></div>
 <div class="dashwrapper">
+	<?php debug($orders); ?>
 	<?php for($i = 0; $i < count($orders); $i++){ ?>
 	<div class="row listing_purchase">
 			<div class="three columns">
@@ -38,6 +39,7 @@ $this->end();
 			</div>
 			<div class="process two columns">
 				<a class="manageorderButton" href="<?php echo $this->webroot; ?>payments/manageorder/<?php echo $orders[$i]['Order']['id']; ?>">Manage Order</a>
+				<a href="/users/profile/<?php echo $orders[$i]['User']['id']; ?>" class="manageorderButton">Buyer's Profile</a>
 			</div>
 	</div>
 	<?php } ?>

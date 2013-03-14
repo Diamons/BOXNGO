@@ -17,7 +17,8 @@
 			
 			$date = new DateTime("now");
 			$date = $date->format("Y-m-d H:i:s");
-			
+			App::import('Model', 'UsedCoupon');
+			$usedCoupon = new UsedCoupon();
 			if($coupon==NULL){
 				return $results;
 			}
@@ -34,11 +35,15 @@
 			}elseif($coupon['Coupon']['minimum'] > $listing['price']){
 				$results['error_message'] = "Your order must be a minimum of $".$coupon['Coupon']['minimum']." to use this coupon.";
 				return $results;
+			}elseif($usedCoupon->alreadyUsed($listing['user_id'], $coupon['Coupon']['id'])){
+				$results['error_message'] = "You already used that coupon.";
+				return $results;
 			}else{
 				$results['applied'] = true;
+				$results['Coupon']['code'] = $coupon['Coupon']['code'];
 				if($coupon['Coupon']['percent_discount'] > 0){
-					$results['Price']['total_price'] = ($listing['price'] - $listing['price']*$coupon['Coupon']['percent_discount']) + $listing['shipping'];
-					$results['Price']['message'] = "Your coupon has been applied for a ".$coupon['Coupon']['percent_discount']."% discount.";
+					$results['Price']['total_price'] = ($listing['price'] - ($listing['price']*$coupon['Coupon']['percent_discount']) + $listing['shipping']);
+					$results['Price']['message'] = "Your coupon has been applied for a ".($coupon['Coupon']['percent_discount'] * 100)."% discount.";
 				}elseif($coupon['Coupon']['amount_discount'] > 0){
 					$results['Price']['total_price'] -= $coupon['Coupon']['amount_discount'];
 					$results['Price']['message'] = "Your coupon has been applied for a $".$coupon['Coupon']['amount_discount']." discount.";

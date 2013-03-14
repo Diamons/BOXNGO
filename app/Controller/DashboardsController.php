@@ -55,7 +55,9 @@
 			$orders = $this->Order->find("all", array("conditions" => array("Order.seller_id" => $this->Auth->user('id')), "order" => "Order.created DESC"));
 			for($i = 0; $i < count($orders); $i++){
 				$a = $this->Image->getShopImage($orders[$i]['Order']['shop_id']);
+				$b = $this->User->read(NULL, $orders[$i]['Order']['seller_id']);
 				$orders[$i]['Image'] = $a['Image'];
+				$orders[$i]['User'] = $b['User'];
 			}
 			$this->set("orders", $orders);
 		}

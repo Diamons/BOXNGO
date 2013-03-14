@@ -127,7 +127,8 @@
 				$this->Session->setflash("We couldn't find that listing. Please contact support if you believe this may be a mistake.", "flash_error");
 				$this->redirect($this->referer());
 			} else {
-				$this->Shop->delete($listingid);
+				$this->Shop->id = $listingid;
+				$this->Shop->saveField('canview', 0);
 				$this->Favorite->deleteAll(array("Favorite.shop_id" => $listingid), false);
 				$this->redirect(array('controller' => 'dashboard'));
 			}
