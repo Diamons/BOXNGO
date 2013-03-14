@@ -72,7 +72,7 @@
 				<?php if($price['applied'] == true){ ?>
 				<div class="coupon_applied row">
 					<div class="four columns">Coupon</div>
-					<div class="eight columns"><b>-$<?php echo number_format($listing['Shop']['price'] - $price['Price']['total_price'], 2); ?></b></div>
+					<div class="eight columns"><b>-$<?php echo number_format($price['discount'], 2); ?></b></div>
 				</div>
 				<?php } ?>
 				<div class="total row">
