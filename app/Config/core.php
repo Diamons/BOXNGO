@@ -173,7 +173,10 @@
  *
  */
 	Configure::write('Session', array(
-		'defaults' => 'php'
+		'defaults' => 'database',
+		'handler' => array(
+			'model' => 'cake_sessions'
+		)
 	));
 
 /**
@@ -285,3 +288,5 @@ if(stristr(env('HTTP_HOST'), 'boxngo.local')){
 }else{ 
     Configure::write('debug', 0); 
 }
+Configure::write('Session.save', 'database');
+
