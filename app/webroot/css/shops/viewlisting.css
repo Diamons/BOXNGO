@@ -5,6 +5,11 @@
 	border: 1px solid #DDD;
 	background: #ECECEC;
 }
+
+#listingPics > #gallery > div{
+	display: none;
+}
+
 #listingPics img{
 	display: block;
 	margin: auto;
