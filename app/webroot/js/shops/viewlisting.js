@@ -1,6 +1,6 @@
 $(function(){
 	$('#gallery').orbit({
-		  animation: 'horizontal-slide',      // fade, horizontal-slide, vertical-slide, horizontal-push
+		  animation: 'horizontal-push',      // fade, horizontal-slide, vertical-slide, horizontal-push
 		  animationSpeed: 800,                // how fast animtions are
 		  timer: true,                        // true or false to have the timer
 		  resetTimerOnClick: false,           // true resets the timer instead of pausing slideshow progress
@@ -18,4 +18,6 @@ $(function(){
 		  afterSlideChange: function(){},     // empty function
 		  fluid: true                         // or set a aspect ratio for content slides (ex: '4x3')
 	});
+	
+	$("#listingPics img").addClass('show');
 });
