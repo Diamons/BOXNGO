@@ -19,5 +19,4 @@ $(function(){
 		  fluid: true                         // or set a aspect ratio for content slides (ex: '4x3')
 	});
 	
-	$("#listingPics img").addClass('show');
 });
