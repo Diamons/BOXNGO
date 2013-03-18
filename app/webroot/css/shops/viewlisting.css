@@ -5,14 +5,15 @@
 	border: 1px solid #DDD;
 	background: #ECECEC;
 }
-#listingPics img{
+
+#listingPics > #gallery > div{
 	display: none;
-	margin: auto;
-	height: 100%;
 }
 
-#listingPics img.show{
+#listingPics img{
 	display: block;
+	margin: auto;
+	height: 100%;
 }
 
 #listingPics > *{

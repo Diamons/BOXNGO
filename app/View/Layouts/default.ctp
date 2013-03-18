@@ -51,7 +51,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 			<a class="support" href="/info/support">Support</a>
 			<a href="/">Home</a>
 			<a href="/search">Browse</a>
-			<!-- <a href="#">Blog</a> -->
+			<a href="/blog">Blog</a>
 			<a href="/info/about">About</a>
 			<a href="/info/privacy">Privacy Policy</a>
 			<!-- <a href="/info/faq">FAQ</a> -->
