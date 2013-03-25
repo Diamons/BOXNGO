@@ -2,8 +2,7 @@
 	height: 420px;		
 	box-shadow: 0 0 18px 1px #F7F7F7;
 	padding: 4px;
-	border: 1px solid #DDD;
-	background: #ECECEC;
+	border: 1px solid #EEE;
 }
 
 #listingPics > #gallery > div{
@@ -214,4 +213,8 @@ a#edit:hover{
 	font-size: 11px;
 	text-transform: uppercase;
 	color: #666;
+}
+
+#gallery > div{
+	background: #FFF !important;
 }
