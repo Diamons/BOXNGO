@@ -6,7 +6,8 @@
 		
 		function beforeFilter(){
 			parent::beforeFilter();
-			$this->Auth->allow('index', 'verifyaccount', 'ajaxlogin', 'ajaxregister', 'facebook', 'facebookregister', 'profile', 'forgotpassword');    
+			$this->Auth->allow('index', 'verifyaccount', 'ajaxlogin', 'ajaxregister', 'facebook', 'facebookregister', 'profile', 'forgotpassword');  
+			$this->Auth->deny('index', 'ajaxlogin', 'facebookregister', 'verifyaccount');
 			$this->Security->blackHoleCallback = 'blackhole';
 
 		}

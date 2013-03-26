@@ -215,3 +215,7 @@ a#edit:hover{
 	text-transform: uppercase;
 	color: #666;
 }
+
+#gallery > div{
+	background: #000 !important;
+}
