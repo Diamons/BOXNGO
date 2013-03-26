@@ -1,7 +1,4 @@
 <?php
-if($_SERVER['REQUEST_URI'] != "/blog/"){
-	header( 'Location: http://theboxngo.com/blog/' ) ;
-}
 /**
  * The main template file.
  *

@@ -1306,7 +1306,6 @@ img#wpstats {
 	}
 	.widget-area {
 		float: right;
-		width: 26.041666667%;
 	}
 	.site-header h1,
 	.site-header h2 {
@@ -1438,7 +1437,7 @@ img#wpstats {
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
 	body {
-		background-color: #e6e6e6;
+		background-color: #FFF;
 	}
 	body .site {
 		padding: 0 40px;
@@ -1612,4 +1611,20 @@ footer.entry-meta{
 
 .entry-header .comments-link {
 	margin-top: 4px;
+}
+
+body{
+	background: #FFF;
+}
+
+header{
+	margin-bottom: 20px;
+}
+
+footer{
+	padding: 30px 0;
+}
+
+#actions{
+	margin-top: 8px;
 }
