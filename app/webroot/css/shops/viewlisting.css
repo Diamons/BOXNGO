@@ -216,6 +216,6 @@ a#edit:hover{
 	color: #666;
 }
 
-#gallery > div{
+#gallery div.orbit div.orbit-slide{
 	background: #000 !important;
 }
