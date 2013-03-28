@@ -21,6 +21,7 @@
 				$results[$i]['School'] = $school['School'];
 			}
 			//debug($results);
+			$this->set("title_for_layout", "Search for ".$this->params->query['query']);
 			$this->set("results", $results);
 		}
 		

@@ -243,6 +243,7 @@
 					$index++;
 				}
 			}
+			$this->set("title_for_layout", $userInfo['User']['display_name']); 
 			$this->set(compact('favorites', 'userInfo', 'school', 'shopItems'));
 		}
 		
