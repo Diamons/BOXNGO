@@ -1,6 +1,6 @@
 <?php 
 $this->start('css');
-echo $this->Html->css('searches/search');
+echo $this->Html->css(array('searches/search', 'pages/main'));
 $this->end();
 ?>
 <div class="wrapper" id="content">
@@ -19,43 +19,38 @@ $this->end();
 		</div>
 	</div>
 	<?php if(!empty($results)){ ?>
-			<?php if(isset($category)){ echo "<h3>".$category['Category']['display_name']."</h3>"; } ?>
-			<?php for($i = 0; $i < count($results); $i++): ?>
-			<?php if($i == 0 || $i % 4 == 0): ?>
-			<div class="row">
-			<?php endif; ?>
-			<div class="three columns listing">
-				<div class="listing_container">
-					<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $results[$i]['Shop']['id'];?>">
-					<?php if(!empty($results[$i]['Image'][0]['url'])){?>
-					<img src="<?php echo $results[$i]['Image'][0]['url']; ?>/convert?w=265&h=271&fit=crop" class="image" />
-					<?php } else { ?>
-					<div class="image"></div>
-					<?php } ?>
-					</a>
-					<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $results[$i]['Shop']['id'];?>"><?php echo nl2br(h($results[$i]['Shop']['name'])); ?></a></h1>
-					
-					<div class="listing_box">$<?php echo $results[$i]['Shop']['price']; ?></div>
-					<div class="listing_box"><a class="addfavorite<?php if(!isset($auth) || empty($auth)){
-					echo "disabled"; }elseif(isset($auth) && !empty($results[$i]['Favorite'])){
-							$unique=true;
-							for($k = 0; $k < count($results[$i]['Favorite']); $k++){
-								if($results[$i]['Favorite'][$k]['user_id'] == $auth['id'])
-									$unique = false;
-							}
-							if($unique == false){
-								echo "used";
-							}
-						}
-					?>" data-listingid="<?php echo $results[$i]['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span></a></div>
-					<div class="rating"><?php if(!empty($results[$i]['School'])){?><a href="/schools/<?php echo $results[$i]['School']['short_id']; ?>"><?php echo $results[$i]['School']['name']; ?></a><?php } ?></div>
-					
-				</div>
+			<?php if(isset($category)){ ?>
+				<h3><?php echo $category['Category']['display_name']; ?></h3>
+			<?php } ?>
+			<div id="listings">
+				<?php if(!empty($results)): ?>
+					<?php 
+						for($i = 0; $i < count($results); $i++):
+							if($i == 0 || $i % 4 == 0): ?>
+								<div class="row">
+							<?php endif; ?>
+								<div class="three columns">
+									<div class="listing">
+										<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $results[$i]['Shop']['id'];?>">
+										<?php if(!empty($results[$i]['Image'][0]['url'])){?>
+										<img src="<?php echo $results[$i]['Image'][0]['url']; ?>/convert?w=182&h=150&fit=crop" class="image" />
+										<?php } else { ?>
+										<div class="image"></div>
+										<?php } ?>
+										</a>
+										<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($results[$i]['Shop']['id']));?>"><?php echo nl2br(h($results[$i]['Shop']['name'])); ?></a></h1>
+										<div class="category"><span class="price">$<?php echo $results[$i]['Shop']['price']; ?></span><a href="/searches/browse/<?php echo $results[$i]['Category']['short_name']; ?>"><?php echo $results[$i]['Category']['display_name']; ?></a></div>
+										<div class="userlisted">
+											<span class="typicn user"></span> Listed by <a href="/users/profile/<?php echo $results[$i]['User']['id']; ?>"><?php echo $results[$i]['User']['display_name']; ?></a>
+										</div>
+									</div>
+								</div>
+						<?php if($i == 3 || $i%4 == 3 || $i == count($results)-1): ?>
+						</div>
+						<?php endif; ?>
+						<?php endfor;
+				endif; ?>
 			</div>
-			<?php if($i == 3 || $i%4 == 3 || $i == count($results)-1): ?>
-			</div>
-			<?php endif; ?>
-			<?php endfor; ?>
 	<?php } else { ?>
 		<h1> Unfortunately there were no matches for that search. </h1>
 		
