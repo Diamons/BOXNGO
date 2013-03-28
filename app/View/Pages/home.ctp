@@ -47,7 +47,7 @@ $this->start('meta'); ?>
 
 <meta name="title" content="BOX'NGO - Buy, Sell, and Trade with Other Students" />
 <meta name="keywords" content="buy, sell, trade, buying, selling, trading, students, college, marketplace" />
-<meta name="description" content="Connect with students from all over the world and your own local campus. Buy from others online, sell your stuff to make money quickly and easily, and trade with other students from your campus." />
+<meta name="description" content="Buy, sell, and trade in the online marketplace for students. BOX'NGO makes buying, selling, and trading online easier than ever before." />
 
 <?php $this->end();
 ?>
