@@ -376,14 +376,14 @@ header span.notification{
 
 .blog_post > a{
 	display:  block;
-	color: #000;
 	font-weight: bold;
-	font-size: 9pt;
+	font-size: 10pt;
 }
 
 .blog_post p{
 	margin: 0;
 }
+
 
 .blog_post > span.date{
 	display: block;

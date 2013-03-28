@@ -43,6 +43,13 @@
 $this->start('css');
 echo $this->Html->css(array('searches/search', 'pages/main_home'));
 $this->end();
+$this->start('meta'); ?>
+
+<meta name="title" content="BOX'NGO - Buy, Sell, and Trade with Other Students" />
+<meta name="keywords" content="buy, sell, trade, buying, selling, trading, students, college, marketplace" />
+<meta name="description" content="Connect with students from all over the world and your own local campus. Buy from others online, sell your stuff to make money quickly and easily, and trade with other students from your campus." />
+
+<?php $this->end();
 ?>
 <div id="content">
 	<div class="wrapper">

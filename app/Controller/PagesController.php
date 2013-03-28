@@ -73,10 +73,12 @@ class PagesController extends AppController {
 		}
 		
 		if($path[0] == "home"){
+			$title_for_layout = "Buy, Sell, and Trade with Other Students";
 			if($this->Auth->loggedIn()){
 				$this->set("listings", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 16)));
 				$this->set("categories", $this->Category->find("all"));
 				$path[0] = "home_user";
+				$title_for_layout = "The Student Marketplace";
 			}
 		}
 		

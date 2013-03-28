@@ -177,10 +177,10 @@ div#content.wrapper{
 
 #categories nav a{
 	display: block;
-	padding: 10px 0;
+	padding: 7px 0;
 	background: #FEFEFE;
 	font-size: 12px;
-	padding-left: 40px;
+	padding-left: 20px;
 	transition: all .1s;
 	-moz-transition: all .1s;
 	-webkit-transition: all .1s;
