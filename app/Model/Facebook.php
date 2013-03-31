@@ -28,7 +28,7 @@
 			$data = array('access_token' => $accessToken, 'object' => $productUrl);
 
 			//Gotta scrape first, Heroku workaround for Custom Types
-			$this->httpSocket->post('https://graph.facebook.com?id='.$productUrl.'{object_url}''&scrape=true');
+			$this->httpSocket->post('https://graph.facebook.com/?id='.$productUrl.'&scrape=true');
 
 			$results = $this->httpSocket->post($postUrl, $data);
 			$results2 = $this->fb->api('/me/theboxngo:favorite',
