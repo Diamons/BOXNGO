@@ -509,7 +509,7 @@ form input[type="submit"]:hover, .usermessage:hover{
 form input[type="submit"].mainpage{
 	float: none;
 	-webkit-appearance: none;
-	display:none;
+	display:none !important;
 	margin: 0;
 	margin-left: 15px;
 	margin-top: -2px;
