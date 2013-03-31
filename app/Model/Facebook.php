@@ -41,6 +41,6 @@
 		public function scrape($url=NULL){
 			$results = $this->httpSocket->post('https://graph.facebook.com/?id='.$url.'&scrape=true');
 			debug($results);
-			debug('https://graph.facebook.com/?id='.$url.'&scrape=true');
+			debug('https://graph.facebook.com/me/theboxngo:favorite?id='.$url.'&scrape=true');
 		}
 	}
