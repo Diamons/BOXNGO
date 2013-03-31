@@ -26,7 +26,6 @@
 					if(!empty($this->request->data['Shop']['images'])){
 						if($this->Shop->save($this->request->data)){
 							$this->Image->saveImages($this->request->data['Shop']['images'], $this->Shop->id);
-							$this->Facebook->scrape("http://theboxngo.com/shops/viewlisting/".$this->Shop->id);
 							$this->Session->setFlash("Congratulations! Your listing has been successfully posted.", "flash_success");
 							$this->redirect(array('controller' => 'shops', 'action' => 'share', $this->Shop->id));
 						} else {
