@@ -21,7 +21,10 @@
 				$results[$i]['School'] = $school['School'];
 			}
 			//debug($results);
-			$this->set("title_for_layout", "Search for ".$this->params->query['query']);
+			if(!empty($this->params->query['query']))
+				$this->set("title_for_layout", "Search for ".$this->params->query['query']);
+			else
+				$this->set("title_for_layout", "Browsing BOX'NGO");
 			$this->set("results", $results);
 		}
 		
