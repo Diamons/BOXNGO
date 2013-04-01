@@ -3,9 +3,14 @@
 	echo $this->Html->css(array('shops/viewlisting', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.css'));
 	$this->end();
 	
-	$this->start('facebookMeta');
-		echo "<meta property=\"og:image\" content=\"".$listing['Image'][0]['url']."\" />";
-	$this->end();
+	$this->start('facebookMeta'); ?>
+		<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# theboxngo: http://ogp.me/ns/fb/theboxngo#">
+		<meta property="fb:app_id" content="116996495106723" /> 
+		<meta property="og:type"   content="theboxngo:listing" /> 
+		<meta property="og:url"    content="<?php echo $this->here; ?>" /> 
+		<meta property="og:title"  content="<?php echo $listing['Shop']['name']; ?>" /> 
+		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>" /> 
+	<?php $this->end();
 	
 	$this->end();
 	$this->start('scriptBottom');
