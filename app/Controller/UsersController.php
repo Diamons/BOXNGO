@@ -2,7 +2,7 @@
 	class UsersController extends AppController{
 		
 		var $uses = array('Favorite', 'Verification', 'Facebook', 'Cookie', 'Thread', 'Message', 'ForgotPassword');
-		var $components = array('Mailchimp.Mailchimp');
+		var $components = array('Mailchimp.Mailchimp', 'AutoLogin.AutoLogin');
 		
 		function beforeFilter(){
 			parent::beforeFilter();

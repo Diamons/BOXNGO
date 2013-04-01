@@ -192,6 +192,7 @@ CakePlugin::load('Shipping', array('bootstrap' => false, 'routes' => false));
 CakePlugin::load('Stripe', array('bootstrap' => false, 'routes' => false));
 CakePlugin::load('Mailchimp', array('bootstrap' => array('config')));
 CakePlugin::load('Mongodb');
+CakePlugin::load('AutoLogin');
 
 Configure::write('Stripe.TestSecret', 'sk_test_Y8VOrxRBF3ivpLeJymyBDHTM');
 Configure::write('Stripe.TestPublishable', 'pk_test_vM0PKYtF5lngZJwOV5Y3ijx4');

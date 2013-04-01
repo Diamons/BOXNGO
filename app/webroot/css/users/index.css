@@ -85,7 +85,7 @@ form{
 	margin: 0;
 }
 
-form label[for="UserAccepttos"]{
+form label[for="UserAccepttos"], label[for="UserAutoLogin"]{
 	display: inline-block;
 	margin-left:10px;
 }
