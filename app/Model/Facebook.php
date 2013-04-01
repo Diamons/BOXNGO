@@ -18,11 +18,12 @@
 		}
 		
 		public function favoriteListing($listingId,$accessToken){
+			$productUrl = 'http://theboxngo.com/shops/viewlisting/'.$listingId;
 			$postUrl = 'https://graph.facebook.com/me/og.likes';
-			$data = array('access_token' => $accessToken, 'gifts_product' => 'http://theboxngo.com/shops/viewlisting/'.$listingId, 'object' => 'http://theboxngo.com/shops/viewlisting/'.$listingId);
+			$data = array('access_token' => $accessToken, 'object' => $productUrl);
 			$results = $this->httpSocket->post($postUrl, $data);
-			print_r($results);
-			die();
+			$results .= $this->httpSocket->get('https://graph.facebook.com/me/theboxngo:favorite&access_token='.$accessToken.'&method=POST&
+gifts_product='.$productUrl);
 			return $results;
 		}
 	}
