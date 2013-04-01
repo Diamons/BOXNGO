@@ -30,7 +30,7 @@
 			$results2 = $this->fb->api('/me/theboxngo:favorite',
 				'POST',
 				array(
-					'listing' => $listingId,
+					'listing' => $productUrl,
 					'access_token' => $accessToken
 				)
 			);
