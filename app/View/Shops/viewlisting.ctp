@@ -9,7 +9,7 @@
 		<meta property="og:type"   content="theboxngo:listing" /> 
 		<meta property="og:url"    content="<?php echo Router::url(null, true) ?>" /> 
 		<meta property="og:title"  content="<?php echo $listing['Shop']['name']; ?>" /> 
-		<meta property="og:message"  content="<?php echo $listing['Shop']['description']; ?>" /> 
+		<meta property="og:description"  content="<?php echo $listing['Shop']['description']; ?>" /> 
 		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>" /> 
 	<?php $this->end();
 	
