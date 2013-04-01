@@ -21,6 +21,8 @@
 			$postUrl = 'https://graph.facebook.com/me/og.likes';
 			$data = array('access_token' => $accessToken, 'gifts_product' => 'http://theboxngo.com/shops/viewlisting/'.$listingId, 'object' => 'http://theboxngo.com/shops/viewlisting/'.$listingId);
 			$results = $this->httpSocket->post($postUrl, $data);
+			print_r($results);
+			die();
 			return $results;
 		}
 	}
