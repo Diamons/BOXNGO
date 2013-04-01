@@ -5,7 +5,7 @@
 		
 		public function beforeFilter(){
 			parent::beforeFilter();
-			$this->Auth->allow('autocomplete');
+			$this->Auth->allow('autocomplete'); 
 		}
 		
 		public function autocomplete(){
@@ -22,7 +22,8 @@
 			$regex = new MongoRegex($regexString); 
 			$courses = $this->Course->find("all", array("conditions" => array(
 				"Course.full_text" => $regex)
-			));			foreach($courses as $a){
+			));
+			foreach($courses as $a){
 				$results['suggestions'][] = array('value' => $a['Course']['full_text'], 'data' => $a['Course']['code']);
 			}
 			$results['query'] = $this->request->query['query'];
