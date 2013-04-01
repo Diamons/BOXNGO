@@ -16,7 +16,6 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		echo $this->Html->css('font-awesome.min');
 		echo $this->Html->css('app');
 		
-		echo $this->fetch('facebookMeta');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 	?>
