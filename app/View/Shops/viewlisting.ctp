@@ -7,7 +7,7 @@
 		<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# theboxngo: http://ogp.me/ns/fb/theboxngo#">
 		<meta property="fb:app_id" content="116996495106723" /> 
 		<meta property="og:type"   content="theboxngo:listing" /> 
-		<meta property="og:url"    content="<?php echo $this->here; ?>" /> 
+		<meta property="og:url"    content="<?php echo Router::url(null, true) ?>" /> 
 		<meta property="og:title"  content="<?php echo $listing['Shop']['name']; ?>" /> 
 		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>" /> 
 	<?php $this->end();
@@ -27,7 +27,7 @@
 		$(function(){
 			var map = L.map('map').setView([<?php echo $school['School']['latitude'].",".$school['School']['longitude']; ?>], 14);
 			L.tileLayer('http://{s}.tile.cloudmade.com/7ced7f56137c4570ac85691831b04c56/997/256/{z}/{x}/{y}.png', {
-    attribution: ''}).addTo(map);
+			attribution: ''}).addTo(map);
 			var popup = L.circle([<?php echo $school['School']['latitude'].",".$school['School']['longitude']; ?>], 220, {color: 'red', fillColor: '#f03', fillOpacity: 0.5}).addTo(map);
 		});
 	</script>
