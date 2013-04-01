@@ -9,13 +9,10 @@
 			$this->httpSocket = new HttpSocket();
 			parent::__construct($id, $table, $ds);
 
-			App::import('Lib', 'Facebook.FB');
- 
-			//PHP 5.3
-			FB::api('/me'); //graph system call to /me
-			 
-			//PHP < 5.3
-			$this->facebook = new FB();
+			App::import('Vendor', 'Facebook/FacebookLibrary');
+			Configure::load('facebook');
+			$this->fb = new FacebookLibrary(Configure::read('Facebook'));
+
 		}
 
 		public function shareListing($name,$url,$fbId,$accessToken,$message=NULL, $imageUrl=NULL){
@@ -30,17 +27,13 @@
 			$postUrl = 'https://graph.facebook.com/me/og.likes';
 			$data = array('access_token' => $accessToken, 'object' => $productUrl);
 			$results = $this->httpSocket->post($postUrl, $data);
-
-			$response = $this->facebook->api(
-				'me/theboxngo:favorite'
+			$results2 = $this->fb->api('/me/theboxngo:favorite',
 				'POST',
 				array(
-					'gifts_product' => $productUrl
+					'listing' => $listingId,
+					'access_token' => $accessToken
 				)
 			);
-			print_r($getUrl);
-			print_r($response);
-			die();
 			return $results;
 		}
 	}
