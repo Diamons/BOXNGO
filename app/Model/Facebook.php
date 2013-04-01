@@ -23,7 +23,7 @@
 			$data = array('access_token' => $accessToken, 'object' => $productUrl);
 			$results = $this->httpSocket->post($postUrl, $data);
 
-			$getUrl = 'https://graph.facebook.com/me/theboxngo:favorite&access_token='.$accessToken.'&method=POST&gifts_product='.$productUrl;
+			$getUrl = 'https://graph.facebook.com/116996495106723/theboxngo:favorite&access_token='.$accessToken.'&method=POST&gifts_product='.$productUrl;
 			$results2 = $this->httpSocket->post($getUrl);
 			print_r($getUrl);
 			print_r($results2);
