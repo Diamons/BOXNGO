@@ -22,8 +22,11 @@
 			$postUrl = 'https://graph.facebook.com/me/og.likes';
 			$data = array('access_token' => $accessToken, 'object' => $productUrl);
 			$results = $this->httpSocket->post($postUrl, $data);
-			$results2 = $this->httpSocket->get('https://graph.facebook.com/me/theboxngo:favorite&access_token='.$accessToken.'&method=POST&
-gifts_product='.$productUrl);
+
+			$getUrl = 'https://graph.facebook.com/me/theboxngo:favorite&access_token='.$accessToken.'&method=POST&
+gifts_product='.$productUrl;
+			$results2 = $this->httpSocket->get($getUrl);
+			print_r($getUrl);
 			print_r($results2);
 			die();
 			return $results;
