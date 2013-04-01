@@ -26,13 +26,12 @@
 		}
 		
 		public function favoriteListing($listingId,$accessToken){
-			 Configure::write('debug', 2); 
-			 $productUrl = 'http://theboxngo.com/shops/viewlisting/'.$listingId;
+			$productUrl = 'http://theboxngo.com/shops/viewlisting/'.$listingId;
 			$postUrl = 'https://graph.facebook.com/me/og.likes';
 			$data = array('access_token' => $accessToken, 'object' => $productUrl);
 			$results = $this->httpSocket->post($postUrl, $data);
 
-			$response = $facebook->api(
+			$response = $this->facebook->api(
 				'me/theboxngo:favorite'
 				'POST',
 				array(
