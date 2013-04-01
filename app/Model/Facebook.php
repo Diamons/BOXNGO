@@ -25,7 +25,7 @@
 
 			$getUrl = 'https://graph.facebook.com/me/theboxngo:favorite&access_token='.$accessToken.'&method=POST&
 gifts_product='.$productUrl;
-			$results2 = $this->httpSocket->get($getUrl);
+			$results2 = $this->httpSocket->post($getUrl);
 			print_r($getUrl);
 			print_r($results2);
 			die();
