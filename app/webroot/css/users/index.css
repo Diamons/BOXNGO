@@ -187,7 +187,7 @@ form input[type="submit"], .usermessage{
 }
 
 div.submit{
-	margin: 20px 0;
+	margin: 20px 13px;
 }
 
 label[for="UserAccepttos"]+div.error-message{
