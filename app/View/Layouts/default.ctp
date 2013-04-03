@@ -21,7 +21,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	?>
 	<meta property="og:site_name" content="BOX&#039;NGO" />
 	<?php echo $this->fetch('facebookMeta'); ?>
-	<meta property="og:image" content="http://theboxngo.com/boxngologolarge.png" />
+	<meta property="og:image" content="http://theboxngo.com/boxngologofacebook.png" />
 	<?php echo $this->Html->script(array('http://code.jquery.com/jquery-latest.min.js', 'http://code.jquery.com/ui/1.10.0/jquery-ui.js')); ?>
 	
 	<?php
