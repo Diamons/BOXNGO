@@ -41,6 +41,7 @@ h1.faq{
 
 .aboutus > .founder:first-child{
 	padding: 20px 20px 20px 0px;
+	border-bottom: 4px dashed #fb9172;
 }
 
 .founder img{

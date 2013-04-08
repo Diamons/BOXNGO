@@ -38,6 +38,12 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		<?php echo $this->Form->create('Search', array('action' => 'index', 'type' => 'GET', 'inputDefaults' => array('div'=>false,'label'=>false),'class' => 'custom')); ?>
 		<?php echo $this->element('layout'.DS.'header'); ?>
 		<?php echo $this->Form->end(); ?>
+		<nav id="subnav">
+			<div class="wrapper">
+				<a href="#">Home</a>
+				<a href="#">Home</a>
+			</div>
+		</nav>
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
 		<?php
