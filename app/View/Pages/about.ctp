@@ -224,7 +224,7 @@ $this->end();
 			<dl class="timelineMinor">
 				<dt id="event28"><a>Stanford Bootcamp</a></dt>
 				<dd class="timelineEvent" id="event28EX" style="display: none; ">
-					<p>On April 17th, we will fly out to California to attend Stanford Bootcamp. The program lasts for 4 days.</p>
+					<p>On April 17th, we will fly out to California to attend Stanford Bootcamp. The program lasts for 4 days. Here, we will be speaking with hundreds of Venture Capitalists, attending pitching conferences, sharing our idea, receiving legal counsel, and much more.</p>
 				</dd>
 			</dl>
 		</div>
