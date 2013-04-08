@@ -20,7 +20,7 @@ $this->end();
 			</div>
 		</div>
 		<div class="nine columns">
-			<a href="/promotions/march2013"><img id="coverBanner" src="/images/cover.png?promo=march2013" /></a>
+			<?php //<a href="/promotions/march2013"><img id="coverBanner" src="/images/cover.png?promo=march2013" /></a> ?>
 			<div id="listings">
 				<?php if(!empty($listings)): ?>
 					<?php 

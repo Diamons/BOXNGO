@@ -382,3 +382,25 @@ a.loginFacebookButton{
 	margin-left: 10px;
 	margin-bottom: 8px;
 }
+
+a#browse{
+	display: block;
+	font-family: "Georgia", serif;
+	font-size: 32px;
+	color: #FFF;
+	background: #EB6841;
+	padding: 30px;
+	width: 400px;
+	margin: 40px auto;
+	border-radius: 9px;
+	font-style: italic;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	transition: .2s;
+}
+
+a#browse:hover{
+	-moz-box-shadow: 0 0 15px #FFF;
+	-webkit-box-shadow: 0 0 15px#FFF;
+	box-shadow: 0 0 15px #FFF;
+}

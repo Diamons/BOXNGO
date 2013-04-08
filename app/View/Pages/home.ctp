@@ -57,6 +57,7 @@ $this->start('meta'); ?>
 			<h1>The Student Marketplace</h1>
 			<h2>Connect with students from all over the world and your own local campus. Buy from others online, sell your stuff to make money quickly and easily, and trade with other students from your campus.</h2>
 			<h2>Buy, sell, and trade, all with <img class="inline_logo" src="/logo.png" alt="BOX'NGO">. It's quick, easy, and FREE!</h2>
+			<a id="browse" href="/search">Browse Listings &#0187;</a>
 		</div>
 		<div id="welcome_container">
 			<?php echo $this->Form->create('User', array('class'=>'custom', 'url' => '/users/', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>

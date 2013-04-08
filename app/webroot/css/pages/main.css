@@ -31,27 +31,40 @@ h1.faq{
 }
 
 .aboutus{
-	background: url('/images/bg/about.jpg') no-repeat 0 -500px;
 	border-radius: 4px;
-	height: 300px;
-	width: 100%;
-	position: relative;
-	overflow: hidden;
+	background: #fa734b;
 }
 
-.aboutus section{
-	position: absolute;
-	bottom: 0;
-	background: rgba(255,255,255,.7);
-	-moz-box-shadow: 0 0 5px #888;
-	-webkit-box-shadow: 0 0 5px#888;
-	box-shadow: 0 0 5px #888;
-	padding: 20px;
-	width: 100%;
-	font-size: 24px;
-	font-style: italic;
-	color: #444;
+.aboutus > .founder{
+	padding: 20px 20px 20px 53px;
 }
+
+.aboutus > .founder:first-child{
+	padding: 20px 20px 20px 0px;
+}
+
+.founder img{
+	width:120px;
+	height:120px;
+	border-radius:60px;
+	display: block;
+	margin: auto;
+	border: 7px solid #FFF;
+}
+
+.founder a{
+	color: #FFF;
+}
+
+.founder span.title{
+	font-size: 11px;
+	font-style: italic;
+}
+
+.founder  h2{
+	font-size: 24px;
+}
+
 
 .aboutcontent{
 	padding: 15px 20px;
