@@ -6,6 +6,6 @@
 		<a href="/users/profile">My Profile</a>
 		<?php } ?>
 		<!-- <a href="#">Make a Request</a> -->
-		<a href="/blog">Blog</a>
+		<a href="/blog/">Blog</a>
 	</div>
 </nav>
