@@ -570,6 +570,18 @@ form input[type="submit"].mainpage:hover{
 	-o-transition: .3s;
 }
 
+#subnav{
+	background: #f4f4f4;
+	border: 1px solid #F1F1F1;
+	border-width: 1px 0;
+	padding: 5px;
+}
+
+#subnav a{
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #333;
+}
 
 .autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; }
 .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
