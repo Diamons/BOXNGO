@@ -19,10 +19,6 @@
 	cursor: pointer;
 }
 
-#content{
-	margin-top: 20px;
-}
-
 #content.wrapper .row{
 	padding: 0 10px;
 }
