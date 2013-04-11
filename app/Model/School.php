@@ -11,7 +11,7 @@
 		public function sameSchool($name1, $name2){
 			$name1 = split("@", $name1);
 			$name2 = split("@", $name2);
-			if($name1[1] == $name2[1])
+			if(isset($name1[1]) && isset($name2[1]) && $name1[1] == $name2[1])
 				return true;
 			else
 				return false;

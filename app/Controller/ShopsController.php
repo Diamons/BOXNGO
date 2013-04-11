@@ -2,6 +2,7 @@
 	class ShopsController extends AppController{
 		
 		var $uses = array('Shop', 'Image', 'Payment', 'School', 'Shopview', 'Facebook', 'Category', 'Favorite', 'Message', 'Thread', 'Trade');
+		var $components = array('Cookie');
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->Auth->allow('viewlisting');
@@ -102,9 +103,13 @@
 				if($this->Auth->loggedIn() && $this->Payment->userBoughtAlready($this->Auth->user('id'), $listingid) === true){
 					$this->Session->setFlash("You have already purchased this item before.", "flash_warning");
 				}
-				if($this->Auth->loggedIn())
-					$this->Shopview->save(array('Shopview'=>array('shop_id' => $listingid, 'user_id' => $this->Auth->user('id'))));
 				
+				//Set cookie for viewed
+				if(!$this->Cookie->read('Viewed.'.$listingid)){
+					$this->Shopview->save(array('Shopview'=>array('shop_id' => $listingid)));
+					$this->Cookie->write('Viewed.'.$listingid, 1);
+				}
+
 				if($listing['Shop']['canview'] == 2)
 					$this->Session->setFlash("This listing has run out of stock and is <b>sold out</b>.", "flash_warning");
 				$this->set("title_for_layout", $listing['Shop']['name']);
@@ -117,7 +122,8 @@
 				$relatedItems = $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 6));
 				$this->set("categories", $this->Category->find("all"));
 				$sameSchool = $this->School->sameSchool($this->Auth->user('username'), $listing['User']['username']);
-				$this->set(compact("listing", "sameSchool", "relatedItems"));
+				$views = $this->Shopview->find("count", array("conditions" => array("Shopview.shop_id" => $listingid)));
+				$this->set(compact("listing", "sameSchool", "relatedItems", "views"));
 			}
 		}
 		

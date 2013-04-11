@@ -102,17 +102,26 @@ div.user_info{
 	margin-bottom: 5px;
 }
 
-#buy .price{
-	float: left;
-	width: 45%;
+#buy .price, #buy .page_views{
 	font-size: 32px;
 	color: #666;
 	text-align: center;
 	padding-top: 17px;
 }
+
+#buy .page_views{
+	color: #AAA;
+	font-weight: lighter;
+	border-right: 1px solid #DDD;
+}
+
+#buy .page_views > div{
+	font-size: 11px;
+	color: #AAA;
+	margin-top: 5px;
+}
+
 #buy .price+div{
-	float: left;
-	width: 55%;
 	text-align: center;
 	padding: 0 10px;
 }

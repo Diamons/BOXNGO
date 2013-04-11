@@ -88,12 +88,16 @@
 			</div>
 		</div>
 		<div class="four columns">
-			<div class="clearfix" id="buy">
-				<div class="price">
+			<div class="row" id="buy">
+				<div class="three columns page_views">
+					<?php echo $views; ?>
+					<div>Views</div>
+				</div>
+				<div class="five columns price">
 					$<?php echo $listing['Shop']['price']; ?>
 					<div class="shipping"><?php if($listing['Shop']['shipping'] == 0){ echo "FREE"; } else { echo "$".$listing['Shop']['shipping']; } ?> Shipping</div>
 				</div>
-				<div>
+				<div class="four columns">
 					<a class="buyNow" href="/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
 					<?php if(!$sameSchool){ ?> <a class="tradeNow" href="/shops/trade/<?php echo $listing['Shop']['id']; ?>">Cash / Trade</a> <?php } ?>
 				</div>
