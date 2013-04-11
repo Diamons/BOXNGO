@@ -1,5 +1,7 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteCond %{REQUEST_URI}  !\.(php|html?|jpg|gif)$
+RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301]
 RewriteBase /blog/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f

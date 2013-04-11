@@ -4,7 +4,7 @@
 			<a href="/"><img src="/logo.png" /></a>
 		</div>
 		<div class="three columns">
-			<a href="/blog">Blog</a>
+			<a href="/blog/">Blog</a>
 			<a href="/info/about">About</a>
 		</div>
 		<div class="three columns">
