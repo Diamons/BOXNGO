@@ -11,7 +11,7 @@ $this->end();
 				<div class="header"><span class="typicn feed"></span> Categories</div>
 				<ul>
 					<?php for($i = 0; $i < count($categories); $i++){ ?>
-						<li><a href="/search/browse/<?php echo  $categories[$i]['Category']['short_name']; ?>"><?php echo $categories[$i]['Category']['display_name']; ?></a></li>
+						<li><a href="/browse/<?php echo  $categories[$i]['Category']['short_name']; ?>"><?php echo $categories[$i]['Category']['display_name']; ?></a></li>
 					<?php } ?>
 				</ul>
 			</nav>

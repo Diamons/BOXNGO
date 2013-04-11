@@ -34,7 +34,7 @@ App::uses('Controller', 'Controller');
  
 App::uses('Sanitize', 'Utility');
 class AppController extends Controller {
-	var $uses = array('User', 'Shop', 'Order', 'School', 'Message', 'Thread');
+	var $uses = array('User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread');
 	var $components = array('Auth', 'Security', 'Session');
 	var $helpers = array('Form');
 	
@@ -42,6 +42,7 @@ class AppController extends Controller {
 		parent::beforeFilter();	  
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
+		$this->set("categories", $this->Category->findNonEmpty());
 		if($this->Auth->loggedIn()){
 			$this->set("notifications", $this->Order->find("count", array("conditions" => array("Order.seller_id" => $this->Auth->user('id'), "Order.status" => array("pending")), "order" => "Order.created")));
 			$this->set("messages", $this->Thread->find("count", array("conditions" => array("OR" => array(array("AND" => array("Thread.receiver_id" => $this->Auth->user('id'), "Thread.receiver_read" => 0)), array("AND" => array("Thread.sender_id" => $this->Auth->user('id'), "Thread.sender_read" => 0))), "Thread.status" => 1), "order" => "Thread.modified DESC")));

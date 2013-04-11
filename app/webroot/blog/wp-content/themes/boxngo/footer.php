@@ -14,16 +14,6 @@
 	</div>
 </div>
 <footer>
-	<div class="wrapper">
-		<a class="support" href="/info/support">Support</a>
-		<a href="/">Home</a>
-		<a href="/search">Browse</a>
-		<a href="/blog">Blog</a>
-		<a href="/info/about">About</a>
-		<a href="/info/privacy">Privacy Policy</a>
-		<!-- <a href="/info/faq">FAQ</a> -->
-		
-	</div>
 </footer>
 <script type="text/javascript">
 

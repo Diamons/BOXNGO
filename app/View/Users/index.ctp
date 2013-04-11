@@ -168,7 +168,8 @@ $this->end();
 </div>
 
 <div class="wrapper" id="content">
-<?php echo $this->Form->create('User', array('class' => 'custom', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
+	<div>
+		<?php echo $this->Form->create('User', array('class' => 'custom', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
 		<div style="padding-right: 100px;" class="six columns">
 			<h1 class="subheader">Login to Account</h1>
 				<div style="text-align: right; margin: 0 90px 5px 0;">
@@ -243,7 +244,8 @@ $this->end();
 			</form>
 		</div>
 	</div>
-	
+</div>
+
 	<div id="forgotpassword" class="reveal-modal small">
 		<h1>Forgot your password?</h1>
 		<p class="lead">Never fear, BOX'NGO is here! Simply enter the email address you used to signup below and we'll help you recover your account.</p>

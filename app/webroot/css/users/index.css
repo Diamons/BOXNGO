@@ -1,4 +1,4 @@
-#content.wrapper{
+#content.wrapper > div{
 	border: 1px solid #ECECEC;
 	border-radius: 5px;
 	overflow: hidden;
@@ -99,6 +99,7 @@ a.loginFacebookButton{
 }
 
 #about_boxngo, .moreinfo{
+	margin-top: 10px;
 	border-radius: 5px;
 	overflow: hidden;
 }

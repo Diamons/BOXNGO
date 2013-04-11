@@ -23,10 +23,11 @@ html, body {
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -80px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0;
 }
 
 footer, .push{
-height: 80px;
+	height: 160px;
 }
 
 a img{
@@ -59,7 +60,8 @@ html, body{
 div.wrapper{
 	min-width: 960px;
 	width: 100%;
-	max-width: 1140px;
+	padding: 0 10px;
+	max-width: 1600px;
 	margin: auto;
 }
 
@@ -157,7 +159,7 @@ div.wrapper{
 }
 
 div#content.wrapper{
-	margin-top: 20px;
+	padding: 0 10px;
 }
 
 #userMessageNotification{
@@ -170,30 +172,18 @@ div#content.wrapper{
 }
 
 header > div.wrapper{
-	border-bottom: 1px solid #F4F4F4;
-	padding:  10px 0 10px 0;
+	padding: 10px;
 }
 
 footer{
 	width: 100%;
 	background: #F7F7F7;
 	border-top: 1px solid #DDD;
-	padding: 20px 0;
+	padding: 40px 10px;
 	
 }
 
-footer > div{
-	font-size: 14px;
-	color: #AAA;
-}
-
-footer > div > a{
-	display: inline-block;
-	margin-right: 24px;
-}
-
 footer a.support{
-	float: right;
 	color: #ff4444;
 }
 
@@ -409,24 +399,24 @@ div.error-message{
 .session_error{
 	color: #a21818;
 	background: #f8a4a4;
-	border: 2px solid #e92626;
+	border: 1px solid #e92626;
 }
 
 .session_success{
-	color: #1866a2;
-	background: #a4d3f8;
-	border: 2px solid #2699e9;
+	color: #768d35;
+	background: #cae9c6;
+	border: 1px solid #72c45e;
 }
 
 .session_warning{
 	color: #C09853;
 	background: #FCF8E3;
-	border: 2px solid #FBEED5;
+	border: 1px solid #FBEED5;
 }
 .session_success, .session_error, .session_warning{
-	padding: 20px;
+	padding: 12px 18px;
 	margin: 10px 0;
-	font-size: 14pt;
+	font-size: 11pt;
 }
 span.custom.radio{
 	display: inline-block; 
@@ -571,16 +561,38 @@ form input[type="submit"].mainpage:hover{
 }
 
 #subnav{
-	background: #f4f4f4;
-	border: 1px solid #F1F1F1;
+	background: #FBFBFB;
+	border: 1px solid #F3F3F3;
 	border-width: 1px 0;
 	padding: 5px;
+	margin-bottom: 1px;
 }
 
 #subnav a{
 	font-size: 11px;
 	text-transform: uppercase;
-	color: #333;
+	color: #AAA;
+	display: inline-block;
+	margin-right: 15px;
+	border-bottom: 1px solid #DDD;
+	padding: 0 5px;
+	transition: .3s;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+}
+
+#subnav div.wrapper{
+	margin-top: -2px;
+}
+
+#subnav a:hover{
+	color: #2ba6cb;
+	border-color: #2ba6cb;
+}
+
+footer > .wrapper > .columns a{
+	display: block;
+	font-size: 11pt;
 }
 
 .autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; }

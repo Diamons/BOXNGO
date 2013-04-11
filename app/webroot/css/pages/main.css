@@ -1,6 +1,3 @@
-#content.wrapper{
-	padding: 20px;
-}
 
 h1.faq{
 	text-align: center;
@@ -158,19 +155,11 @@ h1.faq{
 	background: #799b01;
 }
 
-div#content.wrapper{
-	margin-top: 10px;
-}
-
 #content > .row{
 	margin: 0;
 }	
 
 .columns{
-	padding: 0;
-}
-
-#content.wrapper {
 	padding: 0;
 }
 
@@ -224,10 +213,6 @@ div#content.wrapper{
 	display: block;
 	float: left;
 	padding: 1px 2px 0 0;
-}
-
-#listings{
-	margin-top: 10px;
 }
 
 #listings .row{

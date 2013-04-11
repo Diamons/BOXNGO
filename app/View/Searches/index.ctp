@@ -33,7 +33,7 @@ $this->end();
 									<div class="listing">
 										<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $results[$i]['Shop']['id'];?>">
 										<?php if(!empty($results[$i]['Image'][0]['url'])){?>
-										<img src="<?php echo $results[$i]['Image'][0]['url']; ?>/convert?w=182&h=150&fit=crop" class="image" />
+										<img src="<?php echo $results[$i]['Image'][0]['url']; ?>/convert?w=364&h=300&fit=crop" class="image" />
 										<?php } else { ?>
 										<div class="image"></div>
 										<?php } ?>

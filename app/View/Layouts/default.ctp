@@ -38,12 +38,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		<?php echo $this->Form->create('Search', array('action' => 'index', 'type' => 'GET', 'inputDefaults' => array('div'=>false,'label'=>false),'class' => 'custom')); ?>
 		<?php echo $this->element('layout'.DS.'header'); ?>
 		<?php echo $this->Form->end(); ?>
-		<nav id="subnav">
-			<div class="wrapper">
-				<a href="#">Home</a>
-				<a href="#">Home</a>
-			</div>
-		</nav>
+		<?php echo $this->element('layout'.DS.'subnav'); ?>
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
 		<?php
@@ -51,18 +46,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		?>
 		<div class="push"></div>
 	</div>
-	<footer>
-		<div class="wrapper">
-			<a class="support" href="/info/support">Support</a>
-			<a href="/">Home</a>
-			<a href="/search">Browse</a>
-			<a href="/blog">Blog</a>
-			<a href="/info/about">About</a>
-			<a href="/info/privacy">Privacy Policy</a>
-			<!-- <a href="/info/faq">FAQ</a> -->
-			
-		</div>
-	</footer>
+	<?php echo $this->element('layout'.DS.'footer'); ?>
 	<?php 
 		echo $this->Html->script('foundation.min');
 		echo $this->Html->script('app');
