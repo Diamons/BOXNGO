@@ -208,7 +208,7 @@ $this->end();
 		
 			<img src="<?php echo $this->webroot;?>images/or.png" id="or" />
 			<h1 class="subheader">Signup for <span class="logo">Box'<span class="emphasis">nGo</span></span></h1>
-			<h5 class="subheader">BOX'NGO is an online buying and selling platform for students. Register today using a <b>.EDU</b> email address in order to become a part of the thriving community.</h5>
+			<h5 class="subheader">BOX'NGO is an online buying, selling, and trading platform for sellers. Register today using a <b>.EDU</b> email address in order to become a part of the thriving community.</h5>
 
 			<?php echo $this->Form->create('User', array('class'=>'custom', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
 				<div style="text-align: right; margin: 0 100px 5px 0;">

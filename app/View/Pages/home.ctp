@@ -64,7 +64,7 @@ $this->start('meta'); ?>
 				<div style="text-align: right; margin: 0 100px 5px 0;">
 					<a class="loginFacebookButton" data-redirect="users/facebookregister" href="#"></a>
 				</div>
-						<?php echo $this->Form->input('User.username', array('placeholder' => 'Enter your @EDU Email Address')); ?>
+						<?php echo $this->Form->input('User.username', array('placeholder' => 'Enter your Email Address')); ?>
 						<?php echo $this->Form->input('User.passwordcreate', array('placeholder' => 'Password', 'type' => 'password')); ?>
 						<?php echo $this->Form->input('User.passwordconfirmation', array('placeholder' => 'Confirm Password', 'type'=>'password')); ?>
 					<?php echo $this->Form->input('User.accepttos', array('label' => 'I accept the', 'type' => 'checkbox', 'value' => '1')); ?>
