@@ -8,8 +8,8 @@
 			<a href="/info/about">About</a>
 		</div>
 		<div class="three columns">
-			<?php for($i = 0; $i < count($categories); $i++){ ?>
-				<a href="/browse/<?php echo $categories[$i]['Category']['short_name']; ?>"><?php echo $categories[$i]['Category']['display_name']; ?></a>
+			<?php for($i = 0; $i < count($layoutCategories); $i++){ ?>
+				<a href="/browse/<?php echo $layoutCategories[$i]['Category']['short_name']; ?>"><?php echo $layoutCategories[$i]['Category']['display_name']; ?></a>
 			<?php } ?>
 		</div>
 		<div class="three columns">

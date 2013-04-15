@@ -1,4 +1,4 @@
-#content.wrapper{
+div#content.wrapper{
 	background: url('../../images/stepsbg.jpg') repeat-y 35px;
 	border: 1px solid #ECECEC;
 	border-radius: 5px;
@@ -6,14 +6,14 @@
 	position: relative;
 }
 
-#content.wrapper > div{
+div#content.wrapper > div{
 	border: 1px solid #ECECEC;
 	border-width: 0px 0 1px 1px;
 	padding: 20px 140px;
 	background: #F7F7F7;
 }
 
-#content.wrapper div.header{
+div#content.wrapper div.header{
 	background: #FFF;
 	padding: 10px 35px 15px 35px;
 	margin-top: 30px;
