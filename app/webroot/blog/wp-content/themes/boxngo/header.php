@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/foundation.min.css" />
 	<link rel="stylesheet" type="text/css" href="/css/app.css" />
 	<meta property="og:site_name" content="BOX&#039;NGO" />
-	<meta property="og:image" content="http://theboxngo.com/logo.png" />
+	<meta property="og:image" content="http://theboxngo.com/boxngologofacebook.png" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="http://theboxngo.com/blog/wp-content/themes/boxngo/style.css" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
