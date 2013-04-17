@@ -19,20 +19,20 @@
 <body>
 <div class="boxngo_wrapper">
 	<form action="/search" class="custom" id="SearchIndexForm" method="get" accept-charset="utf-8">
-	<header>
+<header>
 		<div class="row clearfix wrapper">
-			<div id="logo">
-				<a href="/"><img src="/logo.png" alt="BOX'NGO" /></a></div>
-			<div id="search_container">
-				<img id="searchTrigger" src="/images/search.png" />
-				<input name="query" placeholder="Electronics, Textbooks, Jewelry, and more!" type="text" id="SearchQuery"/>				<input  class="mainpage" type="submit" value="Search"/>			</div>
-			<div id="actions">
-				<a id="register" href="/users">Return to Site →</a>
-			</div>
+				<div class="one columns" id="logo"><a href="/"><img src="/logo.png" alt="BOX'NGO"></a></div>
+				<div class="nine columns">
+				</div>
+				<div class="two columns" id="newListing">
+					<a id="listButton" href="/">Return to Site →</a>
+				</div>
 		</div>
-	</header>
-	</form>	
-	<div id="content">
-		<div class="wrapper">
-			<div class="row">
-				<div class="eight columns">
+	</header>		
+</form>
+
+<div id="content">
+	<div class="wrapper">
+		<div class="row">
+			<div class="eight columns">
+
