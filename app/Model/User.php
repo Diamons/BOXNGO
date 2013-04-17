@@ -85,6 +85,7 @@
 		var $hasMany = array('Favorite', 'Shop', 'Purchase' => array('className' => 'Order', 'foreignKey' => 'buyer_id'), 'Order' => array('className' => 'Order', 'foreignKey' => 'seller_id'));
 		
 		public function eduAddress($check){
+			return true;
 			$userDomain = explode("@", $check['username']);
 			if((strtolower(substr($check['username'], -4)) != ".edu") && "facebook.com" != $userDomain[1] && "theboxngo.com" != $userDomain[1])
 				return false;

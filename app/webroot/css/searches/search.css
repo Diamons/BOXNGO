@@ -2,10 +2,6 @@
 	margin: 35px 0;
 }
 
-#content.wrapper .columns, #dashboard.wrapper .dashwrapper .columns{
-	padding: 0 15px;
-}
-
 .row > .listing > .img{
 	width: 100%;
 }
@@ -18,11 +14,6 @@
 .row .listing .image:hover{
 	cursor: pointer;
 }
-
-#content.wrapper .row{
-	padding: 0 10px;
-}
-
 .listing_container{
 	-moz-box-shadow: 0 0 5px #888;
 	-webkit-box-shadow: 0 0 5px#888;
