@@ -15,6 +15,11 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<style>
+		footer.entry-meta{
+			height: auto;
+		}
+	</style>
 </head>
 <body>
 <div class="boxngo_wrapper">
