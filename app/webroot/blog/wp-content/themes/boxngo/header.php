@@ -9,7 +9,7 @@
 	<meta property="og:site_name" content="BOX&#039;NGO" />
 	<meta property="og:image" content="http://theboxngo.com/logo.png" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<link rel="stylesheet" type="text/css" media="all" href="http://theboxngo.com/blog/wp-content/themes/boxngo/style.css" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
