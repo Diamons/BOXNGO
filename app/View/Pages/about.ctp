@@ -10,7 +10,7 @@ $this->end();
 	<div class="aboutus row">
 		<div class="row founder">
 			<div class="two columns">
-				<img src="/images/founders/shahruk.png" />
+				<img src="/images/founders/shahruk.jpg" />
 			</div>
 			<div class="ten columns">
 				<h2>Shahruk Khan Age 19 <span class="title">Co-Founder</span></h2>
@@ -27,7 +27,7 @@ $this->end();
 				</p>
 			</div>
 			<div class="two columns">
-				<img src="/images/founders/minling.png" />
+				<img src="/images/founders/minling.jpg" />
 			</div>
 		</div>
 	</div>

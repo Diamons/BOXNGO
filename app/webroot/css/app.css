@@ -592,6 +592,7 @@ form input[type="submit"].mainpage:hover{
 }
 
 #subnav{
+	margin-bottom: 10px;
 	background: #F8F8F8;
 	border-bottom: 1px solid #EFEFEF;
 }
