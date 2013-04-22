@@ -8,10 +8,7 @@
 		while ($row = mysql_fetch_assoc($result)) { ?>
 			<div class="blog_post">
 				<a href="<?php echo $row['guid']; ?>"><?php echo $row['post_title']; ?></a>
-				
-				<div class="excerpt">
-					<span class="date"><?php echo $this->Time->timeAgoInWords($row['post_date'], array('format' => 'F jS, Y', 'end' => '+1 month')); ?></span> - <?php echo trim(substr($row['post_content'], 0, 300))."..."; ?>
-				</div>
+				<span class="date"><?php echo $this->Time->timeAgoInWords($row['post_date'], array('format' => 'F jS, Y', 'end' => '+1 month')); ?></span>
 			</div>
 <?php	}
 
