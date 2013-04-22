@@ -77,7 +77,7 @@ class PagesController extends AppController {
 			if($this->Auth->loggedIn()){
 				$this->set("listings", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 16)));
 				$path[0] = "home_user";
-				$title_for_layout = "The Student Marketplace";
+				$title_for_layout = "Online Selling Redefined";
 			}
 		}
 		

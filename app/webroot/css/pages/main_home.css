@@ -289,9 +289,9 @@ img#coverBanner{
 
 #boxngo_intro > h1{
 	color: #FFF;
-	font-size: 41pt;
+	font-size: 32pt;
 	font-weight: lighter;
-	text-shadow: 0px 1px 4px #000000;
+	text-shadow: 0px 1px 2px #FFFFFF;
 	margin-bottom: 20px;
 }
 #boxngo_intro > h2{

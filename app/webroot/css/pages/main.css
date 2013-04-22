@@ -1,3 +1,6 @@
+#categories+div.nine.columns{
+	padding-left: 10px;
+}
 
 h1.faq{
 	text-align: center;
@@ -42,12 +45,13 @@ h1.faq{
 }
 
 .founder img{
-	width:120px;
-	height:120px;
-	border-radius:60px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	width:150px;
 	display: block;
 	margin: auto;
-	border: 7px solid #FFF;
+	border: 3px solid #DDD;
 }
 
 .founder a{

@@ -7,32 +7,37 @@
 	<link rel="stylesheet" type="text/css" href="/css/foundation.min.css" />
 	<link rel="stylesheet" type="text/css" href="/css/app.css" />
 	<meta property="og:site_name" content="BOX&#039;NGO" />
-	<meta property="og:image" content="http://theboxngo.com/logo.png" />
+	<meta property="og:image" content="http://theboxngo.com/boxngologofacebook.png" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<link rel="stylesheet" type="text/css" media="all" href="http://theboxngo.com/blog/wp-content/themes/boxngo/style.css" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<style>
+		footer.entry-meta{
+			height: auto;
+		}
+	</style>
 </head>
 <body>
 <div class="boxngo_wrapper">
 	<form action="/search" class="custom" id="SearchIndexForm" method="get" accept-charset="utf-8">
-	<header>
+<header>
 		<div class="row clearfix wrapper">
-			<div id="logo">
-				<a href="/"><img src="/logo.png" alt="BOX'NGO" /></a></div>
-			<div id="search_container">
-				<img id="searchTrigger" src="/images/search.png" />
-				<input name="query" placeholder="Electronics, Textbooks, Jewelry, and more!" type="text" id="SearchQuery"/>				<input  class="mainpage" type="submit" value="Search"/>			</div>
-			<div id="actions">
-				<a id="register" href="/users">Return to Site →</a>
-			</div>
+				<div class="one columns" id="logo"><a href="/"><img src="/logo.png" alt="BOX'NGO"></a></div>
+				<div class="nine columns">
+				</div>
+				<div class="two columns" id="newListing">
+					<a id="listButton" href="/">Return to Site →</a>
+				</div>
 		</div>
-	</header>
-	</form>	
-	<div id="content">
-		<div class="wrapper">
-			<div class="row">
-				<div class="eight columns">
+	</header>		
+</form>
+
+<div id="content">
+	<div class="wrapper">
+		<div class="row">
+			<div class="eight columns">
+
