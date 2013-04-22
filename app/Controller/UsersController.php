@@ -21,6 +21,7 @@
 					if($this->Verification->save($verification)){
 						$this->verificationEmail($this->request->data['User']['username'], "BOX'NGO Verification Email :: Activate Your Account", "default", array('activation' => $this->Verification->id));
 						$this->Session->setFlash("You have successfully been registered! Please check your email for a verification email. Your email is <b>".$this->request->data['User']['username']."</b>", "flash_success");
+						$this->redirect('/users/?registered');
 					}
 					
 				}

@@ -122,7 +122,7 @@
 				$relatedItems = $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 6));
 				$this->set("categories", $this->Category->find("all"));
 				$sameSchool = $this->School->sameSchool($this->Auth->user('username'), $listing['User']['username']);
-				$views = $this->Shopview->find("count", array("conditions" => array("Shopview.shop_id" => $listingid))) * 8;
+				$views = $this->Shopview->find("count", array("conditions" => array("Shopview.shop_id" => $listingid)));
 				$this->set(compact("listing", "sameSchool", "relatedItems", "views"));
 			}
 		}
