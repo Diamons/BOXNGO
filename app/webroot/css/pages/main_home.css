@@ -1,7 +1,9 @@
 #content{
 	height: 600px;
-	background: url('/images/bg/home_bg.jpg') no-repeat;
+	background: #F2F2F2;
 	margin: 0;
+	border: 1px solid #EEE;
+	border-width: 1px 0 1px 0;
 }
 
 h1.faq{
@@ -288,17 +290,17 @@ img#coverBanner{
 }
 
 #boxngo_intro > h1{
-	color: #FFF;
+	color: #333;
 	font-size: 41pt;
 	font-weight: lighter;
-	text-shadow: 0px 1px 4px #000000;
+	text-shadow: 0px 1px 2px #666;
 	margin-bottom: 20px;
 }
 #boxngo_intro > h2{
 	font-size: 18px;
 	margin-bottom: 15px;
 	line-height: 1.5em;
-	color: #FFF;
+	color: #AAA;
 	text-align: left;
 	font-weight: lighter;
 }
