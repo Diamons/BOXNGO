@@ -100,7 +100,7 @@
 				$user = $this->User->find("first", array("conditions" => array("User.facebook_id" => $this->request->query['userID'])));
 				
 				//If self, this means we're editing an already existing user
-				if($self=="self")
+				if($self=="self" && $this->Auth->loggedIn())
 					$this->User->id = $this->Auth->user('id');
 				elseif(!empty($user))
 					$this->User->id = $user['User']['id'];
