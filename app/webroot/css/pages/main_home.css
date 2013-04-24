@@ -1,9 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+
 #content{
-	height: 600px;
-	background: #F2F2F2;
+	height: 400px;
 	margin: 0;
 	border: 1px solid #EEE;
-	border-width: 1px 0 1px 0;
+	border-width: 0 0 1px 0;
 }
 
 h1.faq{
@@ -285,23 +286,18 @@ img#coverBanner{
 	float: left;
 	width: 55%;
 	margin-right: 10%;
-	margin-top: 100px;
+	margin-top: 20px;
 	color: #FFF;
 }
 
 #boxngo_intro > h1{
-<<<<<<< HEAD
 	color: #333;
-	font-size: 41pt;
 	font-weight: lighter;
-	text-shadow: 0px 1px 2px #666;
-=======
-	color: #FFF;
-	font-size: 32pt;
-	font-weight: lighter;
-	text-shadow: 0px 1px 2px #FFFFFF;
->>>>>>> 5b9f62d51b4cf1744470f0973d98178088d93482
+	text-shadow: 0px 1px 2px #333;
+	color: #222;
+	font-size: 30pt;
 	margin-bottom: 20px;
+	font-family: 'Arvo', serif;
 }
 #boxngo_intro > h2{
 	font-size: 18px;
@@ -343,7 +339,7 @@ img#coverBanner{
 
 
 form#UserDisplayForm{
-	margin-top: 120px;
+	margin-top: 40px;
 }
 
 form#UserDisplayForm label[for="UserAccepttos"] {
@@ -382,7 +378,7 @@ a.loginFacebookButton{
 }
 .features .columns h2, .features .columns i{
 	font-size: 20px;
-	display: inline-block;
+	display: block;
 	color: #EB6841;
 	margin: 0;
 }

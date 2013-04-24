@@ -65,7 +65,7 @@
 					<?php 
 					if(!empty($listing['Image'])){
 						for($i = 0; $i < count($listing['Image']); $i++){ ?>
-					<?php echo "<div style='width: 100%; height: 100%; background: #111;'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?w=560&height=420&fit=clip')."</div>";
+					<?php echo "<div style='width: 100%; height: 100%; background: #111;'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?w=737&height=410&fit=clip')."</div>";
 						}
 					}else{
 						echo $this->Html->image("loading.gif");

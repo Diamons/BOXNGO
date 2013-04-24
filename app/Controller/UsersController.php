@@ -114,7 +114,7 @@
 				if($self != "self")
 					$this->User->saveField('password', $this->User->randomPassword());
 			}else{
-				die("A");
+				
 			}
 		}
 		public function logout(){
