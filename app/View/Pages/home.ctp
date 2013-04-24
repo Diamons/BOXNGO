@@ -45,17 +45,17 @@ echo $this->Html->css(array('searches/search', 'pages/main_home'));
 $this->end();
 $this->start('meta'); ?>
 
-<meta name="title" content="BOX'NGO - Buy, Sell, and Trade with Other Students" />
-<meta name="keywords" content="buy, sell, trade, buying, selling, trading, students, college, marketplace" />
-<meta name="description" content="Buy, sell, and trade in the online marketplace for students. BOX'NGO makes buying, selling, and trading online easier than ever before." />
+<meta name="title" content="BOX'NGO - Online selling Made Easy" />
+<meta name="keywords" content="buy, sell, trade, buying, selling, trading" />
+<meta name="description" content="Buy, sell, and trade in the online marketplace that makes online commerce convenient. BOX'NGO makes buying, selling, and trading online easier than ever before." />
 
 <?php $this->end();
 ?>
 <div id="content">
 	<div class="wrapper">
 		<div id="boxngo_intro">
-			<h1>The Student Marketplace</h1>
-			<h2>Connect with students from all over the world and your own local campus. Buy from others online, sell your stuff to make money quickly and easily, and trade with other students from your campus.</h2>
+			<h1 style="font-family: 'Tahoma', sans-serif;">A Simpler, Easier Marketplace</h1>
+			<h2>Connect with sellers from all over the world and your own local campus. Buy from others online, sell your stuff to make money quickly and easily, and trade with other people around you all through BOX'NGO.</h2>
 			<h2>Buy, sell, and trade, all with <img class="inline_logo" src="/logo.png" alt="BOX'NGO">. It's quick, easy, and FREE!</h2>
 			<a id="browse" href="/search">Browse Listings &#0187;</a>
 		</div>
@@ -85,7 +85,7 @@ $this->start('meta'); ?>
 			<div>
 				<i class="icon-heart"></i> <h2>Selling Made Easy</h2>
 			</div>
-				It takes less than 2 minutes to get started selling to your fellow students. You can even trade in person with students from your school!
+				It takes less than 2 minutes to get started selling. Our selling process is fast and easy. Gone are the days of filling out pages of forms to sell one item.
 		</div>
 		<div class="four columns">
 			<div>

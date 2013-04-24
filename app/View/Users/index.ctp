@@ -169,10 +169,10 @@ $this->end();
 
 <div class="wrapper" id="content">
 	<div>
-		<?php echo $this->Form->create('User', array('class' => 'custom', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
+		<?php echo $this->Form->create('User', array('class' => '', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
 		<div style="padding-right: 100px;" class="six columns">
 			<h1 class="subheader">Login to Account</h1>
-				<div style="text-align: right; margin: 0 90px 5px 0;">
+				<div style="text-align: right; margin: 0 103px 5px 0;">
 					<a class="loginFacebookButton" data-redirect="users/facebookregister" href="#"></a>
 				</div>
 				<div class="modified_padding row">
@@ -210,8 +210,8 @@ $this->end();
 			<h1 class="subheader">Signup for <span class="logo">Box'<span class="emphasis">nGo</span></span></h1>
 			<h5 class="subheader">BOX'NGO is an online buying, selling, and trading platform for sellers. Register today using a <b>.EDU</b> email address in order to become a part of the thriving community.</h5>
 
-			<?php echo $this->Form->create('User', array('class'=>'custom', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
-				<div style="text-align: right; margin: 0 100px 5px 0;">
+			<?php echo $this->Form->create('User', array('class'=>'', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
+				<div style="text-align: right; margin: 0 114px 5px 0;">
 					<a class="loginFacebookButton" data-redirect="users/facebookregister" href="#"></a>
 				</div>
 				<div class="modified_padding row">
