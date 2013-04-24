@@ -60,7 +60,7 @@ $this->start('meta'); ?>
 			<a id="browse" href="/search">Browse Listings &#0187;</a>
 		</div>
 		<div id="welcome_container">
-			<?php echo $this->Form->create('User', array('class'=>'custom', 'url' => '/users/', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
+			<?php echo $this->Form->create('User', array('class'=>'', 'url' => '/users/', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
 				<div style="text-align: right; margin: 0 100px 5px 0;">
 					<a class="loginFacebookButton" data-redirect="users/facebookregister" href="#"></a>
 				</div>
