@@ -433,6 +433,10 @@ a#browse > i{
 	text-align: left;
 }
 
+#boxngo_intro div.two.columns{
+	text-align: center;
+}
+
 #boxngo_intro .row{
 	min-width: 0;
 	margin: 35px 0;
