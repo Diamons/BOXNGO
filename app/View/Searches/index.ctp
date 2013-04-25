@@ -18,7 +18,19 @@ $this->end();
 				</div>
 		</div>
 	</div>
-	<?php if(!empty($results)){ ?>
+	<div class="row">
+		<div id="categories" class="three columns">
+				<nav>
+					<div class="header"><span class="typicn feed"></span> Categories</div>
+					<ul>
+						<?php for($i = 0; $i < count($layoutCategories); $i++){ ?>
+							<li><a href="/browse/<?php echo  $layoutCategories[$i]['Category']['short_name']; ?>"><?php echo $layoutCategories[$i]['Category']['display_name']; ?></a></li>
+						<?php } ?>
+					</ul>
+				</nav>
+			</div>
+		<div class="nine columns">
+		<?php if(!empty($results)){ ?>
 			<?php if(isset($category)){ ?>
 				<h3><?php echo $category['Category']['display_name']; ?></h3>
 			<?php } ?>
@@ -55,6 +67,8 @@ $this->end();
 		<h1> Unfortunately there were no matches for that search. </h1>
 		
 	<?php } ?>
+	</div>
+</div>
 	<div style="display:none;">
 		<h2 style="margin: 60px 0 10px 0; font-size: 16px; text-transform: uppercase;">Similar Items</h2>
 		<div id="similar">
