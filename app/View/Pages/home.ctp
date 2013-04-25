@@ -61,7 +61,7 @@ $this->start('meta'); ?>
 				</div>
 				<div class="ten columns">
 					<h2>Flat 10% Selling Fee</h2>
-					Only pay 10% when you make a sale. Other sites require you calculate PayPal fees (3.5% + 35 cents), listing fees, and much more. We charge one flat 10% fee, regardless of how much your listing costs. Spend less time figuring out fees and more time selling.
+					Only pay 10% when you make a sale. Other sites require you to calculate transaction fees, listing fees, and much more to find out how much you have to pay. We charge one flat 10% fee, regardless of how much your listing costs. Spend less time figuring out fees and more time selling.
 				</div>
 			</div>
 			<div class="row feature">
