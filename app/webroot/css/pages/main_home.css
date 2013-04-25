@@ -435,6 +435,7 @@ a#browse > i{
 
 #boxngo_intro .row{
 	min-width: 0;
+	margin: 35px 0;
 }
 
 form input[type="submit"]{
