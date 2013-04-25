@@ -79,7 +79,7 @@ $this->start('meta'); ?>
 				</div>
 				<div class="ten columns">
 					<h2>Quick and Easy Listing Process</h2>
-					Our listing process takes 20 - 30 seconds to fill and complete. With just a few fields, you can be on your way to selling online. We believe selling online should be a easy frictionless process and an easy listing form is just one way to achieve that.
+					Our listing process takes 20 - 30 seconds to fill and complete. With just a few fields, you can be on your way to selling online. We believe selling online should be an easy frictionless process and an easy listing form is just one way to achieve that.
 				</div>
 			</div>
 		</div>
