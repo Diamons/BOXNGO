@@ -224,7 +224,13 @@ $this->end();
 			<dl class="timelineMinor">
 				<dt id="event28"><a>Stanford Bootcamp</a></dt>
 				<dd class="timelineEvent" id="event28EX" style="display: none; ">
-					<p>On April 17th, we will fly out to California to attend Stanford Bootcamp. The program lasts for 4 days. Here, we will be speaking with hundreds of Venture Capitalists, attending pitching conferences, sharing our idea, receiving legal counsel, and much more.</p>
+					<p>On April 17th, we flew out to California to attend Stanford Bootcamp. The program lasted for 4 days. We spoke with venture capitalists, angel investors, attended keynotes given by speakers such as the 3rd employee of eBay, the CEO of Eventbrite, the CEO of YouNoodle, a member of Google's board of directors, and much more.</p>
+				</dd>
+			</dl>
+			<dl class="timelineMinor">
+				<dt id="event29"><a>New Homepage, New Mission</a></dt>
+				<dd class="timelineEvent" id="event29EX" style="display: none; ">
+					<p>April 24th we launched a new homepage <a href="http://i.imgur.com/QKacDNE.jpg">(link)</a> and redefined our mission. EDU email address only was something we pursued to help us get started and figure out the glitches with the site. We felt we were ready to target a much broader audience and reach for greater heights after Stanford E-Bootcamp.</p>
 				</dd>
 			</dl>
 		</div>
