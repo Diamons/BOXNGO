@@ -32,7 +32,7 @@ h1.faq{
 
 .aboutus{
 	border-radius: 4px;
-	background: #fa734b;
+	background: #f1f8e9;
 }
 
 .aboutus > .founder{
@@ -54,9 +54,6 @@ h1.faq{
 	border: 3px solid #DDD;
 }
 
-.founder a{
-	color: #FFF;
-}
 
 .founder span.title{
 	font-size: 11px;

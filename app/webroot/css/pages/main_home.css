@@ -1,10 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Arvo);
 
 #content{
-	height: 400px;
+	height: 540px;
 	margin: 0;
+	background: url('/images/bg/spring.jpg') no-repeat 0 -600px;
 	border: 1px solid #EEE;
-	border-width: 0 0 1px 0;
+	border-width: 1px 0 1px 0;
 }
 
 h1.faq{
@@ -293,7 +294,7 @@ img#coverBanner{
 #boxngo_intro > h1{
 	color: #333;
 	font-weight: lighter;
-	text-shadow: 0px 1px 2px #333;
+	text-shadow: 0px 1px 1px #888;
 	color: #222;
 	font-size: 30pt;
 	margin-bottom: 20px;
@@ -339,13 +340,12 @@ img#coverBanner{
 
 
 form#UserDisplayForm{
-	margin-top: 40px;
+	margin-top: 35px;
 }
 
 form#UserDisplayForm label[for="UserAccepttos"] {
 	display: inline-block;
 	margin-left: 10px;
-	color: #FFF;
 }
 
 label[for="UserAccepttos"]+div.error-message{
@@ -390,15 +390,14 @@ a.loginFacebookButton{
 
 a#browse{
 	display: block;
-	font-family: "Georgia", serif;
+	font-family: "Arvo", serif;
 	font-size: 32px;
 	color: #FFF;
-	background: #EB6841;
+	background: #96c56f ;
 	padding: 30px;
-	width: 400px;
-	margin: 40px auto;
+	width: 100%;
+	margin: 120px auto 40px auto;
 	border-radius: 9px;
-	font-style: italic;
 	-webkit-transition: .2s;
 	-moz-transition: .2s;
 	transition: .2s;
@@ -408,4 +407,37 @@ a#browse:hover{
 	-moz-box-shadow: 0 0 15px #FFF;
 	-webkit-box-shadow: 0 0 15px#FFF;
 	box-shadow: 0 0 15px #FFF;
+}
+
+a#browse > i{
+	float: right;
+	margin-top: -4px;
+}
+
+#boxngo_intro > .feature i{
+	font-size: 60px;
+	display: block;
+	color: #EB6841;
+	margin-top: 25px;
+}
+
+#boxngo_intro > .feature h2{
+	font-size: 18px;
+	text-align: left;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+#boxngo_intro div.columns{
+	color: #666;
+	font-size: 13px;
+	text-align: left;
+}
+
+#boxngo_intro .row{
+	min-width: 0;
+}
+
+form input[type="submit"]{
+	margin: 0;
 }

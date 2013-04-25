@@ -23,7 +23,7 @@ html, body {
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -80px; /* the bottom margin is the negative value of the footer's height */
-	margin: 0 auto -180px;
+	margin: 0 auto -170px;
 }
 
 footer, .push{

@@ -10,7 +10,7 @@ $this->end(); ?>
 					What is BOX'NGO?
 				</div>
 				<p class="answer">
-					BOX'NGO is an interactive online selling platform that allows college students (as of now), to list their items on our website to gain sales, and also reach customers from their own college to make transactions easier.
+					BOX'NGO is an online marketplace that makes it easy to buy, sell, and trade online. We are run by a team of sellers that hate selling online because of how complicated and burdensome the online selling process has become. BOX'NGO is the way we believe online selling should be done - quick, easy, and user friendly.
 				</p>
 			</div>
 			<div class="question_answer">
@@ -26,7 +26,7 @@ $this->end(); ?>
 					Are there any fees?
 				</div>
 				<p class="answer">
-					There is a small fee once you have made a sale online. We retain a 10% fee from the total transaction which covers credit card / bank fees, transaction fees, Paypal fees, and administrative costs.
+					There is a small fee once you have made a sale online. We retain a 10% fee from the total transaction which covers credit card / bank fees, transaction fees, Stripe/PayPal fees, and administrative costs.
 				</p>
 			</div>
 			<div class="question_answer">
@@ -34,7 +34,7 @@ $this->end(); ?>
 					Great, how do I start listing on BOX'NGO?
 				</div>
 				<p class="answer">
-					We've made listing on BOX'NGO as easy as possible. First, you must have a .EDU email address and register using that. Next, click on the orange "List an item for sale" button located on the upper right hand corner or click <a href="/shops/shoplist">here</a>. Fill out the form and you're ready to go! You can always view your items
+					We've made listing on BOX'NGO as easy as possible. To get started, simply register using your email address. Next, click on the orange "List an item for sale" button located on the upper right hand corner or click <a href="/shops/shoplist">here</a>. Fill out the form and you're ready to go! You can always view your items
 on your dashboard.
 				</p>
 			</div>
@@ -59,7 +59,7 @@ on your dashboard.
 					How do I trade on BOX'NGO?
 				</div>
 				<p class="answer">
-					It is very easy to trade on BOXN'GO. If the seller goes to the same school as you, there will be a small orange link located on the view listing page. If you find a listing that you like, and the seller is from the same school as yours, you can establish a meeting time between you and the seller. You will not be charged a BOX'NGO fee if you pay each other in person. But beware of scams and your safety, BOXN'GO will not be responsible for any transactions that happen outside of TheBOXNGO.com.
+					Currently, we are working to implement trading on a broader scale. As of right now, you can only trade if the buyer and seller attend the same college / university and have registered using their EDU email addresses. We hope to allow trading for everyone by early May.
 				</p>
 			</div>
 			<div class="question_answer">

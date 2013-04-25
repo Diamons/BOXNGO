@@ -5,7 +5,7 @@
 		</div>
 		<div class="three columns">
 			<a href="/blog/">Blog</a>
-			<a href="/info/about">About</a>
+			<a href="/info/about">Our Story</a>
 		</div>
 		<div class="three columns">
 			<?php for($i = 0; $i < count($layoutCategories); $i++){ ?>
@@ -13,7 +13,7 @@
 			<?php } ?>
 		</div>
 		<div class="three columns">
-			<a class="support" href="/info/support">Support</a>			
+			<a class="support" href="/info/support">FAQ / Support</a>			
 			<a href="/info/privacy">Privacy Policy</a>
 			<!-- <a href="/info/faq">FAQ</a> -->
 		</div>	

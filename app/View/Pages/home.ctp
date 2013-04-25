@@ -55,9 +55,33 @@ $this->start('meta'); ?>
 	<div class="wrapper">
 		<div id="boxngo_intro">
 			<h1>A Simpler, Easier Marketplace</h1>
-			<h2>Connect with sellers from all over the world and your own local campus. Buy from others online, sell your stuff to make money quickly and easily, and trade with other people around you all through BOX'NGO.</h2>
-			<h2>Buy, sell, and trade, all with <img class="inline_logo" src="/logo.png" alt="BOX'NGO">. It's quick, easy, and FREE!</h2>
-			<a id="browse" href="/search">Browse Listings &#0187;</a>
+			<div class="row feature">
+				<div class="two columns">
+					<i class="icon-credit-card"></i> 
+				</div>
+				<div class="ten columns">
+					<h2>Flat 10% Selling Fee</h2>
+					Only pay 10% when you make a sale. Other sites require you calculate PayPal fees (3.5% + 35 cents), listing fees, and much more. We charge one flat 10% fee, regardless of how much your listing costs. Spend less time figuring out fees and more time selling.
+				</div>
+			</div>
+			<div class="row feature">
+				<div class="two columns">
+					<i class="icon-bolt"></i> 
+				</div>
+				<div class="ten columns">
+					<h2>Get Paid Quick</h2>
+					Once your listing has shipped and we've verified the tracking code which is usually within 24 hours, you get paid via PayPal. If you choose to get paid via check, receive a check in the mail every 2 weeks. You've already made a sale, you shouldn't have to wait days to get paid.
+				</div>
+			</div>
+			<div class="row feature">
+				<div class="two columns">
+					<i class="icon-reorder"></i> 
+				</div>
+				<div class="ten columns">
+					<h2>Quick and Easy Listing Process</h2>
+					Our listing process takes 20 - 30 seconds to fill and complete. With just a few fields, you can be on your way to selling online. We believe selling online should be a easy frictionless process and an easy listing form is just one way to achieve that.
+				</div>
+			</div>
 		</div>
 		<div id="welcome_container">
 			<?php echo $this->Form->create('User', array('class'=>'', 'url' => '/users/', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
@@ -70,28 +94,38 @@ $this->start('meta'); ?>
 					<?php echo $this->Form->input('User.accepttos', array('label' => 'I accept the', 'type' => 'checkbox', 'value' => '1')); ?>
 					<a href="/info/tos">Terms of Service</a>
 					<?php echo $this->Form->end('Register', array('class' => 'submitButton registerButton')); ?>
+					<a href="/search" id="browse"><i class="icon-arrow-right"></i>Browse Listings</a>
 		</div>
 	</div>
 </div>
-<div class="features wrapper">
-	<div class="row">
-		<div class="four columns">
-			<div>
-				<i class="icon-credit-card"></i> <h2>Hassle Free Shopping</h2>
-			</div>
-				It's as easy as finding something you like, paying via <a href="https://stripe.com/gallery">Stripe</a>, and receiving your item. You can shop on BOX'NGO knowing that we're here to help take care of any issues that may arise.
-		</div>
-		<div class="four columns">
-			<div>
-				<i class="icon-heart"></i> <h2>Selling Made Easy</h2>
-			</div>
-				It takes less than 2 minutes to get started selling. Our selling process is fast and easy. Gone are the days of filling out pages of forms to sell one item.
-		</div>
-		<div class="four columns">
-			<div>
-				<i class="icon-cogs"></i> <h2>Low Selling Fees</h2>
-			</div>
-				BOX'NGO charges a flat 10% fee &mdash; lower than most other selling platforms to the seller, not the buyer. You receive 90% of the payment when someone decides to buy online. Only pay when you make a sale, and best of all, cash and trade transactions are 100% free.
-		</div>
+<div class="wrapper">
+	<div id="listings">
+		<?php if(!empty($listings)): ?>
+			<?php 
+				for($i = 0; $i < count($listings); $i++):
+					if($i == 0 || $i % 4 == 0): ?>
+						<div class="row">
+					<?php endif; ?>
+						<div class="three columns">
+							<div class="listing">
+								<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $listings[$i]['Shop']['id'];?>">
+								<?php if(!empty($listings[$i]['Image'][0]['url'])){?>
+								<img src="<?php echo $listings[$i]['Image'][0]['url']; ?>/convert?w=182&h=150&fit=crop" class="image" />
+								<?php } else { ?>
+								<div class="image"></div>
+								<?php } ?>
+								</a>
+								<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($listings[$i]['Shop']['id']));?>"><?php echo nl2br(h($listings[$i]['Shop']['name'])); ?></a></h1>
+								<div class="category"><span class="price">$<?php echo $listings[$i]['Shop']['price']; ?></span><a href="/searches/browse/<?php echo $listings[$i]['Category']['short_name']; ?>"><?php echo $listings[$i]['Category']['display_name']; ?></a></div>
+								<div class="userlisted">
+									<span class="typicn user"></span> Listed by <a href="/users/profile/<?php echo $listings[$i]['User']['id']; ?>"><?php echo $listings[$i]['User']['display_name']; ?></a>
+								</div>
+							</div>
+						</div>
+				<?php if($i == 3 || $i%4 == 3 || $i == count($listings)-1): ?>
+				</div>
+				<?php endif; ?>
+				<?php endfor;
+		endif; ?>
 	</div>
 </div>
