@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Arvo);
 
 #content{
-	height: 540px;
+	height: 600px;
 	margin: 0;
 	background: url('/images/bg/spring.jpg') no-repeat 0 -600px;
 	border: 1px solid #EEE;
@@ -286,7 +286,7 @@ img#coverBanner{
 	float: left;
 	width: 55%;
 	margin-right: 10%;
-	margin-top: 20px;
+	margin-top: 35px;
 	color: #FFF;
 }
 
