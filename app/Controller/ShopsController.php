@@ -112,7 +112,7 @@
 
 				if($listing['Shop']['canview'] == 2)
 					$this->Session->setFlash("This listing has run out of stock and is <b>sold out</b>.", "flash_warning");
-				$this->set("title_for_layout", $listing['Shop']['name']);
+				$this->set("title_for_layout", "$".$listing['Shop']['price']." ".$listing['Shop']['name']);
 				$this->set("school", $this->School->getSchool($listing['User']['username']));
 				if($this->Auth->loggedin()){
 					$this->Favorite->recursive = -1;
