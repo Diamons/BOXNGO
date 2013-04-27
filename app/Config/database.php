@@ -62,11 +62,11 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'us-cdbr-east-02.cleardb.com',
+		'host' => 'us-cdbr-east-03.cleardb.com',
 		'port' => 3306,
-		'login' => 'be313c026dfe07',
-		'password' => 'cf1ec3c2',
-		'database' => 'heroku_0c1b33101416ab0',
+		'login' => 'bd203a888f9dcf',
+		'password' => '6508d8a8',
+		'database' => 'heroku_5c30e26ec8f7395',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
