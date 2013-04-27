@@ -51,7 +51,7 @@ $this->start('meta'); ?>
 
 <?php $this->end();
 ?>
-<div id="content">
+<div class="clearfix" id="content">
 	<div class="wrapper">
 		<div id="boxngo_intro">
 			<h1>A Simpler, Easier Marketplace</h1>

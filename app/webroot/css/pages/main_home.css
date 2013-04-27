@@ -1,7 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Arvo);
 
 #content{
-	height: 600px;
 	margin: 0;
 	background: url('/images/bg/spring.jpg') no-repeat 0 -600px;
 	border: 1px solid #EEE;
@@ -390,7 +389,7 @@ a.loginFacebookButton{
 a#browse{
 	display: block;
 	font-family: "Arvo", serif;
-	font-size: 32px;
+	font-size: 26px;
 	color: #FFF;
 	background: #96c56f ;
 	padding: 30px;
