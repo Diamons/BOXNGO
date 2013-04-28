@@ -1,21 +1,19 @@
 <footer>
 	<div class="row wrapper">
-		<div class="three columns">
+		<div class="four columns">
 			<a href="/"><img src="/logo.png" /></a>
 		</div>
-		<div class="three columns">
+		<div class="four columns">
 			<a href="/blog/">Blog</a>
-			<a href="/info/about">Our Story</a>
+			<a href="/info/about">Meet the Founders</a>
+			<a href="/info/howitworks">How it Works</a>
+			<a class="support" href="/info/support">FAQ / Support</a>			
+			<a href="/info/privacy">Privacy Policy</a>
 		</div>
-		<div class="three columns">
+		<div class="four columns">
 			<?php for($i = 0; $i < count($layoutCategories); $i++){ ?>
 				<a href="/browse/<?php echo $layoutCategories[$i]['Category']['short_name']; ?>"><?php echo $layoutCategories[$i]['Category']['display_name']; ?></a>
 			<?php } ?>
 		</div>
-		<div class="three columns">
-			<a class="support" href="/info/support">FAQ / Support</a>			
-			<a href="/info/privacy">Privacy Policy</a>
-			<!-- <a href="/info/faq">FAQ</a> -->
-		</div>	
 	</div>
 </footer>

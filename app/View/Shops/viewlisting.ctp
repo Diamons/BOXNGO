@@ -6,9 +6,9 @@
 	$this->start('facebookMeta'); ?>
 		<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# theboxngo: http://ogp.me/ns/fb/theboxngo#">
 		<meta property="fb:app_id" content="116996495106723" /> 
-		<meta property="og:type" content="theboxngo:listing" /> 
-		<meta property="og:url" content="<?php echo Router::url(null, true) ?>" />
-		<meta property="og:title" content="<?php echo $listing['Shop']['price']." ".$listing['Shop']['name']; ?>" /> 
+		<meta property="og:type"   content="object" /> 
+		<meta property="og:url"    content="<?php echo Router::url(null, true) ?>" /> 
+		<meta property="og:title"  content="$<?php echo $listing['Shop']['price']." ".$listing['Shop']['name']; ?>" /> 
 		<meta property="og:description"  content="<?php echo $listing['Shop']['description']; ?>" /> 
 		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>" /> 
 	<?php $this->end();
@@ -79,7 +79,7 @@
 				<h4>Similar Items</h4>
 				<?php for($i = 0; $i < count($relatedItems); $i++){ ?>
 					<div class="two columns">
-						<a href="/shops/viewlisting/<?php echo $relatedItems[$i]['Shop']['id']; ?>"><img src="<?php echo $relatedItems[$i]['Image'][0]['url']; ?>/convert?w=180&height=120&fit=crop" /><h5><?php echo $relatedItems[$i]['Shop']['name']; ?></h5></a>
+						<a href="/shops/viewlisting/<?php echo $relatedItems[$i]['Shop']['id']; ?>/<?php echo $relatedItems[$i]['Shop']['permalink']; ?>"><img src="<?php echo $relatedItems[$i]['Image'][0]['url']; ?>/convert?w=180&height=120&fit=crop" /><h5><?php echo $relatedItems[$i]['Shop']['name']; ?></h5></a>
 					</div>
 				<?php } ?>
 			</div>
@@ -110,7 +110,7 @@
 				</div>
 				<div class="four columns">
 					<a class="buyNow" href="/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
-					<?php if(!$sameSchool){ ?> <a class="tradeNow" href="/shops/trade/<?php echo $listing['Shop']['id']; ?>">Trade</a> <?php } ?>
+					<?php if(!$sameSchool){ ?> <a style="display:none;" class="tradeNow" href="/shops/trade/<?php echo $listing['Shop']['id']; ?>">Trade</a> <?php } ?>
 				</div>
 			</div>
 			<div id="info_panel">
@@ -150,7 +150,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="sendmessage" class="reveal-modal small">
+	<div id="sendmessage" class="reveal-modal medium">
 	  <h2>Message <?php echo $listing['User']['display_name']; ?></h2>
 	  <p class="lead">Got a question or comment?</p>
 	  <p>

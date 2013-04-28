@@ -102,6 +102,7 @@ a.loginFacebookButton{
 	margin-top: 10px;
 	border-radius: 5px;
 	overflow: hidden;
+	padding: 0;
 }
 #about_boxngo > div, .moreinfo > div{
 	background: #F6F6F6;

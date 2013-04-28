@@ -25,6 +25,10 @@
 				$this->Shop->set($this->request->data);
 				if($this->Shop->validates()){
 					if(!empty($this->request->data['Shop']['images'])){
+
+						//Permalink
+						$this->request->data['Shop']['permalink'] = $this->Shop->permalink($this->request->data['Shop']['name']);
+
 						if($this->Shop->save($this->request->data)){
 							$this->Image->saveImages($this->request->data['Shop']['images'], $this->Shop->id);
 							$this->Session->setFlash("Congratulations! Your listing has been successfully posted.", "flash_success");
@@ -54,9 +58,9 @@
 				$this->User->recursive = -1;
 				$user = $this->User->read(NULL, $this->Auth->user('id'));
 				if(!empty($user['User']['facebook_access_token'])){
-					$link = "http://theboxngo.com/shops/viewlisting/".$listingId;
+					$link = "http://theboxngo.com/shops/viewlisting/".$listingId."/".$listing['Shop']['permalink'];
 					$results = $this->Facebook->shareListing($listing['Shop']['name'], $link, $user['User']['facebook_id'], $user['User']['facebook_access_token'], '', $listing['Image'][0]['url']);
-					$this->redirect(array('controller' => 'shops', 'action' => 'viewlisting', $listingId));					
+					$this->redirect(array('controller' => 'shops', 'action' => 'viewlisting', $listingId,$listing['Shop']['permalink']));					
 				}
 				$this->set("shoplink", $listingId);
 			}
@@ -91,15 +95,23 @@
 			}
 		}
 		
-		public function viewlisting($listingid=NULL){
+		public function viewlisting($listingid=NULL, $permalink=NULL){
 			if(empty($listingid))
 				$this->redirect($this->referer());
 			$listing = $this->Shop->find("first", array("conditions" => array("Shop.id" => $listingid, "OR" => array("Shop.canview" => array(1,2)))));
-			
 			if(empty($listing)){
 				$this->Session->setFlash("Unfortunately we can't find that listing. Please contact Support if you believe this is a mistake.", "flash_warning");
 				$this->redirect($this->referer());
-			} else {
+			}else{
+				//None created, mostly for old functions, create and save one.
+				if(empty($listing['Shop']['permalink']))
+					$this->Shop->addPermalink($listing['Shop']['id'], $listing['Shop']['name']);
+
+				//If came here without one, add one.
+				if(empty($permalink) || !isset($permalink)){
+					$listing = $this->Shop->read(NULL, $listing['Shop']['id']);
+					$this->redirect(array('controller' => 'shops', 'action' => 'viewlisting', $listingid, $listing['Shop']['permalink']), 301);
+				}
 				if($this->Auth->loggedIn() && $this->Payment->userBoughtAlready($this->Auth->user('id'), $listingid) === true){
 					$this->Session->setFlash("You have already purchased this item before.", "flash_warning");
 				}
@@ -162,6 +174,7 @@
 				$this->Shop->set($this->request->data);
 				if($this->Shop->validates()){
 					if(!empty($this->request->data['Shop']['images'])){
+						$this->request->data['Shop']['permalink'] = $this->Shop->permalink($this->request->data['Shop']['name']);
 						if($this->Shop->save($this->request->data)){
 							
 							$this->Image->saveImages($this->request->data['Shop']['images'], $this->Shop->id);

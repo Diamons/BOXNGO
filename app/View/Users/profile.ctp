@@ -12,7 +12,9 @@ $this->end();
 		<div class="userInfo three columns">
 			<h3 class="username"><?php echo $userInfo['User']['display_name']; ?>'s Profile</h3>
 			<img src="<?php echo $userInfo['User']['profilepic']; ?>" class="avatar" />
-			<a id="sendUserMessage" href="#" data-reveal-id="sendmessage"><i class="icon-envelope"></i> Send Message</a>
+			<?php if($auth){ ?>
+				<a id="sendUserMessage" href="#" data-reveal-id="sendmessage"><i class="icon-envelope"></i> Send Message</a>
+				<?php } ?>
 			<section class="stats_info">
 				<?php if(!empty($school['School']['name'])){ ?><span>Attending <?php echo nl2br(h($school['School']['name'])); ?></span><?php } ?>
 				<div><a id="itemslistedView" href="javascript: void(0);"><div class="value"><?php echo count($userInfo['Shop']); ?></div>Items Listed</a></div>
@@ -28,7 +30,7 @@ $this->end();
 				<?php endif; ?>
 				<div class="four columns listing">
 					<div class="listing_container">
-						<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $favorites[$i]['Shop']['id'];?>">
+						<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $favorites[$i]['Shop']['id'];?>/<?php echo $favorites[$i]['Shop']['permalink']; ?>">
 						<?php if(!empty($favorites[$i]['Image'][0]['url'])){?>
 						<img src="<?php echo $favorites[$i]['Image'][0]['url']; ?>/convert?w=265&h=271&fit=crop" class="image" />
 						<?php } else { ?>
@@ -66,14 +68,14 @@ $this->end();
 				<?php endif; ?>
 				<div class="four columns listing">
 					<div class="listing_container">
-						<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $shopItems[$i]['Shop']['id'];?>">
+						<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $shopItems[$i]['Shop']['id'];?>/<?php echo $shopItems[$i]['Shop']['permalink'];?>">
 						<?php if(!empty($shopItems[$i]['Image'][0]['url'])){?>
 						<img src="<?php echo $shopItems[$i]['Image'][0]['url']; ?>/convert?w=265&h=271&fit=crop" class="image" />
 						<?php } else { ?>
 						<div class="image"></div>
 						<?php } ?>
 						</a>
-						<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $shopItems[$i]['Shop']['id'];?>"><?php echo nl2br(h($shopItems[$i]['Shop']['name'])); ?></a></h1>
+						<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $shopItems[$i]['Shop']['id'];?>/<?php echo $shopItems[$i]['Shop']['permalink'];?>"><?php echo nl2br(h($shopItems[$i]['Shop']['name'])); ?></a></h1>
 						
 						<div class="listing_box">$<?php echo $shopItems[$i]['Shop']['price']; ?></div>
 						<div class="listing_box"><a class="addfavorite<?php if(!isset($auth) || empty($auth)){
@@ -99,6 +101,7 @@ $this->end();
 		</div>
 	</div>
 </div>
+<?php if($auth){ ?>
 <div id="sendmessage" class="reveal-modal small">
   <h2>Message <?php echo $userInfo['User']['display_name']; ?></h2>
   <p>
@@ -109,3 +112,4 @@ $this->end();
   </p>
   <a class="close-reveal-modal">&#215;</a>
 </div>
+<?php } ?>

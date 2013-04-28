@@ -339,7 +339,7 @@
                                                             <div>
                                                                 <h1>Verification Email</h1>
 																<p>
-																	We are sending this email to verify that you signed up for <a href="<?php echo $domain ?>" target="_blank">BOX'NGO</a>. BOX'NGO is an exclusive online buying and selling platform for people with .EDU email addresses (beta). Please verify your email address by clicking the link below:
+																	We are sending this email to verify that you signed up for <a href="<?php echo $domain ?>" target="_blank">BOX'NGO</a>. <a href="<?php echo $domain; ?>">BOX'NGO</a> is an online platform that makes it easy for people to sell online. Please verify your email address by clicking the link below:
 																</p>
 																
 																<p>

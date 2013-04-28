@@ -14,6 +14,9 @@
 		  debug($type);
 		}
 		public function index(){
+			if($this->Auth->loggedIn())
+				$this->redirect($this->referer());
+			
 			//Registration
 			if(isset($this->request->data['User']['passwordconfirmation']) && $this->request->is('post')){
 				if($this->User->save($this->request->data)){
@@ -263,10 +266,10 @@
 							$this->Session->setFlash("Your message was successfully sent! You will receive an email when you get a reply.", "flash_success");
 							parent::sendEmail($user['User']['username'], "BOX'NGO :: You have received a message on BOX'NGO!", "newmessage", array("subject" => $this->request->data['Thread']['subject'], "message" => $this->request->data['Thread']['message']));
 						}else{
-							$this->Session->setFlash("You must included a subject and message. Your subject cannot be over 250 characters and must be at least 10 characters.", "flash_error");
+							$this->Session->setFlash("You must included a subject and message. Your subject cannot be over 250 characters and must be at least 2 characters.", "flash_error");
 						}
 					}else{
-						$this->Session->setFlash("You must included a subject and message. Your subject cannot be over 250 characters and must be at least 10 characters.", "flash_error");
+						$this->Session->setFlash("You must included a subject and message. Your subject cannot be over 250 characters and must be at least 2 characters.", "flash_error");
 					}
 				}else{
 				}
@@ -279,9 +282,13 @@
 					if(($thread['Thread']['sender_id'] == $this->Auth->user('id'))){
 						$thread['Thread']['receiver_read'] = 0;
 						$user = $this->User->read(NULL, $thread['Thread']['receiver_id']);
+						$this->Thread->id = $thread['Thread']['id'];
+						$this->Thread->saveField("receiver_read", 0);
 					}elseif($thread['Thread']['receiver_id'] == $this->Auth->user('id')){
 						$thread['Thread']['sender_read'] = 0;
 						$user = $this->User->read(NULL, $thread['Thread']['sender_id']);
+						$this->Thread->id = $thread['Thread']['id'];
+						$this->Thread->saveField("sender_read", 0);
 					}
 					
 					if(isset($user)){

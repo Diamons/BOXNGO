@@ -116,6 +116,23 @@
 			$this->id = $listingId;
 			$this->save($listing);
 		}
+
+		function permalink($title, $delimiter='-'){
+			$clean = iconv('UTF-8', 'ASCII//TRANSLIT', $title);
+			$clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
+			$clean = strtolower(trim($clean, '-'));
+			$clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+			if(substr($clean, -1, 1) == "-")
+				$clean = substr($clean, 0, -1);
+
+			return $clean;
+		}
+
+		function addPermalink($listingId, $listingName){
+			$tmpPerma = $this->permalink($listingName);
+			$this->id = $listingId;
+			$this->saveField('permalink', $tmpPerma);
+		}
 		
 		function beforeSave($data){
 			if(isset($this->data['Shop']['quantity']) && $this->data['Shop']['quantity'] <= 0){

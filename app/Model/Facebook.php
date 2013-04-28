@@ -23,7 +23,12 @@
 		}
 		
 		public function favoriteListing($listingId,$accessToken){
-			$productUrl = 'http://theboxngo.com/shops/viewlisting/'.$listingId;
+			App::uses('Shop', 'Model');
+			$shop = new Shop();
+			$shop->recursive = 0;
+			$short = $shop->read("permalink", $listingId);
+
+			$productUrl = 'http://theboxngo.com/shops/viewlisting/'.$listingId.'/'.$short['Shop']['permalink'];
 			$postUrl = 'https://graph.facebook.com/me/og.likes';
 			$data = array('access_token' => $accessToken, 'object' => $productUrl);
 
@@ -31,7 +36,7 @@
 			$results2 = $this->fb->api('/me/theboxngo:favorite',
 				'POST',
 				array(
-					'listing' => $productUrl,
+					'object' => $productUrl,
 					'access_token' => $accessToken
 				)
 			);

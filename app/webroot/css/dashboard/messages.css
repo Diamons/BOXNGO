@@ -52,3 +52,17 @@ span.date{
 .alternative.message_individual{
 	background: #F7F7F7;
 }
+
+.profilepic_message{
+	max-width: 100px;
+	display: block;
+	margin: auto;
+}
+
+.message_individual > div.two.columns{
+	text-align: center;
+}	
+
+div.adminLabel{
+	display: block;
+}

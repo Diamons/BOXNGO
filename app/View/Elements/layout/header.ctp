@@ -7,7 +7,7 @@
 				<?php echo $this->Form->submit('Search', array('class' => 'mainpage', 'div'=>false)); ?>
 			</div>
 			<div class="one columns" id="newListing">
-				<a href="/shops/shoplist" id="listButton">Sell</a>
+				<a href="#" id="listButton">Search</a>
 			</div>
 	</div>
 </header>

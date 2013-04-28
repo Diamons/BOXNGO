@@ -86,6 +86,7 @@ div.wrapper{
 }
 
 #user_menu{
+	display: none;
 	width: 280px;
 	z-index: 10;
 	list-style: none;
@@ -238,7 +239,6 @@ footer a.support:hover{
 #actions{
 	text-align: right;
 	float: right;
-	width: 32%;
 }
 
 #actions > a{
@@ -252,17 +252,19 @@ footer a.support:hover{
 	text-align: center;
 }
 
-#register, #login{
+#actions #logout{
+	border-right: none;
+	margin-right: 0;
+
+}
+#register, #login, #logout{
 	float: right;
 }
 
-#register:hover, #login:hover{
+#register:hover, #login:hover, #logout:hover{
 	border-color: #fd8b69 !important;
 }
 
-#actions >a:first-child{
-	border: none;
-}
 
 #actions > a:hover{
 	color: #0899FF;
@@ -277,10 +279,6 @@ footer a.support:hover{
 	color: #CC333F;
 }
 
-#actions #logout, #actions #logout > a{
-	display: inline-block;
-	font-size: 11px;
-}
 header > div.wrapper > nav{
 	background: #FAFAFA;
 	height: 60px;
@@ -369,14 +367,12 @@ header > div.wrapper .link .notification{
 	color: red;
 }
 span.notification{
-	position: absolute;
-	top: 5px;
-	right: 5px;
 	font-size: 11px;
 	background: red;
 	display: inline-block;
 	padding: 3px 5px 2px 5px !important;
 	color: #FFF;
+	margin-left: 5px;
 	border-radius: 5px;
 	line-height: 11px;
 	height: auto !important;
@@ -597,12 +593,13 @@ form input[type="submit"].mainpage:hover{
 	border-bottom: 1px solid #EFEFEF;
 }
 
-#subnav > div.wrapper > a{
+#subnav > div.wrapper > a, #logout{
 	font-size: 11px;
 	text-transform: uppercase;
-	color: #AAA;
+	color: #666;
 	display: inline-block;
 	margin-right: 15px;
+	border: none;
 	border-top: 7px solid #F8F8F8;
 	padding: 0 5px 5px 5px;
 	transition: .3s;
@@ -614,7 +611,7 @@ form input[type="submit"].mainpage:hover{
 	margin-top: -2px;
 }
 
-#subnav > div.wrapper > a:hover{
+#subnav > div.wrapper > a:hover, #logout:hover{
 	color: #2ba6cb;
 	border-color: #2ba6cb;
 }

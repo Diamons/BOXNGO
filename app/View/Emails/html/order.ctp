@@ -339,7 +339,7 @@
                                                             <div>
                                                                 <h1>Order Received</h1>
 																<p>
-																	BOX'NGO is an online marketplace that makes it easy to buy, sell, and trade online.
+																	BOX'NGO is an exclusive online buying and selling platform for people with .EDU email addresses (beta).
 																</p>
 																
 																<p>

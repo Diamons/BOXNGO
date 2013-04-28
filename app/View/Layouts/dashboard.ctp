@@ -50,7 +50,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 					<a href="/dashboard/managepurchases">My Purchases</a>
 					<a href="/dashboard/myorders">My Orders<?php if(isset($notifications) && $notifications > 0){echo "<span class='notification'>".$notifications."</span>";};?></a>
 					<a href="/dashboard/mytrades">My Trades</a>
-					<a href="/dashboard/messages">My Messages <?php if($messages > 0) { echo "<span style='color:red;'>(".$messages.")</span>"; } ?></a>
+					<a href="/dashboard/messages">My Messages <?php if($messages > 0) { echo "<span class='notification'>".$messages."</span>"; } ?></a>
 					<hr />
 					<a href="/dashboard/manageaccount">Edit Profile</a>
 				</div>

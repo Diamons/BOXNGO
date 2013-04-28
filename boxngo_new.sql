@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 07, 2013 at 01:21 AM
+-- Generation Time: Apr 29, 2013 at 04:04 AM
 -- Server version: 5.5.20-log
 -- PHP Version: 5.3.13
 
@@ -19,6 +19,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `boxngo_new`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cake_sessions`
+--
+
+CREATE TABLE IF NOT EXISTS `cake_sessions` (
+  `id` varchar(255) NOT NULL DEFAULT '',
+  `data` text,
+  `expires` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cake_sessions`
+--
+
+INSERT INTO `cake_sessions` (`id`, `data`, `expires`) VALUES
+('ghr5669gci4hdpijue045itp20', 'Config|a:3:{s:9:"userAgent";s:32:"a7e65ab920216b8b942c500c165b696c";s:4:"time";i:1367214574;s:9:"countdown";i:10;}_Token|a:5:{s:3:"key";s:40:"d98f249e802ebf4f83f65e125faa0ca352bd5e78";s:18:"allowedControllers";a:0:{}s:14:"allowedActions";a:0:{}s:14:"unlockedFields";a:0:{}s:10:"csrfTokens";a:29:{s:40:"334d1aabb04f053376e977f8947250e618003c1e";i:1367200386;s:40:"490ac89d2fba71344d34209e5453afccdc7bad03";i:1367200391;s:40:"5e147a1303e47cda8bd905e69101c67ea3fcf087";i:1367200601;s:40:"63d1f47090c07437acaf558b796c119483cd518c";i:1367200607;s:40:"22a1223bc1a6db6beb985d59e4311cdd8e15aadd";i:1367200649;s:40:"45daa87b4592b5aabf840ba7162a14b0376fda63";i:1367200789;s:40:"8347504076c55fc057c35df50db3e13626a39cb9";i:1367201018;s:40:"3044416c79311855d93c6f09efd831fc3527e028";i:1367201110;s:40:"b3703f3495f1a252372fd43f7ed8703d9262ab60";i:1367201179;s:40:"00aecd20277fa2572655110ff83256dac0ea5840";i:1367201182;s:40:"a3480128886bf0734e86e2de62b9f15386a8d1fd";i:1367201219;s:40:"bdbb02ed6c047621dc5e0825462ae1c2c9b5278a";i:1367201233;s:40:"0291e360b0825b724cc268070e18f7dc18c651a3";i:1367201252;s:40:"7af1688cc944bc595ed91935cdb23bbe32248edd";i:1367201292;s:40:"9b8a0ae3973d866d914e1d19c953657600cca833";i:1367201299;s:40:"fa326ce1ccb92d18e32f2b394b0f37fd26e76501";i:1367201321;s:40:"5d66856220ad30eb436cdd74514061c0af5f4f8f";i:1367201330;s:40:"2b8d42af347738b25228c217ffbc3c51d076ce46";i:1367201433;s:40:"ae86fa3d693ff8d6b8f1eeb7445600b53f615413";i:1367201573;s:40:"40aec6e216a7314e2afce39b0835343d4223d098";i:1367201779;s:40:"28f7086bd54ce69832731ec9db04b7c1dd50b779";i:1367201781;s:40:"c3c6c567525f73a197ba61f5eb74c68285a50977";i:1367201843;s:40:"ece0fc57b1dbec9f0e69b02beeca549331f49c2a";i:1367201853;s:40:"a6a0d7bf3ad146b790706675dfc874097f488ddc";i:1367201961;s:40:"e3cebc625159e4e7c6746b148826543a1645c3c9";i:1367201969;s:40:"a2c376c4802f22fb8cb14e77324cc96d6e3f7b46";i:1367201971;s:40:"66a41c5cc613de4842887424d10835e78c7fce95";i:1367201971;s:40:"dacf25def57df9ef8aebf49f47ed8f9e1b5d5012";i:1367201973;s:40:"d98f249e802ebf4f83f65e125faa0ca352bd5e78";i:1367201974;}}Message|a:1:{s:4:"auth";a:3:{s:7:"message";s:47:"You are not authorized to access that location.";s:7:"element";s:7:"default";s:6:"params";a:0:{}}}Auth|a:1:{s:8:"redirect";s:15:"/shops/shoplist";}', 1367200174);
 
 -- --------------------------------------------------------
 
@@ -57,6 +77,7 @@ CREATE TABLE IF NOT EXISTS `coupons` (
   `code` varchar(100) NOT NULL,
   `percent_discount` decimal(10,2) DEFAULT NULL,
   `amount_discount` decimal(10,2) DEFAULT NULL,
+  `minimum` decimal(10,2) NOT NULL,
   `shop_id` int(11) NOT NULL,
   `expiration_date` datetime NOT NULL,
   `status` varchar(100) NOT NULL COMMENT '0 = not active, 1 = active, 2 = expired',
@@ -70,8 +91,8 @@ CREATE TABLE IF NOT EXISTS `coupons` (
 -- Dumping data for table `coupons`
 --
 
-INSERT INTO `coupons` (`id`, `code`, `percent_discount`, `amount_discount`, `shop_id`, `expiration_date`, `status`, `quantity`, `created`, `modified`) VALUES
-(1, 'test10dollaroff', '0.00', '10.00', 0, '2013-03-07 00:00:00', '1', 100, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+INSERT INTO `coupons` (`id`, `code`, `percent_discount`, `amount_discount`, `minimum`, `shop_id`, `expiration_date`, `status`, `quantity`, `created`, `modified`) VALUES
+(1, 'test10dollaroff', '0.15', '10.00', '0.00', 0, '2013-03-15 00:00:00', '1', 69, '0000-00-00 00:00:00', '2013-03-12 09:08:06');
 
 -- --------------------------------------------------------
 
@@ -8839,6 +8860,7 @@ CREATE TABLE IF NOT EXISTS `courses1231` (
 CREATE TABLE IF NOT EXISTS `entries` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `street_address` varchar(255) NOT NULL,
@@ -8850,7 +8872,16 @@ CREATE TABLE IF NOT EXISTS `entries` (
   `modified` datetime NOT NULL,
   `promotion` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+
+--
+-- Dumping data for table `entries`
+--
+
+INSERT INTO `entries` (`id`, `user_id`, `email`, `first_name`, `last_name`, `street_address`, `city`, `state`, `zipcode`, `selection`, `created`, `modified`, `promotion`) VALUES
+(18, 0, 'shahruksemail@gmail.com', '', '', '', '', '', '', '', '2013-03-14 03:38:34', '2013-03-14 03:38:34', 'march2013madness'),
+(19, 0, 'shahruksemail@2mail.com', '', '', '', '', '', '', '', '2013-03-14 03:38:40', '2013-03-14 03:38:40', 'march2013madness'),
+(20, 0, 'shahruks1email@om', '', '', '', '', '', '', '', '2013-03-14 03:39:16', '2013-03-14 03:39:16', 'march2013madness');
 
 -- --------------------------------------------------------
 
@@ -8865,15 +8896,15 @@ CREATE TABLE IF NOT EXISTS `favorites` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `favorites`
 --
 
 INSERT INTO `favorites` (`id`, `shop_id`, `user_id`, `created`, `modified`) VALUES
-(2, 25, 26, '2013-02-18 20:22:06', '2013-02-18 20:22:06'),
-(3, 21, 26, '2013-02-18 20:22:07', '2013-02-18 20:22:07');
+(8, 30, 26, '2013-04-28 09:31:04', '2013-04-28 09:31:04'),
+(10, 38, 26, '2013-04-28 10:16:02', '2013-04-28 10:16:02');
 
 -- --------------------------------------------------------
 
@@ -8908,7 +8939,7 @@ CREATE TABLE IF NOT EXISTS `images` (
   `url` varchar(255) NOT NULL,
   `shop_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=192 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=194 ;
 
 --
 -- Dumping data for table `images`
@@ -8961,7 +8992,9 @@ INSERT INTO `images` (`id`, `url`, `shop_id`) VALUES
 (185, 'https://www.filepicker.io/api/file/zATNo1DCQSmzTAJwOYci', 25),
 (189, 'https://www.filepicker.io/api/file/lVdLLNVTpuuMpt9SiCjj', 26),
 (190, 'https://www.filepicker.io/api/file/WDGL1M6tQqqUy8cSNSY4', 26),
-(191, 'https://www.filepicker.io/api/file/jZfM19SFSAGaRgwmZchI', 26);
+(191, 'https://www.filepicker.io/api/file/jZfM19SFSAGaRgwmZchI', 26),
+(192, 'https://www.filepicker.io/api/file/6XowxWHMSbC8kZFftD1i', 39),
+(193, 'https://www.filepicker.io/api/file/1kVdxN1TxSWQif94jxuN', 40);
 
 -- --------------------------------------------------------
 
@@ -8977,7 +9010,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
 
 --
 -- Dumping data for table `messages`
@@ -9018,7 +9051,14 @@ INSERT INTO `messages` (`id`, `thread_id`, `user_id`, `message`, `created`, `mod
 (32, 24, 26, 'TESAT\r\n\r\nhttp://theboxngo.com/shops/viewlisting/20', '2013-01-22 16:35:27', '2013-01-22 16:35:27'),
 (33, 24, 33, 'HEY BABY', '2013-01-22 16:35:54', '2013-01-22 16:35:54'),
 (34, 24, 33, 'ILY KK', '2013-01-22 16:36:04', '2013-01-22 16:36:04'),
-(35, 24, 33, 'TESTTTT', '2013-01-22 16:44:32', '2013-01-22 16:44:32');
+(35, 24, 33, 'TESTTTT', '2013-01-22 16:44:32', '2013-01-22 16:44:32'),
+(36, 25, 26, 'dsaads\r\nhttp://theboxngo.com/shops/viewlisting/21', '2013-03-14 01:09:06', '2013-03-14 01:09:06'),
+(37, 28, 26, 'dasdsadadasdadsadsadsaddsadsadsadas', '2013-04-28 10:17:54', '2013-04-28 10:17:54'),
+(38, 29, 26, 'http://theboxngo.com/shops/viewlisting/40', '2013-04-28 10:26:29', '2013-04-28 10:26:29'),
+(39, 29, 26, 'Test12321', '2013-04-28 10:27:17', '2013-04-28 10:27:17'),
+(40, 30, 26, 'http://theboxngo.com/shops/viewlisting/40', '2013-04-28 10:27:23', '2013-04-28 10:27:23'),
+(41, 31, 26, 'http://theboxngo.com/shops/viewlisting/39', '2013-04-28 23:19:22', '2013-04-28 23:19:22'),
+(42, 32, 33, 'adsads\r\nhttp://theboxngo.com/shops/viewlisting/37', '2013-04-28 23:19:43', '2013-04-28 23:19:43');
 
 -- --------------------------------------------------------
 
@@ -9050,7 +9090,11 @@ CREATE TABLE IF NOT EXISTS `orders` (
 
 INSERT INTO `orders` (`id`, `seller_id`, `shop_id`, `stripe_id`, `created`, `modified`, `buyer_id`, `payment_id`, `shipping_amount`, `shop_amount`, `status`, `completed`, `tracking_code`, `message`) VALUES
 ('50bb92ba-0aa0-4569-8339-21203177d11f', 26, 1, '', '2012-12-02 17:41:14', '2012-12-02 17:56:20', 33, '50bb92ba-b838-4615-9863-21203177d11f', '0.00', '15.00', 'cancelled', 0, NULL, ''),
-('50bbe980-de6c-4334-be37-21203177d11f', 26, 1, '', '2012-12-02 23:51:28', '2012-12-02 23:51:28', 33, '50bbe980-ceec-45d4-9bbd-21203177d11f', '0.00', '15.00', 'pending', 0, NULL, '');
+('50bbe980-de6c-4334-be37-21203177d11f', 26, 1, '', '2012-12-02 23:51:28', '2012-12-02 23:51:28', 33, '50bbe980-ceec-45d4-9bbd-21203177d11f', '0.00', '15.00', 'pending', 0, NULL, ''),
+('51410e95-99c0-4bb6-a2a5-08103177d11f', 33, 20, '', '2013-03-13 23:41:09', '2013-03-13 23:41:09', 26, '51410e95-d83c-41c0-8cc3-08103177d11f', '0.00', '133.00', 'pending', 0, NULL, ''),
+('51410eb3-c3d0-4c62-8c24-08103177d11f', 33, 20, '', '2013-03-13 23:41:39', '2013-03-13 23:41:39', 26, '51410eb3-4e90-42dc-a7c9-08103177d11f', '0.00', '133.00', 'pending', 0, NULL, ''),
+('51411c65-bc58-4a9c-9614-08103177d11f', 33, 20, '', '2013-03-14 00:40:05', '2013-03-14 00:40:05', 26, '51411c65-1d14-4b9b-a1bf-08103177d11f', '0.00', '133.00', 'pending', 0, NULL, ''),
+('5141203f-7de4-4d0a-abfe-08103177d11f', 33, 20, '', '2013-03-14 00:56:31', '2013-03-14 00:56:31', 26, '5141203e-c7c4-47f6-8723-08103177d11f', '0.00', '133.00', 'pending', 0, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -9082,8 +9126,13 @@ CREATE TABLE IF NOT EXISTS `payments` (
 --
 
 INSERT INTO `payments` (`id`, `user_id`, `shop_id`, `email`, `zipcode`, `state`, `city`, `streetAddress`, `lastName`, `firstName`, `stripe_id`, `shipping_amount`, `shop_amount`, `created`, `modified`) VALUES
+('', 0, 0, '', 0, '', '', '', '', '', '', '0.00', '0.00', '2013-03-12 08:55:34', '2013-03-12 08:55:34'),
 ('50bb92ba-b838-4615-9863-21203177d11f', 33, 1, 'skh0023@hunter.cuny.edu', 11372, 'New York', 'Jackson Heights', '3730 81st #D8 or #D3', 'Khan', 'Shahruk', 'tok_0qNUaLOz1UkRMw', '0.00', '15.00', '2012-12-02 17:41:14', '2012-12-02 17:41:14'),
-('50bbe980-ceec-45d4-9bbd-21203177d11f', 33, 1, 'skh0023@hunter.cuny.edu', 11372, 'New York', 'Jackson Heights', '3730 81st #D8 or #D3', 'Khan', 'Shahruk', 'tok_0qTTIscKiHtfdf', '0.00', '15.00', '2012-12-02 23:51:28', '2012-12-02 23:51:28');
+('50bbe980-ceec-45d4-9bbd-21203177d11f', 33, 1, 'skh0023@hunter.cuny.edu', 11372, 'New York', 'Jackson Heights', '3730 81st #D8 or #D3', 'Khan', 'Shahruk', 'tok_0qTTIscKiHtfdf', '0.00', '15.00', '2012-12-02 23:51:28', '2012-12-02 23:51:28'),
+('51410e95-d83c-41c0-8cc3-08103177d11f', 26, 20, 'shahruksemail@gmail.com', 11372, 'New York', 'Jackson Heights', '3730 81st #D8 or #D3', 'Khan', 'Shahruk', 'tok_1SJ6IstmVBUA7k', '0.00', '133.00', '2013-03-13 23:41:09', '2013-03-13 23:41:09'),
+('51410eb3-4e90-42dc-a7c9-08103177d11f', 26, 20, 'shahruksemail@gmail.com', 11372, 'New York', 'Jackson Heights', '3730 81st #D8 or #D3', 'Khan', 'Shahruk', 'tok_1SJ7GSVdLuIThL', '0.00', '133.00', '2013-03-13 23:41:39', '2013-03-13 23:41:39'),
+('51411c65-1d14-4b9b-a1bf-08103177d11f', 26, 20, 'shahruksemail@gmail.com', 11372, 'New York', 'Jackson Heights', '3730 81st #D8 or #D3', 'Khan', 'Shahruk', 'tok_1SK3duFqiOXPuU', '0.00', '133.00', '2013-03-14 00:40:05', '2013-03-14 00:40:05'),
+('5141203e-c7c4-47f6-8723-08103177d11f', 26, 20, 'shahruksemail@gmail.com', 11372, 'New York', 'Jackson Heights', '3730 81st #D8 or #D3', 'Khan', 'Shahruk', 'tok_1SKJhY8Cvo7lGx', '0.00', '133.00', '2013-03-14 00:56:30', '2013-03-14 00:56:30');
 
 -- --------------------------------------------------------
 
@@ -9140,18 +9189,33 @@ CREATE TABLE IF NOT EXISTS `shops` (
   `shipping` decimal(10,2) NOT NULL,
   `message` text NOT NULL,
   `category_id` int(11) DEFAULT NULL,
+  `permalink` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
 --
 -- Dumping data for table `shops`
 --
 
-INSERT INTO `shops` (`id`, `canview`, `user_id`, `name`, `description`, `quantity`, `price`, `created`, `modified`, `shipping`, `message`, `category_id`) VALUES
-(20, 1, 33, 'TEST ITEM', 'adsdsadsadsadsadsadsadsasa', 1, '133.00', '2013-01-21 12:54:22', '2013-01-21 12:54:22', '0.00', '', 5),
-(21, 1, 26, ' b Maud Martha a', 'adsadsdsaaddsad41sadsadadsadsa', 1, '12313.00', '2013-02-13 07:36:40', '2013-02-13 07:36:40', '0.00', '', 7),
-(25, 1, 26, 'New Maud martha edition book', 'ur gonna love it menzz', 1, '123.00', '2013-02-13 08:24:20', '2013-02-13 08:24:20', '0.00', '', 7),
-(26, 1, 26, 'a new maud martha edition book', 'adsaddsat atarad ad ad ', 1, '11.00', '2013-02-13 08:24:54', '2013-02-13 08:25:22', '0.00', '', 7);
+INSERT INTO `shops` (`id`, `canview`, `user_id`, `name`, `description`, `quantity`, `price`, `created`, `modified`, `shipping`, `message`, `category_id`, `permalink`) VALUES
+(20, 1, 33, 'TEST ITEM', 'adsdsadsadsadsadsadsadsasa', 1, '133.00', '2013-01-21 12:54:22', '2013-04-28 09:59:00', '0.00', '', 5, 'test-item'),
+(21, 1, 26, ' b Maud Martha a', 'adsadsdsaaddsad41sadsadadsadsa', 1, '12313.00', '2013-02-13 07:36:40', '2013-04-28 10:02:35', '0.00', '', 7, '-b-maud-martha-a'),
+(25, 0, 26, 'New Maud martha edition book', 'ur gonna love it menzz', 1, '123.00', '2013-02-13 08:24:20', '2013-03-13 23:32:22', '0.00', '', 7, ''),
+(26, 1, 26, 'a new maud martha edition book', 'adsaddsat atarad ad ad ', 1, '11.00', '2013-02-13 08:24:54', '2013-02-13 08:25:22', '0.00', '', 7, '1-32-321-3'),
+(27, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:09:38', '2013-04-28 10:34:22', '0.00', '', 6, 'test-coiupinsad-as-dsa'),
+(28, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:10:24', '2013-04-28 09:10:24', '0.00', '', 6, ''),
+(29, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:14:05', '2013-04-28 09:14:05', '0.00', '', 6, ''),
+(30, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:14:19', '2013-04-28 10:07:50', '0.00', '', 6, 'test-coiupinsad-as-dsa'),
+(31, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:15:31', '2013-04-28 09:15:31', '0.00', '', 6, ''),
+(32, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:15:50', '2013-04-28 09:15:50', '0.00', '', 6, ''),
+(33, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:16:03', '2013-04-28 09:16:03', '0.00', '', 6, ''),
+(34, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:16:23', '2013-04-28 10:03:45', '0.00', '', 6, 'test-coiupinsad-as-dsa'),
+(35, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:16:29', '2013-04-28 09:16:29', '0.00', '', 6, ''),
+(36, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:16:34', '2013-04-28 10:04:30', '0.00', '', 6, 'test-coiupinsad-as-dsa'),
+(37, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:17:01', '2013-04-28 23:19:39', '0.00', '', 6, 'test-coiupinsad-as-dsa'),
+(38, 1, 26, 'Test coiupinsad as dsa', 'asdTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsaTest coiupinsad as dsa', 1, '12.00', '2013-04-28 09:17:05', '2013-04-28 10:04:42', '0.00', '', 6, 'test-coiupinsad-as-dsa'),
+(39, 1, 26, 'Test 123 ABC Shahruk Was Here', 'assaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsaassaddsadsadsa', 1, '123.00', '2013-04-28 10:09:30', '2013-04-28 10:09:30', '0.00', '', 6, 'test-123-abc-shahruk-was-here'),
+(40, 1, 26, 'Test I love Shahruk Khan He''s Awesome ', 'dsadsadsadsadsaadddsa', 1, '123.00', '2013-04-28 10:11:32', '2013-04-28 10:11:32', '0.00', '', 6, 'test-i-love-shahruk-khan-hes-awesome-');
 
 -- --------------------------------------------------------
 
@@ -9166,7 +9230,7 @@ CREATE TABLE IF NOT EXISTS `shopviews` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=486 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=672 ;
 
 --
 -- Dumping data for table `shopviews`
@@ -9657,7 +9721,193 @@ INSERT INTO `shopviews` (`id`, `user_id`, `shop_id`, `created`, `modified`) VALU
 (482, 33, 20, '2013-03-06 16:20:06', '2013-03-06 16:20:06'),
 (483, 33, 20, '2013-03-06 16:20:12', '2013-03-06 16:20:12'),
 (484, 33, 25, '2013-03-06 16:20:24', '2013-03-06 16:20:24'),
-(485, 33, 25, '2013-03-06 16:20:32', '2013-03-06 16:20:32');
+(485, 33, 25, '2013-03-06 16:20:32', '2013-03-06 16:20:32'),
+(486, 26, 20, '2013-03-11 23:42:06', '2013-03-11 23:42:06'),
+(487, 26, 25, '2013-03-12 08:40:13', '2013-03-12 08:40:13'),
+(488, 26, 25, '2013-03-12 08:40:15', '2013-03-12 08:40:15'),
+(489, 26, 20, '2013-03-12 08:40:17', '2013-03-12 08:40:17'),
+(490, 26, 25, '2013-03-13 23:22:44', '2013-03-13 23:22:44'),
+(491, 26, 25, '2013-03-13 23:23:08', '2013-03-13 23:23:08'),
+(492, 26, 25, '2013-03-13 23:32:17', '2013-03-13 23:32:17'),
+(493, 26, 26, '2013-03-13 23:33:05', '2013-03-13 23:33:05'),
+(494, 26, 26, '2013-03-13 23:34:15', '2013-03-13 23:34:15'),
+(495, 26, 20, '2013-03-13 23:34:22', '2013-03-13 23:34:22'),
+(496, 26, 21, '2013-03-13 23:45:18', '2013-03-13 23:45:18'),
+(497, 26, 20, '2013-03-13 23:45:26', '2013-03-13 23:45:26'),
+(498, 26, 20, '2013-03-14 00:40:14', '2013-03-14 00:40:14'),
+(499, 26, 26, '2013-03-14 00:41:06', '2013-03-14 00:41:06'),
+(500, 26, 20, '2013-03-14 00:42:56', '2013-03-14 00:42:56'),
+(501, 26, 20, '2013-03-14 00:56:08', '2013-03-14 00:56:08'),
+(502, 26, 20, '2013-03-14 00:58:31', '2013-03-14 00:58:31'),
+(503, 26, 20, '2013-03-14 01:07:09', '2013-03-14 01:07:09'),
+(504, 26, 21, '2013-03-14 01:08:36', '2013-03-14 01:08:36'),
+(505, 26, 21, '2013-03-14 01:09:07', '2013-03-14 01:09:07'),
+(506, 26, 21, '2013-03-14 01:10:09', '2013-03-14 01:10:09'),
+(507, 26, 21, '2013-03-14 01:10:10', '2013-03-14 01:10:10'),
+(508, 26, 21, '2013-03-14 01:10:17', '2013-03-14 01:10:17'),
+(509, 26, 21, '2013-03-14 01:10:47', '2013-03-14 01:10:47'),
+(510, 26, 21, '2013-03-14 01:10:57', '2013-03-14 01:10:57'),
+(511, 26, 20, '2013-03-14 01:13:01', '2013-03-14 01:13:01'),
+(512, 26, 20, '2013-03-14 01:15:29', '2013-03-14 01:15:29'),
+(513, 26, 20, '2013-03-14 01:39:33', '2013-03-14 01:39:33'),
+(514, 26, 21, '2013-03-14 01:39:46', '2013-03-14 01:39:46'),
+(515, 26, 21, '2013-03-14 01:40:14', '2013-03-14 01:40:14'),
+(516, 26, 20, '2013-03-14 01:40:42', '2013-03-14 01:40:42'),
+(517, 26, 20, '2013-03-14 01:40:49', '2013-03-14 01:40:49'),
+(518, 26, 20, '2013-03-14 01:41:02', '2013-03-14 01:41:02'),
+(519, 26, 20, '2013-03-14 01:51:19', '2013-03-14 01:51:19'),
+(520, 26, 20, '2013-03-14 01:52:57', '2013-03-14 01:52:57'),
+(521, 26, 20, '2013-03-14 01:53:04', '2013-03-14 01:53:04'),
+(522, 26, 20, '2013-03-14 01:53:12', '2013-03-14 01:53:12'),
+(523, 26, 20, '2013-03-14 01:53:20', '2013-03-14 01:53:20'),
+(524, 26, 20, '2013-03-14 01:53:26', '2013-03-14 01:53:26'),
+(525, 26, 20, '2013-03-14 01:54:29', '2013-03-14 01:54:29'),
+(526, 26, 20, '2013-03-14 01:57:50', '2013-03-14 01:57:50'),
+(527, 26, 20, '2013-03-14 01:58:37', '2013-03-14 01:58:37'),
+(528, 26, 20, '2013-03-14 02:03:32', '2013-03-14 02:03:32'),
+(529, 26, 20, '2013-03-14 02:03:50', '2013-03-14 02:03:50'),
+(530, 26, 20, '2013-03-14 02:04:43', '2013-03-14 02:04:43'),
+(531, 26, 20, '2013-03-14 02:05:15', '2013-03-14 02:05:15'),
+(532, 26, 20, '2013-03-14 02:06:19', '2013-03-14 02:06:19'),
+(533, 26, 20, '2013-03-14 02:07:12', '2013-03-14 02:07:12'),
+(534, 26, 20, '2013-03-14 02:07:25', '2013-03-14 02:07:25'),
+(535, 26, 20, '2013-03-14 02:07:29', '2013-03-14 02:07:29'),
+(536, 26, 20, '2013-03-14 02:08:13', '2013-03-14 02:08:13'),
+(537, 26, 20, '2013-03-14 02:08:28', '2013-03-14 02:08:28'),
+(538, 26, 20, '2013-03-14 02:08:36', '2013-03-14 02:08:36'),
+(539, 26, 20, '2013-03-14 02:08:52', '2013-03-14 02:08:52'),
+(540, 26, 20, '2013-03-14 02:08:57', '2013-03-14 02:08:57'),
+(541, 26, 20, '2013-03-14 02:09:13', '2013-03-14 02:09:13'),
+(542, 26, 20, '2013-03-14 02:10:20', '2013-03-14 02:10:20'),
+(543, 26, 20, '2013-03-14 02:10:49', '2013-03-14 02:10:49'),
+(544, 26, 20, '2013-03-14 02:11:18', '2013-03-14 02:11:18'),
+(545, 26, 20, '2013-03-14 02:11:34', '2013-03-14 02:11:34'),
+(546, 26, 20, '2013-03-14 02:11:44', '2013-03-14 02:11:44'),
+(547, 26, 20, '2013-03-14 02:11:52', '2013-03-14 02:11:52'),
+(548, 26, 20, '2013-03-14 02:12:04', '2013-03-14 02:12:04'),
+(549, 26, 20, '2013-03-14 02:12:15', '2013-03-14 02:12:15'),
+(550, 26, 20, '2013-03-14 02:12:34', '2013-03-14 02:12:34'),
+(551, 26, 20, '2013-03-14 02:13:02', '2013-03-14 02:13:02'),
+(552, 26, 20, '2013-03-14 02:13:10', '2013-03-14 02:13:10'),
+(553, 26, 20, '2013-03-14 02:13:22', '2013-03-14 02:13:22'),
+(554, 26, 20, '2013-03-14 02:13:35', '2013-03-14 02:13:35'),
+(555, 26, 20, '2013-03-14 02:14:35', '2013-03-14 02:14:35'),
+(556, 26, 20, '2013-03-14 02:15:39', '2013-03-14 02:15:39'),
+(557, 26, 20, '2013-03-14 02:16:02', '2013-03-14 02:16:02'),
+(558, 26, 20, '2013-03-14 02:16:13', '2013-03-14 02:16:13'),
+(559, 26, 20, '2013-03-14 02:16:18', '2013-03-14 02:16:18'),
+(560, 26, 20, '2013-03-14 02:16:27', '2013-03-14 02:16:27'),
+(561, 26, 20, '2013-03-14 02:16:37', '2013-03-14 02:16:37'),
+(562, 26, 20, '2013-03-14 02:17:08', '2013-03-14 02:17:08'),
+(563, 26, 20, '2013-03-14 02:17:17', '2013-03-14 02:17:17'),
+(564, 26, 20, '2013-03-14 02:17:28', '2013-03-14 02:17:28'),
+(565, 26, 20, '2013-03-14 02:19:05', '2013-03-14 02:19:05'),
+(566, 26, 20, '2013-03-14 02:19:31', '2013-03-14 02:19:31'),
+(567, 26, 20, '2013-03-14 02:19:37', '2013-03-14 02:19:37'),
+(568, 26, 20, '2013-03-14 02:19:55', '2013-03-14 02:19:55'),
+(569, 26, 20, '2013-03-14 02:20:42', '2013-03-14 02:20:42'),
+(570, 26, 26, '2013-03-14 02:23:33', '2013-03-14 02:23:33'),
+(571, 26, 20, '2013-03-14 02:23:35', '2013-03-14 02:23:35'),
+(572, 26, 20, '2013-03-14 02:24:42', '2013-03-14 02:24:42'),
+(573, 26, 20, '2013-03-14 02:25:01', '2013-03-14 02:25:01'),
+(574, 26, 20, '2013-03-14 02:25:09', '2013-03-14 02:25:09'),
+(575, 26, 20, '2013-03-14 02:25:35', '2013-03-14 02:25:35'),
+(576, 26, 20, '2013-03-14 04:00:24', '2013-03-14 04:00:24'),
+(577, 26, 26, '2013-03-17 04:58:40', '2013-03-17 04:58:40'),
+(578, 26, 26, '2013-03-17 04:59:17', '2013-03-17 04:59:17'),
+(579, 26, 26, '2013-03-17 04:59:22', '2013-03-17 04:59:22'),
+(580, 26, 26, '2013-03-17 04:59:29', '2013-03-17 04:59:29'),
+(581, 26, 26, '2013-03-17 04:59:32', '2013-03-17 04:59:32'),
+(582, 26, 26, '2013-03-17 04:59:45', '2013-03-17 04:59:45'),
+(583, 26, 26, '2013-03-17 04:59:47', '2013-03-17 04:59:47'),
+(584, 26, 26, '2013-03-17 05:13:26', '2013-03-17 05:13:26'),
+(585, 26, 26, '2013-03-17 05:13:31', '2013-03-17 05:13:31'),
+(586, 26, 26, '2013-03-17 05:13:33', '2013-03-17 05:13:33'),
+(587, 26, 26, '2013-03-17 05:13:36', '2013-03-17 05:13:36'),
+(588, 26, 26, '2013-03-17 05:13:38', '2013-03-17 05:13:38'),
+(589, 26, 26, '2013-03-17 05:14:15', '2013-03-17 05:14:15'),
+(590, 26, 26, '2013-03-17 05:14:17', '2013-03-17 05:14:17'),
+(591, 26, 26, '2013-03-17 05:14:19', '2013-03-17 05:14:19'),
+(592, 26, 26, '2013-03-17 05:14:21', '2013-03-17 05:14:21'),
+(593, 26, 26, '2013-03-17 05:14:22', '2013-03-17 05:14:22'),
+(594, 26, 26, '2013-03-17 05:14:23', '2013-03-17 05:14:23'),
+(595, 26, 26, '2013-03-17 05:14:35', '2013-03-17 05:14:35'),
+(596, 26, 26, '2013-03-17 05:15:45', '2013-03-17 05:15:45'),
+(597, 26, 26, '2013-03-17 05:19:50', '2013-03-17 05:19:50'),
+(598, 26, 26, '2013-03-17 05:20:00', '2013-03-17 05:20:00'),
+(599, 26, 26, '2013-03-17 05:20:29', '2013-03-17 05:20:29'),
+(600, 26, 26, '2013-03-17 05:20:34', '2013-03-17 05:20:34'),
+(601, 26, 26, '2013-03-17 05:20:57', '2013-03-17 05:20:57'),
+(602, 26, 26, '2013-03-17 05:23:38', '2013-03-17 05:23:38'),
+(603, 26, 20, '2013-03-28 04:12:19', '2013-03-28 04:12:19'),
+(604, 26, 26, '2013-03-28 04:14:19', '2013-03-28 04:14:19'),
+(605, 26, 21, '2013-03-28 04:14:27', '2013-03-28 04:14:27'),
+(606, 26, 26, '2013-03-28 04:47:26', '2013-03-28 04:47:26'),
+(607, 26, 26, '2013-03-28 04:48:52', '2013-03-28 04:48:52'),
+(608, 26, 26, '2013-03-28 04:59:07', '2013-03-28 04:59:07'),
+(609, 26, 21, '2013-03-28 04:59:26', '2013-03-28 04:59:26'),
+(610, 26, 26, '2013-03-28 04:59:30', '2013-03-28 04:59:30'),
+(611, 26, 20, '2013-03-28 04:59:33', '2013-03-28 04:59:33'),
+(612, 26, 21, '2013-03-28 05:07:05', '2013-03-28 05:07:05'),
+(613, 33, 21, '2013-03-28 05:54:48', '2013-03-28 05:54:48'),
+(614, 33, 20, '2013-03-28 05:55:01', '2013-03-28 05:55:01'),
+(615, 33, 26, '2013-03-28 05:55:01', '2013-03-28 05:55:01'),
+(616, 33, 20, '2013-03-28 05:55:04', '2013-03-28 05:55:04'),
+(617, 33, 20, '2013-03-28 05:58:05', '2013-03-28 05:58:05'),
+(618, 33, 21, '2013-03-28 05:58:15', '2013-03-28 05:58:15'),
+(619, 26, 26, '2013-04-01 03:41:56', '2013-04-01 03:41:56'),
+(620, 26, 26, '2013-04-01 03:42:03', '2013-04-01 03:42:03'),
+(621, 26, 26, '2013-04-01 03:48:44', '2013-04-01 03:48:44'),
+(622, 26, 26, '2013-04-01 03:50:11', '2013-04-01 03:50:11'),
+(623, 26, 26, '2013-04-01 03:50:20', '2013-04-01 03:50:20'),
+(624, 26, 26, '2013-04-01 03:50:40', '2013-04-01 03:50:40'),
+(625, 26, 26, '2013-04-01 03:51:52', '2013-04-01 03:51:52'),
+(626, 26, 26, '2013-04-01 04:02:34', '2013-04-01 04:02:34'),
+(627, 26, 26, '2013-04-01 04:06:21', '2013-04-01 04:06:21'),
+(628, 26, 26, '2013-04-01 04:22:46', '2013-04-01 04:22:46'),
+(629, 26, 26, '2013-04-01 04:22:56', '2013-04-01 04:22:56'),
+(630, 26, 26, '2013-04-01 04:27:00', '2013-04-01 04:27:00'),
+(631, 26, 26, '2013-04-01 04:33:06', '2013-04-01 04:33:06'),
+(632, 26, 26, '2013-04-01 04:33:29', '2013-04-01 04:33:29'),
+(633, 26, 26, '2013-04-01 04:34:03', '2013-04-01 04:34:03'),
+(634, 26, 26, '2013-04-01 04:34:33', '2013-04-01 04:34:33'),
+(635, 26, 26, '2013-04-01 04:35:46', '2013-04-01 04:35:46'),
+(636, 26, 26, '2013-04-01 04:40:35', '2013-04-01 04:40:35'),
+(637, 26, 26, '2013-04-01 04:54:30', '2013-04-01 04:54:30'),
+(638, 26, 26, '2013-04-01 04:56:11', '2013-04-01 04:56:11'),
+(639, 26, 26, '2013-04-01 05:16:12', '2013-04-01 05:16:12'),
+(640, 26, 26, '2013-04-01 05:24:08', '2013-04-01 05:24:08'),
+(641, 26, 26, '2013-04-01 05:28:13', '2013-04-01 05:28:13'),
+(642, 26, 21, '2013-04-01 05:38:58', '2013-04-01 05:38:58'),
+(643, 26, 26, '2013-04-01 05:41:04', '2013-04-01 05:41:04'),
+(644, 26, 26, '2013-04-11 02:32:28', '2013-04-11 02:32:28'),
+(645, 26, 26, '2013-04-11 02:33:00', '2013-04-11 02:33:00'),
+(646, 26, 20, '2013-04-11 02:33:09', '2013-04-11 02:33:09'),
+(647, 26, 20, '2013-04-11 02:33:11', '2013-04-11 02:33:11'),
+(648, 26, 20, '2013-04-11 02:33:48', '2013-04-11 02:33:48'),
+(649, 26, 20, '2013-04-11 02:33:59', '2013-04-11 02:33:59'),
+(650, 26, 20, '2013-04-11 02:34:32', '2013-04-11 02:34:32'),
+(651, 26, 26, '2013-04-11 02:50:50', '2013-04-11 02:50:50'),
+(652, 26, 20, '2013-04-11 02:50:52', '2013-04-11 02:50:52'),
+(653, 26, 20, '2013-04-11 02:55:46', '2013-04-11 02:55:46'),
+(654, 0, 26, '2013-04-11 07:20:16', '2013-04-11 07:20:16'),
+(655, 0, 26, '2013-04-11 07:23:11', '2013-04-11 07:23:11'),
+(656, 0, 26, '2013-04-11 07:23:30', '2013-04-11 07:23:30'),
+(657, 0, 26, '2013-04-11 07:23:36', '2013-04-11 07:23:36'),
+(658, 0, 26, '2013-04-11 07:50:18', '2013-04-11 07:50:18'),
+(659, 0, 20, '2013-04-24 12:19:53', '2013-04-24 12:19:53'),
+(660, 0, 26, '2013-04-28 08:45:07', '2013-04-28 08:45:07'),
+(661, 0, 32, '2013-04-28 09:21:22', '2013-04-28 09:21:22'),
+(662, 0, 30, '2013-04-28 09:30:55', '2013-04-28 09:30:55'),
+(663, 0, 33, '2013-04-28 09:46:43', '2013-04-28 09:46:43'),
+(664, 0, 21, '2013-04-28 09:58:53', '2013-04-28 09:58:53'),
+(665, 0, 34, '2013-04-28 10:03:45', '2013-04-28 10:03:45'),
+(666, 0, 36, '2013-04-28 10:04:30', '2013-04-28 10:04:30'),
+(667, 0, 38, '2013-04-28 10:04:42', '2013-04-28 10:04:42'),
+(668, 0, 39, '2013-04-28 10:09:37', '2013-04-28 10:09:37'),
+(669, 0, 40, '2013-04-28 10:11:36', '2013-04-28 10:11:36'),
+(670, 0, 27, '2013-04-28 10:34:22', '2013-04-28 10:34:22'),
+(671, 0, 37, '2013-04-28 23:19:39', '2013-04-28 23:19:39');
 
 -- --------------------------------------------------------
 
@@ -9677,17 +9927,17 @@ CREATE TABLE IF NOT EXISTS `threads` (
   `subject` longtext NOT NULL,
   `message` longtext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
 
 --
 -- Dumping data for table `threads`
 --
 
 INSERT INTO `threads` (`id`, `sender_id`, `sender_read`, `receiver_id`, `receiver_read`, `created`, `modified`, `status`, `subject`, `message`) VALUES
-(21, 33, 1, 33, 1, '2013-01-07 08:21:00', '2013-01-07 14:11:22', 1, 'Question about iPhone 5!', '\r\n\r\nhttp://theboxngo.com/shops/viewlisting/2'),
-(22, 33, 1, 33, 1, '2013-01-07 08:21:45', '2013-01-07 08:24:40', 1, 'Test #2          saddsa', '\r\n\r\nhttp://theboxngo.com/shops/viewlisting/2'),
-(23, 33, 1, 30, 1, '2013-01-07 08:48:29', '2013-01-07 09:18:40', 1, 'Question about <script>alert("A");</script>', 'http://theboxngo.com/shops/viewlisting/1'),
-(24, 26, 1, 33, 1, '2013-01-22 16:35:27', '2013-01-22 16:35:47', 1, 'Question about TEST ITEM', 'TESAT\r\n\r\nhttp://theboxngo.com/shops/viewlisting/20');
+(29, 26, 1, 26, 1, '2013-04-28 10:26:29', '2013-04-28 10:26:34', 1, 'Question about Test I love Shahruk Khan He''s Awesome ', 'http://theboxngo.com/shops/viewlisting/40'),
+(30, 26, 1, 26, 1, '2013-04-28 10:27:23', '2013-04-28 10:27:54', 1, 'Question about Test I love Shahruk Khan He''s Awesome ', 'http://theboxngo.com/shops/viewlisting/40'),
+(31, 26, 1, 26, 1, '2013-04-28 23:19:22', '2013-04-28 23:19:26', 1, 'Question about Test 123 ABC Shahruk Was Here', 'http://theboxngo.com/shops/viewlisting/39'),
+(32, 33, 1, 26, 1, '2013-04-28 23:19:43', '2013-04-28 23:20:46', 1, 'Question about Test coiupinsad as dsa', 'adsads\r\nhttp://theboxngo.com/shops/viewlisting/37');
 
 -- --------------------------------------------------------
 
@@ -9717,6 +9967,30 @@ INSERT INTO `trades` (`id`, `shop_id`, `user_id`, `message`, `contact`, `created
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `used_coupons`
+--
+
+CREATE TABLE IF NOT EXISTS `used_coupons` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `coupon_id` int(11) NOT NULL,
+  `payment_id` varchar(255) NOT NULL,
+  `order_id` varchar(255) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `used_coupons`
+--
+
+INSERT INTO `used_coupons` (`id`, `user_id`, `coupon_id`, `payment_id`, `order_id`, `created`, `modified`) VALUES
+(11, 26, 1, '5141203e-c7c4-47f6-8723-08103177d11f', '5141203f-7de4-4d0a-abfe-08103177d11f', '2013-03-14 00:56:19', '2013-03-14 00:56:19');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -9740,21 +10014,22 @@ CREATE TABLE IF NOT EXISTS `users` (
   `profilepic` varchar(255) NOT NULL,
   `display_name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `age`, `role`, `banned`, `payment`, `paypal`, `streetAddress`, `city`, `state`, `zipcode`, `facebook_id`, `facebook_access_token`, `profilepic`, `display_name`) VALUES
-(26, 'shahruksemail@gmail.com', '22c8ac51b414394548570a1fcddec53ced2afdd7', 'Shahruk', 'Khan', 0, 'user', 0, 'paypal', 'shahruksemail@gmail.com', '3730 81st #D8 or #D3', 'Jackson Heights', 'New York', 11372, NULL, NULL, '', ''),
-(27, 'skh0023@hunter.edu', '22c8ac51b414394548570a1fcddec53ced2afdd7', '', '', 0, 'admin', 0, '', '', '', '', '', 0, NULL, NULL, '', ''),
+(26, 'shahruksemail@gmail.com', '22c8ac51b414394548570a1fcddec53ced2afdd7', 'Shahruk', 'Khan', 0, 'admin', 0, 'paypal', 'shahruksemail@gmail.com', '3730 81st #D8 or #D3', 'Jackson Heights', 'New York', 11372, NULL, 'BAABqaF6H4qMBAP7pQiQs9V1HGZCLktwjtrgMLbgW0Udq30m9mwSy1UQkZCHxk3BqpPPoYhB2YI5W2guZAB0Mk8LwXn1kN2IEZBhZBqOaU84ninGfCxGwZAs9UJS49MXYaCA1vMwKDcU2OJizsLZAC6FV8msEn4p1UCjvDctZCiTQuV8cCdj5tclKosog4N4LStSusOJr0rNiMcVDZBHuTvy3ZC70MsgDHrFEoZD', '', ''),
+(27, 'skh0023@hunter.edu', '22c8ac51b414394548570a1fcddec53ced2afdd7', '', '', 0, 'admin', 0, '', '', '', '', '', 0, NULL, 'BAABqaF6H4qMBAP7pQiQs9V1HGZCLktwjtrgMLbgW0Udq30m9mwSy1UQkZCHxk3BqpPPoYhB2YI5W2guZAB0Mk8LwXn1kN2IEZBhZBqOaU84ninGfCxGwZAs9UJS49MXYaCA1vMwKDcU2OJizsLZAC6FV8msEn4p1UCjvDctZCiTQuV8cCdj5tclKosog4N4LStSusOJr0rNiMcVDZBHuTvy3ZC70MsgDHrFEoZD', '', ''),
 (30, 'shahruk@hunter.cuny.edu', '22c8ac51b414394548570a1fcddec53ced2afdd7', '', '', 0, 'user', 0, NULL, '', '', '', '', NULL, NULL, NULL, '', ''),
-(33, 'skh0023@hunter.cuny.edu', '22c8ac51b414394548570a1fcddec53ced2afdd7', '', '', 0, 'admin', 0, 'paypal', 'shahruksemail@gmail.com', '', '', '', NULL, NULL, NULL, 'https://www.filepicker.io/api/file/9R5NKWnQuG5QEyKvrAXB', 'OHHHHH YEAH'),
+(33, 'skh0023@hunter.cuny.edu', '22c8ac51b414394548570a1fcddec53ced2afdd7', '', '', 0, 'admin', 0, 'paypal', 'shahruksemail@gmail.com', '', '', '', NULL, NULL, 'BAABqaF6H4qMBAP7pQiQs9V1HGZCLktwjtrgMLbgW0Udq30m9mwSy1UQkZCHxk3BqpPPoYhB2YI5W2guZAB0Mk8LwXn1kN2IEZBhZBqOaU84ninGfCxGwZAs9UJS49MXYaCA1vMwKDcU2OJizsLZAC6FV8msEn4p1UCjvDctZCiTQuV8cCdj5tclKosog4N4LStSusOJr0rNiMcVDZBHuTvy3ZC70MsgDHrFEoZD', 'https://www.filepicker.io/api/file/9R5NKWnQuG5QEyKvrAXB', 'OHHHHH YEAH'),
 (34, 'sss@theboxngo.com', '22c8ac51b414394548570a1fcddec53ced2afdd7', '', '', 0, 'unactivated', 0, NULL, '', '', '', '', NULL, NULL, NULL, '', ''),
 (35, 'shahruk@theboxngo.com', '22c8ac51b414394548570a1fcddec53ced2afdd7', '', '', 0, 'unactivated', 0, NULL, '', '', '', '', NULL, NULL, NULL, '', ''),
-(40, 'skhan@hunter.cuny.edu', '09b6f95d4dd5d18392c7f2bc4d763eaa944f3b18', '', '', 0, 'unactivated', 0, NULL, '', '', '', '', NULL, 100002831466409, 'AAABqaF6H4qMBAO7QcrQ9sXB6pkSTPAV3L3EjI9wuiYH5MKk5W0zjTnEZBEIQJiKdFqinFcSd1wSWYwjxX5KsQyenMKjTE9pI9xxN5MgZDZD', '', ''),
-(41, 'shahruk1@theboxngo.com', '22c8ac51b414394548570a1fcddec53ced2afdd7', '', '', 0, 'user', 0, NULL, '', '', '', '', NULL, NULL, NULL, '', '');
+(40, 'skhan@hunter.cuny.edu', 'ab447e7c2f757bf38146d5d3fd0a8ef2313eb4d8', '', '', 0, 'unactivated', 0, NULL, '', '', '', '', NULL, 100002831466409, 'AAABqaF6H4qMBADu3IOdQB5BB5h5DFYI5COWKZC0IPLp7TRSH5u6qhWqFsmyccgpS12zZAHaHVWn8MPNtlFypWwkSjefPeLonnWiOjRWAZDZD', '', ''),
+(41, 'shahruk1@theboxngo.com', '22c8ac51b414394548570a1fcddec53ced2afdd7', '', '', 0, 'user', 0, NULL, '', '', '', '', NULL, NULL, NULL, '', ''),
+(42, 'test@test.com', '22c8ac51b414394548570a1fcddec53ced2afdd7', '', '', 0, 'unactivated', 0, NULL, '', '', '', '', NULL, NULL, NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -9859,7 +10134,8 @@ INSERT INTO `verifications` (`id`, `user_id`, `created`, `modified`, `activated`
 ('50db68a1-59e8-4a7d-aa9d-1e7c3177d11f', 40, '2012-12-26 21:14:09', '2012-12-26 21:14:09', 0),
 ('50db68aa-7ca8-44d5-8e4e-1e7c3177d11f', 40, '2012-12-26 21:14:18', '2012-12-26 21:14:18', 0),
 ('50db68bd-f43c-408d-bc35-1e7c3177d11f', 40, '2012-12-26 21:14:37', '2012-12-26 21:14:37', 0),
-('50eca282-79ac-4f6a-a371-198c3177d11f', 41, '2013-01-08 22:49:38', '2013-01-08 22:51:53', 1);
+('50eca282-79ac-4f6a-a371-198c3177d11f', 41, '2013-01-08 22:49:38', '2013-01-08 22:51:53', 1),
+('516e0a7b-66bc-4fd4-bf4a-08c83177d11f', 42, '2013-04-17 02:35:39', '2013-04-17 02:35:39', 0);
 
 -- --------------------------------------------------------
 

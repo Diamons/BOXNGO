@@ -51,7 +51,7 @@ $this->start('meta'); ?>
 
 <?php $this->end();
 ?>
-<div id="content">
+<div class="clearfix" id="content">
 	<div class="wrapper">
 		<div id="boxngo_intro">
 			<h1>A Simpler, Easier Marketplace</h1>
@@ -108,14 +108,14 @@ $this->start('meta'); ?>
 					<?php endif; ?>
 						<div class="three columns">
 							<div class="listing">
-								<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $listings[$i]['Shop']['id'];?>">
+								<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $listings[$i]['Shop']['id'];?>/<?php echo $listings[$i]['Shop']['permalink']; ?>">
 								<?php if(!empty($listings[$i]['Image'][0]['url'])){?>
-								<img src="<?php echo $listings[$i]['Image'][0]['url']; ?>/convert?w=182&h=150&fit=crop" class="image" />
+								<img src="<?php echo $listings[$i]['Image'][0]['url']; ?>/convert?w=250&h=205&fit=crop" class="image" />
 								<?php } else { ?>
 								<div class="image"></div>
 								<?php } ?>
 								</a>
-								<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($listings[$i]['Shop']['id']));?>"><?php echo nl2br(h($listings[$i]['Shop']['name'])); ?></a></h1>
+								<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($listings[$i]['Shop']['id']));?>/<?php echo $listings[$i]['Shop']['permalink']; ?>"><?php echo nl2br(h($listings[$i]['Shop']['name'])); ?></a></h1>
 								<div class="category"><span class="price">$<?php echo $listings[$i]['Shop']['price']; ?></span><a href="/searches/browse/<?php echo $listings[$i]['Category']['short_name']; ?>"><?php echo $listings[$i]['Category']['display_name']; ?></a></div>
 								<div class="userlisted">
 									<span class="typicn user"></span> Listed by <a href="/users/profile/<?php echo $listings[$i]['User']['id']; ?>"><?php echo $listings[$i]['User']['display_name']; ?></a>

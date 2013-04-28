@@ -38,7 +38,7 @@ $(function(){
 		});
 	});
 	
-	$("#searchTrigger").on("click", function(){
+	$("#searchTrigger, #listButton").on("click", function(){
 		$("#SearchIndexForm").submit();
 	});
 });

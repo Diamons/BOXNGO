@@ -7,8 +7,8 @@
 					'message' => 'Subject may not exceed 250 characters.'
 				),
 				'minLength' => array(
-					'rule' => array('minlength', '10'),
-					'message' => 'Your subject must be at least 10 characters.'
+					'rule' => array('minlength', '2'),
+					'message' => 'Your subject must be at least 2 characters.'
 				)
 			),
 			'message' => array(

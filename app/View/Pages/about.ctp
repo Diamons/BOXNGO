@@ -230,7 +230,7 @@ $this->end();
 			<dl class="timelineMinor">
 				<dt id="event29"><a>New Homepage, New Mission</a></dt>
 				<dd class="timelineEvent" id="event29EX" style="display: none; ">
-					<p>April 24th we launched a new homepage <a href="http://i.imgur.com/QKacDNE.jpg">(link)</a> and redefined our mission. EDU email address only was something we pursued to help us get started and figure out the glitches with the site. We felt we were ready to target a much broader audience and reach for greater heights after Stanford E-Bootcamp.</p>
+					<p>April 24th we launched a new homepage <a target="_blank" href="http://i.imgur.com/QKacDNE.jpg">(link)</a> and redefined our mission. EDU email address only was something we pursued to help us get started and figure out the glitches with the site. We felt we were ready to target a much broader audience and reach for greater heights after Stanford E-Bootcamp.</p>
 				</dd>
 			</dl>
 		</div>

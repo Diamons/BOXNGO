@@ -43,14 +43,14 @@ $this->end();
 							<?php endif; ?>
 								<div class="three columns">
 									<div class="listing">
-										<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $results[$i]['Shop']['id'];?>">
+										<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $results[$i]['Shop']['id'];?>/<?php echo $results[$i]['Shop']['permalink']; ?>">
 										<?php if(!empty($results[$i]['Image'][0]['url'])){?>
 										<img src="<?php echo $results[$i]['Image'][0]['url']; ?>/convert?w=364&h=300&fit=crop" class="image" />
 										<?php } else { ?>
 										<div class="image"></div>
 										<?php } ?>
 										</a>
-										<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($results[$i]['Shop']['id']));?>"><?php echo nl2br(h($results[$i]['Shop']['name'])); ?></a></h1>
+										<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($results[$i]['Shop']['id']));?>/<?php echo$results[$i]['Shop']['permalink']; ?>"><?php echo nl2br(h($results[$i]['Shop']['name'])); ?></a></h1>
 										<div class="category"><span class="price">$<?php echo $results[$i]['Shop']['price']; ?></span><a href="/searches/browse/<?php echo $results[$i]['Category']['short_name']; ?>"><?php echo $results[$i]['Category']['display_name']; ?></a></div>
 										<div class="userlisted">
 											<span class="typicn user"></span> Listed by <a href="/users/profile/<?php echo $results[$i]['User']['id']; ?>"><?php echo $results[$i]['User']['display_name']; ?></a>
