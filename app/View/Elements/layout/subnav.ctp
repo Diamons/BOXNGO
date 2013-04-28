@@ -3,7 +3,7 @@
 		<a href="/">Home</a>
 		<?php if(isset($auth)){ ?>
 		<a href="/dashboard">Dashboard</a>
-		<a href="/dashboard/messages">Inbox</a>
+		<a href="/dashboard/messages">Inbox <?php if($messages > 0) { echo "<span class='notification'>".$messages."</span>"; } ?></a>
 		<a href="/users/profile">My Profile</a>
 		<?php } ?>
 		<!-- <a href="#">Make a Request</a> -->
@@ -15,7 +15,7 @@
 				<?php } else { ?>
 				<div id="actions">
 					<div id="user_container">
-						Welcome back <?php echo $auth['username']; ?>!
+						<a href="/users/profile">Welcome back <?php echo $auth['username']; ?>!</a>
 						<ul id="user_menu">
 							<li>
 								<a href="/dashboard">

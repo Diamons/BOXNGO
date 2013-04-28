@@ -263,10 +263,10 @@
 							$this->Session->setFlash("Your message was successfully sent! You will receive an email when you get a reply.", "flash_success");
 							parent::sendEmail($user['User']['username'], "BOX'NGO :: You have received a message on BOX'NGO!", "newmessage", array("subject" => $this->request->data['Thread']['subject'], "message" => $this->request->data['Thread']['message']));
 						}else{
-							$this->Session->setFlash("You must included a subject and message. Your subject cannot be over 250 characters and must be at least 10 characters.", "flash_error");
+							$this->Session->setFlash("You must included a subject and message. Your subject cannot be over 250 characters and must be at least 2 characters.", "flash_error");
 						}
 					}else{
-						$this->Session->setFlash("You must included a subject and message. Your subject cannot be over 250 characters and must be at least 10 characters.", "flash_error");
+						$this->Session->setFlash("You must included a subject and message. Your subject cannot be over 250 characters and must be at least 2 characters.", "flash_error");
 					}
 				}else{
 				}

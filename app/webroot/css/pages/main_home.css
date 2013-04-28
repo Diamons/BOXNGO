@@ -444,3 +444,7 @@ a#browse > i{
 form input[type="submit"]{
 	margin: 0;
 }
+
+.row .listing div.image {
+	height: 205px;
+}

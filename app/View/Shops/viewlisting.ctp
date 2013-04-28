@@ -79,7 +79,7 @@
 				<h4>Similar Items</h4>
 				<?php for($i = 0; $i < count($relatedItems); $i++){ ?>
 					<div class="two columns">
-						<a href="/shops/viewlisting/<?php echo $relatedItems[$i]['Shop']['id']; ?>"><img src="<?php echo $relatedItems[$i]['Image'][0]['url']; ?>/convert?w=180&height=120&fit=crop" /><h5><?php echo $relatedItems[$i]['Shop']['name']; ?></h5></a>
+						<a href="/shops/viewlisting/<?php echo $relatedItems[$i]['Shop']['id']; ?>/<?php echo $relatedItems[$i]['Shop']['permalink']; ?>"><img src="<?php echo $relatedItems[$i]['Image'][0]['url']; ?>/convert?w=180&height=120&fit=crop" /><h5><?php echo $relatedItems[$i]['Shop']['name']; ?></h5></a>
 					</div>
 				<?php } ?>
 			</div>

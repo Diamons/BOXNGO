@@ -28,7 +28,7 @@ $this->end();
 				<?php endif; ?>
 				<div class="four columns listing">
 					<div class="listing_container">
-						<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $favorites[$i]['Shop']['id'];?>">
+						<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $favorites[$i]['Shop']['id'];?>/<?php echo $favorites[$i]['Shop']['permalink']; ?>">
 						<?php if(!empty($favorites[$i]['Image'][0]['url'])){?>
 						<img src="<?php echo $favorites[$i]['Image'][0]['url']; ?>/convert?w=265&h=271&fit=crop" class="image" />
 						<?php } else { ?>
@@ -66,14 +66,14 @@ $this->end();
 				<?php endif; ?>
 				<div class="four columns listing">
 					<div class="listing_container">
-						<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $shopItems[$i]['Shop']['id'];?>">
+						<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $shopItems[$i]['Shop']['id'];?>/<?php echo $shopItems[$i]['Shop']['permalink'];?>">
 						<?php if(!empty($shopItems[$i]['Image'][0]['url'])){?>
 						<img src="<?php echo $shopItems[$i]['Image'][0]['url']; ?>/convert?w=265&h=271&fit=crop" class="image" />
 						<?php } else { ?>
 						<div class="image"></div>
 						<?php } ?>
 						</a>
-						<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $shopItems[$i]['Shop']['id'];?>"><?php echo nl2br(h($shopItems[$i]['Shop']['name'])); ?></a></h1>
+						<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $shopItems[$i]['Shop']['id'];?>/<?php echo $shopItems[$i]['Shop']['permalink'];?>"><?php echo nl2br(h($shopItems[$i]['Shop']['name'])); ?></a></h1>
 						
 						<div class="listing_box">$<?php echo $shopItems[$i]['Shop']['price']; ?></div>
 						<div class="listing_box"><a class="addfavorite<?php if(!isset($auth) || empty($auth)){
