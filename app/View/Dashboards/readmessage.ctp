@@ -13,7 +13,7 @@ $this->end();
 					<?php echo $this->Html->image($user['profilepic'], array('class' => 'profilepic_message')); ?>
 
 					<a href="/users/profile/<?php echo $user['id']; ?>"><?php echo $user['display_name']; ?></a>
-						<?php if($user['role'] == "admin"){ ?><span class="radius alert label">Administrator</span><?php } ?><span class="date"><?php echo $this->Time->timeAgoInWords($thread['Message'][$i]['created'], array('format' => 'F jS, Y', 'end' => '+1 month')); ?></span>
+						<?php if($user['role'] == "admin"){ ?><div class="adminLabel radius alert label">Administrator</div><?php } ?><span class="date"><?php echo $this->Time->timeAgoInWords($thread['Message'][$i]['created'], array('format' => 'F jS, Y', 'end' => '+1 month')); ?></span>
 				</div>
 				<div class="nine columns">
 					<?php echo nl2br(h($thread['Message'][$i]['message'])); ?>
