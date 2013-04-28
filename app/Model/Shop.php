@@ -122,6 +122,8 @@
 			$clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
 			$clean = strtolower(trim($clean, '-'));
 			$clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+			if(substr($clean, -1, 1) == "-")
+				$clean = substr($clean, 0, -1);
 
 			return $clean;
 		}
