@@ -176,6 +176,7 @@
 				$this->Shop->set($this->request->data);
 				if($this->Shop->validates()){
 					if(!empty($this->request->data['Shop']['images'])){
+						$this->request->data['Shop']['permalink'] = $this->Shop->permalink($this->request->data['Shop']['name']);
 						if($this->Shop->save($this->request->data)){
 							
 							$this->Image->saveImages($this->request->data['Shop']['images'], $this->Shop->id);

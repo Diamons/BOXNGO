@@ -12,7 +12,9 @@ $this->end();
 		<div class="userInfo three columns">
 			<h3 class="username"><?php echo $userInfo['User']['display_name']; ?>'s Profile</h3>
 			<img src="<?php echo $userInfo['User']['profilepic']; ?>" class="avatar" />
-			<a id="sendUserMessage" href="#" data-reveal-id="sendmessage"><i class="icon-envelope"></i> Send Message</a>
+			<?php if($auth){ ?>
+				<a id="sendUserMessage" href="#" data-reveal-id="sendmessage"><i class="icon-envelope"></i> Send Message</a>
+				<?php } ?>
 			<section class="stats_info">
 				<?php if(!empty($school['School']['name'])){ ?><span>Attending <?php echo nl2br(h($school['School']['name'])); ?></span><?php } ?>
 				<div><a id="itemslistedView" href="javascript: void(0);"><div class="value"><?php echo count($userInfo['Shop']); ?></div>Items Listed</a></div>
@@ -99,6 +101,7 @@ $this->end();
 		</div>
 	</div>
 </div>
+<?php if($auth){ ?>
 <div id="sendmessage" class="reveal-modal small">
   <h2>Message <?php echo $userInfo['User']['display_name']; ?></h2>
   <p>
@@ -109,3 +112,4 @@ $this->end();
   </p>
   <a class="close-reveal-modal">&#215;</a>
 </div>
+<?php } ?>

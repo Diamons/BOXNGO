@@ -14,6 +14,7 @@
 					<a id="login" href="<?php echo $this->webroot;?>users">Login</a>
 				<?php } else { ?>
 				<div id="actions">
+					<a id="logout" href="/users/logout">Logout</a>
 					<div id="user_container">
 						<a href="/users/profile">Welcome back <?php echo $auth['username']; ?>!</a>
 						<ul id="user_menu">
