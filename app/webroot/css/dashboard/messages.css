@@ -62,3 +62,7 @@ span.date{
 .message_individual > div.two.columns{
 	text-align: center;
 }	
+
+div.adminLabel{
+	display: block;
+}
