@@ -101,7 +101,7 @@
 			$listing = $this->Shop->find("first", array("conditions" => array("Shop.id" => $listingid, "OR" => array("Shop.canview" => array(1,2)))));
 			
 			//None created, mostly for old functions, create and save one.
-			if(empty($listing['Shop']['permalink']))
+			if(empty($listing['Shop']['permalink']) || !isset($permalink))
 				$this->Shop->addPermalink($listing['Shop']['id'], $listing['Shop']['name']);
 
 			//If came here without one, add one.

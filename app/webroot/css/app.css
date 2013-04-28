@@ -254,8 +254,9 @@ footer a.support:hover{
 
 #actions #logout{
 	border-right: none;
-}
+	margin-right: 0;
 
+}
 #register, #login, #logout{
 	float: right;
 }
