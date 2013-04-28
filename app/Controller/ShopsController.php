@@ -99,21 +99,19 @@
 			if(empty($listingid))
 				$this->redirect($this->referer());
 			$listing = $this->Shop->find("first", array("conditions" => array("Shop.id" => $listingid, "OR" => array("Shop.canview" => array(1,2)))));
-			
-			//None created, mostly for old functions, create and save one.
-			if(empty($listing['Shop']['permalink']) || !isset($permalink))
-				$this->Shop->addPermalink($listing['Shop']['id'], $listing['Shop']['name']);
-
-			//If came here without one, add one.
-			if(empty($permalink)){
-				$listing = $this->Shop->read(NULL, $listing['Shop']['id']);
-				$this->redirect(array('controller' => 'shops', 'action' => 'viewlisting', $listingid, $listing['Shop']['permalink']), 301);
-			}
-
 			if(empty($listing)){
 				$this->Session->setFlash("Unfortunately we can't find that listing. Please contact Support if you believe this is a mistake.", "flash_warning");
 				$this->redirect($this->referer());
-			} else {
+			}else{
+				//None created, mostly for old functions, create and save one.
+				if(empty($listing['Shop']['permalink']))
+					$this->Shop->addPermalink($listing['Shop']['id'], $listing['Shop']['name']);
+
+				//If came here without one, add one.
+				if(empty($permalink) || !isset($permalink)){
+					$listing = $this->Shop->read(NULL, $listing['Shop']['id']);
+					$this->redirect(array('controller' => 'shops', 'action' => 'viewlisting', $listingid, $listing['Shop']['permalink']), 301);
+				}
 				if($this->Auth->loggedIn() && $this->Payment->userBoughtAlready($this->Auth->user('id'), $listingid) === true){
 					$this->Session->setFlash("You have already purchased this item before.", "flash_warning");
 				}
