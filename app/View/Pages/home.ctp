@@ -24,7 +24,7 @@
 					document.cookie='fbAccess='+response.authResponse.accessToken+'; expires='+date.toUTCString()+';';
 					$.ajax({
 						data: {userID: response.authResponse.userID},
-						url: 'http://theboxngo.com/users/facebook',
+						url: getDomain()+'users/facebook',
 						success: function(data){
 							window.top.location = getDomain()+redirectUrl+'?fb='+response.authResponse.userID;
 						}

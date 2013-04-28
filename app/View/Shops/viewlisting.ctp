@@ -6,9 +6,9 @@
 	$this->start('facebookMeta'); ?>
 		<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# theboxngo: http://ogp.me/ns/fb/theboxngo#">
 		<meta property="fb:app_id" content="116996495106723" /> 
-		<meta property="og:type"   content="theboxngo:listing" /> 
-		<meta property="og:url"    content="<?php echo Router::url(null, true) ?>" /> 
-		<meta property="og:title"  content="<?php echo $listing['Shop']['price']." ".$listing['Shop']['name']; ?>" /> 
+		<meta property="og:type" content="theboxngo:listing" /> 
+		<meta property="og:url" content="<?php echo Router::url(null, true) ?>" />
+		<meta property="og:title" content="<?php echo $listing['Shop']['price']." ".$listing['Shop']['name']; ?>" /> 
 		<meta property="og:description"  content="<?php echo $listing['Shop']['description']; ?>" /> 
 		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>" /> 
 	<?php $this->end();
