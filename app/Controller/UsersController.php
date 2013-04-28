@@ -125,7 +125,7 @@
 		
 		public function addfavorite(){
 			$this->autoRender = false;
-			if($this->request->is('ajax')){
+			if(!$this->request->is('ajax')){
 				$listingId = $this->params->query['listingid'];
 				if(!empty($listingId)){
 				//If this isn't already favorited by this user

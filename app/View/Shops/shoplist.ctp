@@ -103,6 +103,8 @@ $this->end();
 		</div>
 	</div>	
 	<section class="clearfix">
-	<?php if(isset($edit)){ ?><a onclick="return confirm('Are you sure you want to delete this listing?');" class="deletebutton" href="<?php echo $this->webroot; ?>shops/deletelisting/<?php echo $edit; ?>">DELETE</a><?php } ?>	<?php echo $this->Form->end('List it Now', array('div' => false)); ?>
+	<?php if(isset($edit)){ ?><a onclick="return confirm('Are you sure you want to delete this listing?');" class="deletebutton" href="<?php echo $this->webroot; ?>shops/deletelisting/<?php echo $edit; ?>">DELETE</a><?php } ?>	
+	<?php if(isset($edit)){ ?><?php echo $this->Form->end('Save Changes', array('div' => false)); ?>
+	<?php } else { ?><?php echo $this->Form->end('List it Now', array('div' => false)); ?><?php } ?>
 	</section>
 </div>

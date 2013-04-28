@@ -15,13 +15,6 @@
 
 		}
 
-		public function cacheUpdate($listingId, $accessToken){
-			$productUrl = 'http://theboxngo.com/shops/viewlisting/'.$listingId;
-			$postUrl = 'https://graph.facebook.com/me/theboxngo:favorite?access_token='.$accessToken.'&listing='.$productUrl.'&scrape=true';
-			$results = $this->httpSocket->get($postUrl);
-			return true;
-		}
-
 		public function shareListing($name,$url,$fbId,$accessToken,$message=NULL, $imageUrl=NULL){
 			$message = 'I just listed '.$name.' for sale on BOX\'NGO! Check it out!';
 			$postUrl = 'https://graph.facebook.com/'.$fbId.'/feed?picture='.urlencode($imageUrl).'&link='.urlencode($url).'&name='.$name.'&message='.urlencode($message).'&access_token='. $accessToken;
@@ -38,7 +31,7 @@
 			$results2 = $this->fb->api('/me/theboxngo:favorite',
 				'POST',
 				array(
-					'listing' => $productUrl,
+					'object' => $productUrl,
 					'access_token' => $accessToken
 				)
 			);
