@@ -339,7 +339,7 @@
                                                             <div>
                                                                 <h1>Trade Request Received</h1>
 																<p>
-																	BOX'NGO is an exclusive online buying and selling platform for people with .EDU email addresses (beta).
+																	<a href="<?php echo $domain; ?>">BOX'NGO</a> is an online platform that makes it easy for people to sell online.
 																</p>
 																
 																<p>

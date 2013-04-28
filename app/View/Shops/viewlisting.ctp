@@ -110,7 +110,7 @@
 				</div>
 				<div class="four columns">
 					<a class="buyNow" href="/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
-					<?php if(!$sameSchool){ ?> <a class="tradeNow" href="/shops/trade/<?php echo $listing['Shop']['id']; ?>">Trade</a> <?php } ?>
+					<?php if(!$sameSchool){ ?> <a style="display:none;" class="tradeNow" href="/shops/trade/<?php echo $listing['Shop']['id']; ?>">Trade</a> <?php } ?>
 				</div>
 			</div>
 			<div id="info_panel">
@@ -150,7 +150,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="sendmessage" class="reveal-modal small">
+	<div id="sendmessage" class="reveal-modal medium">
 	  <h2>Message <?php echo $listing['User']['display_name']; ?></h2>
 	  <p class="lead">Got a question or comment?</p>
 	  <p>
