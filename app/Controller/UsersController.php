@@ -14,6 +14,9 @@
 		  debug($type);
 		}
 		public function index(){
+			if($this->Auth->loggedIn())
+				$this->redirect($this->referer());
+			
 			//Registration
 			if(isset($this->request->data['User']['passwordconfirmation']) && $this->request->is('post')){
 				if($this->User->save($this->request->data)){
