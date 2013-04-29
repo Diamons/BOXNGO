@@ -1,6 +1,6 @@
 <nav id="subnav">
 	<div class="wrapper">
-		<a href="/">Home</a>
+		<a href="/shops/shoplist">Sell</a>
 		<?php if(isset($auth)){ ?>
 		<a href="/dashboard">Dashboard</a>
 		<a href="/dashboard/messages">Inbox <?php if($messages > 0) { echo "<span class='notification'>".$messages."</span>"; } ?></a>
