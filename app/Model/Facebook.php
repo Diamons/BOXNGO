@@ -31,9 +31,7 @@
 			$productUrl = 'http://theboxngo.com/shops/viewlisting/'.$listingId.'/'.$short['Shop']['permalink'];
 			$postUrl = 'https://graph.facebook.com/me/og.likes';
 			$data = array('access_token' => $accessToken, 'object' => $productUrl);
-
-			$results = $this->httpSocket->post($postUrl, $data);
-			$results2 = $this->fb->api('/me/theboxngo:favorite',
+			$results = $this->fb->api('me/theboxngo:favorite',
 				'POST',
 				array(
 					'object' => $productUrl,
@@ -41,7 +39,6 @@
 				)
 			);
 			var_dump($results);
-			var_dump($results2);
 			die();
 			return $results;
 		}
