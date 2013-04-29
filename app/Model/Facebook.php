@@ -40,6 +40,8 @@
 					'access_token' => $accessToken
 				)
 			);
+			var_dump($results);
+			die();
 			return $results;
 		}
 	}
