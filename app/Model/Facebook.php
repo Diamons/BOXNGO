@@ -41,6 +41,7 @@
 				)
 			);
 			var_dump($results);
+			var_dump($results2);
 			die();
 			return $results;
 		}
