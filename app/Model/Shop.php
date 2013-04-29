@@ -1,6 +1,10 @@
 <?php
 	class Shop extends AppModel{
 		
+		public $virtualFields = array(
+			'full_link' => 'http://theboxngo.com/shops/viewlisting/CONCAT(Shop.id, "/", Shop.permalink)'
+		);
+
 		public $validate = array(
 			'name' => array(
 				'notEmpty'=>array(
@@ -53,10 +57,6 @@
 		
 		var $hasMany = array('Image', 'Favorite');
 		var $belongsTo = array('User', 'Category');
-		
-		protected function _findSchool($state, $query, $results = array()){
-			
-		}
 		
 		function minprice($check, $limit){
 			if($check['price'] >= $limit)
@@ -151,4 +151,7 @@
 			
 			return true;
 		}
+
+
+
 	}
