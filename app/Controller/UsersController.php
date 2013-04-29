@@ -282,9 +282,13 @@
 					if(($thread['Thread']['sender_id'] == $this->Auth->user('id'))){
 						$thread['Thread']['receiver_read'] = 0;
 						$user = $this->User->read(NULL, $thread['Thread']['receiver_id']);
+						$this->Thread->id = $thread['Thread']['id'];
+						$this->Thread->saveField("receiver_read", 0);
 					}elseif($thread['Thread']['receiver_id'] == $this->Auth->user('id')){
 						$thread['Thread']['sender_read'] = 0;
 						$user = $this->User->read(NULL, $thread['Thread']['sender_id']);
+						$this->Thread->id = $thread['Thread']['id'];
+						$this->Thread->saveField("sender_read", 0);
 					}
 					
 					if(isset($user)){
