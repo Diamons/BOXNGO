@@ -8,7 +8,7 @@
 		<meta property="fb:app_id" content="116996495106723" /> 
 		<meta property="og:type"   content="object" /> 
 		<meta property="og:url"    content="<?php echo Router::url(null, true) ?>" /> 
-		<meta property="og:title"  content="<?php echo $listing['Shop']['price']." ".$listing['Shop']['name']; ?>" /> 
+		<meta property="og:title"  content="$<?php echo $listing['Shop']['price']." ".$listing['Shop']['name']; ?>" /> 
 		<meta property="og:description"  content="<?php echo $listing['Shop']['description']; ?>" /> 
 		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>" /> 
 	<?php $this->end();
