@@ -198,3 +198,25 @@ label[for="UserAccepttos"]+div.error-message{
 	margin-top: 2em;
 	left: 110px;
 }
+
+#questions{
+	position: relative; 
+	border:6px solid #f0f8e8; 
+	background: #e7fad4; 
+	min-height: 90px; 
+	margin-bottom: 10px;
+}
+
+#questions .question_mark{
+	color: #bce790; 
+	position: absolute; 
+	padding: 10px 30px; 
+	line-height: 64px; 
+	font-size:64px;
+}
+
+#questions .info_panel{
+	text-align: center; 
+	margin-top: 33px; 
+	font-size: 24px;
+}

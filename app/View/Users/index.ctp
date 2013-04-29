@@ -47,7 +47,8 @@ $this->end();
 <?php $this->end(); ?>
 
 <div class="wrapper" id="content">
-	<div style="border:6px solid #f0f8e8; background: #e7fad4; min-height: 100px; margin-bottom: 10px;" id="questions"><div style="line-height: 120px; font-size:64px;" class="question">?</div> <div class="panel">Curious? Check out the How It Works page for further details!</div></div>
+	<div id="questions"><div class="question_mark">?</div> 
+	<div class="info_panel">It's free to get started selling today! Read more about <a href="/info/howitworks">How it Works</a></div></div>
 	<div>
 		<?php echo $this->Form->create('User', array('class' => '', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
 		<div style="padding-right: 100px;" class="six columns">
