@@ -27,7 +27,7 @@
 			$shop = new Shop();
 			$shop->recursive = 0;
 			$short = $shop->read("permalink", $listingId);
-
+			Configure::write('debug', 2);
 			$productUrl = 'http://theboxngo.com/shops/viewlisting/'.$listingId.'/'.$short['Shop']['permalink'];
 			$postUrl = 'https://graph.facebook.com/me/og.likes';
 			$data = array('access_token' => $accessToken, 'object' => $productUrl);
