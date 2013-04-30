@@ -1,7 +1,8 @@
 <footer>
 	<div class="row wrapper">
 		<div class="four columns">
-			<a href="/"><img src="/logo.png" /></a>
+			<a id="footer_logo" href="/"><img src="/logo.png" /></a>
+			<a href="https://facebook.com/theboxngo"><img class="social" src="/img/facebook.png" />
 		</div>
 		<div class="four columns">
 			<a href="/blog/">Blog</a>
