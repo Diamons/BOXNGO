@@ -188,7 +188,9 @@
 					break;
 				}
 				$this->User->id = $this->Auth->user('id');
-				if($this->User->save($this->request->data)){
+				if($this->request->data['User']['payment'] == "Check" && empty($this->request->data['User']['first_name']))
+					$this->Session->setFlash("Please put in your check payment information.", "flash_error");
+				elseif($this->User->save($this->request->data)){
 					$this->Session->setFlash("Now that we know how to pay you, let's get started!", "flash_success");
 					$this->redirect(array('controller' => 'shops', 'action' => 'shoplist'));
 				} else {

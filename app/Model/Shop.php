@@ -1,9 +1,5 @@
 <?php
 	class Shop extends AppModel{
-		
-		public $virtualFields = array(
-			'full_link' => 'http://theboxngo.com/shops/viewlisting/CONCAT(Shop.id, "/", Shop.permalink)'
-		);
 
 		public $validate = array(
 			'name' => array(
@@ -134,6 +130,13 @@
 			$this->saveField('permalink', $tmpPerma);
 		}
 		
+		public function afterFind($results){
+
+			foreach($results as &$a){
+				$a['Shop']['full_url'] = "http://theboxngo.com/shops/viewlisting/".$a['Shop']['id']."/".$a['Shop']['permalink'];
+			}return $results;
+		}
+
 		function beforeSave($data){
 			if(isset($this->data['Shop']['quantity']) && $this->data['Shop']['quantity'] <= 0){
 				$this->data['Shop']['quantity'] = 0;
