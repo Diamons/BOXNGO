@@ -1,9 +1,6 @@
 <?php
 	class Shop extends AppModel{
-		
-		public $virtualFields = array(
-			'full_link' => 'http://theboxngo.com/shops/viewlisting/CONCAT(Shop.id, "/", Shop.permalink)'
-		);
+
 
 		public $validate = array(
 			'name' => array(
@@ -134,7 +131,7 @@
 			$this->saveField('permalink', $tmpPerma);
 		}
 		
-		function beforeSave($data){
+		function beforeSave($data = array()){
 			if(isset($this->data['Shop']['quantity']) && $this->data['Shop']['quantity'] <= 0){
 				$this->data['Shop']['quantity'] = 0;
 				$this->data['Shop']['canview'] = 2;

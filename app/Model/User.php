@@ -113,7 +113,7 @@
 			}
 		}
 		
-		public function afterFind($results, $primary){
+		public function afterFind($results, $primary = FALSE){
 			if(isset($results[0]) && empty($results[0]['User']['display_name'])){
 				for($i = 0; $i < count($results); $i++){
 					$a = explode("@", $results[$i]['User']['username']);
