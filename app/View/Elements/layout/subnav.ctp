@@ -21,7 +21,7 @@
 							<li>
 								<a href="/dashboard">
 									<i class="icon-reorder"></i>
-									<h2>Dashboard</h2>
+									<h2>Dashboard <?php if(isset($notifications) && $notifications > 0){echo "<span class='notification'>".$notifications."</span>";};?></h2>
 								</a>
 							</li>
 							<li>
