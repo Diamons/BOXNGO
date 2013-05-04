@@ -2,7 +2,7 @@
 	<div class="wrapper">
 		<a href="/shops/shoplist">Sell</a>
 		<?php if(isset($auth)){ ?>
-		<a href="/dashboard">Dashboard</a>
+		<a href="/dashboard">Dashboard <?php if(isset($notifications) && $notifications > 0){echo "<span class='notification'>".$notifications."</span>";};?></a>
 		<a href="/dashboard/messages">Inbox <?php if($messages > 0) { echo "<span class='notification'>".$messages."</span>"; } ?></a>
 		<a href="/users/profile">My Profile</a>
 		<?php } ?>
