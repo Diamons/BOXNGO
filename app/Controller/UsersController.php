@@ -1,8 +1,8 @@
 <?php
 	class UsersController extends AppController{
 		
-		var $uses = array('Favorite', 'Verification', 'Facebook', 'Cookie', 'Thread', 'Message', 'ForgotPassword');
-		var $components = array('Mailchimp.Mailchimp', 'AutoLogin.AutoLogin');
+		var $uses = array('Autologin', 'Favorite', 'Verification', 'Facebook', 'Cookie', 'Thread', 'Message', 'ForgotPassword');
+		var $components = array('Mailchimp.Mailchimp');
 		
 		function beforeFilter(){
 			parent::beforeFilter();
@@ -15,7 +15,7 @@
 		}
 		public function index(){
 			if($this->Auth->loggedIn())
-				$this->redirect($this->referer());
+				$this->Auth->redirect();
 			
 			//Registration
 			if(isset($this->request->data['User']['passwordconfirmation']) && $this->request->is('post')){
@@ -43,6 +43,8 @@
 						
 						} else{
 							if($this->Auth->login()){
+								$hash = $this->UserLogin->saveUser($user['User']['username']);
+								$this->Autologin->save(array('Autologin' => array('user_id' => $user['User']['id'], 'hash' => $hash)));
 								$this->Session->setFlash("You have successfully been logged in.", "flash_success");
 								$this->redirect($this->Auth->redirect());
 							} else {
@@ -87,6 +89,8 @@
 						} else{
 							$this->Session->setFlash("You have successfully been logged in.", "flash_success");	
 							if($this->Auth->login($user['User'])){
+								$hash = $this->UserLogin->saveUser($user['User']['username']);
+								$this->Autologin->save(array('Autologin' => array('user_id' => $user['User']['id'], 'hash' => $hash)));
 								$this->redirect($this->Auth->redirect());
 							}
 						}
@@ -122,6 +126,7 @@
 		}
 		public function logout(){
 			$this->Session->setFlash("You have successfully been logged out.", "flash_success");
+			$this->Cookie->delete('al');
 			$this->Auth->logout();
 			$this->redirect('/');
 		}
@@ -130,6 +135,7 @@
 			$this->autoRender = false;
 			if($this->request->is('ajax')){
 				$listingId = $this->params->query['listingid'];
+				//$this->Facebook->forceScrape($this->params->query['url']);
 				if(!empty($listingId)){
 				//If this isn't already favorited by this user
 					$favoriteUnique = $this->Favorite->find("first", array("conditions" => array("Favorite.shop_id" => $listingId, "Favorite.user_id" => $this->Auth->user('id'))));

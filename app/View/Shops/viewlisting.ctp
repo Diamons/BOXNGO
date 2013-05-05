@@ -10,7 +10,7 @@
 		<meta property="og:url"    content="<?php echo Router::url(null, true) ?>" /> 
 		<meta property="og:title"  content="$<?php echo $listing['Shop']['price']." ".$listing['Shop']['name']; ?>" /> 
 		<meta property="og:description"  content="<?php echo $listing['Shop']['description']; ?>" /> 
-		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>" /> 
+		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>/convert?w=200&height=200&fit=clip" /> 
 	<?php $this->end();
 	
 	$this->end();
@@ -56,7 +56,7 @@
 					echo "disabled"; }elseif(isset($auth) && !empty($favorite)){
 								echo "used";
 							}
-					?>" data-listingid="<?php echo $listing['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span></a>
+					?>" data-listingid="<?php echo $listing['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span><i class="loading icon-spinner icon-spin"></i></a>
 			</div><h1 id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
 		</div>
 		<div class="eight columns">

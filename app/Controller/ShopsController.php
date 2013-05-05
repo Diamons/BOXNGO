@@ -6,12 +6,12 @@
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->Auth->allow('viewlisting');
+			$this->Security->unlockedActions = array('shoplist');
 		}
 		
 		public function shoplist(){
 			$categories = $this->Category->find("list");
 			$this->set("categories", $categories);
-			
 			$user = $this->User->read(NULL, $this->Auth->user('id'));
 			if(empty($user['User']['payment']) || !isset($user['User']['payment']))
 				$this->redirect(array('controller' => 'users', 'action' => 'paymentinfo'));
@@ -28,8 +28,8 @@
 
 						//Permalink
 						$this->request->data['Shop']['permalink'] = $this->Shop->permalink($this->request->data['Shop']['name']);
-
 						if($this->Shop->save($this->request->data)){
+							$shop = $this->Shop->read(NULL, $this->Shop->id);
 							$this->Image->saveImages($this->request->data['Shop']['images'], $this->Shop->id);
 							$this->Session->setFlash("Congratulations! Your listing has been successfully posted.", "flash_success");
 							$this->redirect(array('controller' => 'shops', 'action' => 'share', $this->Shop->id));

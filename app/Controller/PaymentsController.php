@@ -47,7 +47,7 @@ class PaymentsController extends AppController {
 	}
 	
 	public function process($listingId = NULL){
-		if(isset($this->request->data['Coupon']['code'])){
+		if(isset($this->request->data['Coupon']['code']) && !empty($this->request->data['Coupon']['code'])){
 			$coupon = $this->Coupon->find("first", array("conditions" => array("Coupon.code" => $this->request->data['Coupon']['code'])));
 			if(!$this->UsedCoupon->alreadyUsed($this->Auth->user('id'), $coupon['Coupon']['id'], true)){
 				$this->Session->setFlash("A coupon error has occurred." , "flash_error");
