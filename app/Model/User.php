@@ -52,6 +52,20 @@
 					'allowEmpty' => true
 				)
 			),
+			'first_name' => array(
+				'notempty' => array(
+					'rule' => 'notEmpty',
+					'message' => 'Please put in your first name.',
+					'allowEmpty' => true	
+				)
+			),
+			'last_name' => array(
+				'notempty' => array(
+					'rule' => 'notEmpty',
+					'message' => 'Please put in your last name.',
+					'allowEmpty' => true			
+				)
+			),
 			'display_name' => array(
 				'notempty' => array(
 					'rule' => 'notEmpty',

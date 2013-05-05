@@ -1,7 +1,6 @@
 <?php
 	class Shop extends AppModel{
 
-
 		public $validate = array(
 			'name' => array(
 				'notEmpty'=>array(
@@ -131,7 +130,14 @@
 			$this->saveField('permalink', $tmpPerma);
 		}
 		
-		function beforeSave($data = array()){
+		public function afterFind($results){
+
+			foreach($results as &$a){
+				$a['Shop']['full_url'] = "http://theboxngo.com/shops/viewlisting/".$a['Shop']['id']."/".$a['Shop']['permalink'];
+			}return $results;
+		}
+
+		function beforeSave($data){
 			if(isset($this->data['Shop']['quantity']) && $this->data['Shop']['quantity'] <= 0){
 				$this->data['Shop']['quantity'] = 0;
 				$this->data['Shop']['canview'] = 2;

@@ -28,7 +28,7 @@ $this->end();
 				?>
 			</div>
 			<div id="paypalChoice" class="row">
-				<div class="four columns">Paypal E-mail Address</div><div class="eight columns"><?php echo $this->Form->input("User.paypal"); ?></div>
+				<div class="four columns">Paypal E-mail Address</div><div class="eight columns"><?php echo $this->Form->input("User.paypal", array("required" => false)); ?></div>
 			</div>
 			<div id="checkChoice">
 				<div class="row">
