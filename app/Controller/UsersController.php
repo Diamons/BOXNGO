@@ -1,7 +1,7 @@
 <?php
 	class UsersController extends AppController{
 		
-		var $uses = array('Favorite', 'Verification', 'Facebook', 'Cookie', 'Thread', 'Message', 'ForgotPassword');
+		var $uses = array('Autologin', 'Favorite', 'Verification', 'Facebook', 'Cookie', 'Thread', 'Message', 'ForgotPassword');
 		var $components = array('Mailchimp.Mailchimp', 'AutoLogin.AutoLogin');
 		
 		function beforeFilter(){
@@ -43,6 +43,8 @@
 						
 						} else{
 							if($this->Auth->login()){
+								$hash = $this->UserLogin->saveUser($user['User']['username']);
+								$this->Autologin->save(array('Autologin' => array('user_id' => $user['User']['id'], 'hash' => $hash)));
 								$this->Session->setFlash("You have successfully been logged in.", "flash_success");
 								$this->redirect($this->Auth->redirect());
 							} else {
@@ -87,6 +89,8 @@
 						} else{
 							$this->Session->setFlash("You have successfully been logged in.", "flash_success");	
 							if($this->Auth->login($user['User'])){
+								$hash = $this->UserLogin->saveUser($user['User']['username']);
+								$this->Autologin->save(array('Autologin' => array('user_id' => $user['User']['id'], 'hash' => $hash)));
 								$this->redirect($this->Auth->redirect());
 							}
 						}
