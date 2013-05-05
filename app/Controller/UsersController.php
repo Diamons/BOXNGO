@@ -15,7 +15,7 @@
 		}
 		public function index(){
 			if($this->Auth->loggedIn())
-				$this->redirect($this->referer());
+				$this->Auth->redirect();
 			
 			//Registration
 			if(isset($this->request->data['User']['passwordconfirmation']) && $this->request->is('post')){
@@ -126,6 +126,7 @@
 		}
 		public function logout(){
 			$this->Session->setFlash("You have successfully been logged out.", "flash_success");
+			$this->Cookie->delete('al');
 			$this->Auth->logout();
 			$this->redirect('/');
 		}
