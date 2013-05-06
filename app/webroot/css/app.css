@@ -366,6 +366,10 @@ header > div.wrapper .link .notification{
 .addfavoriteused .heart {
 	color: red;
 }
+
+.addfavorite.loading{
+	background: url('/img/loading.gif');
+}
 span.notification{
 	font-size: 11px;
 	background: red;
@@ -553,6 +557,24 @@ form input[type="submit"].mainpage:hover{
 	-moz-box-shadow: inset -0px 1px 1px #b9dbfb;
 	box-shadow: inset -0px 1px 1px #b9dbfb;
 	
+}
+
+.favoriteadd{
+	position: relative;
+	min-width: 38px;
+	min-height: 36px;
+}
+
+.favoriteadd > a{
+	display: block;
+}
+
+.favoriteadd i.loading{
+	font-size: 28px;
+	top: 3px;
+	left: 5px;
+	display: none;
+	position: absolute;
 }
 
 .deletebutton{

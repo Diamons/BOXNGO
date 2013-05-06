@@ -10,10 +10,15 @@ $(function(){
 	$("body").on("click", "a.addfavorite", function(event){
 		event.preventDefault();
 		var favoriteClicked = $(this);
+		$(this).find('.typicn.heart').hide();
+		$(this).find('i.loading').show();
+		var _this = this;
     	$.ajax({
 			url: getDomain()+'users/addfavorite',
 			data: {listingid: $(this).data('listingid')},
 			success: function(response){
+				$(_this).find('.loading').hide();
+				$(_this).find('.typicn.heart').show();
 				favoriteClicked.removeClass('addfavorite');
 				favoriteClicked.addClass('addfavoriteused');
 				$("body .favoritemessage").remove();
@@ -25,10 +30,15 @@ $(function(){
 	$("body").on("click", "a.addfavoriteused", function(event){
 		event.preventDefault();
 		var favoriteClicked = $(this);
+		$(this).find('.typicn.heart').hide();
+		$(this).find('i.loading').show();
+		var _this = this;
 		$.ajax({
 			url: getDomain()+'users/removefavorite',
 			data: {listingid: $(this).data('listingid')},
 			success: function(response){
+				$(_this).find('.loading').hide();
+				$(_this).find('.typicn.heart').show();
 				favoriteClicked.removeClass('addfavoriteused');
 				favoriteClicked.addClass('addfavorite');
 				$("body .favoritemessage").remove();

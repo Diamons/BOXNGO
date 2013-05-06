@@ -31,7 +31,7 @@
 						if($this->Shop->save($this->request->data)){
 							$shop = $this->Shop->read(NULL, $this->Shop->id);
 
-							$this->Facebook->forceScrape($shop['Shop']['full_url'], $shop['User']['facebook_access_token']);
+							$this->Facebook->forceScrape($shop['Shop']['full_url']);
 							$this->Image->saveImages($this->request->data['Shop']['images'], $this->Shop->id);
 							$this->Session->setFlash("Congratulations! Your listing has been successfully posted.", "flash_success");
 							$this->redirect(array('controller' => 'shops', 'action' => 'share', $this->Shop->id));

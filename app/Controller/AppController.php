@@ -43,8 +43,7 @@ class AppController extends Controller {
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
 		$this->set("layoutCategories", $this->Category->findNonEmpty());
-		$userLogged = $this->Cookie->read('autologin');
-
+		
 		$cookie = $this->Cookie->read('al');
 		$this->Auth->login($this->UserLogin->checkUser($cookie, $this->Autologin->find("first", array("conditions" => array("Autologin.hash" => $cookie)))));
 		if($this->Auth->loggedIn()){

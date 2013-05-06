@@ -56,7 +56,7 @@
 					echo "disabled"; }elseif(isset($auth) && !empty($favorite)){
 								echo "used";
 							}
-					?>" data-listingid="<?php echo $listing['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span></a>
+					?>" data-listingid="<?php echo $listing['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span><i class="loading icon-spinner icon-spin"></i></a>
 			</div><h1 id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
 		</div>
 		<div class="eight columns">
