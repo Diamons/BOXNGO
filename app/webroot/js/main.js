@@ -11,6 +11,7 @@ $(function(){
 			url: '/apis/checkfacebookuser',
 			data: {listingid: listingId},
 			success: function(response){
+				var facebookId;
 				if(response == false){
 					facebookId = null;
 				}
