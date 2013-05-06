@@ -35,6 +35,7 @@ $(function(){
 		$(this).find('.typicn.heart').hide();
 		$(this).find('i.loading').show();
 		var facebookId = postLike($(this).data('listingid'));
+		console.log(facebookId);
 		var _this = this;
     	$.ajax({
 			url: getDomain()+'users/addfavorite',
