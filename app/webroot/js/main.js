@@ -25,12 +25,13 @@ $(function(){
 					}
 				);
 				}
-				addFavorite(_this);
+				addFavorite(_this, facebookId);
 			}
 		});
 	}
 
 	function addFavorite(_this, facebookId){
+		var favoriteClicked = $(_this);
 		$.ajax({
 			url: getDomain()+'users/addfavorite',
 			data: {listingid: $(_this).data('listingid'), facebook_story: facebookId, url: window.location.href},
