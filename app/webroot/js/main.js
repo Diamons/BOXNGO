@@ -22,7 +22,8 @@ $(function(){
 						access_token: response					
 					},
 						function(response) {
-							addFavorite(_this, facebookId);
+							console.log("A");
+							addFavorite(_this, response.id);
 						}
 					);
 				}
@@ -31,6 +32,7 @@ $(function(){
 	}
 
 	function addFavorite(_this, facebookId){
+		console.log(facebookId);
 		var favoriteClicked = $(_this);
 		$.ajax({
 			url: getDomain()+'users/addfavorite',
