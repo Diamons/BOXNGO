@@ -6,13 +6,14 @@ $(function(){
 		$(this).find('ul.submenu').delay(200).slideUp();
 	});
 	
-	function postLike(listingId) {
+	function postLike(_this, listingId) {
 		$.ajax({
 			url: '/apis/checkfacebookuser',
 			data: {listingid: listingId},
 			success: function(response){
-				if(response == false)
-					return null;
+				if(response == false){
+					facebookId = null;
+				}
 				else{
 					FB.api('me/theboxngo:favorite','post',
 					{
@@ -20,26 +21,19 @@ $(function(){
 						access_token: response					
 					},
 					function(response) {
-						return response.id;
+						facebookId = response.id;
 					}
 				);
 				}
+				addFavorite(_this);
 			}
 		});
 	}
 
-	//Add favorites
-	$("body").on("click", "a.addfavorite", function(event){
-		event.preventDefault();
-		var favoriteClicked = $(this);
-		$(this).find('.typicn.heart').hide();
-		$(this).find('i.loading').show();
-		var facebookId = postLike($(this).data('listingid'));
-		console.log(facebookId);
-		var _this = this;
-    	$.ajax({
+	function addFavorite(_this, facebookId){
+		$.ajax({
 			url: getDomain()+'users/addfavorite',
-			data: {listingid: $(this).data('listingid'), facebook_story: facebookId, url: window.location.href},
+			data: {listingid: $(_this).data('listingid'), facebook_story: facebookId, url: window.location.href},
 			success: function(response){
 				$(_this).find('.loading').hide();
 				$(_this).find('.typicn.heart').show();
@@ -50,6 +44,15 @@ $(function(){
 				$("body .favoritemessage").slideDown().delay(4000).slideUp();
 			}
 		});
+	}
+
+	//Add favorites
+	$("body").on("click", "a.addfavorite", function(event){
+		event.preventDefault();
+		var favoriteClicked = $(this);
+		$(this).find('.typicn.heart').hide();
+		$(this).find('i.loading').show();
+		postLike(this, $(this).data('listingid'));
 	});
 	$("body").on("click", "a.addfavoriteused", function(event){
 		event.preventDefault();
