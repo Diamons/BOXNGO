@@ -35,10 +35,7 @@
 			if(!$this->Auth->loggedIn())
 				$this->set("result", "false");
 			else{
-				$fav = $this->Favorite->find("first", array("conditions" => array("Favorite.user_id" => $this->Auth->user('id'), "Favorite.shop_id" => $this->request->query['listingid'])));
-				if(!empty($fav))
-					$this->set("result", "false");
-				elseif(!$this->Auth->loggedIn())
+				if(!$this->Auth->loggedIn())
 					$this->set("result", "false");
 				else{
 					$token = $this->Auth->user('facebook_access_token');
