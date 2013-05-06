@@ -10,22 +10,17 @@ $(function(){
 	$("body").on("click", "a.addfavorite", function(event){
 		event.preventDefault();
 		var favoriteClicked = $(this);
-		$.ajax({
-	        url : "http://developers.facebook.com/tools/debug/og/object?q="+window.location.href,
-	        success : function (a,b) {
-	        	$.ajax({
-					url: getDomain()+'users/addfavorite',
-					data: {listingid: $(this).data('listingid')},
-					success: function(response){
-						favoriteClicked.removeClass('addfavorite');
-						favoriteClicked.addClass('addfavoriteused');
-						$("body .favoritemessage").remove();
-						$("body").prepend(response);
-						$("body .favoritemessage").slideDown().delay(4000).slideUp();
-					}
-				});
-        	}
-        });
+    	$.ajax({
+			url: getDomain()+'users/addfavorite',
+			data: {listingid: $(this).data('listingid')},
+			success: function(response){
+				favoriteClicked.removeClass('addfavorite');
+				favoriteClicked.addClass('addfavoriteused');
+				$("body .favoritemessage").remove();
+				$("body").prepend(response);
+				$("body .favoritemessage").slideDown().delay(4000).slideUp();
+			}
+		});
 	});
 	$("body").on("click", "a.addfavoriteused", function(event){
 		event.preventDefault();

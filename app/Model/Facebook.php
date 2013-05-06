@@ -41,6 +41,6 @@
 		}
 
 		public function forceScrape($url){
-			$this->httpSocket->get("https://developers.facebook.com/tools/debug/og/object?q=".$url);
+			$this->httpSocket->post("https://developers.facebook.com/tools/debug/og/object", array('q' => $url));
 		}
 	}
