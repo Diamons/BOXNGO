@@ -29,4 +29,17 @@
 			$results['query'] = $this->request->query['query'];
 			$this->set("results", $results);
 		}
+
+		public function checkfacebookuser(){
+			$this->layout = "ajax";
+			if(!$this->Auth->loggedIn())
+				$this->set("result", "false");
+			else{
+				$token = $this->Auth->user('facebook_access_token');
+				if(!empty($token))
+					$this->set("result", $token);
+				else
+					$this->set("result", "false");
+			}
+		}
 	}

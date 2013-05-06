@@ -572,7 +572,7 @@ form input[type="submit"].mainpage:hover{
 .favoriteadd i.loading{
 	font-size: 28px;
 	top: 3px;
-	left: 5px;
+	left: 6px;
 	display: none;
 	position: absolute;
 }
