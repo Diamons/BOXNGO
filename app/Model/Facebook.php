@@ -37,12 +37,13 @@
 					'access_token' => $accessToken
 				)
 			);
-			var_dump($results);
-			die();
 			return $results;
 		}
 
-		public function forceScrape($url){
-			$this->httpSocket->get("https://developers.facebook.com/tools/debug/og/object?q=".urlencode($url));
+		public function forceScrape($url, $token){
+			if(empty($token))
+				$token = "BAABqaF6H4qMBAONHbhGvqvZBD0FGaPN2jEDd4WbSQOcGTh6gP0zWrGUwDxmqh4Tv5jnZBh03jwuaUPGo87qDgdyvPQkk5ZCIyrl8V8AnE7mGUM0TzNHVZAdc1GJK0gC5fFahIdntPPxS44TyKXyWCHTxUnLZC6lTntnDuzGLej0YUpiKui9tqHiFJZARZCMtI8pcUutib0lqlMvz2Y0Y7YFSsyVb14qgBMZD";
+
+			$result = $this->httpSocket->post("http://developers.facebook.com/tools/lint", array('id' => urlencode($url), 'scrape' => true, 'access_token' => $token));;
 		}
 	}
