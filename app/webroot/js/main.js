@@ -15,7 +15,7 @@ $(function(){
 		var _this = this;
     	$.ajax({
 			url: getDomain()+'users/addfavorite',
-			data: {listingid: $(this).data('listingid')},
+			data: {listingid: $(this).data('listingid'), url: window.location.href},
 			success: function(response){
 				$(_this).find('.loading').hide();
 				$(_this).find('.typicn.heart').show();

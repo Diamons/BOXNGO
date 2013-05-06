@@ -135,6 +135,7 @@
 			$this->autoRender = false;
 			if($this->request->is('ajax')){
 				$listingId = $this->params->query['listingid'];
+				$this->Facebook->forceScrape($this->params->query['url']);
 				if(!empty($listingId)){
 				//If this isn't already favorited by this user
 					$favoriteUnique = $this->Favorite->find("first", array("conditions" => array("Favorite.shop_id" => $listingId, "Favorite.user_id" => $this->Auth->user('id'))));
