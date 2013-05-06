@@ -15,8 +15,10 @@ $(function(){
 				else{
 					FB.api('me/theboxngo:favorite','post',
 					{
-						object: window.location.href					},
+						object: window.location.href					
+					},
 					function(response) {
+						console.log(response);
 						return true;
 					}
 				);
