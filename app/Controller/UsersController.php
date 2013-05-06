@@ -133,6 +133,7 @@
 		
 		public function addfavorite(){
 			$this->autoRender = false;
+			 Configure::write('debug', 2); 
 			if($this->request->is('ajax')){
 				$listingId = $this->params->query['listingid'];
 				//$this->Facebook->forceScrape($this->params->query['url']);

@@ -23,7 +23,7 @@
 		}
 		
 		public function favoriteListing($listingId,$accessToken){
-			App::uses('Shop', 'Model');
+			/*App::uses('Shop', 'Model');
 			$shop = new Shop();
 			$shop->recursive = 0;
 			$short = $shop->read("permalink", $listingId);
@@ -37,7 +37,8 @@
 					'access_token' => $accessToken
 				)
 			);
-			return $results;
+			return $results;*/
+			return true;
 		}
 
 		public function forceScrape($url){
