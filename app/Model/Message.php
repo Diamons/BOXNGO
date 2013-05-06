@@ -14,7 +14,7 @@
 		);
 		
 		var $belongsTo = array('Thread', 'User');
-		function beforeSave($data){
+		function beforeSave($data = array()){
 			if(isset($this->data['Message']['message'])){
 				$this->data['Message']['message'] = trim($this->data['Message']['message']);
 			}

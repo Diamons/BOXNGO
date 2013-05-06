@@ -21,7 +21,7 @@
 
 		var $hasMany = array('Message');
 		
-		function beforeSave($data){
+		function beforeSave($data = array()){
 			if(isset($this->data['Thread']['message'])){
 				$this->data['Thread']['message'] = trim($this->data['Thread']['message']);
 			}

@@ -9,7 +9,7 @@
 App::import('Vendor', 'Mailchimp.MCAPI');
 class MailchimpComponent extends Component {
 
-	public function initialize($controller, $settings = NULL) {
+	public function initialize(Controller $controller, $settings = NULL) {
 		if ($controller->request->is('ajax')) {
 			Configure::write('debug', 0);
 
@@ -40,7 +40,7 @@ class MailchimpComponent extends Component {
 
 	}
 
-	public function startup($controller) {
+	public function startup(Controller $controller) {
 		$this->controller = $controller;
 	}
 

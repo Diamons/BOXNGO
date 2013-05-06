@@ -5,7 +5,7 @@ class ShippingBehavior extends ModelBehavior{
 	protected $carriers;
 	
     protected $config;
-	public function setup(Model $Model){
+	public function setup(Model $Model, $config = array()){
 		$this->Model = $Model; 
 
 	}

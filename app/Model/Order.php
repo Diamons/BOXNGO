@@ -12,7 +12,7 @@
 			)
 		);
 			
-		public function afterFind($data){
+		public function afterFind($data, $primary=FALSE){
 			for($i = 0; $i < count($data); $i++){
 				if(isset($data[$i]['Order']))
 					$data[$i]['Order']['totalPrice'] = $data[$i]['Order']['shipping_amount'] + $data[$i]['Order']['shop_amount'];

@@ -21,7 +21,7 @@
 					<div class="four columns"><?php echo $this->Form->input('Payment.streetAddress'); ?></div>
 					<div class="four columns"><?php echo $this->Form->input('Payment.city'); ?></div>
 					<div class="two columns"><?php echo $this->Form->input('Payment.state'); ?></div>
-					<div class="two columns"><?php echo $this->Form->input('Payment.zipcode', array('type' => 'text')); ?></div>
+					<div class="two columns"><?php echo $this->Form->input('Payment.zipcode', array('label' => 'Postal or Zip Code')); ?></div>
 				</div>
 			</div>
 			<div id="payment_options">
