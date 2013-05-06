@@ -28,6 +28,7 @@ $(function(){
 					}
 				);
 				}
+				console.log(facebookId);
 				addFavorite(_this, facebookId);
 			}
 		});
