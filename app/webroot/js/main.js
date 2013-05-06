@@ -20,8 +20,7 @@ $(function(){
 						access_token: response					
 					},
 					function(response) {
-						console.log(response);
-						return true;
+						return response.id;
 					}
 				);
 				}
@@ -35,12 +34,12 @@ $(function(){
 		var favoriteClicked = $(this);
 		$(this).find('.typicn.heart').hide();
 		$(this).find('i.loading').show();
+		var facebookId = postLike($(this).data('listingid'));
 		var _this = this;
     	$.ajax({
 			url: getDomain()+'users/addfavorite',
-			data: {listingid: $(this).data('listingid'), url: window.location.href},
+			data: {listingid: $(this).data('listingid'), facebook_story: facebookId, url: window.location.href},
 			success: function(response){
-				postLike($(_this).data('listingid'));
 				$(_this).find('.loading').hide();
 				$(_this).find('.typicn.heart').show();
 				favoriteClicked.removeClass('addfavorite');

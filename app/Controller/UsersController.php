@@ -144,11 +144,9 @@
 						//If the listing actually exists and viewable
 						if(isset($listing) && !empty($listing) && $listing['Shop']['canview'] == 1){
 							$user = $this->User->read(NULL, $this->Auth->user('id'));
-							if(!empty($user['User']['facebook_access_token'])){
-								$this->Facebook->favoriteListing($listing['Shop']['id'], $user['User']['facebook_access_token']);
-							}
 							$favorite['Favorite']['shop_id'] = $listingId;
 							$favorite['Favorite']['user_id'] = $this->Auth->user('id');
+							$favorite['Favorite']['facebook_story'] = $this->params->query['facebook_story'];
 							if($this->Favorite->save($favorite)){
 								$this->set("listingname", $listing['Shop']['name']);
 								$this->layout = "ajax";
