@@ -14,7 +14,7 @@ $(function(){
 				var facebookId;
 				if(response == false){
 					facebookId = null;
-					alert("B");
+					alert(response);
 				}
 				else{
 					FB.api('me/theboxngo:favorite','post',
