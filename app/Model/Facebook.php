@@ -39,4 +39,9 @@
 			);
 			return $results;
 		}
+
+		public function forceScrape($url){
+			die(debug($this->httpSocket->get($url)));
+
+		}
 	}

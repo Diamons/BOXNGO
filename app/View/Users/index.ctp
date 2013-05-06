@@ -76,13 +76,6 @@ $this->end();
 					<div class="four columns"></div>
 					<div class="eight columns" style="text-align:right; font-size: 11px;"><a data-reveal-id="forgotpassword" href="#">Forgot your Password?</a></div>
 				</div>
-				<div class="modified_padding row">
-					<div class="four columns">
-					</div>
-					<div class="eight columns">
-						<?php echo $this->Form->input('auto_login', array('type' => 'checkbox', 'label' => 'Keep me logged in')); ?>
-					</div>
-				</div>
 					<?php echo $this->Form->end('Login'); ?>
 		</div>
 		<div class="six columns" id="register_panel">
