@@ -13,7 +13,7 @@ $(function(){
 			success: function(response){
 				var facebookId;
 				if(response == false){
-					facebookId = null;
+					addFavorite(_this);
 				}
 				else{
 					FB.api('me/theboxngo:favorite','post',
@@ -21,15 +21,11 @@ $(function(){
 						object: window.location.href,
 						access_token: response					
 					},
-					function(response) {
-						console.log(response);
-						console.log(response.id);
-						facebookId = response.id;
-					}
-				);
+						function(response) {
+							addFavorite(_this, facebookId);
+						}
+					);
 				}
-				console.log(facebookId);
-				addFavorite(_this, facebookId);
 			}
 		});
 	}
