@@ -41,6 +41,13 @@
 			return true;
 		}
 
+		public function removePost($postId){
+			$response = $this->fb->api(
+			  '/'.$postId,
+			  'DELETE'
+			);
+		}
+
 		public function forceScrape($url){
 			$url = urlencode($url);;
 			$result = $this->httpSocket->post("http://developers.facebook.com/tools/debug/og/object?q=".$url);
