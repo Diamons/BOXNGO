@@ -14,6 +14,7 @@ $(function(){
 				var facebookId;
 				if(response == false){
 					facebookId = null;
+					alert("B");
 				}
 				else{
 					FB.api('me/theboxngo:favorite','post',
@@ -22,11 +23,11 @@ $(function(){
 						access_token: response					
 					},
 					function(response) {
+						alert("A");
 						facebookId = response.id;
 					}
 				);
 				}
-				console.log(facebookId);
 				addFavorite(_this, facebookId);
 			}
 		});
