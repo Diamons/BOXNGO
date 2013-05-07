@@ -1,0 +1,6 @@
+User-agent: * 
+Disallow: /api/*
+Disallow: /home/rentshorttermnyc
+Disallow: /home/rentforshorttermnyc
+Disallow: /home/rentshortterminnyc
+Disallow: /home/rentashorttermnyc
