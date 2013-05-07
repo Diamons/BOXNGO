@@ -6,9 +6,10 @@ $(function(){
 		$(this).find('ul.submenu').delay(200).slideUp();
 	});
 	
-	function postLike() {
+	function postLike(listingId) {
 		$.ajax({
 			url: '/apis/checkfacebookuser',
+			data: {listingid: listingId},
 			success: function(response){
 				if(response == false)
 					return null;
@@ -39,7 +40,7 @@ $(function(){
 			url: getDomain()+'users/addfavorite',
 			data: {listingid: $(this).data('listingid'), url: window.location.href},
 			success: function(response){
-				postLike();
+				postLike($(_this).data('listingid'));
 				$(_this).find('.loading').hide();
 				$(_this).find('.typicn.heart').show();
 				favoriteClicked.removeClass('addfavorite');
