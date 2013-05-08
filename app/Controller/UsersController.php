@@ -169,6 +169,7 @@
 				//If this isn't already favorited by this user
 					$favoriteUnique = $this->Favorite->find("first", array("conditions" => array("Favorite.shop_id" => $listingId, "Favorite.user_id" => $this->Auth->user('id'))));
 					if(!empty($favoriteUnique)){
+						$this->Facebook->removePost($favoriteUnique['Favorite']['facebook_story']);
 						$this->Favorite->delete($favoriteUnique['Favorite']['id']);
 					} else {
 						//$this->redirect($this->referer());
