@@ -9,7 +9,7 @@
 		<meta property="og:type"   content="object" /> 
 		<meta property="og:url"    content="<?php echo Router::url(null, true) ?>" /> 
 		<meta property="og:title"  content="$<?php echo $listing['Shop']['price']." ".$listing['Shop']['name']; ?>" /> 
-		<meta property="og:description"  content="<?php echo $listing['Shop']['description']; ?>" /> 
+		<meta property="og:description"  content="" /> 
 		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>/convert?w=200&height=200&fit=crop" /> 
 	<?php $this->end();
 	

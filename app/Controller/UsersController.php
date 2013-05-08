@@ -162,7 +162,6 @@
 		
 		public function removefavorite(){
 			$this->layout = "ajax";
-			 Configure::write('debug', 2); 
 			if($this->request->is('ajax')){
 				$listingId = $this->params->query['listingid'];
 				if(!empty($listingId)){
