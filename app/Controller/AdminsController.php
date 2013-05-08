@@ -1,6 +1,8 @@
 <?php
 	class AdminsController extends AppController{
 		var $uses = array('Category', 'Shop', 'User', 'School');
+		var $components = array('Shipping.Shipping');
+
 		public function beforeFilter(){
 			parent::beforeFilter();
 			if($this->Auth->user('role') != "admin"){
@@ -79,5 +81,9 @@
 			$this->set("schools", $undefinedSchools);
 		}
 		
+		public function track(){
+			if($this->request->is('post'))
+				$this->set("result", $this->Shipping->getTracker($this->request->data['Tracking']['code']));
+		}
 		public function markup(){ }
 	}

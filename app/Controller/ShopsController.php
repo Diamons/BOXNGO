@@ -6,7 +6,6 @@
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->Auth->allow('viewlisting');
-			$this->Security->unlockedActions = array('shoplist');
 		}
 		
 		public function shoplist(){
