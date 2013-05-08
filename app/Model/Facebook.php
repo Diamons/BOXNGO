@@ -42,10 +42,12 @@
 		}
 
 		public function removePost($postId){
-			$response = $this->fb->api(
-			  '/'.$postId,
-			  'DELETE'
-			);
+			if(!empty($postId)){
+				$response = $this->fb->api(
+				  '/'.$postId,
+				  'DELETE'
+				);
+			}
 		}
 
 		public function forceScrape($url){
