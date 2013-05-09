@@ -17,6 +17,7 @@ $this->end();
 				100% Feedback
 			</div>
 			<?php } ?>
+			<a id="sendUserMessage" href="#" data-reveal-id="sendmessage"><i class="icon-envelope"></i> Send Message</a>
 		</div>
 		<div id="profile_feed" class="ten columns">
 			<div class="alert">

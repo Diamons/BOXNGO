@@ -251,6 +251,8 @@ img#coverBanner{
 .listing h1.listing_title a {
 	display: block;
 	margin: 10px 0 1px 0;
+	font-weight: lighter;
+	font-size: 11px;
 }
 
 #listings .userlisted .typicn.user, .listings .userlisted .typicn.user{

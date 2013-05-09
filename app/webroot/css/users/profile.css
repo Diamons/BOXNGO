@@ -34,3 +34,14 @@ box-shadow: 0 0 5px #888;
 div.status.panel{
 	background: #fff6cd;
 }
+
+#sendUserMessage{
+	font-size: 14px;
+	text-align: center;
+	display: block;
+	border: 1px solid #DDD;
+}
+
+#sendUserMessage > i{
+	color: red;
+}
