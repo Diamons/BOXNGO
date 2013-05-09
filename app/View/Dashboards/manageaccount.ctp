@@ -20,19 +20,32 @@ $this->end();
 		</div>
 	</div>
 	<div class="row">
-	<div class="four columns">
-		<b>Profile Picture</b>
-		<span class="detail">
-			An image to represent you on BOX'NGO.
-		</span>
+		<div class="four columns">
+			<b>Profile Picture</b>
+			<span class="detail">
+				An image to represent you on BOX'NGO.
+			</span>
+		</div>
+		<div class="eight columns">
+			<div id="uploadImages">
+					<a href="#" id="upload">Upload Profile Picture</a>
+					<?php echo $this->Form->textarea("User.profilepic"); ?>
+					<span class="detail">Once you upload your picture, click Save Info.</span>
+					<div id="editor"></div>
+				</div>
+		</div>
 	</div>
-	<div class="eight columns">
-		<div id="uploadImages">
-				<a href="#" id="upload">Upload Profile Picture</a>
-				<?php echo $this->Form->textarea("User.profilepic"); ?>
-				<span class="detail">Once you upload your picture, click Save Info.</span>
-				<div id="editor"></div>
-			</div>
+	<div class="row">
+		<div class="four columns">
+			<b>Small Description</b>
+			<span class="detail">
+				A few words to describe you on your profile page.
+			</span>
+		</div>
+		<div class="eight columns">
+			<?php echo $this->Form->textarea('User.profile_info'); ?>
+			<div class="countdown"></div>
+			<?php echo $this->Form->error('User.profile_info'); ?>
+		</div>
 	</div>
-</div>
 <?php echo $this->Form->end("Save Info"); ?>

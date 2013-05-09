@@ -216,21 +216,21 @@ h1.faq{
 	padding: 1px 2px 0 0;
 }
 
-#listings .row{
+#listings .row, .listings .row{
 	margin: 0;
 	border: 1px solid #EEE;
 	border-top: none;
 }
 
-#listings > .row:first-child{
+#listings > .row:first-child, .listings > .row:first-child{
 	border-top: 1px solid #EEE;
 }
-#listings .row .columns{
+#listings .row .columns, .listings .row .columns{
 	padding: 25px 15px;
 	border-right: 1px solid #EEE;
 }
 
-#listings > .row > .columns:nth-child(4n){
+#listings > .row > .columns:nth-child(4n), .listings > .row > .columns:nth-child(4n){
 	border: none;
 }
 
@@ -253,7 +253,7 @@ img#coverBanner{
 	margin: 10px 0 1px 0;
 }
 
-#listings .userlisted .typicn.user{
+#listings .userlisted .typicn.user, .listings .userlisted .typicn.user{
 	background: #7dbeda;
 	height: 18px;
 	overflow: hidden;
@@ -267,11 +267,11 @@ img#coverBanner{
 	border-radius: 4px;
 }
 
-#listings .userlisted{
+#listings .userlisted, .listings .userlisted{
 	font-size: 11px;
 }
 
-#listings .category a{
+#listings .category a, .listings .category a{
 	color: #BBB;
 	font-size: 11px;
 	transition: .3s;
@@ -280,12 +280,12 @@ img#coverBanner{
 	-o-transition: .3s;
 }
 
-#listings .category a:hover{
+#listings .category a:hover, .listings .category a:hover{
 	color: #888;
 	text-decoration: underline;
 }
 
-#listings .category span.price{
+#listings .category span.price, .listings .category span.price{
 	color: #EB6841; 
 	font-size: 9pt; 
 	display:block; 

@@ -9,7 +9,7 @@
 .row .listing div.image{
 	background: #F1F1F1 url('../../images/nopic.png') no-repeat;
 	width: 100%;
-	height: 271px;
+	height: 153px;
 }
 .row .listing .image:hover{
 	cursor: pointer;

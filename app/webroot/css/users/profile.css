@@ -1,0 +1,36 @@
+#profile_feed{
+	padding-left: 20px;
+}
+
+img.profilePic{
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-box-shadow: 0 0 5px #888;
+-webkit-box-shadow: 0 0 5px#888;
+box-shadow: 0 0 5px #888;
+}
+
+.feedback_section{
+	margin-top: 10px;
+	padding-top: 10px;
+	text-align: center;
+	font-size: 12px;
+}
+#feedback{
+	height: 26px;
+	border-radius: 3px;
+	width: 26px;
+	float: left;
+	margin-top: -3px;
+	margin-right: 5px;
+}
+
+#content .row {
+	margin: 0;
+}
+
+div.status.panel{
+	background: #fff6cd;
+}

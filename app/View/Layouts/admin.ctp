@@ -52,6 +52,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 					<li><a href="/admin/assigncategories">Assign Items to Categories</a></li>
 					<li><a href="/admin/editschools">Edit School Info</a></li>
 					<li><a href="/admin/markup">Markup Calculator</a></li>
+					<li><a href="/admin/paypalorders">Manage PayPal Orders <?php if($orders > 0){ ?><span class="notification"><?php echo $orders; ?></span><?php } ?></a></li>
 				</ul>
 			</div>
 			<div class="nine columns">

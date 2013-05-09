@@ -79,6 +79,7 @@ class PaymentsController extends AppController {
 					$order['Order']['payment_id'] = $this->Payment->id;
 					$order['Order']['shipping_amount'] = $listing['Shop']['shipping'];
 					$order['Order']['shop_amount'] = $listing['Shop']['price'];
+					$order['Order']['payment'] = $listing['User']['payment'];
 					if(!$this->Order->save($order)){
 						parent::sendEmail("shahruksemail@gmail.com", "BOX'NGO! URGENT! THIS [ORDER] DID NOT SAVE!", "error", $this->request->data);
 					} else {
@@ -120,8 +121,12 @@ class PaymentsController extends AppController {
 				break;
 				case "ship":
 					if($order['Order']['status'] == "accepted" && !empty($this->request->data)){
-						if($this->Order->save($this->request->data))
+						if($this->Order->save($this->request->data)){
 							$this->Order->saveField("status", "shipped");
+							parent::sendEmail("support@theboxngo.com", "ORDER NEEDS MANAGING");
+							$this->Session->setFlash("Your code is being tracked! Your payment is coming soon!", "flash_success");
+					}
+						}
 						else
 							$this->Session->setFlash("We couldn't verify that tracking number. Please use either UPS, FedEx, or USPS.", "flash_error");
 					}

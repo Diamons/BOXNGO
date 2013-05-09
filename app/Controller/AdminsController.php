@@ -9,11 +9,16 @@
 				throw new NotFoundException("That page could not be found.");
 			}else{
 				$this->layout = "admin";
+				$this->set("orders", $this->Order->find("count", array("conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.payment" => "paypal"))));
 			}
 		}
 		
 		public function index(){
 		
+		}
+
+		public function paypalorders(){
+			$this->set("paypalOrders", $this->Order->find("all", array("conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.payment" => "paypal"))));
 		}
 		
 		public function modifyCategories($id=NULL, $delete=FALSE){

@@ -86,6 +86,10 @@
 					'message' => 'That name has already been taken.'
 				)
 			),
+			'profile_info' => array(
+				'rule' => array('maxlength', 300),
+				'message' => 'Please keep it under 300 characters.'
+			),
 			'accepttos' => array(
 				'agree' => array(
 					'rule' => array('comparison', '!=', 0),
