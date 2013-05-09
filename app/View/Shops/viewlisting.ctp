@@ -12,7 +12,8 @@
 		<meta property="og:description"  content="" /> 
 		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>/convert?w=200&height=200&fit=crop" /> 
 	<?php $this->end();
-	
+	$this->start('pinterest');
+	echo $this->Html->image($listing['Image'][0]['url'], array('id' => 'pinterestImage'));
 	$this->end();
 	$this->start('scriptBottom');
 	echo'<script type="text/javascript">var switchTo5x=true;</script>
