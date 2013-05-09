@@ -5,7 +5,6 @@ $this->end();
 ?>
 <div id="dashmenu"><span>Manage my Orders</span></div>
 <div class="dashwrapper">
-	<?php debug($orders); ?>
 	<?php for($i = 0; $i < count($orders); $i++){ ?>
 	<div class="row listing_purchase">
 			<div class="three columns">
