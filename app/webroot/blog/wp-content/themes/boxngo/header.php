@@ -18,6 +18,7 @@
 	<style>
 		footer.entry-meta{
 			height: auto;
+			min-height: 0;
 		}
 	</style>
 </head>

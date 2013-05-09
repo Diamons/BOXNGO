@@ -1,11 +1,14 @@
 <?php $this->start('scriptBottom');
 $this->end();
 $this->start('css');
-echo $this->Html->css(array('searches/search', 'pages/main'));
+echo $this->Html->css(array('searches/search', 'pages/main', 'bootstrap.min'));
 $this->end();
 ?>
 <div id="content" class="wrapper">
 	<div class="row">
+		<div id="update" class="alert">
+			<a href="http://theboxngo.com/blog/?p=2461"><strong>Blog Update -</strong> Current State of Affairs and Upcoming Updates</a>
+		</div>
 		<div id="categories" class="three columns">
 			<nav>
 				<div class="header"><span class="typicn feed"></span> Categories</div>
