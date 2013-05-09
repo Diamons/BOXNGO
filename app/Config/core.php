@@ -173,11 +173,7 @@
  *
  */
 	Configure::write('Session', array(
-		'cookie' => 'BOXNGO',
-		'defaults' => 'database',
-		'handler' => array(
-			'model' => 'cake_sessions'
-		)
+		'defaults' => 'php'
 	));
 
 /**

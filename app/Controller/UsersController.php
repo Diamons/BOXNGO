@@ -235,7 +235,6 @@
 				$this->Session->setFlash("Unfortunately we can't find that user.", "flash_error");
 			}
 			
-			$school = $this->School->getSchool($userInfo['User']['username']);
 			$favorites = array();
 			$index = 0;
 			for($i=0;$i<count($userInfo['Favorite']);$i++){
@@ -255,7 +254,7 @@
 				}
 			}
 			$this->set("title_for_layout", $userInfo['User']['display_name']); 
-			$this->set(compact('favorites', 'userInfo', 'school', 'shopItems'));
+			$this->set(compact('favorites', 'userInfo', 'shopItems'));
 		}
 		
 		public function message($userid=NULL,$thread=NULL){
