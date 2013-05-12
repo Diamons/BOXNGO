@@ -95,7 +95,7 @@
 				    		<div class="date">
 				    			<?php echo $this->Time->timeAgoInWords($comments[$i]['Comment']['created'], array('format' => 'F jS, Y', 'end' => '+1 year')); ?>
 				    		</div>
-				    		<?php echo $comments[$i]['Comment']['message']; ?>
+				    		<?php echo nl2br(h($comments[$i]['Comment']['message'])); ?>
 				    	</div>
 				    </div>
 			    <?php }
