@@ -233,6 +233,12 @@ $this->end();
 					<p>April 24th we launched a new homepage <a target="_blank" href="http://i.imgur.com/QKacDNE.jpg">(link)</a> and redefined our mission. EDU email address only was something we pursued to help us get started and figure out the glitches with the site. We felt we were ready to target a much broader audience and reach for greater heights after Stanford E-Bootcamp.</p>
 				</dd>
 			</dl>
+			<dl class="timelineMinor">
+				<dt id="event30"><a>Few Minor Updates and Finals</a></dt>
+				<dd class="timelineEvent" id="event30EX" style="display: none; ">
+					<p>After we opened up our platform and removed the EDU email restriction, we saw a huge growth in our site. We received nearly 10 - 15 new registrations per day and went from about 30 to 420 listings on our site in the course of 3 weeks. We are now working on tweaking our platform to create a better experience for our buyers and sellers. We replaced Disqus for comments and shuffled the view listing page around a bit <a href="http://i.imgur.com/9jWtjU6.png" target="_blank">(link)</a>, changed the look of the categories <a href="http://i.imgur.com/oTSL0aK.png" target="_blank">(link)</a>, and completely redesigned the profile page <a href="http://i.imgur.com/I5e5IJM.png" target="_blank">(link)</a>. Finals week is next week so we're taking things a little slowly as of late until we get all this college stuff over with.</p>
+				</dd>
+			</dl>
 		</div>
 	</div>
 </div>

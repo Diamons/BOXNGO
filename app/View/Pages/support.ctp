@@ -34,8 +34,7 @@ $this->end(); ?>
 					Great, how do I start listing on BOX'NGO?
 				</div>
 				<p class="answer">
-					We've made listing on BOX'NGO as easy as possible. To get started, simply register using your email address. Next, click on the orange "List an item for sale" button located on the upper right hand corner or click <a href="/shops/shoplist">here</a>. Fill out the form and you're ready to go! You can always view your items
-on your dashboard.
+					We've made listing on BOX'NGO as easy as possible. To get started, simply register using your email address. Next, click on the "Sell" button located on the upper left hand corner or click <a href="/shops/shoplist">here</a>. Fill out the form and you're ready to go! You can always view your items on your dashboard.
 				</p>
 			</div>
 			<div class="question_answer">
@@ -51,7 +50,7 @@ on your dashboard.
 					How will I get paid?
 				</div>
 				<p class="answer">
-					We give sellers the choice of either Paypal or Check when they first list an item for sale. Getting paid via Paypal happens automatically. 24 hours after your item has arrived, we transfer the funds directly into your Paypal account. If you choose to get paid via Check, we will write out a check to your address every 2 weeks for the amount of money you are owed minus postage charges (about 35 cents).
+					We give sellers the choice of either Paypal or Check when they first list an item for sale. Getting paid via Paypal happens automatically. 24 hours after your item has arrived, we transfer the funds directly into your Paypal account. If you choose to get paid via Check, we will write out a check to your address every 2 weeks for the amount of money you are owed minus postage charges (about 46 cents).
 				</p>
 			</div>
 			<div class="question_answer">
@@ -59,15 +58,7 @@ on your dashboard.
 					How do I trade on BOX'NGO?
 				</div>
 				<p class="answer">
-					Currently, we are working to implement trading on a broader scale. As of right now, you can only trade if the buyer and seller attend the same college / university and have registered using their EDU email addresses. We hope to allow trading for everyone by early May.
-				</p>
-			</div>
-			<div class="question_answer">
-				<div class="question">
-					Can I trade with people from other schools?
-				</div>
-				<p class="answer">
-					At this time we do not allow inter-school trading. BOX'NGO is a BETA website and we are constantly changing things. If there are features you'd like, feel free to express your opinions by contacting us.
+					As of right now, we do not support trading until we re-implement the trading feature. We were an online buying/selling/trading platform for students with @EDU email addresses up until April 24th when we opened up our selling platform to everyone. We promise you, we are working on it.
 				</p>
 			</div>
 		</div>
