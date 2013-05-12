@@ -22,3 +22,7 @@ span.detail{
 	text-align: right;
 	color: #58a9dc;
 }
+
+#UserProfileInfo{
+	min-height: 150px;
+}
