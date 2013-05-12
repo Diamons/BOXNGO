@@ -10,17 +10,8 @@ $this->end();
 			<a href="http://theboxngo.com/blog/?p=2461"><strong>Blog Update -</strong> Current State of Affairs and Upcoming Updates</a>
 		</div>
 		<div id="categories" class="three columns">
-			<nav>
-				<div class="header"><span class="typicn feed"></span> Categories</div>
-				<ul>
-					<?php for($i = 0; $i < count($layoutCategories); $i++){ ?>
-						<li><a href="/browse/<?php echo  $layoutCategories[$i]['Category']['short_name']; ?>"><?php echo $layoutCategories[$i]['Category']['display_name']; ?></a></li>
-					<?php } ?>
-				</ul>
-			</nav>
-			<div id="blogposts">
-				<?php echo $this->element('includes'.DS.'wordpress'); ?>
-			</div>
+			<?php echo $this->element('categories'); ?>
+
 		</div>
 		<div class="nine columns">
 			<?php //<a href="/promotions/march2013"><img id="coverBanner" src="/images/cover.png?promo=march2013" /></a> ?>

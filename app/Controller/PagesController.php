@@ -42,7 +42,6 @@ class PagesController extends AppController {
  * @var array
  */
 	public $uses = array('Shop', 'Category', 'Course');
-	var $helpers = array('Time');
 	
 	public function beforeFilter(){
 		parent::beforeFilter();

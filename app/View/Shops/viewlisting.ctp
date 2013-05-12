@@ -76,30 +76,36 @@
 			<div id="description">
 				<?php echo nl2br(h($listing['Shop']['description'])); ?>
 			</div>
-			<div id="similarItems" class="panel row">
-				<h4>Similar Items</h4>
-				<?php for($i = 0; $i < count($relatedItems); $i++){ ?>
-					<div class="two columns">
-						<a href="/shops/viewlisting/<?php echo $relatedItems[$i]['Shop']['id']; ?>/<?php echo $relatedItems[$i]['Shop']['permalink']; ?>"><img src="<?php echo $relatedItems[$i]['Image'][0]['url']; ?>/convert?w=180&height=120&fit=crop" /><h5><?php echo $relatedItems[$i]['Shop']['name']; ?></h5></a>
-					</div>
+			<div id="comments" class="row">
+				<?php if(isset($auth)){ ?>
+					<a id="addComment" class="addComment" href="#"><span class="plus typicn"></span> Write a Comment</a>
 				<?php } ?>
-			</div>
-			<div id="reviews" class="row">
-			    <div id="disqus_thread"></div>
-			    <script type="text/javascript">
-			        var disqus_shortname = 'boxngo'; // required: replace example with your forum shortname
-			        var disqus_url = 'http://theboxngo.com/viewlisting/<?php echo $listing['Shop']['id']; ?>';
-			        (function() {
-			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			        })();
-			    </script>
-			    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-			    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+				<?php echo $this->Form->create("Comment", array("url" => "/shops/comment/".$listing['Shop']['id'])); ?>
+				<?php echo $this->Form->input("Comment.message", array("type" => "textarea")); ?>
+				<?php echo $this->Form->end("Leave Comment"); ?>
+			    <?php if(!empty($comments)){ 
+			    	for($i = 0; $i < count($comments); $i++){?>
+				    <div class="<?php if($listing['Shop']['user_id'] == $comments[$i]['Comment']['user_id']){ ?>seller <?php } ?>row comment">
+				    	<div class="userInfo two columns">
+				    		<?php echo $this->Html->image($comments[$i]['User']['profilepic'], array('class' => 'profilePic')); ?>
+				    		<?php echo $this->Html->link($comments[$i]['User']['display_name'], "/users/profile/".$comments[$i]['User']['id']); ?>
+				    		<?php if($listing['Shop']['user_id'] == $comments[$i]['Comment']['user_id']){ ?><div class="radius success label">Seller</div><?php } ?>
+				    	</div>
+				    	<div class="ten columns">
+				    		<div class="date">
+				    			<?php echo $this->Time->timeAgoInWords($comments[$i]['Comment']['created'], array('format' => 'F jS, Y', 'end' => '+1 year')); ?>
+				    		</div>
+				    		<?php echo $comments[$i]['Comment']['message']; ?>
+				    	</div>
+				    </div>
+			    <?php }
+				}else{ ?>
+				No comments to display.
+				<?php } ?>
 			</div>
 		</div>
 		<div class="four columns">
+			<a id="buyNow" href="#">Buy Now</a>
 			<div class="row" id="buy">
 				<div class="three columns page_views">
 					<?php echo $views; ?>
@@ -130,13 +136,24 @@
 					<h3 class="subheader">User Info</h3>
 					<div class="user_info">
 						<a href="/users/profile/<?php echo $listing['User']['id']; ?>">
-						<img src="<?php echo $listing['User']['profilepic']; ?>" class="avatar" />
+						<img src="<?php echo $listing['User']['profilepic']; ?>" class="profilePic" />
 						<?php echo $listing['User']['display_name']; ?></a>
 					</div>
 					<div>
 						<a href="/users/profile/<?php echo $listing['User']['id']; ?>"><span class="user typicn"></span> View <?php echo $listing['User']['display_name']; ?>'s Profile</a>
-						<a data-reveal-id="sendmessage" href="/users/profile/<?php echo $listing['User']['id']; ?>"><span class="write typicn"></span> Message <?php echo $listing['User']['display_name']; ?></a>
+						<?php if(isset($auth)){ ?>
+							<a data-reveal-id="sendmessage" href="/users/profile/<?php echo $listing['User']['id']; ?>"><span class="write typicn"></span> Message <?php echo $listing['User']['display_name']; ?></a>
+						<?php } ?>
 					</div>
+				</section>
+				<section id="similarItems" class="row clearfix">
+				<h3 class="subheader">Other Listings of Interest</h3>
+				<?php for($i = 0; $i < count($relatedItems); $i++){ ?>
+					<div class="six columns">
+						<a href="/shops/viewlisting/<?php echo $relatedItems[$i]['Shop']['id']; ?>/<?php echo $relatedItems[$i]['Shop']['permalink']; ?>"><img src="<?php echo $relatedItems[$i]['Image'][0]['url']; ?>/convert?w=180&height=120&fit=crop" /><h5><?php echo $relatedItems[$i]['Shop']['name']; ?></h5></a>
+					</div>
+				<?php } ?>
+			</div>
 				</section>
 				<?php if(isset($school) && !empty($school['School']['short_id'])){ ?>
 				<section class="clearfix">
@@ -151,15 +168,17 @@
 			</div>
 		</div>
 	</div>
+<?php if(isset($auth)){ ?>
 	<div id="sendmessage" class="reveal-modal medium">
 	  <h2>Message <?php echo $listing['User']['display_name']; ?></h2>
 	  <p class="lead">Got a question or comment?</p>
 	  <p>
 		<?php echo $this->Form->create("Message", array("url" => "/users/message/".$listing['User']['id'])); ?>
 		<?php echo $this->Form->input("Thread.subject", array("type" => "text", "value" => "Question about ".$listing['Shop']['name'])); ?>
-		<?php echo $this->Form->input("Thread.message", array("type" => "textarea", "value" => "\n\n\nhttp://theboxngo.com/shops/viewlisting/".$listing['Shop']['id'])); ?>
+		<?php echo $this->Form->input("Thread.message", array("type" => "textarea", "value" => "\n\n\n".$listing['Shop']['full_url'])); ?>
 		<?php echo $this->Form->end("Send Message"); ?>
 	  </p>
 	  <a class="close-reveal-modal">&#215;</a>
 	</div>
+<?php } ?>
 </div>

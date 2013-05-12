@@ -20,15 +20,8 @@ $this->end();
 	</div>
 	<div class="row">
 		<div id="categories" class="three columns">
-				<nav>
-					<div class="header"><span class="typicn feed"></span> Categories</div>
-					<ul>
-						<?php for($i = 0; $i < count($layoutCategories); $i++){ ?>
-							<li><a href="/browse/<?php echo  $layoutCategories[$i]['Category']['short_name']; ?>"><?php echo $layoutCategories[$i]['Category']['display_name']; ?></a></li>
-						<?php } ?>
-					</ul>
-				</nav>
-			</div>
+				<?php echo $this->element('categories'); ?>
+		</div>
 		<div class="nine columns">
 		<?php if(!empty($results)){ ?>
 			<?php if(isset($category)){ ?>

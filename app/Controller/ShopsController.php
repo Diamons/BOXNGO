@@ -1,8 +1,10 @@
 <?php
 	class ShopsController extends AppController{
 		
-		var $uses = array('Shop', 'Image', 'Payment', 'School', 'Shopview', 'Facebook', 'Category', 'Favorite', 'Message', 'Thread', 'Trade');
+		var $uses = array('Comment', 'Shop', 'Image', 'Payment', 'School', 'Shopview', 'Facebook', 'Category', 'Favorite', 'Message', 'Thread', 'Trade');
 		var $components = array('Cookie');
+		var $helpers = array('Time');
+
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->Auth->allow('viewlisting');
@@ -130,14 +132,31 @@
 					$this->set("favorite", $this->Favorite->find("first", array("conditions" => array("Favorite.user_id" => $this->Auth->user('id'), "Favorite.shop_id" => $listingid))));
 				}
 				
-				$relatedItems = $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 6));
-				$this->set("categories", $this->Category->find("all"));
+				$relatedItems = $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 8));
+				$this->set("comments", $this->Comment->find("all", array("conditions" => array("Comment.shop_id" => $listingid))));
 				$sameSchool = $this->School->sameSchool($this->Auth->user('username'), $listing['User']['username']);
 				$views = $this->Shopview->find("count", array("conditions" => array("Shopview.shop_id" => $listingid)));
 				$this->set(compact("listing", "sameSchool", "relatedItems", "views"));
 			}
 		}
 		
+		public function comment($shopid){
+			if(empty($shopid) || !$this->request->is('post'))
+				redirect($this->referer());
+			$this->request->data['Comment']['user_id'] = $this->Auth->user('id');
+			$this->request->data['Comment']['shop_id'] = $shopid;
+			if(empty($this->request->data['Comment']['message']))
+				$this->Session->setFlash("Please no empty comments!", "flash_error");
+			elseif($this->Comment->save($this->request->data)){
+				$this->Session->setFlash("Your comment was posted!", "flash_success");
+				$this->Shop->recursive = 1;
+				$shop = $this->Shop->read(NULL, $shopid);
+				parent::sendEmail($shop['User']['username'],"BOX'NGO :: New comment posted on your listing for ".$shop['Shop']['name'],"newcomment", array('link' => $shop['Shop']['full_url'], 'name' => $shop['Shop']['name']));
+			}
+			$this->redirect($this->referer());
+
+		}
+
 		public function deletelisting($listingid=NULL){
 			if(empty($listingid))
 				$this->redirect($this->referer());

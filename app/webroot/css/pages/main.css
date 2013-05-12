@@ -166,9 +166,6 @@ h1.faq{
 
 #content.wrapper #categories{
 	padding: 0;	
-	background: #F3F3F3;	
-	border-radius: 9px;
-	border: 1px solid #EEE;
 }
 
 #categories nav ul{
@@ -181,33 +178,32 @@ h1.faq{
 
 #categories nav a{
 	display: block;
-	padding: 7px 0;
+	padding: 10px 0;
 	background: #FEFEFE;
 	font-size: 12px;
-	padding-left: 20px;
-	transition: all .1s;
-	-moz-transition: all .1s;
-	-webkit-transition: all .1s;
-	-o-transition: all .1s;
+	padding-left: 15px;
+	transition: all .2s;
+	-moz-transition: all .2s;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	border-bottom: 1px solid #EEE;
+}
+
+#categories nav a i{
+	padding-right: 25px;
 }
 
 #categories nav a:hover{
-	background: #f9833d; /* Old browsers */
-	background: -moz-linear-gradient(top, #f9833d 0%, #fc804b 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9833d), color-stop(100%,#fc804b)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #f9833d 0%,#fc804b 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #f9833d 0%,#fc804b 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #f9833d 0%,#fc804b 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #f9833d 0%,#fc804b 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9833d', endColorstr='#fc804b',GradientType=0 ); /* IE6-9 */
-	color: #FFF;
+	color: #f9833d;
 }
 
 #categories nav div.header{
 	font-weight: bold;
 	padding: 10px 0;
-	padding-left: 23px;
+	padding-left: 16px;
 	color: #666;
+	border-bottom: 2px solid #2ba6cb;
+
 }
 
 #categories nav .header span.typicn{

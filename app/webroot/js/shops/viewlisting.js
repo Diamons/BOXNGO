@@ -1,4 +1,9 @@
 $(function(){
+	$("#addComment").on("click", function(event){
+		event.preventDefault();
+		$("#CommentViewlistingForm").stop(true,true).slideToggle(500);
+	});
+
 	$('#gallery').orbit({
 		  animation: 'horizontal-push',      // fade, horizontal-slide, vertical-slide, horizontal-push
 		  animationSpeed: 800,                // how fast animtions are

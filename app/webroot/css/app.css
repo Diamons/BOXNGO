@@ -541,6 +541,17 @@ form input[type="submit"].mainpage{
 form input[type="submit"].mainpage:hover{
 	background: #97c007;
 }
+
+img.profilePic{
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
 .favoritemessage{
 	display: none;
 	position: fixed;

@@ -11,6 +11,7 @@ $this->end();
 	<div class="row">
 		<div class="userInfo two columns">
 			<?php echo $this->Html->image($userInfo['User']['profilepic'], array('class' => 'profilePic')); ?>
+			<?php echo $userInfo['User']['display_name']; ?>
 			<?php if($userInfo['User']['role'] == "admin"){ ?>
 			<div class="alert alert-success feedback_section clearfix">
 				<?php echo $this->Html->image('/images/icons/great.png', array('id' => 'feedback', 'class' => 'great')); ?>
