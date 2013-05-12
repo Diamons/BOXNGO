@@ -543,6 +543,8 @@ form input[type="submit"].mainpage:hover{
 }
 
 img.profilePic{
+	display: block;
+	margin: auto;
 	border: 1px solid #DDD;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
