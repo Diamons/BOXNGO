@@ -18,8 +18,8 @@ $(function(){
 		  captionAnimation: 'fade',           // fade, slideOpen, none
 		  captionAnimationSpeed: 800,         // if so how quickly should they animate in
 		  bullets: true,                     // true or false to activate the bullet navigation
-		  bulletThumbs: false,                // thumbnails for the bullets
-		  bulletThumbLocation: '',            // location from this file where thumbs will be
+		  bulletThumbs: true,                // thumbnails for the bullets
+		  bulletThumbLocation: 'asd',            // location from this file where thumbs will be
 		  afterSlideChange: function(){},     // empty function
 		  fluid: true                         // or set a aspect ratio for content slides (ex: '4x3')
 	});

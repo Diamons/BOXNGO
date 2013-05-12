@@ -22,7 +22,9 @@ $this->end();
 		</div>
 		<div id="profile_feed" class="ten columns">
 			<div class="alert">
-				<?php echo nl2br(h($userInfo['User']['profile_info'])); ?>
+				<?php if(!empty($userInfo['User']['profile_info'])){ echo nl2br(h($userInfo['User']['profile_info'])); } else { ?>
+				<i>This user has not filled this out yet.</i>
+				<?php } ?>
 			</div>
 			<dl class="tabs contained">
 				<dd class="active"><a href="#forsale">For Sale</a></dd>
