@@ -125,15 +125,12 @@ class PaymentsController extends AppController {
 							$this->Order->saveField("status", "shipped");
 							parent::sendEmail("support@theboxngo.com", "ORDER NEEDS MANAGING");
 							$this->Session->setFlash("Your code is being tracked! Your payment is coming soon!", "flash_success");
-					}
-						}
-						else
+					}else
 							$this->Session->setFlash("We couldn't verify that tracking number. Please use either UPS, FedEx, or USPS.", "flash_error");
-					}
 				break;
-			}
+				}
+			}		
 		}
-		
 		$order = $this->Order->find("first", array("conditions" => array("Order.id" => $orderId, "Order.seller_id" => $this->Auth->user('id'))));
 		if(empty($order)){
 			$this->Session->setFlash("That order could not be found.", "flash_error");

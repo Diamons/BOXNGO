@@ -1,7 +1,7 @@
 <?php
 	class AdminsController extends AppController{
 		var $uses = array('Category', 'Shop', 'User', 'School');
-		var $components = array('Shipping.Shipping');
+		var $components = array('Shipping.Shipping', 'RequestHandler');
 
 		public function beforeFilter(){
 			parent::beforeFilter();
@@ -19,6 +19,17 @@
 
 		public function paypalorders(){
 			$this->set("paypalOrders", $this->Order->find("all", array("conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.payment" => "paypal"))));
+		}
+
+		public function checkorders(){
+			$startDate1 = date('Y-m-01 00:00:00');
+			$endDate1 = date('Y-m-15 00:00:00');
+			$startDate2 = date('Y-m-15 00:00:00');
+			$endDate2 = date('Y-m-t 23:59:59');
+
+			$this->Order->recursive = -1;
+			$this->set("checkOrders1", $this->Order->find("all", array("fields" => "Order.seller_id", "conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate1, "Order.modified <" => $endDate1, "Order.payment" => "check"))));
+			$this->set("checkOrders2", $this->Order->find("all", array("conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate2, "Order.modified <=" => $endDate2, "Order.payment" => "check"), "group" => "Order.seller_id")));
 		}
 		
 		public function modifyCategories($id=NULL, $delete=FALSE){

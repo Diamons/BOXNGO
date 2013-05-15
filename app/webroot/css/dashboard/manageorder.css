@@ -30,7 +30,7 @@
 	font-size: 13px;
 }
 
-.columns{
+#content.wrapper .columns{
 	padding: 20px;
 }
 

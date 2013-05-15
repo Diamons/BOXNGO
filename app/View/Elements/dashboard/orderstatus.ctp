@@ -3,10 +3,8 @@
 		<div class="three columns">
 			<a href="<?php echo $this->webroot; ?>shops/viewlisting/<?php echo $purchases[$i]['Order']['shop_id']; ?>"><img src="<?php echo $purchases[$i]['Image']['url']; ?>/convert?w=210&h=120&fit=crop" /></a>
 		</div>
-		<div class="three columns">
+		<div class="two columns">
 			<a href="<?php echo $this->webroot; ?>shops/viewlisting/<?php echo $purchases[$i]['Order']['shop_id']; ?>"><?php echo $purchases[$i]['Shop']['name']; ?></a>
-		</div>
-		<div class="totalPrice one columns">
 		</div>
 		<div class="totalPrice two columns">
 			$<?php echo $purchases[$i]['Order']['totalPrice']; ?>
@@ -30,6 +28,10 @@
 				<span <?php if($purchases[$i]['Order']['status'] == "delivered"){ echo "class='current'"; } ?>><span class="typicn heart" data-title="heart"></span>Delivered</span>
 			</div>
 			<?php } ?>
+		</div>
+		<div class="process two columns">
+			<a class="manageorderButton" href="<?php echo $this->webroot; ?>payments/manageorder/<?php echo $purchases[$i]['Order']['id']; ?>">Manage Order</a>
+			<a href="/users/profile/<?php echo $purchases[$i]['Shop']['user_id']; ?>" class="manageorderButton">Seller's Profile</a>
 		</div>
 </div>
 <?php } ?>
