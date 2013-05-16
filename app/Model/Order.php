@@ -16,7 +16,7 @@
 			
 		public function afterFind($data, $primary=FALSE){
 			for($i = 0; $i < count($data); $i++){
-				if(isset($data[$i]['Order']))
+				if(isset($data[$i]['Order']['shipping_amount']) && isset($data[$i]['Order']['shop_amount']))
 					$data[$i]['Order']['totalPrice'] = $data[$i]['Order']['shipping_amount'] + $data[$i]['Order']['shop_amount'];
 				if(isset($data[$i]['Order']['tracking_code']))
 					$data[$i]['Order']['carrier'] = $this->detectCarrier($data[$i]['Order']['tracking_code']);

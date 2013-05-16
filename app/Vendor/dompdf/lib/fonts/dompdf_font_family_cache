@@ -1,4 +1,4 @@
-array (
+<?php return array (
   'sans-serif' => 
   array (
     'normal' => DOMPDF_FONT_DIR . 'Helvetica',
@@ -132,4 +132,4 @@ array (
 //    'italic' => DOMPDF_FONT_DIR . 'Verdana_Italic',
 //    'bold_italic' => DOMPDF_FONT_DIR . 'Verdana_Bold_Italic',
 //  ),
-)
+) ?>

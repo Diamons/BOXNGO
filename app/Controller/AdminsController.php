@@ -1,6 +1,6 @@
 <?php
 	class AdminsController extends AppController{
-		var $uses = array('Category', 'Shop', 'User', 'School');
+		var $uses = array('Category', 'Image', 'Shop', 'User', 'School');
 		var $components = array('Shipping.Shipping', 'RequestHandler');
 
 		public function beforeFilter(){
@@ -27,9 +27,32 @@
 			$startDate2 = date('Y-m-15 00:00:00');
 			$endDate2 = date('Y-m-t 23:59:59');
 
-			$this->Order->recursive = -1;
-			$this->set("checkOrders1", $this->Order->find("all", array("fields" => "Order.seller_id", "conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate1, "Order.modified <" => $endDate1, "Order.payment" => "check"))));
-			$this->set("checkOrders2", $this->Order->find("all", array("conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate2, "Order.modified <=" => $endDate2, "Order.payment" => "check"), "group" => "Order.seller_id")));
+			$this->Order->recursive = 1;
+			$checkPayments = $this->Order->find("all", array("fields" => "Order.seller_id", "conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate1, "Order.modified <" => $endDate1, "Order.payment" => "check")));
+
+			$count = 0;
+			$checkOrders1= array();
+			foreach($checkPayments as $a){
+				$checkOrders1[$count] = $this->Order->find("all", array("conditions" => array("Order.seller_id" => $a['Order']['seller_id'], "Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate1, "Order.modified <" => $endDate1, "Order.payment" => "check")));
+				for($i = 0; $i < count($checkOrders1[$count]); $i++)
+					$checkOrders1[$count][$i]['Order']['carrier'] = $this->Shipping->getTracker($checkOrders1[$count][$i]['Order']['tracking_code']);
+				$count++;
+			}
+
+			$checkPayments = $this->Order->find("all", array("fields" => "Order.seller_id", "conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate2, "Order.modified <" => $endDate2, "Order.payment" => "check")));
+			
+			//Check Orders 2 = after the 15th of the month
+			$count = 0;
+			$checkOrders2= array();
+			foreach($checkPayments as $a){
+				$checkOrders2[$count] = $this->Order->find("all", array("conditions" => array("Order.seller_id" => $a['Order']['seller_id'], "Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate2, "Order.modified <" => $endDate2, "Order.payment" => "check")));
+				for($i = 0; $i < count($checkOrders2[$count]); $i++)
+					$checkOrders2[$count][$i]['Order']['carrier'] = $this->Shipping->getTracker($checkOrders2[$count][$i]['Order']['tracking_code']);
+				
+				$count++;
+			}
+
+			$this->set(compact("checkOrders1", "checkOrders2"));
 		}
 		
 		public function modifyCategories($id=NULL, $delete=FALSE){
@@ -102,4 +125,9 @@
 				$this->set("result", $this->Shipping->getTracker($this->request->data['Tracking']['code']));
 		}
 		public function markup(){ }
+		public function view($orderId){
+			$order = $this->Order->read(NULL, $orderId);
+			$order['Shop']['image'] = $this->Image->find("first", array("conditions" => array("Image.shop_id" => $order['Shop']['id'])));
+			$this->set(compact('order'));
+		} 
 	}
