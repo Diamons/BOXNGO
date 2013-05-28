@@ -56,7 +56,6 @@ $Configuration['Garden']['ThemeOptions']['Styles']['Value'] = '%s';
 $Configuration['Garden']['Format']['Hashtags'] = FALSE;
 $Configuration['Garden']['EditContentTimeout'] = '1800';
 $Configuration['Garden']['WebRoot'] = 'vanilla';
-$Configuration['Garden']['StripWebRoot'] = TRUE;
 // Plugins
 $Configuration['Plugins']['GettingStarted']['Dashboard'] = '1';
 $Configuration['Plugins']['GettingStarted']['Discussion'] = '1';
