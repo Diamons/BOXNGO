@@ -13,7 +13,7 @@
 
    <!-- (1) Moot look and feel -->
    <link rel="stylesheet" href="//cdn.moot.it/1.3.0/moot.css">
-  <!-- <link rel="stylesheet" href="/css/forum.css"> -->
+   <link rel="stylesheet" href="/css/forum.css">
    <!-- (4) Custom CSS -->
    <style>
    body {
