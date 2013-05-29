@@ -15,7 +15,8 @@ if (!defined('IN_PHPBB'))
 {
 	exit;
 }
-
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 require($phpbb_root_path . 'includes/startup.' . $phpEx);
 
 if (file_exists($phpbb_root_path . 'config.' . $phpEx))
