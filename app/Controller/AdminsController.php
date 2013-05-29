@@ -28,14 +28,15 @@
 			$endDate2 = date('Y-m-t 23:59:59');
 
 			$this->Order->recursive = 1;
-			$checkPayments = $this->Order->find("all", array("fields" => "Order.seller_id", "conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate1, "Order.modified <" => $endDate1, "Order.payment" => "check")));
+			$checkPayments = $this->Order->find("all", array("fields" => "Order.seller_id", "conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.modified <" => $endDate1, "Order.payment" => "check")));
 
 			$count = 0;
 			$checkOrders1= array();
 			foreach($checkPayments as $a){
 				$checkOrders1[$count] = $this->Order->find("all", array("conditions" => array("Order.seller_id" => $a['Order']['seller_id'], "Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate1, "Order.modified <" => $endDate1, "Order.payment" => "check")));
-				for($i = 0; $i < count($checkOrders1[$count]); $i++)
+				for($i = 0; $i < count($checkOrders1[$count]); $i++){
 					$checkOrders1[$count][$i]['Order']['carrier'] = $this->Shipping->getTracker($checkOrders1[$count][$i]['Order']['tracking_code']);
+				}
 				$count++;
 			}
 
