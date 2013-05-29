@@ -28,7 +28,7 @@
 			//Need to make controller return aggregations
 			<div>Step 2: Write the check</div>
 			<div>
-				<b>Amount:</b> $<?php echo 
+				
 			</div>
 		</fieldset>
 		<?php echo $this->Html->link(__('Generate PDF Report'), array('action' => 'view', '1', 'ext' => 'pdf')); ?>

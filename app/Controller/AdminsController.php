@@ -47,9 +47,11 @@
 			$checkOrders2= array();
 			foreach($checkPayments as $a){
 				$checkOrders2[$count] = $this->Order->find("all", array("conditions" => array("Order.seller_id" => $a['Order']['seller_id'], "Order.completed" => 0, "Order.status" => "shipped", "Order.modified >=" => $startDate2, "Order.modified <" => $endDate2, "Order.payment" => "check")));
-				for($i = 0; $i < count($checkOrders2[$count]); $i++)
+				for($i = 0; $i < count($checkOrders2[$count]); $i++){
 					$checkOrders2[$count][$i]['Order']['carrier'] = $this->Shipping->getTracker($checkOrders2[$count][$i]['Order']['tracking_code']);
-				
+					$checkOrders2[$count]['totalAmount'] += $checkOrders[$count][$i]['Order']['totalPrice'];
+				}
+
 				$count++;
 			}
 
