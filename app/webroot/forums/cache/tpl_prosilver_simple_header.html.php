@@ -10,7 +10,8 @@
 <meta name="distribution" content="global" />
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<?php echo (isset($this->_rootref['META'])) ? $this->_rootref['META'] : ''; ?>
+<?php echo (isset($this->_rootref['META'])) ? $this->_rootref['META'] : ''; ?>
+
 <title><?php echo (isset($this->_rootref['SITENAME'])) ? $this->_rootref['SITENAME'] : ''; ?> &bull; <?php if ($this->_rootref['S_IN_MCP']) {  echo ((isset($this->_rootref['L_MCP'])) ? $this->_rootref['L_MCP'] : ((isset($user->lang['MCP'])) ? $user->lang['MCP'] : '{ MCP }')); ?> &bull; <?php } else if ($this->_rootref['S_IN_UCP']) {  echo ((isset($this->_rootref['L_UCP'])) ? $this->_rootref['L_UCP'] : ((isset($user->lang['UCP'])) ? $user->lang['UCP'] : '{ UCP }')); ?> &bull; <?php } echo (isset($this->_rootref['PAGE_TITLE'])) ? $this->_rootref['PAGE_TITLE'] : ''; ?></title>
 
 <script type="text/javascript">
@@ -56,9 +57,11 @@
 <link href="<?php echo (isset($this->_rootref['T_THEME_PATH'])) ? $this->_rootref['T_THEME_PATH'] : ''; ?>/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
 <link href="<?php echo (isset($this->_rootref['T_THEME_PATH'])) ? $this->_rootref['T_THEME_PATH'] : ''; ?>/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
 
-<?php if ($this->_rootref['S_CONTENT_DIRECTION'] == ('rtl')) {  ?>
+<?php if ($this->_rootref['S_CONTENT_DIRECTION'] == ('rtl')) {  ?>
+
 	<link href="<?php echo (isset($this->_rootref['T_THEME_PATH'])) ? $this->_rootref['T_THEME_PATH'] : ''; ?>/bidi.css" rel="stylesheet" type="text/css" media="screen, projection" />
-<?php } $this->_tpldata['DEFINE']['.']['POPUP'] = 1; ?>
+<?php } $this->_tpldata['DEFINE']['.']['POPUP'] = 1; ?>
+
 
 </head>
 
