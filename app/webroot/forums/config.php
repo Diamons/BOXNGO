@@ -1,7 +1,7 @@
 <?php
 // phpBB 3.0.x auto-generated configuration file
 // Do not change anything in this file!
-$dbms = 'mysqli';
+$dbms = 'mysql';
 $dbhost = 'us-cdbr-east-03.cleardb.com';
 $dbport = '';
 $dbname = 'heroku_5648c9c067c6638';

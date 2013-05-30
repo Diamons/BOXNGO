@@ -16,15 +16,6 @@ if (!defined('IN_PHPBB'))
 	exit;
 }
 
-register_shutdown_function('shutdownFunction');
-
-function shutDownFunction() { 
-    $error = error_get_last();
-    if ($error['type'] == 1) {
-        var_dump($error);   
-    } 
-}
-
 require($phpbb_root_path . 'includes/startup.' . $phpEx);
 
 if (file_exists($phpbb_root_path . 'config.' . $phpEx))
