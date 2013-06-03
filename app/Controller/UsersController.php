@@ -226,6 +226,8 @@
 		}
 		
 		public function profile($userId=NULL){
+			if($this->Auth->user('role') == "admin")
+				Configure::write('debug', 2);
 			if(empty($userId)){
 				$userId = $this->Auth->user('id');
 			}
