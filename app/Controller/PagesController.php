@@ -76,6 +76,7 @@ class PagesController extends AppController {
 			$this->set("listings", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 16)));
 			if($this->Auth->loggedIn()){
 				$path[0] = "home_user";
+				$this->set("recent", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "Shop.created DESC", "limit" => 5)));
 			}
 		}
 		
@@ -83,7 +84,4 @@ class PagesController extends AppController {
 		$this->render(implode('/', $path));
 	}
 
-	public function forums(){
-		$this->layout = "ajax";
-	}
 }

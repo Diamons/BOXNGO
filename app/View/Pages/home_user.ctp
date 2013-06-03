@@ -13,10 +13,12 @@ $this->end();
 			<?php echo $this->element('categories'); ?>
 		<nav class="newlyListed">
 			<div class="header">Newly Listed</div>
+
+			<?php for($i = 0; $i < count($recent); $i++){ ?>
 			<div class="row">
 				<div class="three columns">
-					<a href="#">
-						<img class="newListingImage" src="https://www.filepicker.io/api/file/W0UpttdARU6EqEVwpyvm/convert?w=182&h=150&fit=crop" />
+					<a href="<?php echo $recent[$i]['Shop']['permalink']; ?>">
+						<?php echo $this->Html->image($recent[$i]['Image'][0]['url'], array('class' => 'newListingImage')); ?>
 					</a>	
 				</div>
 				<div class="newlyListedInfo nine columns">
@@ -25,11 +27,12 @@ $this->end();
 					<div class="price">$123.00</div>
 				</div>
 			</div>
+			<?php } ?>
+
 		</nav>
 
 		</div>
 		<div class="nine columns">
-			<a href="/promotions/march2013"><img id="coverBanner" src="/images/cover.png?promo=march2013" /></a>
 			<div id="listings">
 				<?php if(!empty($listings)): ?>
 					<?php 
