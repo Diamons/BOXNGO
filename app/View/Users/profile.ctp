@@ -16,7 +16,7 @@ $this->end();
         		<?php echo $this->Html->image($userInfo['User']['profilepic'], array('class' => 'bg')); ?>
 			</div>
 		</div>
-		asdasd
+		<?php echo $userInfo['User']['display_name']; ?>
 		<div class="data content">
 			<div class="row">
 				<div class="six columns">
