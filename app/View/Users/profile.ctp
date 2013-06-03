@@ -1,24 +1,38 @@
 <?php $this->start('css');
-	echo $this->Html->css(array('searches/search', 'pages/main', 'users/profile', 'bootstrap.min'));
+	echo $this->Html->css(array('searches/search', 'pages/main', 'users/profile', 'bootstrap.min', 'http://fonts.googleapis.com/css?family=Quicksand:300,400,700', 'http://fonts.googleapis.com/css?family=Lato:400,300'));
 $this->end();
 $this->start('scriptBottom');
 	echo $this->Html->script(array('users/profile'));
 $this->end();
 ?>
 
-	
 <div id="content" class="wrapper">
 	<div class="row">
 		<div class="userInfo two columns">
-			<?php echo $this->Html->image($userInfo['User']['profilepic'], array('class' => 'profilePic')); ?>
-			<?php echo $userInfo['User']['display_name']; ?>
-			<?php if($userInfo['User']['role'] == "admin"){ ?>
-			<div class="alert alert-success feedback_section clearfix">
-				<?php echo $this->Html->image('/images/icons/great.png', array('id' => 'feedback', 'class' => 'great')); ?>
-				100% Feedback
+			
+	<div class="container">
+		<div class="profile_snippet">
+			<div class="bio">
+        		<?php echo $this->Html->image($userInfo['User']['profilepic'], array('class' => 'bg')); ?>
 			</div>
-			<?php } ?>
-			<a id="sendUserMessage" href="#" data-reveal-id="sendmessage"><i class="icon-envelope"></i> Send Message</a>
+		</div>
+		asdasd
+		<div class="data content">
+			<div class="row">
+				<div class="six columns">
+					<?php echo number_format($shopFavorites); ?>
+					<span>Shop Favorites</span>
+				</div>
+				<div class="six columns">
+					<?php echo number_format($shopViews); ?>
+					<span>Shop Views</span>
+				</div>
+			</div>
+
+			<a href="#" class="sendUserMessage" data-reveal-id="sendmessage"> <i class="icon-envelope"></i> Send Message</a>
+		</div>
+
+	</div>
 		</div>
 		<div id="profile_feed" class="ten columns">
 			<div class="alert">
@@ -38,7 +52,7 @@ $this->end();
 	</div>
 </div>
 <?php if(isset($auth) && !empty($auth)){ ?>
-<div id="sendmessage" class="reveal-modal small">
+<div id="sendmessage" class="reveal-modal medium">
   <h2>Message <?php echo $userInfo['User']['display_name']; ?></h2>
   <p>
 	<?php echo $this->Form->create("Message", array("url" => "/users/message/".$userInfo['User']['id'])); ?>

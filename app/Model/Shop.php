@@ -133,8 +133,10 @@
 		public function afterFind($results, $primary=FALSE){
 
 			foreach($results as &$a){
-				$a['Shop']['full_url'] = "http://theboxngo.com/shops/viewlisting/".$a['Shop']['id']."/".$a['Shop']['permalink'];
-			}return $results;
+				if(isset($a['Shop']['permalink']))
+					$a['Shop']['full_url'] = "http://theboxngo.com/shops/viewlisting/".$a['Shop']['id']."/".$a['Shop']['permalink'];
+			}
+			return $results;
 		}
 
 		function beforeSave($data = array()){

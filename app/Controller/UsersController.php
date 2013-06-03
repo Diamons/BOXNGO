@@ -1,7 +1,7 @@
 <?php
 	class UsersController extends AppController{
 		
-		var $uses = array('Autologin', 'Favorite', 'Verification', 'Facebook', 'Cookie', 'Thread', 'Message', 'ForgotPassword');
+		var $uses = array('Autologin', 'Favorite', 'Verification', 'Facebook', 'Cookie', 'Thread', 'Message', 'ForgotPassword', 'ShopView');
 		var $components = array('Mailchimp.Mailchimp');
 		
 		function beforeFilter(){
@@ -253,6 +253,10 @@
 					$index++;
 				}
 			}
+
+			$shopIds = $this->Shop->find("list", array("conditions" => array("Shop.user_id" => $userId)));
+			$this->set("shopViews", $this->ShopView->find("count", array("conditions" => array("shop_id" => array_keys($shopIds)))));
+			$this->set("shopFavorites", $this->Favorite->find("count", array("conditions" => array("shop_id" => array_keys($shopIds)))));
 			$this->set("title_for_layout", $userInfo['User']['display_name']); 
 			$this->set(compact('favorites', 'userInfo', 'shopItems'));
 		}
