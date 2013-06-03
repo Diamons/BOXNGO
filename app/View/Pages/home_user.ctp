@@ -11,10 +11,25 @@ $this->end();
 		</div>
 		<div id="categories" class="three columns">
 			<?php echo $this->element('categories'); ?>
+		<nav class="newlyListed">
+			<div class="header">Newly Listed</div>
+			<div class="row">
+				<div class="three columns">
+					<a href="#">
+						<img class="newListingImage" src="https://www.filepicker.io/api/file/W0UpttdARU6EqEVwpyvm/convert?w=182&h=150&fit=crop" />
+					</a>	
+				</div>
+				<div class="newlyListedInfo nine columns">
+					<a class="newlyListedName" href="/shops/viewlisting/6721/vintage-silver-plated-square-emperor-clear-crystal-ring-65"> Vintage Silver Plated Square Emperor Clear Crystal Ring, 6.5 </a>
+					<div class="category"><a href="/searches/browse/cell-phones">Cell Phones</a></div>
+					<div class="price">$123.00</div>
+				</div>
+			</div>
+		</nav>
 
 		</div>
 		<div class="nine columns">
-			<?php //<a href="/promotions/march2013"><img id="coverBanner" src="/images/cover.png?promo=march2013" /></a> ?>
+			<a href="/promotions/march2013"><img id="coverBanner" src="/images/cover.png?promo=march2013" /></a>
 			<div id="listings">
 				<?php if(!empty($listings)): ?>
 					<?php 

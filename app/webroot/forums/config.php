@@ -1,16 +1,17 @@
 <?php
-// phpBB 3.0.x auto-generated configuration file
-// Do not change anything in this file!
-$dbms = 'mysql';
-$dbhost = 'us-cdbr-east-03.cleardb.com';
-$dbport = '';
-$dbname = 'heroku_5648c9c067c6638';
-$dbuser = 'bf9d3d7e7eb560';
-$dbpasswd = 'aadf777b';
-$table_prefix = 'phpbb_';
-$acm_type = 'file';
-$load_extensions = '';
 
-@define('PHPBB_INSTALLED', true);
-// @define('DEBUG', true);
-// @define('DEBUG_EXTRA', true);
+$db_type = 'mysql';
+$db_host = 'us-cdbr-east-03.cleardb.com';
+$db_name = 'heroku_5648c9c067c6638';
+$db_username = 'bf9d3d7e7eb560';
+$db_password = 'aadf777b';
+$db_prefix = 'forums_';
+$p_connect = false;
+
+$cookie_name = 'pun_cookie_dc65f0';
+$cookie_domain = '';
+$cookie_path = '/';
+$cookie_secure = 0;
+$cookie_seed = 'd8b25921091536ed';
+
+define('PUN', 1);

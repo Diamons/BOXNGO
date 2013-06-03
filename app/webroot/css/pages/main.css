@@ -172,16 +172,47 @@ h1.faq{
 	margin: 0;
 }
 
+#categories > nav{
+	margin-bottom: 20px;
+	border: 1px solid #d4ffad;
+	border-radius: 9px;
+	padding: 0 10px 10px 10px;
+	background: #f1ffe4;
+}
+
+#categories > nav.newlyListed{
+	background: #FFF;
+	border-color: #97ddff;
+}
+
+#categories nav.newlyListed img.newListingImage{
+	border: 1px solid #DDD;
+	padding: 1px;
+}
+
+#categories nav.newlyListed div.newlyListedInfo{
+	padding-left:10px;
+}
+
 #categories nav li{
 	display: block;
 }
 
-#categories nav a{
+nav.newlyListed .newlyListedInfo > a{
+	display: block;
+	font-size: 11px;
+}
+
+#categories nav.newlyListed a.newlyListedName{
+	height: 1.7em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#categories nav:first-child a{
 	display: block;
 	padding: 10px 0;
-	background: #FEFEFE;
 	font-size: 12px;
-	padding-left: 15px;
 	transition: all .2s;
 	-moz-transition: all .2s;
 	-webkit-transition: all .2s;
@@ -200,7 +231,6 @@ h1.faq{
 #categories nav div.header{
 	font-weight: bold;
 	padding: 10px 0;
-	padding-left: 16px;
 	color: #666;
 	border-bottom: 2px solid #2ba6cb;
 
@@ -228,6 +258,11 @@ h1.faq{
 
 #listings > .row > .columns:nth-child(4n), .listings > .row > .columns:nth-child(4n){
 	border: none;
+}
+
+div.price{
+	color: #84b855;
+	font-size: 11px;
 }
 
 img#coverBanner{
@@ -269,7 +304,7 @@ img#coverBanner{
 	font-size: 11px;
 }
 
-#listings .category a, .listings .category a{
+.category a{
 	color: #BBB;
 	font-size: 11px;
 	transition: .3s;
@@ -278,12 +313,12 @@ img#coverBanner{
 	-o-transition: .3s;
 }
 
-#listings .category a:hover, .listings .category a:hover{
+.category a:hover{
 	color: #888;
 	text-decoration: underline;
 }
 
-#listings .category span.price, .listings .category span.price{
+.category span.price{
 	color: #EB6841; 
 	font-size: 9pt; 
 	display:block; 
