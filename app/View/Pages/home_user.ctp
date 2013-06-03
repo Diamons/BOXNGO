@@ -4,6 +4,7 @@ $this->start('css');
 echo $this->Html->css(array('searches/search', 'pages/main', 'bootstrap.min'));
 $this->end();
 ?>
+
 <div id="content" class="wrapper">
 	<div class="row">
 		<div id="update" class="alert">
@@ -22,8 +23,8 @@ $this->end();
 					</a>	
 				</div>
 				<div class="newlyListedInfo nine columns">
-					<a class="newlyListedName" href="/shops/viewlisting/6721/vintage-silver-plated-square-emperor-clear-crystal-ring-65"> Vintage Silver Plated Square Emperor Clear Crystal Ring, 6.5 </a>
-					<div class="category"><a href="/searches/browse/cell-phones">Cell Phones</a></div>
+					<a class="newlyListedName" href="<?php echo $recent[$i]['Shop']['permalink']; ?>"> Vintage Silver Plated Square Emperor Clear Crystal Ring, 6.5 </a>
+					<div class="category"><a href="/searches/browse/<?php echo $recent[$i]['Category']['short_name']; ?>"><?php echo $recent[$i]['Category']['display_name']; ?></a></div>
 					<div class="price">$123.00</div>
 				</div>
 			</div>
