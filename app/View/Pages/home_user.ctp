@@ -19,7 +19,7 @@ $this->end();
 			<div class="row">
 				<div class="three columns">
 					<a href="<?php echo $recent[$i]['Shop']['permalink']; ?>">
-						<?php echo $this->Html->image($recent[$i]['Image'][0]['url'].'/convert?w=64&height=64', array('class' => 'newListingImage')); ?>
+						<?php echo $this->Html->image($recent[$i]['Image'][0]['url'].'/convert?w=64&height=64&fit=crop', array('class' => 'newListingImage')); ?>
 					</a>	
 				</div>
 				<div class="newlyListedInfo nine columns">
