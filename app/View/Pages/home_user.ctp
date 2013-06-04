@@ -18,13 +18,8 @@ $this->end();
 			<?php for($i = 0; $i < count($recent); $i++){ ?>
 			<div class="row">
 				<div class="three columns">
-<<<<<<< HEAD
-					<a href="<?php echo $recent[$i]['Shop']['permalink']; ?>">
-						<?php echo $this->Html->image($recent[$i]['Image'][0]['url'].'/convert?w=64&height=64&fit=crop', array('class' => 'newListingImage')); ?>
-=======
 					<a href="<?php echo $recent[$i]['Shop']['full_url']; ?>">
-						<?php echo $this->Html->image($recent[$i]['Image'][0]['url'].'/convert?w=64&height=64', array('class' => 'newListingImage')); ?>
->>>>>>> 414a852c336a7df8e6c38d24c55e37b6b6c3c42f
+						<?php echo $this->Html->image($recent[$i]['Image'][0]['url'].'/convert?w=64&height=64&fit=crop', array('class' => 'newListingImage')); ?>
 					</a>	
 				</div>
 				<div class="newlyListedInfo nine columns">
