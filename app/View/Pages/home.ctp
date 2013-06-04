@@ -60,8 +60,8 @@ $this->start('meta'); ?>
 					<i class="icon-credit-card"></i> 
 				</div>
 				<div class="ten columns">
-					<h2>Flat 10% Selling Fee</h2>
-					Only pay 10% when you make a sale. Other sites require you to calculate transaction fees, listing fees, and much more to find out how much you have to pay. We charge one flat 10% fee, regardless of how much your listing costs. Spend less time figuring out fees and more time selling.
+					<h2>One Simple 10% Selling Fee</h2>
+					It doesn't get any easier than earning 90% of your selling price. We believe sellers shouldn't have to try and figure out PayPal fees, credit card transaction fees, listing fees, and any other fees most other online selling platforms charge their users. With BOX'NGO, simply list your stuff and receive 90% of your sale price. It's as simple as that.
 				</div>
 			</div>
 			<div class="row feature">
@@ -69,8 +69,8 @@ $this->start('meta'); ?>
 					<i class="icon-bolt"></i> 
 				</div>
 				<div class="ten columns">
-					<h2>Get Paid Quick</h2>
-					Once your listing has shipped and we've verified the tracking code which is usually within 24 hours, you get paid via PayPal. If you choose to get paid via check, receive a check in the mail every 2 weeks. You've already made a sale, you shouldn't have to wait days to get paid.
+					<h2>Quick and Easy Payments - Check or PayPal</h2>
+					One thing sellers really hate is having to wait days to get your payment. With BOX'NGO, we make getting paid quick and easy for our sellers. When getting paid via PayPal, we simply disburse 90% of the sale into your PayPal account 24 hours after you post a tracking code. If you choose to get paid via check, we mail a check every two weeks for 90% of the sales in those two weeks minus 46 cents for postage. No fees, no waits, just quick and easy.
 				</div>
 			</div>
 			<div class="row feature">
