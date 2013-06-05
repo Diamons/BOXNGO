@@ -215,3 +215,29 @@ Stack Trace:
 #3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-05 20:54:22 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/comment/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-05 20:54:28 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/comment/26
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 C:\wamp\www\boxngo2\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
