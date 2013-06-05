@@ -79,6 +79,14 @@ $(function(){
 	$("#searchTrigger, #listButton").on("click", function(){
 		$("#SearchIndexForm").submit();
 	});
+
+	$(window).scroll(function(){
+	    if($(this).scrollTop()){
+	        $('#toTop').fadeIn();
+	    }else{
+	        $('#toTop').fadeOut();
+	    }
+	});
 });
 
 function getDomain(){

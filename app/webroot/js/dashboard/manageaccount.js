@@ -24,16 +24,16 @@ function getId(fpUrl){
 	return fpUrl[fpUrl.length-1];
 }
 
-function updateCountdown() {
+/*function updateCountdown() {
     var remaining = 300 - jQuery('#UserProfileInfo').val().length;
     jQuery('.countdown').text(remaining + ' characters remaining.');
 }
-
+*/
 $(document).ready(function(){
 	if($("#UserProfilepic").val() != ""){
 		$("#editor").html("<img src='"+$("#UserProfilepic").val()+"' />");
 	}
-	updateCountdown();
+	/*updateCountdown();
     $('#UserProfileInfo').change(updateCountdown);
-    $('#UserProfileInfo').keyup(updateCountdown);
+    $('#UserProfileInfo').keyup(updateCountdown);*/
 });

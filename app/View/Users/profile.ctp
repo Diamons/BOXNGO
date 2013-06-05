@@ -7,6 +7,7 @@ $this->end();
 ?>
 
 <div id="content" class="wrapper">
+	<?php echo $this->element('totop'); ?>
 	<div class="row">
 		<div class="userInfo two columns">
 			

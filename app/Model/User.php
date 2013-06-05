@@ -87,8 +87,8 @@
 				)
 			),
 			'profile_info' => array(
-				'rule' => array('maxlength', 310),
-				'message' => 'Please keep it under 300 characters.'
+				'rule' => array('maxlength', 1000),
+				'message' => 'Please keep it under 1,000 characters.'
 			),
 			'accepttos' => array(
 				'agree' => array(
