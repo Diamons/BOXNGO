@@ -205,3 +205,13 @@ Request URL: /images/bg/sky.j
 Stack Trace:
 #0 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-06-05 20:48:51 Error: Fatal Error (1): Call to undefined function redirect() in [C:\wamp\www\boxngo2\app\Controller\ShopsController.php, line 145]
+2013-06-05 20:48:51 Error: [FatalErrorException] Call to undefined function redirect()
+Request URL: /shops/comment/26/
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\box...', 145)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\box...', 145, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\box...', 145, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
