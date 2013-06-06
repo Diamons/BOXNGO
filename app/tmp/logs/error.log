@@ -241,3 +241,183 @@ Stack Trace:
 #7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
 #8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2013-06-05 21:36:20 Error: [MissingTableException] Table categories for model Category was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'test',
+)
+Request URL: /shops/shoplist
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Model\Category.php(21): Model->find('all')
+#3 C:\wamp\www\boxngo2\app\Controller\AppController.php(45): Category->findNonEmpty()
+#4 C:\wamp\www\boxngo2\app\Controller\ShopsController.php(9): AppController->beforeFilter()
+#5 [internal function]: ShopsController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-05 21:36:22 Error: [MissingTableException] Table categories for model Category was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'test',
+)
+Request URL: /shops/shoplist
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Model\Category.php(21): Model->find('all')
+#3 C:\wamp\www\boxngo2\app\Controller\AppController.php(45): Category->findNonEmpty()
+#4 C:\wamp\www\boxngo2\app\Controller\ShopsController.php(9): AppController->beforeFilter()
+#5 [internal function]: ShopsController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-05 21:36:24 Error: [MissingTableException] Table categories for model Category was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'test',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Model\Category.php(21): Model->find('all')
+#3 C:\wamp\www\boxngo2\app\Controller\AppController.php(45): Category->findNonEmpty()
+#4 C:\wamp\www\boxngo2\app\Controller\PagesController.php(47): AppController->beforeFilter()
+#5 [internal function]: PagesController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-05 21:36:25 Error: [MissingTableException] Table categories for model Category was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'test',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Model\Category.php(21): Model->find('all')
+#3 C:\wamp\www\boxngo2\app\Controller\AppController.php(45): Category->findNonEmpty()
+#4 C:\wamp\www\boxngo2\app\Controller\PagesController.php(47): AppController->beforeFilter()
+#5 [internal function]: PagesController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-05 21:36:26 Error: [MissingTableException] Table categories for model Category was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'test',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Model\Category.php(21): Model->find('all')
+#3 C:\wamp\www\boxngo2\app\Controller\AppController.php(45): Category->findNonEmpty()
+#4 C:\wamp\www\boxngo2\app\Controller\PagesController.php(47): AppController->beforeFilter()
+#5 [internal function]: PagesController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-05 21:40:01 Error: [MissingTableException] Table categories for model Category was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'test',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Model\Category.php(21): Model->find('all')
+#3 C:\wamp\www\boxngo2\app\Controller\AppController.php(45): Category->findNonEmpty()
+#4 C:\wamp\www\boxngo2\app\Controller\PagesController.php(47): AppController->beforeFilter()
+#5 [internal function]: PagesController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-05 21:40:03 Error: [MissingTableException] Table categories for model Category was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'test',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Model\Category.php(21): Model->find('all')
+#3 C:\wamp\www\boxngo2\app\Controller\AppController.php(45): Category->findNonEmpty()
+#4 C:\wamp\www\boxngo2\app\Controller\PagesController.php(47): AppController->beforeFilter()
+#5 [internal function]: PagesController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-05 21:45:34 Error: [MissingTableException] Table categories for model Category was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'test',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Model\Category.php(21): Model->find('all')
+#3 C:\wamp\www\boxngo2\app\Controller\AppController.php(45): Category->findNonEmpty()
+#4 C:\wamp\www\boxngo2\app\Controller\PagesController.php(47): AppController->beforeFilter()
+#5 [internal function]: PagesController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-05 21:49:09 Error: [MissingTableException] Table categories for model Category was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'test',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Model\Category.php(21): Model->find('all')
+#3 C:\wamp\www\boxngo2\app\Controller\AppController.php(45): Category->findNonEmpty()
+#4 C:\wamp\www\boxngo2\app\Controller\PagesController.php(47): AppController->beforeFilter()
+#5 [internal function]: PagesController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
