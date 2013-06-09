@@ -421,3 +421,215 @@ Stack Trace:
 #9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2013-06-08 04:10:07 Error: [NotFoundException] That page could not be found.
+Request URL: /admin/
+Stack Trace:
+#0 [internal function]: AdminsController->beforeFilter(Object(CakeEvent))
+#1 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#2 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#4 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-08 04:10:10 Error: [NotFoundException] That page could not be found.
+Request URL: /admin
+Stack Trace:
+#0 [internal function]: AdminsController->beforeFilter(Object(CakeEvent))
+#1 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#2 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#4 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-08 04:13:06 Error: [NotFoundException] That page could not be found.
+Request URL: /admin
+Stack Trace:
+#0 [internal function]: AdminsController->beforeFilter(Object(CakeEvent))
+#1 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#2 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#4 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-08 04:13:08 Error: [NotFoundException] That page could not be found.
+Request URL: /admin
+Stack Trace:
+#0 [internal function]: AdminsController->beforeFilter(Object(CakeEvent))
+#1 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#2 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#4 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-08 04:26:22 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [C:\wamp\www\boxngo2\app\Model\Collection.php, line 2]
+2013-06-08 04:26:22 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /admin/managecollections
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 2, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 2, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-08 04:26:28 Error: [MissingTableException] Table collections for model Collection was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'collections',
+  'class' => 'Collection',
+  'ds' => 'test',
+)
+Request URL: /admin/managecollections
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('collections')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Controller\AdminsController.php(62): Model->find('all')
+#3 [internal function]: AdminsController->managecollections()
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-06-09 03:09:58 Error: [MissingTableException] Table collections for model Collection was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'collections',
+  'class' => 'Collection',
+  'ds' => 'test',
+)
+Request URL: /admin/managecollections
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('collections')
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\boxngo2\app\Controller\AdminsController.php(62): Model->find('all')
+#3 [internal function]: AdminsController->managecollections()
+#4 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-06-09 16:14:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Shop.collection_id' in 'on clause'
+Request URL: /admin/managecollections
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Collect...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Collect...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Collect...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Collection), Array)
+#5 C:\wamp\www\boxngo2\app\Controller\AdminsController.php(62): Model->find('all')
+#6 [internal function]: AdminsController->managecollections()
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-09 16:14:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Collection.shop_id' in 'on clause'
+Request URL: /admin/managecollections
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Collect...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Collect...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Collect...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Collection), Array)
+#5 C:\wamp\www\boxngo2\app\Controller\AdminsController.php(62): Model->find('all')
+#6 [internal function]: AdminsController->managecollections()
+#7 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#8 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-09 17:58:18 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('test')
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(1108): Model->setDataSource('test')
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#5 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#6 C:\wamp\www\boxngo2\app\Model\Category.php(21): Model->find('all')
+#7 C:\wamp\www\boxngo2\app\Controller\AppController.php(45): Category->findNonEmpty()
+#8 C:\wamp\www\boxngo2\app\Controller\PagesController.php(47): AppController->beforeFilter()
+#9 [internal function]: PagesController->beforeFilter(Object(CakeEvent))
+#10 C:\wamp\www\boxngo2\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#11 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#13 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-06-09 19:19:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/shops/jquery.mCustomScrollbar.concat.min.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-09 19:20:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/shops/jquery.mCustomScrollbar.concat.min.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-09 19:20:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/shops/jquery.mCustomScrollbar.concat.min.js
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-09 19:27:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/mCSB_buttons.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-09 19:31:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/mCSB_buttons.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-09 20:55:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Shop.collection_id' in 'field list'
+Request URL: /admin/managecollections
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Shop`.`...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Shop`.`...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1343): DboSource->fetchAll('SELECT `Shop`.`...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1205): DboSource->fetchAssociated(Object(Collection), 'SELECT `Shop`.`...', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(Collection), Object(Shop), 'hasMany', 'Shop', Array, Array, true, Array, 0, Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Collection), Array)
+#7 C:\wamp\www\boxngo2\app\Controller\AdminsController.php(62): Model->find('all')
+#8 [internal function]: AdminsController->managecollections()
+#9 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-09 20:57:57 Error: [MissingActionException] Action AdminsController::editcollection() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdminsController',
+  'action' => 'editcollection',
+)
+Request URL: /admin/editcollection/1
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

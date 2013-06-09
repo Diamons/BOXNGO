@@ -1,6 +1,6 @@
 <?php
 	class AdminsController extends AppController{
-		var $uses = array('Category', 'Image', 'Shop', 'User', 'School');
+		var $uses = array('Collection', 'Category', 'Image', 'Shop', 'User', 'School');
 		var $components = array('Shipping.Shipping', 'RequestHandler');
 
 		public function beforeFilter(){
@@ -58,6 +58,15 @@
 			$this->set(compact("checkOrders1", "checkOrders2"));
 		}
 		
+		public function managecollections(){
+			$this->set("collections", $this->Collection->find("all"));
+			if($this->request->is('post')){
+
+			}else{
+
+			}
+		}
+
 		public function modifyCategories($id=NULL, $delete=FALSE){
 			if($delete == "delete"){
 				if($this->Category->delete($id)){

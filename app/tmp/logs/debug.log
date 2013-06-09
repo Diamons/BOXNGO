@@ -1,0 +1,9 @@
+2013-06-09 20:52:02 Debug: Notice (8): Undefined index: facebook_story in [C:\wamp\www\boxngo2\app\Controller\UsersController.php, line 149]
+Trace:
+UsersController::addfavorite() - APP\Controller\UsersController.php, line 149
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 92
+

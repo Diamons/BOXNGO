@@ -7,9 +7,9 @@ $this->end();
 
 <div id="content" class="wrapper">
 	<div class="row">
-		<div id="update" class="alert">
-			<a href="http://theboxngo.com/blog/?p=2461"><strong>Blog Update -</strong> Current State of Affairs and Upcoming Updates</a>
-		</div>
+		<?php /*<div id="update" class="alert">
+			<a href="http://theboxngo.com/blog/?p=2461"><strong>Blog Update -</strong> Current State of Affairs and Upcoming Updates</a> 
+		</div>*/ ?>
 		<div id="categories" class="three columns">
 			<?php echo $this->element('categories'); ?>
 		<nav class="newlyListed">
@@ -33,6 +33,7 @@ $this->end();
 		</nav>
 		</div>
 		<div class="nine columns">
+			<a id="promo_container" href="#"><img id="promo" alt="Father's Day Sale" src="/images/banner.jpg" /></a>
 			<div id="listings">
 				<?php if(!empty($listings)): ?>
 					<?php 
