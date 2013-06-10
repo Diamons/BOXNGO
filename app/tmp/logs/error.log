@@ -734,3 +734,305 @@ Stack Trace:
 #11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
 #12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2013-06-10 17:25:57 Error: [NotFoundException] That page could not be found.
+Request URL: /admin
+Stack Trace:
+#0 [internal function]: AdminsController->beforeFilter(Object(CakeEvent))
+#1 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#2 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#4 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-10 17:33:50 Error: [BadRequestException] The request has been black-holed
+Request URL: /admin/managecollections
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(AdminsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(AdminsController))
+#2 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-10 17:35:00 Error: [MissingActionException] Action AdminsController::editcollection() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdminsController',
+  'action' => 'editcollection',
+)
+Request URL: /admin/editcollection/2
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-10 17:39:13 Error: [MissingViewException] View file "C:\wamp\www\rr\app\View\Admins\editcollection.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\rr\\app\\View\\Admins\\editcollection.ctp',
+)
+Request URL: /admin/editcollection/2
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-10 18:44:20 Error: [MissingTableException] Table collection_items for model CollectionItem was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'collection_items',
+  'class' => 'CollectionItem',
+  'ds' => 'test',
+)
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('collection_item...')
+#1 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#2 C:\wamp\www\rr\lib\Cake\View\Helper\FormHelper.php(198): Model->schema()
+#3 C:\wamp\www\rr\lib\Cake\View\Helper\FormHelper.php(448): FormHelper->_introspectModel('CollectionItem', 'fields')
+#4 C:\wamp\www\rr\app\View\Admins\editcollection.ctp(5): FormHelper->create('CollectionItem')
+#5 C:\wamp\www\rr\lib\Cake\View\View.php(947): include('C:\wamp\www\rr\...')
+#6 C:\wamp\www\rr\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\rr\...', Array)
+#7 C:\wamp\www\rr\lib\Cake\View\View.php(471): View->_render('C:\wamp\www\rr\...')
+#8 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#10 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-10 20:40:43 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\rr\app\Controller\AdminsController.php, line 77]
+2013-06-10 20:40:43 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 77)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 77, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 77, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-10 20:41:01 Error: Fatal Error (4): syntax error, unexpected '$hasMany' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\wamp\www\rr\app\Model\CollectionItem.php, line 3]
+2013-06-10 20:41:01 Error: [FatalErrorException] syntax error, unexpected '$hasMany' (T_VARIABLE), expecting function (T_FUNCTION)
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 3, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 3, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-10 20:41:26 Error: Fatal Error (4): syntax error, unexpected '$validate' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\wamp\www\rr\app\Model\CollectionItem.php, line 6]
+2013-06-10 20:41:26 Error: [FatalErrorException] syntax error, unexpected '$validate' (T_VARIABLE), expecting function (T_FUNCTION)
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 6, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 6, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-10 20:41:34 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\rr\app\Model\CollectionItem.php, line 11]
+2013-06-10 20:41:34 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 11, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 11, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-10 20:45:48 Error: Fatal Error (4): syntax error, unexpected ')', expecting ';' in [C:\wamp\www\rr\app\Model\CollectionItem.php, line 12]
+2013-06-10 20:45:48 Error: [FatalErrorException] syntax error, unexpected ')', expecting ';'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 12, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 12, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-10 20:53:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->save(Array)
+#5 [internal function]: AdminsController->editcollection('7')
+#6 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-10 20:54:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->save(Array)
+#5 [internal function]: AdminsController->editcollection('7')
+#6 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-10 20:55:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(2054): Model->saveAssociated(Array, Array)
+#6 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->saveAll(Array)
+#7 [internal function]: AdminsController->editcollection('7')
+#8 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-10 20:56:36 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2247): Model->save(Array, Array)
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(2054): Model->saveAssociated(Array, Array)
+#6 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->saveAll(Array)
+#7 [internal function]: AdminsController->editcollection('7')
+#8 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-10 20:57:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#5 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->saveMany(Array)
+#6 [internal function]: AdminsController->editcollection('7')
+#7 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#8 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-10 21:00:37 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#5 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->saveMany(Array)
+#6 [internal function]: AdminsController->editcollection('7')
+#7 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#8 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-10 21:01:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#5 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->saveMany(Array)
+#6 [internal function]: AdminsController->editcollection('7')
+#7 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#8 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-10 21:02:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#5 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->saveMany(Array)
+#6 [internal function]: AdminsController->editcollection('7')
+#7 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#8 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-10 21:02:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#5 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->saveMany(Array)
+#6 [internal function]: AdminsController->editcollection('7')
+#7 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#8 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-10 21:03:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#5 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->saveMany(Array)
+#6 [internal function]: AdminsController->editcollection('7')
+#7 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#8 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-10 21:03:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `bo...', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `bo...')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1744): DboSource->create(Object(CollectionItem), Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2112): Model->save(Array, Array)
+#5 C:\wamp\www\rr\app\Controller\AdminsController.php(77): Model->saveMany(Array)
+#6 [internal function]: AdminsController->editcollection('7')
+#7 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#8 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-06-10 21:24:31 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\wamp\www\rr\app\Controller\AdminsController.php, line 85]
+2013-06-10 21:24:31 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 85)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 85, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 85, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-10 21:32:15 Error: Fatal Error (4): syntax error, unexpected ',', expecting ')' in [C:\wamp\www\rr\app\View\Admins\editcollection.ctp, line 9]
+2013-06-10 21:32:15 Error: [FatalErrorException] syntax error, unexpected ',', expecting ')'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 9, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 9, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -1,10 +1,11 @@
 <?php
 	class AdminsController extends AppController{
-		var $uses = array('Collection', 'Category', 'Image', 'Shop', 'User', 'School');
+		var $uses = array('Collection', 'CollectionItem', 'Category', 'Image', 'Shop', 'User', 'School');
 		var $components = array('Shipping.Shipping', 'RequestHandler');
 
 		public function beforeFilter(){
 			parent::beforeFilter();
+			$this->Security->unlockedActions = array('editcollection');
 			if($this->Auth->user('role') != "admin"){
 				throw new NotFoundException("That page could not be found.");
 			}else{
@@ -61,9 +62,24 @@
 		public function managecollections(){
 			$this->set("collections", $this->Collection->find("all"));
 			if($this->request->is('post')){
+				if($this->Collection->save($this->request->data)){
+					$this->Session->setFlash("Saved!", "flash_success");
+					$this->redirect($this->referer());
+				}
+				else
+					$this->Session->setFlash("Check error!", "flash_error");
+			}
+		}
 
-			}else{
-
+		public function editcollection($id=NULL){
+			$this->set("collection", $this->Collection->read(NULL, $id));
+			if($this->request->is('post')){
+				if($this->CollectionItem->saveMany($this->request->data)){
+					$this->Session->setFlash("A", "flash_success");
+					$this->redirect($this->referer());
+				}else{
+					$this->Session->setFlash("Error!", "flash_error");
+				}
 			}
 		}
 

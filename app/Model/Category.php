@@ -31,8 +31,8 @@
 		}
 
 		public function beforeSave($options = array()){
-			if(!empty($this->data['Category']['short_name'])){
-				$this->data['Category']['short_name'] = strtolower(str_replace(" ", "-", trim($this->data['Category']['short_name'])));
+			if(!empty($this->data[$this->alias]['short_name'])){
+				$this->data[$this->alias]['short_name'] = strtolower(str_replace(" ", "-", trim($this->data[$this->alias]['short_name'])));
 			}
 			return true;
 		}

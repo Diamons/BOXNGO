@@ -35,7 +35,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	<div class="boxngo_wrapper">
 		<header>
 			<div class="wrapper">
-				<div id="logo"><a href="<?php echo $this->webroot;?>"><img src="/logo.png" alt="BOX'NGO" /></a></div>
+				<div id="logo"><a href="<?php echo $this->webroot;?>"><!-- <img src="/logo.png" alt="BOX'NGO" /> -->RESERVATION RESOURCES</a></div>
 				<div id="actions">	
 					<?php if(!isset($auth)): ?>
 					<?php else : ?>
