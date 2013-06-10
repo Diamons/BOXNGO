@@ -33,7 +33,7 @@ $this->end();
 		</nav>
 		</div>
 		<div class="nine columns">
-			<a id="promo_container" href="#"><img id="promo" alt="Father's Day Sale" src="/images/banner.jpg" /></a>
+			<?php //<a id="promo_container" href="#"><img id="promo" alt="Father's Day Sale" src="/images/banner.jpg" /></a> ?>
 			<div id="listings">
 				<?php if(!empty($listings)): ?>
 					<?php 
