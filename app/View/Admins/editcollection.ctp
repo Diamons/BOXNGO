@@ -7,4 +7,5 @@ Use the ID #s of the listings, one per field
 
 <?php echo $this->Form->create("CollectionItem"); ?>
 <?php echo $this->Form->input("CollectionItem.shop_id", array('label' => 'Shop ID# Separated by Commas Example: (1,2,3,4) NO SPACES', 'type' => 'text')); ?>
+<?php echo $this->Form->hidden("CollectionItem.collection_id", array('value' => $collection['Collection']['id'])); ?>
 <?php echo $this->Form->end("Save"); ?>

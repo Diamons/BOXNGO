@@ -3,23 +3,40 @@
 		public $hasMany = array('Shop');
 		public $belongsTo = array("Collection");
 
+		public $validate = array(
+			'shop_id' => array(
+				'rule' => array('mustExist'),
+				'message' => 'Shop ID doesn\'t exist!'
+			)
+		);
 
-		public function beforeSave($options = array()){
-			
-			if(isset($this->data[$this->alias]['shop_id'])){
+		public function mustExist($check){
+			App::import('Model', 'Shop');
+			$shop = new Shop();
+			$shop->recursive = -1;
+			$shopItem = $shop->read('id', $check['shop_id']);
+			if(!empty($shopItem))
+				return true;
+			else
+				return "Shop Item ID# ".$check['shop_id']." doesn't exist!";
+		}
+
+		public function splitSave($data = array()){
+			$collectionId = $data['CollectionItem']['collection_id'];
+			if(isset($data[$this->alias]['shop_id'])){
 				$newResults = array();
-				for($i = 0; $i < count($this->data[$this->alias]['shop_id']); $i++){
-					$newResults = explode(',', trim($this->data[$this->alias]['shop_id']));
+				for($i = 0; $i < count($data[$this->alias]['shop_id']); $i++){
+					$newResults = explode(',', trim($data[$this->alias]['shop_id']));
 				}
-
-				$this->data = array();
+				$data = array();
 				for($i = 0; $i < count($newResults); $i++){
-					$this->data[$i][$this->alias]['shop_id'] = $newResults[$i];
+					$data[][$this->alias] = array ('shop_id' => $newResults[$i], 'collection_id' => $collectionId);
 				}
-				debug($this->validationErrors);
 				
 			}
-
-			return true;
+			if($this->saveMany($data))
+				return true;
+			else
+				return false;
 		}
 	}

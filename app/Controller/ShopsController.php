@@ -142,7 +142,7 @@
 		
 		public function comment($shopid){
 			if(empty($shopid) || !$this->request->is('post'))
-				//$this->redirect($this->referer());
+				$this->redirect($this->referer());
 			$this->request->data['Comment']['user_id'] = $this->Auth->user('id');
 			$this->request->data['Comment']['shop_id'] = $shopid;
 			if(empty($this->request->data['Comment']['message']))

@@ -1036,3 +1036,59 @@ Stack Trace:
 #3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-11 14:40:25 Error: [NotFoundException] That page could not be found.
+Request URL: /admin/managecollections
+Stack Trace:
+#0 [internal function]: AdminsController->beforeFilter(Object(CakeEvent))
+#1 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#2 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#4 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-11 16:51:09 Error: Fatal Error (1): Class 'ShopModel' not found in [C:\wamp\www\rr\app\Model\CollectionItem.php, line 15]
+2013-06-11 16:51:09 Error: [FatalErrorException] Class 'ShopModel' not found
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'ShopMode...', 'C:\wamp\www\rr\...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'ShopMode...', 'C:\wamp\www\rr\...', 15, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'ShopMode...', 'C:\wamp\www\rr\...', 15, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-11 19:33:02 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\rr\app\View\Admins\editcollection.ctp, line 10]
+2013-06-11 19:33:02 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /admin/editcollection/7
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 10, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 10, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-11 19:43:02 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/comment/161
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-11 19:43:08 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/comment/161
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}

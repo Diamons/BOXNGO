@@ -74,11 +74,12 @@
 		public function editcollection($id=NULL){
 			$this->set("collection", $this->Collection->read(NULL, $id));
 			if($this->request->is('post')){
-				if($this->CollectionItem->saveMany($this->request->data)){
-					$this->Session->setFlash("A", "flash_success");
+				if($this->CollectionItem->splitSave($this->request->data)){
+					$this->Session->setFlash("Good job noob", "flash_success");
 					$this->redirect($this->referer());
 				}else{
 					$this->Session->setFlash("Error!", "flash_error");
+					debug($this->CollectionItem->validationErrors);
 				}
 			}
 		}
