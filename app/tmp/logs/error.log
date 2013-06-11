@@ -1092,3 +1092,16 @@ Stack Trace:
 #7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
 #8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2013-06-11 20:21:26 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/comment/161
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
