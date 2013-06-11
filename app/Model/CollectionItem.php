@@ -10,14 +10,16 @@
 				$newResults = array();
 				for($i = 0; $i < count($this->data[$this->alias]['shop_id']); $i++){
 					$newResults = explode(',', trim($this->data[$this->alias]['shop_id']));
-					debug($newResults);
 				}
-				$this->data = $newResults;
-				debug($this->data);
-				die();
-				return true;
+
+				$this->data = array();
+				for($i = 0; $i < count($newResults); $i++){
+					$this->data[$i][$this->alias]['shop_id'] = $newResults[$i];
+				}
+				debug($this->validationErrors);
+				
 			}
 
-			
+			return true;
 		}
 	}

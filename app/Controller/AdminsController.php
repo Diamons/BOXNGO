@@ -62,7 +62,7 @@
 		public function managecollections(){
 			$this->set("collections", $this->Collection->find("all"));
 			if($this->request->is('post')){
-				if($this->Collection->save($this->request->data)){
+				if($this->Collection->saveMany($this->request->data)){
 					$this->Session->setFlash("Saved!", "flash_success");
 					$this->redirect($this->referer());
 				}
