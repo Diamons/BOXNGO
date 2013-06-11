@@ -25,7 +25,7 @@ $this->end();
 				<div class="newlyListedInfo nine columns">
 					<a class="newlyListedName" href="<?php echo $recent[$i]['Shop']['full_url']; ?>"> <?php echo $recent[$i]['Shop']['name']; ?></a>
 					<div class="category"><a href="/searches/browse/<?php echo $recent[$i]['Category']['short_name']; ?>"><?php echo $recent[$i]['Category']['display_name']; ?></a></div>
-					<div class="price">$<?php echo number_format($recent[$i]['Shop']['price'] + $recent[$i]['Shop']['shipping'], 2); ?></div>
+					<div class="price">$<?php echo number_format($recent[$i]['Shop']['price'], 2); ?></div>
 				</div>
 			</div>
 			<?php } ?>
