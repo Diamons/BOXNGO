@@ -249,6 +249,10 @@ footer a.support:hover{
 	margin: 0;
 }
 
+#featured_recent h1.user_title > a{
+	color: inherit;
+}
+
 #recent_activity{
 	margin-left: 4px;
 	margin-right: -4px;
