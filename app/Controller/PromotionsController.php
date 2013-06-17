@@ -65,4 +65,8 @@
 			
 			$this->set("title_for_layout", "Get 15% Off Your First Purchase!");
 		}
+
+		public function june2013(){
+			$this->set("title_for_layout", "10% Off and Free T-Shirts on Orders of $10 and Up!");
+		}
 	}

@@ -1176,3 +1176,50 @@ Stack Trace:
 #3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-17 19:38:15 Error: [MissingActionException] Action PromotionsController::june2013() could not be found.
+Exception Attributes: array (
+  'controller' => 'PromotionsController',
+  'action' => 'june2013',
+)
+Request URL: /promotions/june2013
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-17 19:39:11 Error: [MissingViewException] View file "C:\wamp\www\rr\app\View\Promotions\june2013.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\rr\\app\\View\\Promotions\\june2013.ctp',
+)
+Request URL: /promotions/june2013
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-17 19:39:29 Error: [MissingViewException] View file "C:\wamp\www\rr\app\View\Promotions\june2013.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\rr\\app\\View\\Promotions\\june2013.ctp',
+)
+Request URL: /promotions/june2013
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-17 19:39:49 Error: [MissingViewException] View file "C:\wamp\www\rr\app\View\Promotions\june2013.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\rr\\app\\View\\Promotions\\june2013.ctp',
+)
+Request URL: /promotions/june2013
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
