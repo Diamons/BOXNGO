@@ -220,7 +220,7 @@ footer a.support:hover{
 
 #logo{
 	padding-right: 10px;
-	margin-top: 1px;
+	margin-top: -4px;
 }
 
 #logo a{
@@ -228,8 +228,110 @@ footer a.support:hover{
 }
 
 #logo span.emphasis {
-	color: #FF8400;
+	color: #438aca;
 	padding-left: 4px;
+}
+
+#featured_recent > div:first-child{
+	background: #3567a7;
+	overflow: hidden;
+	border-right: 9px;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+}
+
+#featured_recent h1.user_title{
+	font-size: 20px;
+	font-family: "Open Sans", "Helvetica", "Arial",  sans-serif;
+	text-align: center;
+	color: #EEE;
+	text-shadow: 0 1px #333;
+	margin: 0;
+}
+
+#recent_activity{
+	margin-left: 4px;
+	margin-right: -4px;
+	padding-left: 10px;
+	max-height: 222px;
+	overflow: hidden;
+	border-radius: 9px;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border: 1px solid #dbf1fb;
+}
+
+#recent_activity .recent_container{
+	background: #FFF;
+}
+
+#recent_activity .recent_event{
+	font-size: 11px;
+	padding: 5px;
+	padding-right: 15px;
+	margin: 0;
+	border-bottom: 1px solid #dbf1fb;
+}
+
+#recent_activity .recent_event:last-child{
+	border: none;
+}
+
+#recent_activity b.timestamp{
+	display: block;
+	text-align: right;
+}
+
+
+#featured_recent div.featured_seller, #featured_recent div.featured_seller_image{
+	padding: 15px;
+}
+
+#featured_recent .featured_seller_info{
+	color: #FFF;
+	font-size: 11px;
+	padding-top: 15px;
+}
+#featured_recent a{
+}
+
+#featured_recent h2.role{
+	color: #5ebef0;
+	font-size: 12px;
+	text-align: center;
+	margin: 0;
+	margin-top: 5px;
+	font-family: "Open Sans", "Helvetica", "Arial",  sans-serif;
+}
+
+#featured_recent{
+	margin-bottom: 10px;
+}
+
+#featured_recent a.bar, #recent_activity div.bar{
+	display: block;
+	border-top: 4px solid #2f5c9e;
+	background: #264a7e;
+	padding: 15px;
+	text-align: right;
+	color: #FFF;
+	font-size: 11px;
+}
+
+#recent_activity div.bar:first-child{
+	margin-top:2px;
+}
+
+#featured_recent img.featured_seller_image{
+	display: block;
+	margin: auto;
+	margin-bottom: 10px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	padding: 3px;
+	background: #444;
+	border:3px solid #FFF;
 }
 
 #search_container{

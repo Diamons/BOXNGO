@@ -7,7 +7,6 @@ editPane.onclick = function(){
 	$("#content.wrapper input[type='submit']").fadeOut();
 	filepicker.pickMultiple({
 		mimetype: 'image/*',
-		services: ['COMPUTER', 'DROPBOX', 'FACEBOOK', 'FLICKR', 'GOOGLE_DRIVE']
 	}, function(fpfiles) {
 		for(i = 0; i < fpfiles.length; i++){
 			filepicker.store(fpfiles[i], function(copy){

@@ -108,19 +108,15 @@
 			</div>
 		</div>
 		<div class="four columns">
-			<a id="buyNow" href="#">Buy Now</a>
+			<a id="buyNow" href="/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
 			<div class="row" id="buy">
-				<div class="three columns page_views">
+				<div class="six columns page_views">
 					<?php echo $views; ?>
 					<div>Views</div>
 				</div>
-				<div class="five columns price">
+				<div class="six columns price">
 					$<?php echo $listing['Shop']['price']; ?>
 					<div class="shipping"><?php if($listing['Shop']['shipping'] == 0){ echo "FREE"; } else { echo "$".$listing['Shop']['shipping']; } ?> Shipping</div>
-				</div>
-				<div class="four columns">
-					<a class="buyNow" href="/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
-					<?php if(!$sameSchool){ ?> <a style="display:none;" class="tradeNow" href="/shops/trade/<?php echo $listing['Shop']['id']; ?>">Trade</a> <?php } ?>
 				</div>
 			</div>
 			<div id="info_panel">

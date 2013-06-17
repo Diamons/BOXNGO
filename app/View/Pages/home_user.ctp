@@ -1,7 +1,8 @@
 <?php $this->start('scriptBottom');
+echo  $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'pages/home_user'));
 $this->end();
 $this->start('css');
-echo $this->Html->css(array('searches/search', 'pages/main', 'bootstrap.min'));
+echo $this->Html->css(array('shops/jquery.mCustomScrollbar', 'searches/search', 'pages/main', 'bootstrap.min'));
 $this->end();
 ?>
 
@@ -34,34 +35,34 @@ $this->end();
 		</div>
 		<div class="nine columns">
 			<?php //<a id="promo_container" href="#"><img id="promo" alt="Father's Day Sale" src="/images/banner.jpg" /></a> ?>
-			<div id="listings">
-				<?php if(!empty($listings)): ?>
-					<?php 
-						for($i = 0; $i < count($listings); $i++):
-							if($i == 0 || $i % 4 == 0): ?>
-								<div class="row">
-							<?php endif; ?>
-								<div class="three columns">
-									<div class="listing">
-										<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $listings[$i]['Shop']['id'];?>/<?php echo $listings[$i]['Shop']['permalink']; ?>">
-										<?php if(!empty($listings[$i]['Image'][0]['url'])){?>
-										<img src="<?php echo $listings[$i]['Image'][0]['url']; ?>/convert?w=182&h=150&fit=crop" class="image" />
-										<?php } else { ?>
-										<div class="image"></div>
-										<?php } ?>
-										</a>
-										<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($listings[$i]['Shop']['id']));?>/<?php echo $listings[$i]['Shop']['permalink']; ?>"><?php echo nl2br(h($listings[$i]['Shop']['name'])); ?></a></h1>
-										<div class="category"><span class="price">$<?php echo $listings[$i]['Shop']['price']; ?></span><a href="/searches/browse/<?php echo $listings[$i]['Category']['short_name']; ?>"><?php echo $listings[$i]['Category']['display_name']; ?></a></div>
-										<div class="userlisted">
-											<span class="typicn user"></span> Listed by <a href="/users/profile/<?php echo $listings[$i]['User']['id']; ?>"><?php echo $listings[$i]['User']['display_name']; ?></a>
-										</div>
-									</div>
-								</div>
-						<?php if($i == 3 || $i%4 == 3 || $i == count($listings)-1): ?>
+			<div id="featured_recent" class="row">
+				<div class="eight columns">
+					<div class="row">
+						<div class="featured_seller five columns">
+							<a href="http://theboxngo.com/users/profile/38"><img class="featured_seller_image" src="https://www.filepicker.io/api/file/8X3zkMNUQLOxArpFO2n3/convert?width=75&height=75&fit=crop" /></a>
+							<h1 class="user_title"><a href="http://theboxngo.com/users/profile/38">The Awesome Shop</a></h1>
+							<h2 class="role">Featured Seller</h2>
 						</div>
-						<?php endif; ?>
-						<?php endfor;
-				endif; ?>
+						<div class="featured_seller_info seven columns">
+							"The Awesome Shop" was one of the first sellers on our site - back when BOX'NGO was for students only. Since then, this seller has listed many handmade pieces of work, exclusives like sold out Aldo shoes, textbooks, and much more. Whatever you're looking for, The Awesome Shop has something to admire or pique your interest regardless.
+						</div>
+					</div>
+					<a href="http://theboxngo.com/users/profile/38" class="bar">
+						View our Featured Seller <i class="icon-share-alt"></i>
+					</a>
+				</div>
+				<div id="recent_activity" class="four columns">
+					<div class="recent_container">
+						<?php foreach($activity as $a){ ?>
+							<div class="recent_event">
+								Someone viewed <a href="<?php echo $a['Shop']['full_url']; ?>"><?php echo h($a['Shop']['name']); ?></a> about <b><?php echo $this->Time->timeAgoInWords($a['Shopview']['created']); ?></b>
+							</div>
+						<?php } ?>
+					</div>
+				</div>
+			</div>
+			<div id="listings">
+				<?php echo $this->element('four_columns_listings', array('listings' => $listings)); ?>
 			</div>
 		</div>
 	</div>
