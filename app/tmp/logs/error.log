@@ -1166,3 +1166,13 @@ Request URL: /js/shops/jquery.mCustomScrollbar.js
 Stack Trace:
 #0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-06-17 19:08:17 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\rr\app\View\Searches\index.ctp, line 54]
+2013-06-17 19:08:17 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /browse/beauty-and-health
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 54)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 54, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 54, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

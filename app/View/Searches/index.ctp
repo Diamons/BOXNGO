@@ -28,35 +28,8 @@ $this->end();
 				<h3><?php echo $category['Category']['display_name']; ?></h3>
 			<?php } ?>
 			<div id="listings">
-				<?php if(!empty($results)): ?>
-					<?php 
-						for($i = 0; $i < count($results); $i++):
-							if($i == 0 || $i % 4 == 0): ?>
-								<div class="row">
-							<?php endif; ?>
-								<div class="three columns">
-									<div class="listing">
-										<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $results[$i]['Shop']['id'];?>/<?php echo $results[$i]['Shop']['permalink']; ?>">
-										<?php if(!empty($results[$i]['Image'][0]['url'])){?>
-										<img src="<?php echo $results[$i]['Image'][0]['url']; ?>/convert?w=364&h=300&fit=crop" class="image" />
-										<?php } else { ?>
-										<div class="image"></div>
-										<?php } ?>
-										</a>
-										<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($results[$i]['Shop']['id']));?>/<?php echo$results[$i]['Shop']['permalink']; ?>"><?php echo nl2br(h($results[$i]['Shop']['name'])); ?></a></h1>
-										<div class="category"><span class="price">$<?php echo $results[$i]['Shop']['price']; ?></span><a href="/searches/browse/<?php echo $results[$i]['Category']['short_name']; ?>"><?php echo $results[$i]['Category']['display_name']; ?></a></div>
-										<div class="userlisted">
-											<span class="typicn user"></span> Listed by <a href="/users/profile/<?php echo $results[$i]['User']['id']; ?>"><?php echo $results[$i]['User']['display_name']; ?></a>
-										</div>
-									</div>
-								</div>
-						<?php if($i == 3 || $i%4 == 3 || $i == count($results)-1): ?>
-						</div>
-						<?php endif; ?>
-						<?php endfor;
-				endif; ?>
-			</div>
-	<?php } else { ?>
+				<?php echo $this->element('four_columns_listings', array('listings' => $results));
+				}else{ ?>
 		<h1> Unfortunately there were no matches for that search. </h1>
 		
 	<?php } ?>

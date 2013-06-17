@@ -8,7 +8,7 @@
 							<div class="listing">
 								<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $listings[$i]['Shop']['id'];?>/<?php echo $listings[$i]['Shop']['permalink']; ?>">
 								<?php if(!empty($listings[$i]['Image'][0]['url'])){?>
-								<img src="<?php echo $listings[$i]['Image'][0]['url']; ?>/convert?w=250&h=205&fit=crop" class="image" />
+								<img alt="<?php echo trim(h($listings[$i]['Shop']['name'])); ?>" src="<?php echo $listings[$i]['Image'][0]['url']; ?>/convert?w=250&h=205&fit=crop" class="image" />
 								<?php } else { ?>
 								<div class="image"></div>
 								<?php } ?>

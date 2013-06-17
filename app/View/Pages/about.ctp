@@ -240,5 +240,27 @@ $this->end();
 				</dd>
 			</dl>
 		</div>
+		<div class="timelineMajor">
+			<h2 class="timelineMajorMarker">May 2013</h2>
+			<dl class="timelineMinor">
+				<dt id="event31"><a>Finals</a></dt>
+				<dd class="timelineEvent" id="event31EX" style="display: none; ">
+					<p>We're buckling down for finals season.</p>
+				</dd>
+			</dl>
+		</div>
+		<div class="timelineMajor">
+			<h2 class="timelineMajorMarker">June 2013</h2>
+			<dl class="timelineMinor">
+				<dt id="event32"><a>Improved Home Page</a></dt>
+				<dd class="timelineEvent" id="event32EX" style="display: none; ">
+					<p>We added a "featured seller" part to our homepage (for our users!). Now users can check out interesting sellers on the BOX'NGO platform. In addition, we've added a little stream of recent activity so people can see the latest shop views.</p>
+				</dd>
+				<dt id="event33"><a>New Buy Now Button</a></dt>
+				<dd class="timelineEvent" id="event33EX" style="display: none; ">
+					<p>We supersized our buy now button and made it much more prominent.</p>
+				</dd>
+			</dl>
+		</div>
 	</div>
 </div>
