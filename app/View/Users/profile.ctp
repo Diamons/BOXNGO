@@ -37,7 +37,7 @@ $this->end();
 		<div id="profile_feed" class="ten columns">
 			<div class="alert">
 				<?php if(!empty($userInfo['User']['profile_info'])){ echo nl2br(h($userInfo['User']['profile_info'])); } else { ?>
-				<i>This user has not filled this out yet.</i>
+				<i>This user has not filled this out yet. To fill this information out, click <a href="/dashboard/manageaccount">here</a>.</i>
 				<?php } ?>
 			</div>
 			<dl class="tabs contained">
