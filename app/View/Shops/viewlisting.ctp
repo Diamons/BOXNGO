@@ -67,7 +67,7 @@
 					<?php 
 					if(!empty($listing['Image'])){
 						for($i = 0; $i < count($listing['Image']); $i++){ ?>
-					<?php echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."/convert?height=420&fit=crop' class='imageContainer'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop')."</div>";
+					<?php echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."/convert?height=420&fit=crop' class='imageContainer'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop', array('alt' => $listing['Shop']['name']))."</div>";
 						}
 					}else{
 						echo $this->Html->image("loading.gif");
