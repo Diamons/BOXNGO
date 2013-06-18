@@ -4,6 +4,7 @@
 	$this->end();
 	
 	$this->start('facebookMeta'); ?>
+		<?php echo $this->Html->meta('canonical', $listing['Shop']['full_url'], array('rel'=>'canonical', 'type'=>null, 'title'=>null, 'inline' => false));?>
 		<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# theboxngo: http://ogp.me/ns/fb/theboxngo#">
 		<meta property="fb:app_id" content="116996495106723" /> 
 		<meta property="og:type"   content="object" /> 
