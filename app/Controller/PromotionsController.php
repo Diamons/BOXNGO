@@ -6,7 +6,7 @@
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->Security->unlockedActions = array('february2013', 'march2013');
-			$this->Auth->allow('february2013','march2013');			
+			$this->Auth->allow('february2013','march2013', 'june2013');			
 		}
 		public function february2013($step=NULL){
 

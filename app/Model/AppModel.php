@@ -34,9 +34,7 @@ class AppModel extends Model {
 	
 	public function __construct($id = false, $table = null, $ds = null) {
 		
-		if(stristr(env('HTTP_HOST'), 'theboxngo.com') || stristr(env('HTTP_HOST'), 'www.theboxngo.com')){ 
-			$this->useDbConfig = "default";
-		} else {
+		if(stristr(env('HTTP_HOST'), 'boxngo.local')){ 
 			$this->useDbConfig = "test";
 		}
 		parent::__construct($id, $table, $ds);

@@ -9,4 +9,4 @@
 </style>
 <div id="content" class="wrapper">
 	<h1>Reservation Resources Form Output</h2>
-</div>
+</div>This is a test
