@@ -23,8 +23,8 @@ $this->end();
 			<?php echo $this->Form->create("User", array("inputDefaults" => array("div" => false, "label" => false))); ?>
 			<div id="checkmarks">
 				<?php
-					$options=array('Paypal'=>'Paypal','Check'=>'Check');
-					echo $this->Form->radio('payment',$options);
+					$options=array('paypal'=>'Paypal','check'=>'Check');
+					echo $this->Form->radio('User.payment',$options);
 				?>
 			</div>
 			<div id="paypalChoice" class="row">
@@ -46,7 +46,8 @@ $this->end();
 					<div class="two columns">Zip Code</div><div class="two columns"><?php echo $this->Form->input("User.zipcode", array("type" => "text")); ?></div>
 				</div>
 			</div>
-			<?php echo $this->Form->end("Confirm Payment Information"); ?>
+			<?php 
+			if(empty($this->request->data)){ echo $this->Form->end("Save Payment Information"); } else if(!empty($this->request->data)){ echo $this->Form->end("Update Payment Information"); }?>
 		</div>
 	</div>
 </div>

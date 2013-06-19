@@ -53,6 +53,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 					<a href="/dashboard/messages">My Messages <?php if($messages > 0) { echo "<span class='notification'>".$messages."</span>"; } ?></a>
 					<hr />
 					<a href="/dashboard/manageaccount">Edit Profile</a>
+					<a href="/users/paymentinfo">Manage Payment Information</a>
 				</div>
 			</div>
 			<div class="nine columns">

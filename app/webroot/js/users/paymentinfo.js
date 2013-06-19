@@ -1,8 +1,8 @@
 $(function(){
 	var choice = $("input[name=data\\[User\\]\\[payment\\]]:checked").val();
-	if(choice == "Paypal"){
-		$("#paypalChoice, #UserPaymentinfoForm input[type='submit']").slideDown();
-	}else if(choice == "Check"){
-		$("#checkChoice, #UserPaymentinfoForm input[type='submit']").slideDown();
+	if(choice == "paypal"){
+		$(".paypal_large.choice").click();
+	}else if(choice == "check"){
+		$(".check_large.choice").click();
 	}
 });

@@ -1223,3 +1223,23 @@ Stack Trace:
 #3 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
 #4 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2013-06-19 01:34:22 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\boxngo2\app\Controller\UsersController.php, line 181]
+2013-06-19 01:34:22 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /users/paymentinfo
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\wamp\www\box...', 181)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\wamp\www\box...', 181, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\wamp\www\box...', 181, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-19 01:34:40 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\boxngo2\app\Controller\UsersController.php, line 181]
+2013-06-19 01:34:40 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /users/paymentinfo
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\wamp\www\box...', 181)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\wamp\www\box...', 181, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\wamp\www\box...', 181, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

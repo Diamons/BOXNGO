@@ -178,7 +178,7 @@
 		}
 		
 		public function paymentinfo(){
-			if($this->request->is('post') && !empty($this->request->data)){
+			if($this->request->is('post') || $this->request->is('put') && !empty($this->request->data)){
 				switch($this->request->data['User']['payment']){
 					case "Check":
 						unset($this->request->data['User']['paypal']);
@@ -201,9 +201,15 @@
 				} else {
 					$this->Session->setFlash("Please check the form below for any errors. We want to help make sure you get paid easily!", "flash_error");
 				}
+			}else{
+				$user = $this->User->read(NULL, $this->Auth->user('id'));
+				if(!empty($user['User']['payment'])){
+					$this->request->data = $this->User->read(NULL, $this->Auth->user('id'));
+					$this->set("edit", true);
+				}
 			}
 		}
-		
+
 		public function verifyaccount($verificationId=NULL){
 			if(isset($verificationId)){
 				$verification = $this->Verification->find("first",array("conditions" => array("Verification.id" => $verificationId, "Verification.activated" => 0)));
