@@ -1,6 +1,6 @@
 <?php
 	class Shop extends AppModel{
-
+		public $actsAs = array("ShopUrl");
 		public $validate = array(
 			'name' => array(
 				'notEmpty'=>array(
@@ -132,9 +132,9 @@
 		
 		public function afterFind($results, $primary=FALSE){
 
-			foreach($results as &$a){
+			foreach($results as &$a){//die(debug($a));
 				if(isset($a['Shop']['permalink']))
-					$a['Shop']['full_url'] = "http://theboxngo.com/shops/viewlisting/".$a['Shop']['id']."/".$a['Shop']['permalink'];
+					$a['Shop']['full_url'] = $this->getFullUrl($a['Shop']['id'], $a['Shop']['permalink']);
 			}
 			return $results;
 		}

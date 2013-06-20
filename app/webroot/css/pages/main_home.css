@@ -138,3 +138,42 @@ div.asterisk{
 	margin-top: 10px;
 	margin-bottom: 15px;
 }
+
+#collectionHome .note_block{
+	display: block;
+	text-align: center;
+	padding: 2px;
+}
+
+#collectionHome .note_block > div{
+	background: #acd225;
+	height: 112px;
+	font-size: 30px;
+	color: #FFF;
+	padding-top: 25px;
+}
+
+#collectionHome .note_block > a:hover{
+	background: #ff8400;
+}
+
+#collectionHome .note_block span.small{
+	display: block;
+	font-size: 12px;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+#browse_note > a{
+	padding: 2px;
+	background: #009cff;
+	display: block;
+	height: 112px;
+	color: #FFF;
+	padding-top: 25px;
+	font-size: 20px;
+	text-transform: uppercase;
+	transition: .5s;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+}

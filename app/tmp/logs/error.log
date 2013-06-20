@@ -1554,3 +1554,152 @@ Stack Trace:
 #11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2013-06-20 14:51:54 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?width=140&height=140&fit=crop
+Stack Trace:
+#0 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 14:51:56 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?width=140&height=140&fit=crop
+Stack Trace:
+#0 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 14:52:34 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?width=140&height=140&fit=crop
+Stack Trace:
+#0 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 14:52:55 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?width=140&height=140&fit=crop
+Stack Trace:
+#0 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 14:53:06 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?width=140&height=140&fit=crop
+Stack Trace:
+#0 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 14:54:14 Error: [NotFoundException] That page could not be found.
+Request URL: /admin
+Stack Trace:
+#0 [internal function]: AdminsController->beforeFilter(Object(CakeEvent))
+#1 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#2 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#4 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-20 15:51:12 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'test' at line 1
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('test', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('test', Array, Array)
+#3 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('test', Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(800): DboSource->query('test', Array, Object(Collection))
+#5 C:\wamp\www\rr\app\Model\Collection.php(9): Model->__call('test', Array)
+#6 C:\wamp\www\rr\app\Model\Collection.php(9): Collection->test()
+#7 [internal function]: Collection->afterFind(Array, true)
+#8 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(246): call_user_func_array(Array, Array)
+#9 C:\wamp\www\rr\lib\Cake\Model\Model.php(2974): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\wamp\www\rr\lib\Cake\Model\Model.php(2700): Model->_filterResults(Array)
+#11 C:\wamp\www\rr\app\Controller\PagesController.php(83): Model->find('first', Array)
+#12 [internal function]: PagesController->display('home')
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-06-20 15:53:56 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'test' at line 1
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('test', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('test', Array, Array)
+#3 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('test', Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(800): DboSource->query('test', Array, Object(Collection))
+#5 C:\wamp\www\rr\app\Model\Collection.php(9): Model->__call('test', Array)
+#6 C:\wamp\www\rr\app\Model\Collection.php(9): Collection->test()
+#7 [internal function]: Collection->afterFind(Array, true)
+#8 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(246): call_user_func_array(Array, Array)
+#9 C:\wamp\www\rr\lib\Cake\Model\Model.php(2974): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\wamp\www\rr\lib\Cake\Model\Model.php(2700): Model->_filterResults(Array)
+#11 C:\wamp\www\rr\app\Controller\PagesController.php(83): Model->find('first', Array)
+#12 [internal function]: PagesController->display('home')
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-06-20 15:58:09 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'test' at line 1
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('test', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('test', Array, Array)
+#3 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('test', Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(800): DboSource->query('test', Array, Object(Collection))
+#5 C:\wamp\www\rr\app\Model\Collection.php(9): Model->__call('test', Array)
+#6 C:\wamp\www\rr\app\Model\Collection.php(9): Collection->test()
+#7 [internal function]: Collection->afterFind(Array, true)
+#8 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(246): call_user_func_array(Array, Array)
+#9 C:\wamp\www\rr\lib\Cake\Model\Model.php(2974): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\wamp\www\rr\lib\Cake\Model\Model.php(2700): Model->_filterResults(Array)
+#11 C:\wamp\www\rr\app\Controller\PagesController.php(83): Model->find('first', Array)
+#12 [internal function]: PagesController->display('home')
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-06-20 15:58:21 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'test' at line 1
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('test', Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('test', Array, Array)
+#3 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('test', Array, Array)
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(800): DboSource->query('test', Array, Object(Collection))
+#5 C:\wamp\www\rr\app\Model\Collection.php(9): Model->__call('test', Array)
+#6 C:\wamp\www\rr\app\Model\Collection.php(9): Collection->test()
+#7 [internal function]: Collection->afterFind(Array, true)
+#8 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(246): call_user_func_array(Array, Array)
+#9 C:\wamp\www\rr\lib\Cake\Model\Model.php(2974): CakeEventManager->dispatch(Object(CakeEvent))
+#10 C:\wamp\www\rr\lib\Cake\Model\Model.php(2700): Model->_filterResults(Array)
+#11 C:\wamp\www\rr\app\Controller\PagesController.php(83): Model->find('first', Array)
+#12 [internal function]: PagesController->display('home')
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-06-20 16:03:58 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\rr\app\Model\Collection.php, line 11]
+2013-06-20 16:03:58 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 11, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 11, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

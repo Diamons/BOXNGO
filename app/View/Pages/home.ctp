@@ -64,23 +64,40 @@ $this->start('meta'); ?>
 						<div class="row">
 							<?php for($i = 0; $i < 3; $i++){ ?>
 								<div class="three columns">
-									<?php echo $this->Html->image($collection['CollectionItem'][$i]['Shop']['Image'][0]['url'].'/convert?width=140&height=140&fit=crop'); ?>
+									<a href="<?php echo $collection['CollectionItem'][$i]['Shop']['full_url']; ?>"><?php echo $this->Html->image($collection['CollectionItem'][$i]['Shop']['Image'][0]['url'].'/convert?width=140&height=140&fit=crop'); ?></a>
 								</div>
 							<?php } ?>
+							<div class="three columns note_block">
+								<div>
+									1,000+
+									<span class="small">New Listings</span>
+								</div>
+							</div>
 						</div>
 						<div class="row">
 							<?php for($i = 3; $i < 6; $i++){ ?>
 								<div class="three columns">
-									<?php echo $this->Html->image($collection['CollectionItem'][$i]['Shop']['Image'][0]['url'].'/convert?width=140&height=140&fit=crop'); ?>
+									<a href="<?php echo $collection['CollectionItem'][$i]['Shop']['full_url']; ?>"><?php echo $this->Html->image($collection['CollectionItem'][$i]['Shop']['Image'][0]['url'].'/convert?width=140&height=140&fit=crop'); ?></a>
 								</div>
 							<?php } ?>
+							<div class="three columns note_block">
+								<div>
+									250+ 
+									<span class="small">Average Views</span>
+								</div>
+							</div>
 						</div>
 						<div class="row">
 							<?php for($i = 6; $i < 9; $i++){ ?>
 								<div class="three columns">
-									<?php echo $this->Html->image($collection['CollectionItem'][$i]['Shop']['Image'][0]['url'].'/convert?width=140&height=140&fit=crop'); ?>
+									<a href="<?php echo $collection['CollectionItem'][$i]['Shop']['full_url']; ?>"><?php echo $this->Html->image($collection['CollectionItem'][$i]['Shop']['Image'][0]['url'].'/convert?width=140&height=140&fit=crop'); ?></a>
 								</div>
 							<?php } ?>
+							<div id="browse_note" class="three columns note_block">
+								<a href="#">Browse <i class="icon-arrow-right"></i>
+									<span class="small">More Listings</span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
