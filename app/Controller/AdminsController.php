@@ -81,6 +81,16 @@
 					$this->Session->setFlash("Error!", "flash_error");
 					debug($this->CollectionItem->validationErrors);
 				}
+			}else{
+				$this->CollectionItem->recursive = -1;
+				$collectionItems = $this->CollectionItem->find("all", array("conditions" => array("CollectionItem.collection_id" => $id)));
+				$this->request->data['CollectionItem'] = array();
+				$this->request->data['CollectionItem']['shop_id'] = "";
+				for($i = 0; $i < count($collectionItems); $i++){
+					$this->request->data['CollectionItem']['shop_id'] .= $collectionItems[$i]['CollectionItem']['shop_id'];
+					if($i < count($collectionItems)- 1)
+						$this->request->data['CollectionItem']['shop_id'] .= ",";
+				}
 			}
 		}
 

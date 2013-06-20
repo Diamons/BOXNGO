@@ -1243,3 +1243,314 @@ Stack Trace:
 #3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-20 00:47:12 Error: [MissingLayoutException] Layout file "C:\wamp\www\boxngo2\app\View\Layouts\blank.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\boxngo2\\app\\View\\Layouts\\blank.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\View\View.php(509): View->_getLayoutFileName('blank')
+#1 C:\wamp\www\boxngo2\lib\Cake\View\View.php(479): View->renderLayout('', 'blank')
+#2 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(948): View->render('home', NULL)
+#3 C:\wamp\www\boxngo2\app\Controller\PagesController.php(87): Controller->render('home')
+#4 [internal function]: PagesController->display('home')
+#5 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-20 01:12:24 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/sky.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:12:33 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skybg.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:12:36 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skybg.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:12:56 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skybg.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:09 Error: [MissingControllerException] Controller class IController could not be found.
+Exception Attributes: array (
+  'class' => 'IController',
+  'plugin' => NULL,
+)
+Request URL: /i
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:09 Error: [MissingControllerException] Controller class ImagController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagController',
+  'plugin' => NULL,
+)
+Request URL: /imag
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:09 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/b
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:10 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/s
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:10 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/sk
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:10 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/sky
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:10 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skynbg
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:11 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skynb
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:11 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skyn
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:11 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skynb
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:11 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skynbg
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:12 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skynb
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:12 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skyn
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:12 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/sky
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:12 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skyb
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:12 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skybg
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:12 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skybg.
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:17:13 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skybg.j
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 01:39:54 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /images/bg/skybg.png
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-20 02:03:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Shop.collection_item_id' in 'field list'
+Request URL: /admin/editcollection/3
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Shop`.`...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Shop`.`...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1343): DboSource->fetchAll('SELECT `Shop`.`...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1205): DboSource->fetchAssociated(Object(CollectionItem), 'SELECT `Shop`.`...', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(CollectionItem), Object(Shop), 'hasMany', 'Shop', Array, Array, true, Array, 0, Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(CollectionItem), Array)
+#7 C:\wamp\www\boxngo2\app\Controller\AdminsController.php(85): Model->find('all', Array)
+#8 [internal function]: AdminsController->editcollection('3')
+#9 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 02:04:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Shop.collection_item_id' in 'field list'
+Request URL: /admin/editcollection/3
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Shop`.`...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Shop`.`...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1343): DboSource->fetchAll('SELECT `Shop`.`...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1205): DboSource->fetchAssociated(Object(CollectionItem), 'SELECT `Shop`.`...', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(CollectionItem), Object(Shop), 'hasMany', 'Shop', Array, Array, true, Array, 0, Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(CollectionItem), Array)
+#7 C:\wamp\www\boxngo2\app\Controller\AdminsController.php(85): Model->find('all', Array)
+#8 [internal function]: AdminsController->editcollection('3')
+#9 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 02:04:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Shop.collection_item_id' in 'field list'
+Request URL: /admin/editcollection/3
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Shop`.`...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Shop`.`...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1343): DboSource->fetchAll('SELECT `Shop`.`...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1205): DboSource->fetchAssociated(Object(CollectionItem), 'SELECT `Shop`.`...', Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(CollectionItem), Object(Shop), 'hasMany', 'Shop', Array, Array, true, Array, 0, Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(CollectionItem), Array)
+#7 C:\wamp\www\boxngo2\app\Controller\AdminsController.php(86): Model->find('all', Array)
+#8 [internal function]: AdminsController->editcollection('3')
+#9 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-20 02:13:54 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [C:\wamp\www\boxngo2\app\Controller\AdminsController.php, line 97]
+2013-06-20 02:13:54 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /admin/editcollection/3
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 97)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 97, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 97, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-20 02:14:02 Error: Fatal Error (4): syntax error, unexpected T_PUBLIC in [C:\wamp\www\boxngo2\app\Controller\AdminsController.php, line 97]
+2013-06-20 02:14:02 Error: [FatalErrorException] syntax error, unexpected T_PUBLIC
+Request URL: /admin/editcollection/3
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 97)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 97, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 97, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-20 03:08:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Shop.collection_item_id' in 'where clause'
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Shop`.`...', Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Shop`.`...', Array, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1275): DboSource->fetchAll('SELECT `Shop`.`...', false)
+#4 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1221): DboSource->queryAssociation(Object(CollectionItem), Object(Shop), 'hasOne', 'Shop', Array, Array, true, Array, 1, Array)
+#5 C:\wamp\www\boxngo2\lib\Cake\Model\Datasource\DboSource.php(1116): DboSource->queryAssociation(Object(Collection), Object(CollectionItem), 'hasMany', 'CollectionItem', Array, Array, true, Array, 2, Array)
+#6 C:\wamp\www\boxngo2\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Collection), Array)
+#7 C:\wamp\www\boxngo2\app\Controller\PagesController.php(83): Model->find('first', Array)
+#8 [internal function]: PagesController->display('home')
+#9 C:\wamp\www\boxngo2\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#10 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

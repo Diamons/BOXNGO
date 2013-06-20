@@ -41,7 +41,7 @@ class PagesController extends AppController {
 /**
  * @var array
  */
-	public $uses = array('Shop', 'Shopview', 'Category', 'Course');
+	public $uses = array('Shop', 'Shopview', 'Collection', 'Category', 'Course');
 	
 	public function beforeFilter(){
 		parent::beforeFilter();
@@ -78,6 +78,10 @@ class PagesController extends AppController {
 				$path[0] = "home_user";
 				$this->set("activity", $this->Shopview->find("all", array("order" => "Shopview.created DESC", "limit" => 10)));
 				$this->set("recent", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "Shop.created DESC", "limit" => 5)));
+			}else{
+				$this->Collection->recursive = 3;
+				$this->set("collection", $this->Collection->find("first", array("conditions" => array("Collection.short_name" => "homepage"))));
+				$this->layout ="ajax";
 			}
 		}
 		

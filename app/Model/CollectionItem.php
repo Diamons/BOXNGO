@@ -1,7 +1,6 @@
 <?php
 	class CollectionItem extends AppModel{
-		public $hasMany = array('Shop');
-		public $belongsTo = array("Collection");
+		public $belongsTo = array("Shop");
 
 		public $validate = array(
 			'shop_id' => array(
@@ -23,7 +22,7 @@
 
 		public function splitSave($data = array()){
 			$collectionId = $data['CollectionItem']['collection_id'];
-			$this->Collection->delete(array('CollectionItem.collection_id' => $collectionId));
+			$this->delete(array('CollectionItem.collection_id' => $collectionId));
 			if(isset($data[$this->alias]['shop_id'])){
 				$newResults = array();
 				for($i = 0; $i < count($data[$this->alias]['shop_id']); $i++){

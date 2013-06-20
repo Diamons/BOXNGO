@@ -1,131 +1,160 @@
-<?php $this->start('scriptBottom'); ?>
-<script>
-	$(function(){
-		$("a.loginFacebookButton").on("click", function(event){
-			event.preventDefault();	
-			var redirectUrl = $(this).data('redirect');
-			FB.getLoginStatus(function(response) {
-			  if (response.status === 'connected') {
-			  } else if (response.status === 'not_authorized') {
-				// not_authorized
-				login();
-			  } else {
-				// not_logged_in
-				login();
-			  }
-			});
-			
-			FB.login(function(response) {
-				
-				if (response.authResponse) {
-					var date = new Date();
-					var time = 2;
-					date.setTime(date.getTime() + (time * 60 * 1000));
-					document.cookie='fbAccess='+response.authResponse.accessToken+'; expires='+date.toUTCString()+';';
-					$.ajax({
-						data: {userID: response.authResponse.userID},
-						url: getDomain()+'users/facebook',
-						success: function(data){
-							window.top.location = getDomain()+redirectUrl+'?fb='+response.authResponse.userID;
-						}
-					});
-					
-				}
-			});
-			
-			FB.Event.subscribe('auth.login', function (response) {
-			  window.top.location = getDomain()+redirectUrl+'?fb='+response.authResponse.userID;
-			});
-		});
-	});
-</script>
-<?php $this->end();
+<?php
+
+$cakeDescription = __d('box\'ngo', 'BOX\'NGO');
 $this->start('css');
-echo $this->Html->css(array('searches/search', 'pages/main_home'));
+echo $this->Html->css(array('pages/main_home'));
 $this->end();
 $this->start('meta'); ?>
-
 <meta name="title" content="BOX'NGO - Online selling Made Easy" />
 <meta name="keywords" content="buy, sell, trade, buying, selling, trading" />
 <meta name="description" content="Buy, sell, and trade in the online marketplace that makes online commerce convenient. BOX'NGO makes buying, selling, and trading online easier than ever before." />
 
-<?php $this->end();
-?>
-<div class="clearfix" id="content">
-	<div class="wrapper">
-		<div id="boxngo_intro">
-			<h1>A Simpler, Easier Marketplace</h1>
-			<div class="row feature">
-				<div class="two columns">
-					<i class="icon-credit-card"></i> 
+<?php $this->end(); ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo $this->Html->charset(); ?>
+	<title>
+		<?php echo $cakeDescription ?> - 
+		<?php echo nl2br(h($title_for_layout)); ?>
+	</title>
+	<?php
+		echo $this->Html->meta('icon');
+		echo $this->Html->css('foundation.min');
+		echo $this->Html->css('typicons');
+		echo $this->Html->css('font-awesome.min');
+		echo $this->Html->css('app');
+		
+		echo $this->fetch('meta');
+		echo $this->fetch('css');
+	?>
+	<meta property="og:site_name" content="BOX&#039;NGO" />
+	<?php echo $this->fetch('facebookMeta'); ?>
+	<meta property="og:image" content="http://theboxngo.com/boxngologofacebook.png" />
+	<?php echo $this->Html->script(array('http://code.jquery.com/jquery-latest.min.js', 'http://code.jquery.com/ui/1.10.0/jquery-ui.js')); ?>
+	
+	<?php
+		echo $this->fetch('script');
+	?>
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<?php //debug($collection); ?>
+		<div id="content_container">
+			<div id="content" class="wrapper">
+				<div class="row">
+					<div id="guest_links">
+						<a href="/search">Browse Listings</a>
+						<a href="/users">Log In</a>
+						<a id="register" href="/users">Register (Free)</a>
+					</div>
+					<a href="/" id="logo"><img src="/logo.png" /></a>
 				</div>
-				<div class="ten columns">
-					<h2>One Simple 10% Selling Fee</h2>
-					It doesn't get any easier than earning 90% of your selling price. We believe sellers shouldn't have to try and figure out PayPal fees, credit card transaction fees, listing fees, and any other fees most other online selling platforms charge their users. With BOX'NGO, simply list your stuff and receive 90% of your sale price. It's as simple as that.
-				</div>
-			</div>
-			<div class="row feature">
-				<div class="two columns">
-					<i class="icon-bolt"></i> 
-				</div>
-				<div class="ten columns">
-					<h2>Quick and Easy Payments - Check or PayPal</h2>
-					One thing sellers really hate is having to wait days to get your payment. With BOX'NGO, we make getting paid quick and easy for our sellers. When getting paid via PayPal, we simply disburse 90% of the sale into your PayPal account 24 hours after you post a tracking code. If you choose to get paid via check, we mail a check every two weeks for 90% of the sales in those two weeks minus 46 cents for postage. No fees, no waits, just quick and easy.
-				</div>
-			</div>
-			<div class="row feature">
-				<div class="two columns">
-					<i class="icon-reorder"></i> 
-				</div>
-				<div class="ten columns">
-					<h2>Quick and Easy Listing Process</h2>
-					Our listing process takes 20 - 30 seconds to fill and complete. With just a few fields, you can be on your way to selling online. We believe selling online should be an easy frictionless process and an easy listing form is just one way to achieve that.
-				</div>
-			</div>
-		</div>
-		<div id="welcome_container">
-			<?php echo $this->Form->create('User', array('class'=>'', 'url' => '/users/', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
-				<div style="text-align: right; margin: 0 100px 5px 0;">
-					<a class="loginFacebookButton" data-redirect="users/facebookregister" href="#"></a>
-				</div>
-						<?php echo $this->Form->input('User.username', array('placeholder' => 'Enter your Email Address')); ?>
-						<?php echo $this->Form->input('User.passwordcreate', array('placeholder' => 'Password', 'type' => 'password')); ?>
-						<?php echo $this->Form->input('User.passwordconfirmation', array('placeholder' => 'Confirm Password', 'type'=>'password')); ?>
-					<?php echo $this->Form->input('User.accepttos', array('label' => 'I accept the', 'type' => 'checkbox', 'value' => '1')); ?>
-					<a href="/info/tos">Terms of Service</a>
-					<?php echo $this->Form->end('Register', array('class' => 'submitButton registerButton')); ?>
-					<a href="/search" id="browse"><i class="icon-arrow-right"></i>Browse Listings</a>
-		</div>
-	</div>
-</div>
-<div class="wrapper">
-	<div id="listings">
-		<?php if(!empty($listings)): ?>
-			<?php 
-				for($i = 0; $i < count($listings); $i++):
-					if($i == 0 || $i % 4 == 0): ?>
+				<div class="row" id="main_content">
+					<div class="six columns">
+						<h1>Online Buying and Selling Made Easy!</h1>
+						<h2>Free registration, easy listing, quick payments via check or PayPal, one flat fee*, user reviews, quick support, and much more! Buying and selling online has never been so simple.</h2>
+						<a href="/users" id="buyAndSell"><i class="icon-signin"></i> Sign up for Free</a>
+						<div class="asterisk">*BOX'NGO charges a flat 10% fee. There are no additional listing fees, subtitle fees, image fees, PayPal fees, or anything ele period. Our job is to make selling online easy and no seller should have to add up fees and percentages of a sale to figure out how much they earned. We take care of everything for you and give you 90% of each and every sale.</div>
+					</div>
+					<div id="collectionHome" class="six columns">
 						<div class="row">
-					<?php endif; ?>
-						<div class="three columns">
-							<div class="listing">
-								<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $listings[$i]['Shop']['id'];?>/<?php echo $listings[$i]['Shop']['permalink']; ?>">
-								<?php if(!empty($listings[$i]['Image'][0]['url'])){?>
-								<img src="<?php echo $listings[$i]['Image'][0]['url']; ?>/convert?w=250&h=205&fit=crop" class="image" />
-								<?php } else { ?>
-								<div class="image"></div>
-								<?php } ?>
-								</a>
-								<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($listings[$i]['Shop']['id']));?>/<?php echo $listings[$i]['Shop']['permalink']; ?>"><?php echo nl2br(h($listings[$i]['Shop']['name'])); ?></a></h1>
-								<div class="category"><span class="price">$<?php echo $listings[$i]['Shop']['price']; ?></span><a href="/searches/browse/<?php echo $listings[$i]['Category']['short_name']; ?>"><?php echo $listings[$i]['Category']['display_name']; ?></a></div>
-								<div class="userlisted">
-									<span class="typicn user"></span> Listed by <a href="/users/profile/<?php echo $listings[$i]['User']['id']; ?>"><?php echo $listings[$i]['User']['display_name']; ?></a>
+							<?php for($i = 0; $i < 3; $i++){ ?>
+								<div class="three columns">
+									<?php echo $this->Html->image($collection['CollectionItem'][$i]['Shop']['Image'][0]['url'].'/convert?width=140&height=140&fit=crop'); ?>
+								</div>
+							<?php } ?>
+						</div>
+						<div class="row">
+							<?php for($i = 3; $i < 6; $i++){ ?>
+								<div class="three columns">
+									<?php echo $this->Html->image($collection['CollectionItem'][$i]['Shop']['Image'][0]['url'].'/convert?width=140&height=140&fit=crop'); ?>
+								</div>
+							<?php } ?>
+						</div>
+						<div class="row">
+							<?php for($i = 6; $i < 9; $i++){ ?>
+								<div class="three columns">
+									<?php echo $this->Html->image($collection['CollectionItem'][$i]['Shop']['Image'][0]['url'].'/convert?width=140&height=140&fit=crop'); ?>
+								</div>
+							<?php } ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="features_body" class="wrapper">
+			<div class="row">
+				<div class="nine columns">
+					<div class="row">
+						<div class="six columns">
+							<div class="feature row">
+								<div class="four columns">
+									<i class="icon-credit-card"></i>
+								</div>
+								<div class="eight columns">
+									<h3>One Simple 10% Fee</h3>
+									Many online selling sites charge listing fees, refund fees, photo fees, transfer fees, and more. We charge one simple 10% fee that covers everything for you so that you earn 90% every time.
+								</div>
+							</div>
+							<div class="feature row">
+								<div class="four columns">
+									<i class="icon-dollar"></i>
+								</div>
+								<div class="eight columns">
+									<h3>Quick Payments</h3>
+									No more waiting to get paid and disputing sales. With BOX'NGO, we pay you within 24 hours via PayPal or if you choose, every 2 weeks via Check minus postage.
+								</div>
+							</div>
+							<div class="feature row">
+								<div class="four columns">
+									<i class="icon-comments"></i>
+								</div>
+								<div class="eight columns">
+									<h3>User Reviews</h3>
+									View comments, discuss listings, and listen to other users voice their opinions on their buying and selling experience.
 								</div>
 							</div>
 						</div>
-				<?php if($i == 3 || $i%4 == 3 || $i == count($listings)-1): ?>
+						<div class="six columns">
+							<div class="feature row">
+								<div class="four columns">
+									<i class="icon-heart"></i>
+								</div>
+								<div class="eight columns">
+									<h3>Fast and Easy Listing</h3>
+									Fill out a few quick fields, upload an image, and get your item listed. All in under 30 seconds. There's no quicker and easier way to sell online than with BOX'NGO.
+								</div>
+							</div>
+							<div class="feature row">
+								<div class="four columns">
+									<i class="icon-shield"></i>
+								</div>
+								<div class="eight columns">
+									<h3>Excellent Support</h3>
+									Our support team responds quickly and is there to help you with any issues you may have although to be honest, with a site as quick and easy ours, we rarely hear from people.
+								</div>
+							</div>
+							<div class="feature row">
+								<div class="four columns">
+									<i class="icon-bullhorn"></i>
+								</div>
+								<div class="eight columns">
+									<h3>Free Promotion</h3>
+									Listing not doing so well? BOX'NGO automatically promotes quality listings that don't have a lot of views.
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<?php endif; ?>
-				<?php endfor;
-		endif; ?>
-	</div>
-</div>
+				<div class="three columns">
+
+				</div>
+			</div>
+		</div>
+</body>
+
+</html>
