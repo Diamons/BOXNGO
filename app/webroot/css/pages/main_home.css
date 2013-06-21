@@ -22,6 +22,10 @@ a#logo{
 	font-weight: bold;
 }
 
+#guest_links > a:last-child{
+	margin-right: 0;
+}
+
 #register{
 	float: none;
 	background: #82d738;
