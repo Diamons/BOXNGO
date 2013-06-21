@@ -24,6 +24,7 @@ $this->start('meta'); ?>
 		echo $this->Html->css('typicons');
 		echo $this->Html->css('font-awesome.min');
 		echo $this->Html->css('app');
+		echo $this->Html->css('shops/jquery.mCustomScrollbar');
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -31,8 +32,9 @@ $this->start('meta'); ?>
 	<meta property="og:site_name" content="BOX&#039;NGO" />
 	<?php echo $this->fetch('facebookMeta'); ?>
 	<meta property="og:image" content="http://theboxngo.com/boxngologofacebook.png" />
-	<?php echo $this->Html->script(array('http://code.jquery.com/jquery-latest.min.js', 'http://code.jquery.com/ui/1.10.0/jquery-ui.js')); ?>
-	
+	<?php echo $this->Html->script(array('http://code.jquery.com/jquery-latest.min.js', 'http://code.jquery.com/ui/1.10.0/jquery-ui.js'));
+		echo  $this->Html->script(array('shops/jquery.mCustomScrollbar.min'));
+	?>
 	<?php
 		echo $this->fetch('script');
 	?>
@@ -40,6 +42,24 @@ $this->start('meta'); ?>
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<script>
+	function resize(){
+		var highestCol = Math.max($('#collectionHome img').height());
+		$('.note_block > div, #browse_note > a').innerHeight(highestCol);
+	}
+	$(window).load(function(){
+		resize();
+		$("#recent_activity").mCustomScrollbar({
+	    	scrollButtons:{
+				enable:true
+			},
+			theme: "dark"
+	    });
+	});
+	$(window).resize(function(){
+		resize();
+	});
+	</script>
 </head>
 <body>
 	<?php //debug($collection); ?>
@@ -82,7 +102,7 @@ $this->start('meta'); ?>
 							<?php } ?>
 							<div class="three columns note_block">
 								<div>
-									250+ 
+									100+ 
 									<span class="small">Average Views</span>
 								</div>
 							</div>
@@ -94,7 +114,7 @@ $this->start('meta'); ?>
 								</div>
 							<?php } ?>
 							<div id="browse_note" class="three columns note_block">
-								<a href="#">Browse <i class="icon-arrow-right"></i>
+								<a href="/search">Browse <i class="icon-arrow-right"></i>
 									<span class="small">More Listings</span>
 								</a>
 							</div>
@@ -167,11 +187,30 @@ $this->start('meta'); ?>
 						</div>
 					</div>
 				</div>
-				<div class="three columns">
-
+				<div id="recent_activity" class="three columns">
+					<div class="recent_container">
+						<?php foreach($activity as $a){ ?>
+							<div class="recent_event">
+								Someone viewed <a href="<?php echo $a['Shop']['full_url']; ?>"><?php echo h($a['Shop']['name']); ?></a> about <b><?php echo $this->Time->timeAgoInWords($a['Shopview']['created']); ?></b>
+							</div>
+						<?php } ?>
+					</div>
 				</div>
 			</div>
 		</div>
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-2509553-6']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
 </body>
 
 </html>
