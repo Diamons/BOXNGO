@@ -78,7 +78,7 @@ $this->start('meta'); ?>
 						<h1>Online Buying and Selling Made Easy!</h1>
 						<h2>Free registration, easy listing, quick payments via check or PayPal, one flat fee*, user reviews, quick support, and much more! Buying and selling online has never been so simple.</h2>
 						<a href="/users" id="buyAndSell"><i class="icon-signin"></i> Sign up for Free</a>
-						<div class="asterisk">*BOX'NGO charges a flat 10% fee. There are no additional listing fees, subtitle fees, image fees, PayPal fees, or anything ele period. Our job is to make selling online easy and no seller should have to add up fees and percentages of a sale to figure out how much they earned. We take care of everything for you and give you 90% of each and every sale.</div>
+						<div class="asterisk">*BOX'NGO charges a flat 10% fee. There are no additional listing fees, image fees, PayPal fees, or anything else period. Our job is to make selling online easy and no seller should have to add up fees and percentages of a sale to figure out how much they earned. We take care of everything for you and give you 90% profit of each and every sale.</div>
 					</div>
 					<div id="collectionHome" class="six columns">
 						<div class="row">
@@ -133,7 +133,7 @@ $this->start('meta'); ?>
 									<i class="icon-credit-card"></i>
 								</div>
 								<div class="eight columns">
-									<h3>One Simple 10% Fee</h3>
+									<h3>Earn 90% Profit</h3>
 									Many online selling sites charge listing fees, refund fees, photo fees, transfer fees, and more. We charge one simple 10% fee that covers everything for you so that you earn 90% every time.
 								</div>
 							</div>
