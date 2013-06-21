@@ -62,6 +62,18 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
+		'host' => 'localhost',
+		'port' => 3306,
+		'login' => 'root',
+		'password' => 'aCC23zzzY23',
+		'database' => 'boxngo_production',
+		'prefix' => '',
+		//'encoding' => 'utf8',
+	);
+
+	public $defaultOld = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
 		'host' => 'us-cdbr-east-03.cleardb.com',
 		'port' => 3306,
 		'login' => 'bd203a888f9dcf',
