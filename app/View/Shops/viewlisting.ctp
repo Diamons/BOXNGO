@@ -120,6 +120,7 @@
 				<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="six columns price">
 					<link itemprop="availability" href="http://schema.org/InStock" content="In Stock" />
 					<meta itemprop="priceCurrency" content="USD" />
+					<meta itemprop="price" content="<?php echo $listing['Shop']['price']; ?>" />
 					<span>$<?php echo $listing['Shop']['price']; ?></span>
 					<div class="shipping"><?php if($listing['Shop']['shipping'] == 0){ echo "FREE"; } else { echo "$".$listing['Shop']['shipping']; } ?> Shipping</div>
 				</div>
