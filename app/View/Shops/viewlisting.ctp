@@ -53,7 +53,7 @@
 		<?php if(isset($auth) && $auth['id'] == $listing['Shop']['user_id']) { ?>
 			<a id="edit" href="/shops/edit/<?php echo $listing['Shop']['id']; ?>">Edit this Listing</a>
 		<?php } ?>
-		<div itemscope itemtype="http://schema.org/Product">
+		<div>
 			<div class="favoriteadd"><a class="addfavorite<?php if(!isset($auth) || empty($auth)){
 					echo "disabled"; }elseif(isset($auth) && !empty($favorite)){
 								echo "used";
@@ -62,6 +62,7 @@
 			</div><h1 itemprop="name" id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
 		</div>
 		<div itemscope itemtype="http://schema.org/Product" class="eight columns">
+			<meta itemtype="http://schema.org/Product" value="<?php echo h($listing['Shop']['name']); ?>" />
 			<div class="row" id="listingPics">
 				<div id="gallery">
 					<?php 
