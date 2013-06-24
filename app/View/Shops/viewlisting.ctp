@@ -61,7 +61,7 @@
 					?>" data-listingid="<?php echo $listing['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span><i class="loading icon-spinner icon-spin"></i></a>
 			</div><h1 id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
 		</div>
-		<div class="eight columns">
+		<div itemscope itemtype="http://schema.org/Product" class="eight columns">
 			<div class="row" id="listingPics">
 				<div id="gallery">
 					<?php 
@@ -109,6 +109,11 @@
 			</div>
 		</div>
 		<div class="four columns">
+			<div id="offerInfo">
+				<meta itemprop="currency" content="USD" />
+				<meta itemprop="price" content="<?php echo $listing['Shop']['price']; ?>" />
+				<meta itemprop="availability" content="InStock" />
+			</div>
 			<a id="buyNow" href="/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
 			<div class="row" id="buy">
 				<div class="six columns page_views">
