@@ -63,6 +63,7 @@
 		</div>
 		<div itemscope itemtype="http://schema.org/Product" class="eight columns">
 			<meta itemprop="name" content="<?php echo h($listing['Shop']['name']); ?>" />
+			<meta itemprop="image" content="<?php echo $listing['Image'][0]['url']; ?>/convert?w=200&height=200&fit=crop" />
 			<div class="row" id="listingPics">
 				<div id="gallery">
 					<?php 
@@ -117,6 +118,8 @@
 					<div>Views</div>
 				</div>
 				<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="six columns price">
+					<link itemprop="availability" href="http://schema.org/InStock" content="In Stock" />
+					<meta itemprop="priceCurrency" content="USD"
 					<span itemprop="price">$<?php echo $listing['Shop']['price']; ?></span>
 					<div class="shipping"><?php if($listing['Shop']['shipping'] == 0){ echo "FREE"; } else { echo "$".$listing['Shop']['shipping']; } ?> Shipping</div>
 				</div>
