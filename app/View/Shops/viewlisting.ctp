@@ -59,7 +59,7 @@
 								echo "used";
 							}
 					?>" data-listingid="<?php echo $listing['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span><i class="loading icon-spinner icon-spin"></i></a>
-			</div><h1 itemprop="name" id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
+			</div><h1 itemscope itemtype="http://schema.org/Product" itemprop="name" id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
 		</div>
 		<div itemscope itemtype="http://schema.org/Product" class="eight columns">
 			<div class="row" id="listingPics">
