@@ -59,10 +59,10 @@
 								echo "used";
 							}
 					?>" data-listingid="<?php echo $listing['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span><i class="loading icon-spinner icon-spin"></i></a>
-			</div><h1 itemprop="name" id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
+			</div><h1 id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
 		</div>
 		<div itemscope itemtype="http://schema.org/Product" class="eight columns">
-			<meta itemtype="http://schema.org/Product" value="<?php echo h($listing['Shop']['name']); ?>" />
+			<meta itemtype="http://schema.org/Product" content="<?php echo h($listing['Shop']['name']); ?>" />
 			<div class="row" id="listingPics">
 				<div id="gallery">
 					<?php 
