@@ -1703,3 +1703,341 @@ Stack Trace:
 #3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-21 04:39:40 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/edit/8329
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-21 04:39:44 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/edit/8329
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-21 06:28:19 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /blog/sitemap_index.xml
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-21 07:06:20 Error: [MissingControllerException] Controller class Apple-touch-icon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /apple-touch-icon.png
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-21 09:16:58 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /blog/sitemap_index.xml
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-21 09:56:12 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /blog/sitemap_index.xml
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-21 12:17:21 Error: [BadRequestException] The request has been black-holed
+Request URL: /dashboard/manageaccount
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(244): SecurityComponent->blackHole(Object(DashboardsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(DashboardsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-21 19:48:34 Error: [MissingActionException] Action ShopsController::shoplist#() could not be found.
+Exception Attributes: array (
+  'controller' => 'ShopsController',
+  'action' => 'shoplist#',
+)
+Request URL: /shops/shoplist#
+Stack Trace:
+#0 /var/www/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-21 22:10:57 Error: [MissingControllerException] Controller class W00tw00t.at.blackhats.romanian.anti-sec:)Controller could not be found.
+Exception Attributes: array (
+  'class' => 'W00tw00t.at.blackhats.romanian.anti-sec:)Controller',
+  'plugin' => NULL,
+)
+Request URL: /w00tw00t.at.blackhats.romanian.anti-sec:)
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-21 22:10:57 Error: [MissingControllerException] Controller class PhpMyAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'PhpMyAdminController',
+  'plugin' => NULL,
+)
+Request URL: /phpMyAdmin/scripts/setup.php
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-21 22:10:58 Error: [MissingControllerException] Controller class PmaController could not be found.
+Exception Attributes: array (
+  'class' => 'PmaController',
+  'plugin' => NULL,
+)
+Request URL: /pma/scripts/setup.php
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-21 22:10:58 Error: [MissingControllerException] Controller class MyadminController could not be found.
+Exception Attributes: array (
+  'class' => 'MyadminController',
+  'plugin' => NULL,
+)
+Request URL: /myadmin/scripts/setup.php
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-21 22:10:59 Error: [MissingControllerException] Controller class MyAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'MyAdminController',
+  'plugin' => NULL,
+)
+Request URL: /MyAdmin/scripts/setup.php
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-22 00:49:37 Error: [MissingControllerException] Controller class Apple-touch-icon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /apple-touch-icon.png
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-22 00:49:37 Error: [MissingControllerException] Controller class Apple-touch-icon-precomposed.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon-precomposed.pngController',
+  'plugin' => NULL,
+)
+Request URL: /apple-touch-icon-precomposed.png
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-22 01:24:05 Error: [MissingControllerException] Controller class PhppathController could not be found.
+Exception Attributes: array (
+  'class' => 'PhppathController',
+  'plugin' => NULL,
+)
+Request URL: /phppath/php
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-22 07:45:21 Error: [MissingControllerException] Controller class AdministratorController could not be found.
+Exception Attributes: array (
+  'class' => 'AdministratorController',
+  'plugin' => NULL,
+)
+Request URL: /administrator/
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-22 15:42:38 Error: [MissingControllerException] Controller class PhppathController could not be found.
+Exception Attributes: array (
+  'class' => 'PhppathController',
+  'plugin' => NULL,
+)
+Request URL: /phppath/php
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-22 21:05:24 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /blog/wp-content/uploads/2013/03/photo-3.jpg
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 00:28:08 Error: [MissingActionException] Action ShopsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ShopsController',
+  'action' => 'index',
+)
+Request URL: /shops
+Stack Trace:
+#0 /var/www/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-23 02:54:49 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/shoplist
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(241): SecurityComponent->blackHole(Object(ShopsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-23 03:37:21 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/edit/8331
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-23 06:45:39 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/shoplist
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-23 06:46:11 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/shoplist
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-23 12:25:20 Error: [MissingControllerException] Controller class Apple-touch-icon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /apple-touch-icon.png
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 13:21:38 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /blog/sitemap_index.xml
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-23 21:59:50 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/edit/1941
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-23 22:23:32 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/shoplist
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-24 04:19:14 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/shoplist
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-06-24 09:39:06 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /blog/sitemap_index.xml
+Stack Trace:
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-24 13:19:58 Error: [MissingActionException] Action ShopsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ShopsController',
+  'action' => 'index',
+)
+Request URL: /shops/
+Stack Trace:
+#0 /var/www/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-24 15:27:50 Error: [BadRequestException] The request has been black-holed
+Request URL: /shops/shoplist
+Stack Trace:
+#0 /var/www/lib/Cake/Controller/Component/SecurityComponent.php(244): SecurityComponent->blackHole(Object(ShopsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ShopsController))
+#2 /var/www/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /var/www/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/lib/Cake/Controller/Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
