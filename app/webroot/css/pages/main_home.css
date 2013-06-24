@@ -67,20 +67,20 @@ a#logo{
 	padding-left: 100px;
 }
 
-#collectionHome img{
+#collectionHome img, #collectionHome .note_block{
 	display: block;
 	padding: 2px;
-	border: 1px solid #DDD;
+	border: 1px solid #EEE;
 	border-right: none;
 	border-bottom: none;
 }
 
-#collectionHome .row .columns:last-child img{
-	border-right: 1px solid #DDD;
+#collectionHome .row .columns:last-child img, #collectionHome .note_block{
+	border-right: 1px solid #EEE;
 }
 
-#collectionHome .row:last-child img{
-	border-bottom: 1px solid #DDD;
+#collectionHome .row:last-child img, #collectionHome .note_block{
+	border-bottom: 1px solid #EEE;
 }
 
 a#buyAndSell{
@@ -147,8 +147,7 @@ div.asterisk{
 
 #collectionHome .note_block > div{
 	background: #acd225;
-	height: 112px;
-	font-size: 30px;
+	font-size: 24px;
 	color: #FFF;
 	padding-top: 25px;
 }
@@ -168,12 +167,16 @@ div.asterisk{
 	padding: 2px;
 	background: #009cff;
 	display: block;
-	height: 112px;
 	color: #FFF;
-	padding-top: 25px;
-	font-size: 20px;
+	padding-top: 15px;
+	font-size: 16px;
 	text-transform: uppercase;
 	transition: .5s;
 	-webkit-transition: .5s;
 	-moz-transition: .5s;
+}
+
+#recent_activity{
+	max-height:460px;
+	padding-left: 5px;
 }

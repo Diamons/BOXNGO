@@ -73,10 +73,10 @@ class PagesController extends AppController {
 		
 		if($path[0] == "home"){
 			$title_for_layout = "Online Selling Redefined";
+			$this->set("activity", $this->Shopview->find("all", array("order" => "Shopview.created DESC", "limit" => 10)));
 			if($this->Auth->loggedIn()){			
 				$this->set("listings", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 16)));
 				$path[0] = "home_user";
-				$this->set("activity", $this->Shopview->find("all", array("order" => "Shopview.created DESC", "limit" => 10)));
 				$this->set("recent", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "Shop.created DESC", "limit" => 5)));
 			}else{
 				$this->Collection->recursive = 3;
