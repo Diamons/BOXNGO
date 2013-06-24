@@ -62,7 +62,7 @@
 			</div><h1 id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
 		</div>
 		<div itemscope itemtype="http://schema.org/Product" class="eight columns">
-			<meta itemtype="http://schema.org/Product" content="<?php echo h($listing['Shop']['name']); ?>" />
+			<meta itemprop="name" content="<?php echo h($listing['Shop']['name']); ?>" />
 			<div class="row" id="listingPics">
 				<div id="gallery">
 					<?php 
