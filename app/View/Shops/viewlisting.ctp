@@ -11,7 +11,7 @@
 		<meta property="og:url"    content="<?php echo Router::url(null, true) ?>" /> 
 		<meta property="og:title"  content="$<?php echo $listing['Shop']['price']." ".$listing['Shop']['name']; ?>" /> 
 		<meta property="og:description"  content="" /> 
-		<meta property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>/convert?w=200&height=200&fit=crop" /> 
+		<meta itemprop="image" property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>/convert?w=200&height=200&fit=crop" /> 
 	<?php $this->end();
 	$this->start('pinterest');
 	echo $this->Html->image($listing['Image'][0]['url'], array('id' => 'pinterestImage'));
@@ -59,7 +59,7 @@
 								echo "used";
 							}
 					?>" data-listingid="<?php echo $listing['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span><i class="loading icon-spinner icon-spin"></i></a>
-			</div><h1 id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
+			</div><h1 itemprop="name" id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
 		</div>
 		<div itemscope itemtype="http://schema.org/Product" class="eight columns">
 			<div class="row" id="listingPics">
@@ -77,7 +77,7 @@
 
 				</div>
 			</div>
-			<div id="description">
+			<div itemprop="description" id="description">
 				<?php echo nl2br(h($listing['Shop']['description'])); ?>
 			</div>
 			<div id="comments" class="row">
@@ -109,19 +109,14 @@
 			</div>
 		</div>
 		<div class="four columns">
-			<div id="offerInfo">
-				<meta itemprop="currency" content="USD" />
-				<meta itemprop="price" content="<?php echo $listing['Shop']['price']; ?>" />
-				<meta itemprop="availability" content="InStock" />
-			</div>
 			<a id="buyNow" href="/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
 			<div class="row" id="buy">
 				<div class="six columns page_views">
 					<?php echo $views; ?>
 					<div>Views</div>
 				</div>
-				<div class="six columns price">
-					$<?php echo $listing['Shop']['price']; ?>
+				<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="six columns price">
+					<span itemprop="price">$<?php echo $listing['Shop']['price']; ?></span>
 					<div class="shipping"><?php if($listing['Shop']['shipping'] == 0){ echo "FREE"; } else { echo "$".$listing['Shop']['shipping']; } ?> Shipping</div>
 				</div>
 			</div>
