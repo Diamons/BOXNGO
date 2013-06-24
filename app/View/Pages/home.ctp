@@ -172,7 +172,7 @@ $this->start('meta'); ?>
 								</div>
 								<div class="eight columns">
 									<h3>Excellent Support</h3>
-									Our support team responds quickly and is there to help you with any issues you may have although to be honest, with a site as quick and easy ours, we rarely hear from people.
+									Our support team responds quickly and is there to help you with any issues you may have, although to be honest, with a site as quick and easy ours, we rarely hear from people.
 								</div>
 							</div>
 							<div class="feature row">
