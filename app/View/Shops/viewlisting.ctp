@@ -76,7 +76,7 @@
 					}?>
 				</div>
 				<div id="displayPicture">
-
+					<a id="lightboxImage" href="<?php echo $listing['Image'][0]['url']; ?>"><img src="<?php echo $listing['Image'][0]['url']; ?>" /></a>
 				</div>
 			</div>
 			<div itemprop="description" id="description">

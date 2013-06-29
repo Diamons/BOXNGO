@@ -4,9 +4,6 @@ $(function(){
 		$("#CommentViewlistingForm").stop(true,true).slideToggle(500);
 	});
 
-	var image = document.getElementById("displayPicture");
-	image.innerHTML = "<a id='lightboxImage' href=''><img src='' /></a>";
-
 	$("#gallery").mCustomScrollbar({
     	scrollButtons:{
 			enable:true
