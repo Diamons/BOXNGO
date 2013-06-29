@@ -5,7 +5,7 @@ $(function(){
 	});
 
 	var image = document.getElementById("displayPicture");
-	image.innerHTML = "<img src='' />";
+	image.innerHTML = "<a id='lightboxImage' href=''><img src='' /></a>";
 
 	$("#gallery").mCustomScrollbar({
     	scrollButtons:{
@@ -13,8 +13,11 @@ $(function(){
 		},
 		theme: "dark"
     });
-
+	$('#lightboxImage').magnificPopup({
+		type: 'image'
+	});
     $("#gallery").on("click", ".imageContainer", function(){
+    	$("#lightboxImage").attr('href', $(this).data('image'));
     	$("#displayPicture img").attr('src', $(this).data('image'));
     	$("#gallery .imageContainer").removeClass("selected");
     	$(this).addClass("selected");

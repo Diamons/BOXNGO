@@ -1,6 +1,6 @@
 <?php
 	$this->start('css');
-	echo $this->Html->css(array('shops/viewlisting', 'shops/jquery.mCustomScrollbar', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.css'));
+	echo $this->Html->css(array('shops/viewlisting', 'shops/jquery.mCustomScrollbar', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.css', 'lightbox/magnific-popup'));
 	$this->end();
 	
 	$this->start('facebookMeta'); ?>
@@ -20,7 +20,7 @@
 	echo'<script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">stLight.options({publisher: "cffa0d8a-32aa-4e85-aabf-01228a58cf29"});</script>';
-	echo $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'shops/viewlisting', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.js'));
+	echo $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'shops/viewlisting', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.js', 'lightbox'));
 	/*Map Stuff */
 	if(isset($school) && !empty($school)){
 	?>
@@ -69,7 +69,7 @@
 					<?php 
 					if(!empty($listing['Image'])){
 						for($i = 0; $i < count($listing['Image']); $i++){ ?>
-					<?php echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."/convert?height=420&fit=crop' class='imageContainer'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop', array('alt' => $listing['Shop']['name']))."</div>";
+					<?php echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."' class='imageContainer'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop', array('alt' => $listing['Shop']['name']))."</div>";
 						}
 					}else{
 						echo $this->Html->image("loading.gif");
