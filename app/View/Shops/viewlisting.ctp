@@ -17,9 +17,6 @@
 	echo $this->Html->image($listing['Image'][0]['url'], array('id' => 'pinterestImage'));
 	$this->end();
 	$this->start('scriptBottom');
-	echo'<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "cffa0d8a-32aa-4e85-aabf-01228a58cf29"});</script>';
 	echo $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'shops/viewlisting', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.js', 'lightbox'));
 	/*Map Stuff */
 	if(isset($school) && !empty($school)){
@@ -128,12 +125,16 @@
 				<section>
 					<h3 class="subheader">Like this listing?</h3>
 					<div id="social">
-						<span class='st_facebook_large' displayText='Facebook'></span>
-						<span class='st_twitter_large' displayText='Tweet'></span>
-						<span class='st_reddit_large' displayText='Reddit'></span>
-						<span class='st_googleplus_large' displayText='Google +'></span>
-						<span class='st_pinterest_large' displayText='Pinterest'></span>
-						<span class='st_linkedin_large' displayText='LinkedIn'></span>
+						<!-- AddThis Button BEGIN -->
+						<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+						<a class="addthis_button_facebook"></a>
+						<a class="addthis_button_twitter"></a>
+						<a class="addthis_button_pinterest_share"></a>
+						<a class="addthis_button_reddit"></a>
+						<a class="addthis_button_google_plusone_share"></a>
+						</div>
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+						<!-- AddThis Button END -->
 					</div>
 				</section>
 				<section class="clearfix">
