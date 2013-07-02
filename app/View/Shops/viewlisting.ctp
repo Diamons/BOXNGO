@@ -108,7 +108,7 @@
 			</div>
 		</div>
 		<div class="four columns">
-			<a id="buyNow" href="https://theboxngo.com/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
+			<a id="buyNow" href="https://www.theboxngo.com/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
 			<div class="row" id="buy">
 				<div class="six columns page_views">
 					<?php echo $views; ?>
