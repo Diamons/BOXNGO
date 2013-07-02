@@ -8,6 +8,7 @@
 
 		public function saveUser($username){
 			$hash = Security::hash($username);
+			$this->Cookie->domain = ".theboxngo.com";
 			$this->Cookie->write('al', $hash, true, '2 months');
 			return $hash;
 		}
