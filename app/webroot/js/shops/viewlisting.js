@@ -13,12 +13,12 @@ $(function(){
 	$('#lightboxImage').magnificPopup({
 		type: 'image'
 	});
-    $("#gallery").on("click", ".imageContainer", function(){
-    	$("#lightboxImage").attr('href', $(this).data('image'));
-    	$("#displayPicture img").attr('src', $(this).data('image'));
-    	$("#gallery .imageContainer").removeClass("selected");
-    	$(this).addClass("selected");
-    });
-
     $("#gallery div.imageContainer:first-child").click();
+});
+
+$("#gallery").on("click", ".imageContainer", function(){
+	$("#lightboxImage").attr('href', $(this).data('image'));
+	$("#displayPicture img").attr('src', $(this).data('image'));
+	$("#gallery .imageContainer").removeClass("selected");
+	$(this).addClass("selected");
 });
