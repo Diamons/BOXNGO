@@ -211,3 +211,6 @@ Configure::write('Stripe.fields', array(
     'stripe_cvc_check' => array('card' => 'cvc_check'),
     'stripe_amount' => 'amount'
 ));
+
+//Cross subdomain authentication
+ini_set("session.cookie_domain", ".theboxngo.com");

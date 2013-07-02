@@ -164,6 +164,10 @@ div.user_info{
 	text-align: center;
 }
 
+#social > div{
+	display: inline-block;
+}
+
 #description{
 	margin-bottom: 20px;
 }

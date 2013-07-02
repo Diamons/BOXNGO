@@ -4,21 +4,23 @@ $(function(){
 		$("#CommentViewlistingForm").stop(true,true).slideToggle(500);
 	});
 
-	var image = document.getElementById("displayPicture");
-	image.innerHTML = "<img src='' />";
-
 	$("#gallery").mCustomScrollbar({
     	scrollButtons:{
 			enable:true
 		},
 		theme: "dark"
     });
-
-    $("#gallery").on("click", ".imageContainer", function(){
-    	$("#displayPicture img").attr('src', $(this).data('image'));
-    	$("#gallery .imageContainer").removeClass("selected");
-    	$(this).addClass("selected");
-    });
-
+	$('#lightboxImage').magnificPopup({
+		type: 'image'
+	});
     $("#gallery div.imageContainer:first-child").click();
+});
+
+$("#gallery").on("click", ".imageContainer", function(){
+	$("#lightboxImage").attr('href', $(this).data('image'));
+	console.log($(this).data('image'));
+	$("#displayPicture img").attr('src', $(this).data('image'));
+	console.log($(this).data('image'));
+	$("#gallery .imageContainer").removeClass("selected");
+	$(this).addClass("selected");
 });

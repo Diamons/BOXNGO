@@ -1,6 +1,6 @@
 <?php
 	$this->start('css');
-	echo $this->Html->css(array('shops/viewlisting', 'shops/jquery.mCustomScrollbar', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.css'));
+	echo $this->Html->css(array('shops/viewlisting', 'shops/jquery.mCustomScrollbar', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.css', 'lightbox/magnific-popup'));
 	$this->end();
 	
 	$this->start('facebookMeta'); ?>
@@ -17,10 +17,7 @@
 	echo $this->Html->image($listing['Image'][0]['url'], array('id' => 'pinterestImage'));
 	$this->end();
 	$this->start('scriptBottom');
-	echo'<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "cffa0d8a-32aa-4e85-aabf-01228a58cf29"});</script>';
-	echo $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'shops/viewlisting', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.js'));
+	echo $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'shops/viewlisting', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.js', 'lightbox'));
 	/*Map Stuff */
 	if(isset($school) && !empty($school)){
 	?>
@@ -69,14 +66,14 @@
 					<?php 
 					if(!empty($listing['Image'])){
 						for($i = 0; $i < count($listing['Image']); $i++){ ?>
-					<?php echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."/convert?height=420&fit=crop' class='imageContainer'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop', array('alt' => $listing['Shop']['name']))."</div>";
+					<?php echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."' class='imageContainer'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop', array('alt' => $listing['Shop']['name']))."</div>";
 						}
 					}else{
 						echo $this->Html->image("loading.gif");
 					}?>
 				</div>
 				<div id="displayPicture">
-
+					<a id="lightboxImage" href="<?php echo $listing['Image'][0]['url']; ?>"><img src="<?php echo $listing['Image'][0]['url']; ?>" /></a>
 				</div>
 			</div>
 			<div itemprop="description" id="description">
@@ -111,7 +108,7 @@
 			</div>
 		</div>
 		<div class="four columns">
-			<a id="buyNow" href="/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
+			<a id="buyNow" href="https://www.theboxngo.com/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
 			<div class="row" id="buy">
 				<div class="six columns page_views">
 					<?php echo $views; ?>
@@ -128,12 +125,16 @@
 				<section>
 					<h3 class="subheader">Like this listing?</h3>
 					<div id="social">
-						<span class='st_facebook_large' displayText='Facebook'></span>
-						<span class='st_twitter_large' displayText='Tweet'></span>
-						<span class='st_reddit_large' displayText='Reddit'></span>
-						<span class='st_googleplus_large' displayText='Google +'></span>
-						<span class='st_pinterest_large' displayText='Pinterest'></span>
-						<span class='st_linkedin_large' displayText='LinkedIn'></span>
+						<!-- AddThis Button BEGIN -->
+						<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+						<a class="addthis_button_facebook"></a>
+						<a class="addthis_button_twitter"></a>
+						<a class="addthis_button_pinterest_share"></a>
+						<a class="addthis_button_reddit"></a>
+						<a class="addthis_button_google_plusone_share"></a>
+						</div>
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+						<!-- AddThis Button END -->
 					</div>
 				</section>
 				<section class="clearfix">
