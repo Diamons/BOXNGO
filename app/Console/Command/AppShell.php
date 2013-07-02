@@ -28,4 +28,17 @@ App::uses('Shell', 'Console');
  */
 class AppShell extends Shell {
 
+	public function sendEmail($to="shahruksemail@gmail.com",$subject="TEST",$template="default", $variables=NULL){
+		App::uses('CakeEmail', 'Network/Email');
+		$email = new CakeEmail('default');
+		$email->from(array('shahruk@theboxngo.com' => 'BOXNGO'))
+		->to($to)
+		->subject($subject)
+		->template('default', $template)
+		->emailFormat('html');
+		$email->viewVars(array("domain" => "http://theboxngo.com/", "variables" => $variables));
+		$email->send();
+		
+	}
+
 }
