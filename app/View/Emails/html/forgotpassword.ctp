@@ -334,28 +334,25 @@
                                 
                                                 <!-- // Begin Module: Standard Content \\ -->
                                                 <table border="0" cellpadding="20" cellspacing="0" width="100%">
-                                                    <tr>
+                                                    <tr><tr></tr><tr></tr>
                                                         <td valign="top" class="bodyContent">
                                                             <div>
-                                                                <h1>Order Received</h1>
+                                                                <h1>Account Recovery / Forgot Password</h1>
 																<p>
 																	<a href="<?php echo $domain; ?>">BOX'NGO</a> is an online platform that makes it easy for people to sell online.
 																</p>
 																
 																<p>
-																	Congratulations! You just received an order!
+																	We are sending this email because you forgot your password for BOX'NGO. If you did not request this, you can safely ignore this email. Otherwise, simply click the link below to assign your account a new password.
 																</p>
+																
+																<p style="padding-top: 15px; border-top: 1px solid #CCC;">
+																	<?php echo $variables['link']; ?></div>
+																</p>
+
                                                             </div>
 														</td>
                                                     </tr>
-													<tr><td class="bodyContent">
-														<div>
-														<h4>Not a member of BOX'NGO?</h4>
-														<p>
-															Sign up today to start selling to other people with no extra fees and free advertising.
-														</p>
-														</div>
-													</td></tr>
                                                     <tr>
                                                     	<td align="center" valign="top" style="padding-top:0;">
                                                         	<table border="0" cellpadding="15" cellspacing="0" class="templateButton">

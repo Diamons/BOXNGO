@@ -337,23 +337,21 @@
                                                     <tr>
                                                         <td valign="top" class="bodyContent">
                                                             <div>
-                                                                <h1>Order Received</h1>
+                                                                <h1>New comment!</h1>
 																<p>
 																	<a href="<?php echo $domain; ?>">BOX'NGO</a> is an online platform that makes it easy for people to sell online.
 																</p>
 																
 																<p>
-																	Congratulations! You just received an order!
+																	Hey there! You received a new comment on your listing for <a target="_blank" href="<?php echo $variables['link']; ?>"><?php echo $variables['name']; ?></a>.
+																</p>
+																<p>
+																	Responding to questions and comments is a great way to build reputation with your users. 
 																</p>
                                                             </div>
 														</td>
                                                     </tr>
 													<tr><td class="bodyContent">
-														<div>
-														<h4>Not a member of BOX'NGO?</h4>
-														<p>
-															Sign up today to start selling to other people with no extra fees and free advertising.
-														</p>
 														</div>
 													</td></tr>
                                                     <tr>

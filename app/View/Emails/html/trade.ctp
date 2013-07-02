@@ -337,22 +337,27 @@
                                                     <tr>
                                                         <td valign="top" class="bodyContent">
                                                             <div>
-                                                                <h1>Order Received</h1>
+                                                                <h1>Trade Request Received</h1>
 																<p>
 																	<a href="<?php echo $domain; ?>">BOX'NGO</a> is an online platform that makes it easy for people to sell online.
 																</p>
 																
 																<p>
-																	Congratulations! You just received an order!
+																	You have received a trade request for the following item: <?php echo $domain."shops/viewlisting/".$listing; ?>. This email was sent to you because this person attends the same school as you.
 																</p>
+
                                                             </div>
 														</td>
                                                     </tr>
 													<tr><td class="bodyContent">
 														<div>
-														<h4>Not a member of BOX'NGO?</h4>
+														<h1>Message</h1>
 														<p>
-															Sign up today to start selling to other people with no extra fees and free advertising.
+															<?php echo nl2br(h($message)); ?>
+														</p>
+														<h1>Contact</h1>
+														<p>
+															<?php echo nl2br(h($contact)); ?>
 														</p>
 														</div>
 													</td></tr>
