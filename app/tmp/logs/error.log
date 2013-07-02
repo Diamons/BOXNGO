@@ -2041,3 +2041,33 @@ Stack Trace:
 #7 /var/www/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ShopsController), Object(CakeRequest), Object(CakeResponse))
 #8 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2013-06-25 18:26:10 Error: Fatal Error (4): syntax error, unexpected '1' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in [C:\wamp\www\rr\app\Config\routes.php, line 33]
+2013-06-25 18:26:10 Error: [FatalErrorException] syntax error, unexpected '1' (T_LNUMBER), expecting variable (T_VARIABLE) or '$'
+Request URL: /?myfile%3Aasd=
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 33, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 33, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-25 18:26:24 Error: Fatal Error (4): syntax error, unexpected '1' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in [C:\wamp\www\rr\app\Config\routes.php, line 33]
+2013-06-25 18:26:24 Error: [FatalErrorException] syntax error, unexpected '1' (T_LNUMBER), expecting variable (T_VARIABLE) or '$'
+Request URL: /?myfile%3Aasd=
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 33, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 33, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-25 18:30:41 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\rr\app\Config\routes.php, line 33]
+2013-06-25 18:30:41 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /?myfile%3Aasd=
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 33, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 33, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
