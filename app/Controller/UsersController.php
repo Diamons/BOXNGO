@@ -356,6 +356,14 @@
 				}
 			}
 		}
+
+		public function unsubscribe($email){
+			$user = $this->User->find("first", array("conditions" => array("User.username" => $email)));
+			$this->User->id = $user['User']['id'];
+			if($this->User->saveField("allow_emails", 0))
+				$this->Session->setFlash("Your email has been unsubscribed.", "flash_success");
+		}
+
 		private function verificationEmail($email=NULL,$subject=NULL,$layout=NULL,$variables=NULL ){
 			parent::sendEmail($email, $subject, $layout, $variables);
 		}
