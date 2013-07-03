@@ -45,6 +45,7 @@
 					<div class="stripe_button">
 						<script src="https://button.stripe.com/v1/button.js" class="stripe-button"
 						  data-key="<?php echo $stripekey; ?>"
+						  data-address="true"
 						  data-image="<?php echo $listing['Image'][0]['url']; ?>"
  						  data-amount="<?php echo ($price['Price']['total_price'] * 100); ?>" 
 						  data-name="<?php echo h($listing['Shop']['name']); ?>"

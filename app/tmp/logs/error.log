@@ -1,0 +1,50 @@
+2013-07-03 03:06:15 Error: Fatal Error (1): Call to a member function saveField() on a non-object in [C:\wamp\www\boxngo2\app\Controller\Component\UserLoginComponent.php, line 25]
+2013-07-03 03:06:15 Error: [FatalErrorException] Call to a member function saveField() on a non-object
+Request URL: /users/logout
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\box...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\box...', 25, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\box...', 25, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-03 03:08:42 Error: Fatal Error (1): Call to undefined method UserLoginComponent::loadModel() in [C:\wamp\www\boxngo2\app\Controller\Component\UserLoginComponent.php, line 22]
+2013-07-03 03:08:42 Error: [FatalErrorException] Call to undefined method UserLoginComponent::loadModel()
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\box...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\box...', 22, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\box...', 22, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-03 03:09:51 Error: Fatal Error (1): Cannot use object of type User as array in [C:\wamp\www\boxngo2\app\Controller\Component\UserLoginComponent.php, line 24]
+2013-07-03 03:09:51 Error: [FatalErrorException] Cannot use object of type User as array
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\box...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\box...', 24, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\box...', 24, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-03 03:09:53 Error: Fatal Error (1): Cannot use object of type User as array in [C:\wamp\www\boxngo2\app\Controller\Component\UserLoginComponent.php, line 24]
+2013-07-03 03:09:53 Error: [FatalErrorException] Cannot use object of type User as array
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\box...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\box...', 24, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\box...', 24, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-03 03:10:13 Error: Fatal Error (1): Cannot use object of type User as array in [C:\wamp\www\boxngo2\app\Controller\Component\UserLoginComponent.php, line 25]
+2013-07-03 03:10:13 Error: [FatalErrorException] Cannot use object of type User as array
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\box...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\box...', 25, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\box...', 25, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

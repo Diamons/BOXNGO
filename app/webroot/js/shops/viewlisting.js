@@ -18,9 +18,7 @@ $(function(){
 
 $("#gallery").on("click", ".imageContainer", function(){
 	$("#lightboxImage").attr('href', $(this).data('image'));
-	console.log($(this).data('image'));
 	$("#displayPicture img").attr('src', $(this).data('image'));
-	console.log($(this).data('image'));
 	$("#gallery .imageContainer").removeClass("selected");
 	$(this).addClass("selected");
 });
