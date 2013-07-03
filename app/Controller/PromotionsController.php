@@ -6,7 +6,7 @@
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->Security->unlockedActions = array('february2013', 'march2013');
-			$this->Auth->allow('february2013','march2013', 'june2013');			
+			$this->Auth->allow('february2013','march2013', 'june2013', 'july4th');			
 		}
 		public function february2013($step=NULL){
 
@@ -68,5 +68,9 @@
 
 		public function june2013(){
 			$this->set("title_for_layout", "10% Off and Free T-Shirts on Orders of $10 and Up!");
+		}
+
+		public function july4th(){
+			$this->set("title_for_layout", "Our Exclusive July 4th Sale!");
 		}
 	}

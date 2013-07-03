@@ -48,3 +48,38 @@ Stack Trace:
 #3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-07-03 17:55:36 Error: [MissingActionException] Action PromotionsController::july4th() could not be found.
+Exception Attributes: array (
+  'controller' => 'PromotionsController',
+  'action' => 'july4th',
+)
+Request URL: /promotions/july4th
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-03 17:56:26 Error: [MissingViewException] View file "C:\wamp\www\rr\app\View\Promotions\july4th.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\rr\\app\\View\\Promotions\\july4th.ctp',
+)
+Request URL: /promotions/july4th
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-07-03 17:59:41 Error: [MissingViewException] View file "C:\wamp\www\rr\app\View\Promotions\july4th.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\rr\\app\\View\\Promotions\\july4th.ctp',
+)
+Request URL: /promotions/july4th
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PromotionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
