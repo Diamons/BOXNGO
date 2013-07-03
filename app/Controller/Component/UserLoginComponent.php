@@ -7,8 +7,8 @@
 
 		public function saveUser($username){
 			$hash = Security::hash($username);
-			if(!stristr(env('HTTP_HOST'), 'boxngo.local'))
-				$this->Cookie->domain = ".theboxngo.com";
+			//if(!stristr(env('HTTP_HOST'), 'boxngo.local'))
+			//	$this->Cookie->domain = ".theboxngo.com";
 			$this->Cookie->write('al', $hash, true, '2 months');
 			return $hash;
 		}
