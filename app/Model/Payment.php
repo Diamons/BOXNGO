@@ -35,7 +35,7 @@
 			}if($coupon['Coupon']['minimum'] > $listing['price']){
 				$results['error_message'] = "Your order must be a minimum of $".$coupon['Coupon']['minimum']." to use this coupon.";
 				return $results;
-			}if(isset($coupon['Coupon']['collection_id'])){
+			}if(isset($coupon['Coupon']['collection_id']) && !empty($coupon['Collection']['collection_id'])){
 				App::import('Model', 'CollectionItem');
 				$collectionItem = new CollectionItem();
 				$result = $collectionItem->find("first", array("conditions" => array("CollectionItem.shop_id" => $listing['id'], "CollectionItem.collection_id" => $coupon['Coupon']['collection_id']))); 
