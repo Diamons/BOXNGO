@@ -1,6 +1,6 @@
 <?php
 	class PromotionsController extends AppController{
-		var $uses = array('Entry');
+		public $uses = array('Entry', 'Collection');
 		public $components = array('Cookie');
 		
 		public function beforeFilter(){
@@ -70,7 +70,9 @@
 			$this->set("title_for_layout", "10% Off and Free T-Shirts on Orders of $10 and Up!");
 		}
 
-		public function july4th(){
+		public function july4th(){$this->Collection->recursive = 3;
+			$this->set("collection", $this->Collection->find("first", array("conditions" => array("Collection.short_name" => "july-4th"))));
+			
 			$this->set("title_for_layout", "Our Exclusive July 4th Sale!");
 		}
 	}

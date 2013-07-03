@@ -25,17 +25,25 @@
 			if($coupon['Coupon']['status'] == 0 || $coupon['Coupon']['status'] == 2){
 				$results['error_message'] = "That coupon has expired or is no longer valid.";
 				return $results;
-			}elseif($date > $coupon['Coupon']['expiration_date']){
+			}if($date > $coupon['Coupon']['expiration_date']){
 				$results['error_message'] = "That coupon has expired.";
 				$this->markExpired($coupon['Coupon']['id']);
 				return $results;
-			}elseif($coupon['Coupon']['quantity'] <= 0){
+			}if($coupon['Coupon']['quantity'] <= 0){
 				$results['error_message'] = "That coupon has run out.";
 				return $results;
-			}elseif($coupon['Coupon']['minimum'] > $listing['price']){
+			}if($coupon['Coupon']['minimum'] > $listing['price']){
 				$results['error_message'] = "Your order must be a minimum of $".$coupon['Coupon']['minimum']." to use this coupon.";
 				return $results;
-			}elseif($usedCoupon->alreadyUsed($listing['user_id'], $coupon['Coupon']['id'])){
+			}if(isset($coupon['Coupon']['collection_id'])){
+				App::import('Model', 'CollectionItem');
+				$collectionItem = new CollectionItem();
+				$result = $collectionItem->find("first", array("conditions" => array("CollectionItem.shop_id" => $listing['id'], "CollectionItem.collection_id" => $coupon['Coupon']['collection_id']))); 
+				if(empty($result)){
+					$results['error_message'] = "That coupon is not valid for this listing.";
+					return $results;
+				}
+			}if($usedCoupon->alreadyUsed($listing['user_id'], $coupon['Coupon']['id'])){
 				$results['error_message'] = "You already used that coupon.";
 				return $results;
 			}else{

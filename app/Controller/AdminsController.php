@@ -12,7 +12,14 @@
 				$this->layout = "admin";
 				$this->set("orders", $this->Order->find("count", array("conditions" => array("Order.completed" => 0, "Order.status" => "shipped", "Order.payment" => "paypal"))));
 			}
+			$this->Security->blackHoleCallback = 'blackhole';
+
 		}
+		
+		public function blackhole($type) {
+		  debug($type);
+		}
+		
 		
 		public function index(){
 		
@@ -62,7 +69,7 @@
 		public function managecollections(){
 			$this->set("collections", $this->Collection->find("all"));
 			if($this->request->is('post')){
-				if($this->Collection->saveMany($this->request->data)){
+				if($this->Collection->save($this->request->data)){
 					$this->Session->setFlash("Saved!", "flash_success");
 					$this->redirect($this->referer());
 				}
