@@ -20,6 +20,7 @@ class PaymentsController extends AppController {
 				}
 				
 				$coupon = NULL;
+				$this->request->data['Coupon']['code'] = strtolower($this->request->data['Coupon']['code']);
 				if($this->request->is('post') && !empty($this->request->data['Coupon']['code'])){
 					$this->Coupon->set($this->request->data);
 					if(!$this->Coupon->validates()){
