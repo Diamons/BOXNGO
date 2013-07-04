@@ -138,6 +138,10 @@
 					$results[$i]['User']['display_name'] = $a[0];
 				}
 			}
+			elseif(isset($results['display_name']) && empty($results['display_name'])){
+					$a = explode("@", $results['User']['username']);
+					$results['User']['display_name'] = $a[0];
+			}
 			if(isset($results[0]) && empty($results[0]['User']['profilepic']))
 				$results[0]['User']['profilepic'] = '/images/avataricon.gif';
 			return $results;
