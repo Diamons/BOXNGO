@@ -810,19 +810,9 @@ footer > .wrapper > .columns a{
 	display: block;
 }
 
-#promo_container{
-	display: block;
-	border: 12px solid #7cd1f9;
-	padding: 0;
-	border-radius: 20px;
-	margin-bottom: 5px;
-}
-
 #promo{
-	display: block;
-	border-radius: 9px;
+	width: 100%;
 }
-
 #toTop {
     padding: 10px 10px 5px 10px;
     background: #178bd7;
