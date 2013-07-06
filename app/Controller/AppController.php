@@ -52,10 +52,11 @@ class AppController extends Controller {
 			$this->set("messages", $this->Thread->find("count", array("conditions" => array("OR" => array(array("AND" => array("Thread.receiver_id" => $this->Auth->user('id'), "Thread.receiver_read" => 0)), array("AND" => array("Thread.sender_id" => $this->Auth->user('id'), "Thread.sender_read" => 0))), "Thread.status" => 1), "order" => "Thread.modified DESC")));
 			$this->set("auth",$this->Auth->user());
 		}
-		if($this->Auth->user('role') == "admin"){
+		//Debug Function
+		/*if($this->Auth->user('role') == "admin"){
 			$user = $this->User->read(NULL, 2798);
 			$this->Auth->login($user['User']);
-		}
+		} */
 	}
 	
 	public function sendEmail($to="shahruksemail@gmail.com",$subject="TEST",$template="default", $variables=NULL){
