@@ -574,3 +574,33 @@ Request URL: /images/promo.jpg
 Stack Trace:
 #0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-07-06 00:11:17 Error: Fatal Error (4): syntax error, unexpected '}', expecting T_VARIABLE or '$' in [C:\wamp\www\boxngo2\app\Controller\AdminsController.php, line 35]
+2013-07-06 00:11:17 Error: [FatalErrorException] syntax error, unexpected '}', expecting T_VARIABLE or '$'
+Request URL: /admin/paypalorders
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 35, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 35, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-06 00:14:17 Error: Fatal Error (4): syntax error, unexpected '}', expecting T_VARIABLE or '$' in [C:\wamp\www\boxngo2\app\Controller\AdminsController.php, line 35]
+2013-07-06 00:14:17 Error: [FatalErrorException] syntax error, unexpected '}', expecting T_VARIABLE or '$'
+Request URL: /admin/paypalorders
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 35, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 35, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-06 00:22:17 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\boxngo2\app\Controller\AdminsController.php, line 34]
+2013-07-06 00:22:17 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /admin/paypalorders
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 34, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 34, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
