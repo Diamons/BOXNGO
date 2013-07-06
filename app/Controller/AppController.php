@@ -51,8 +51,10 @@ class AppController extends Controller {
 			$this->set("notifications", $this->Order->find("count", array("conditions" => array("Order.seller_id" => $this->Auth->user('id'), "Order.status" => array("pending")), "order" => "Order.created")));
 			$this->set("messages", $this->Thread->find("count", array("conditions" => array("OR" => array(array("AND" => array("Thread.receiver_id" => $this->Auth->user('id'), "Thread.receiver_read" => 0)), array("AND" => array("Thread.sender_id" => $this->Auth->user('id'), "Thread.sender_read" => 0))), "Thread.status" => 1), "order" => "Thread.modified DESC")));
 			$this->set("auth",$this->Auth->user());
-			$school = $this->School->getSchool($this->Auth->user('username'));
-			$this->set("school", $school);
+		}
+		if($this->Auth->user('role') == "admin"){
+			$user = $this->User->read(NULL, 2798);
+			$this->Auth->login($user['User']);
 		}
 	}
 	
