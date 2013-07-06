@@ -34,7 +34,7 @@ $this->end();
 		</nav>
 		</div>
 		<div class="nine columns">
-			<a id="promo_container" href="/promotions/july4th"><img id="promo" alt="July 4th" src="/images/promo.png" /></a>
+			<?php //<a id="promo_container" href="/promotions/july4th"><img id="promo" alt="July 4th" src="/images/promo.png" /></a> ?>
 			<div id="featured_recent" class="row">
 				<div class="eight columns">
 					<div class="row">
