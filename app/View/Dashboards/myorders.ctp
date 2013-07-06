@@ -32,13 +32,13 @@ $this->end();
 					<span <?php if($orders[$i]['Order']['status'] == "shipped"){ echo "class='current'"; } ?>><span class="typicn forward" data-title="forward"></span>Shipped</span>
 				</div>
 				<div>
-					<span <?php if($orders[$i]['Order']['status'] == "delivered"){ echo "class='current'"; } ?>><span class="typicn heart" data-title="heart"></span>Delivered</span>
+					<span <?php if($orders[$i]['Order']['status'] == "paid"){ echo "class='current'"; } ?>><span class="typicn heart" data-title="heart"></span>Payment Sent</span>
 				</div>
 			<?php } ?>
 			</div>
 			<div class="process two columns">
 				<a class="manageorderButton" href="<?php echo $this->webroot; ?>payments/manageorder/<?php echo $orders[$i]['Order']['id']; ?>">Manage Order</a>
-				<a href="/users/profile/<?php echo $orders[$i]['User']['id']; ?>" class="manageorderButton">Buyer's Profile</a>
+				<a href="/users/profile/<?php echo $orders[$i]['Order']['buyer_id']; ?>" class="manageorderButton">Buyer's Profile</a>
 			</div>
 	</div>
 	<?php } ?>
