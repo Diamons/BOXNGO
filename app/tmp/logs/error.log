@@ -640,3 +640,13 @@ Request URL: /convert?w=210&h=120&fit=crop
 Stack Trace:
 #0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-07-08 09:00:27 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\wamp\www\boxngo2\app\View\Shops\viewlisting.ctp, line 22]
+2013-07-08 09:00:27 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /shops/viewlisting/141/gold-heart-crystal-necklace
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 22, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 22, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

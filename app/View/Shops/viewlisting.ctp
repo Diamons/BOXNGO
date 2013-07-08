@@ -1,6 +1,6 @@
 <?php
 	$this->start('css');
-	echo $this->Html->css(array('shops/viewlisting', 'shops/jquery.mCustomScrollbar', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.css', 'lightbox/magnific-popup'));
+	echo $this->Html->css(array('shops/viewlisting', 'shops/jquery.mCustomScrollbar', 'lightbox/magnific-popup'));
 	$this->end();
 	
 	$this->start('facebookMeta'); ?>
@@ -17,24 +17,8 @@
 	echo $this->Html->image($listing['Image'][0]['url'], array('id' => 'pinterestImage'));
 	$this->end();
 	$this->start('scriptBottom');
-	echo $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'shops/viewlisting', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.js', 'lightbox'));
-	/*Map Stuff */
-	if(isset($school) && !empty($school)){
-	?>
-	
-	
-	<script>
-		$(function(){
-			var map = L.map('map').setView([<?php echo $school['School']['latitude'].",".$school['School']['longitude']; ?>], 14);
-			L.tileLayer('http://{s}.tile.cloudmade.com/7ced7f56137c4570ac85691831b04c56/997/256/{z}/{x}/{y}.png', {
-			attribution: ''}).addTo(map);
-			var popup = L.circle([<?php echo $school['School']['latitude'].",".$school['School']['longitude']; ?>], 220, {color: 'red', fillColor: '#f03', fillOpacity: 0.5}).addTo(map);
-		});
-	</script>
-<?php
-	}
+	echo $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'lightbox', 'shops/viewlisting'));
 	$this->end();
-	/*End Map Stuff*/
 ?>
 
 <div id="fb-root"></div>
@@ -66,14 +50,21 @@
 					<?php 
 					if(!empty($listing['Image'])){
 						for($i = 0; $i < count($listing['Image']); $i++){ ?>
-					<?php echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."' class='imageContainer'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop', array('alt' => $listing['Shop']['name']))."</div>";
+						<?php 
+							if($i == 0){
+								echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."' class='imageContainer selected'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop', array('alt' => $listing['Shop']['name']))."</div>";
+							} else {
+								echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."' class='imageContainer'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop', array('alt' => $listing['Shop']['name']))."</div>";
+							}
 						}
 					}else{
 						echo $this->Html->image("loading.gif");
 					}?>
 				</div>
 				<div id="displayPicture">
-					<a id="lightboxImage" href="<?php echo $listing['Image'][0]['url']; ?>"><img src="<?php echo $listing['Image'][0]['url']; ?>" /></a>
+					<?php for($i = 0; $i < count($listing['Image']); $i++){ ?>
+						<a id="lightboxImage<?php echo $i; ?>" href="<?php echo $listing['Image'][$i]['url']; ?>"><img src="<?php echo $listing['Image'][$i]['url']; ?>" /></a>
+					<?php } ?>
 				</div>
 			</div>
 			<div itemprop="description" id="description">
@@ -160,16 +151,6 @@
 				<?php } ?>
 			</div>
 				</section>
-				<?php if(isset($school) && !empty($school['School']['short_id'])){ ?>
-				<section class="clearfix">
-					<h3 class="subheader">School</h3>
-					<div class="school_info">
-						<a href="/schools/<?php echo $school['School']['short_id']; ?>"><b><?php echo $school['School']['name']; ?></b>
-						<?php if(isset($school['School']['logo'])){ ?><img src="<?php echo $school['School']['logo']; ?>" class="avatar" /><?php } ?></a>
-						 <div id="map"></div>
-					</div>
-				</section>
-				<?php } ?>
 			</div>
 		</div>
 	</div>
