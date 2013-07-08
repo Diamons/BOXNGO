@@ -631,3 +631,12 @@ Request URL: /convert?w=210&h=120&fit=crop
 Stack Trace:
 #0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-07-06 20:22:03 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?w=210&h=120&fit=crop
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

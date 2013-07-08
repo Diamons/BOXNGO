@@ -132,7 +132,7 @@
 		
 		public function afterFind($results, $primary=FALSE){
 
-			foreach($results as &$a){//die(debug($a));
+			foreach($results as &$a){
 				if(isset($a['Shop']['permalink']))
 					$a['Shop']['full_url'] = $this->getFullUrl($a['Shop']['id'], $a['Shop']['permalink']);
 			}

@@ -10,10 +10,11 @@ $(function(){
 		},
 		theme: "dark"
     });
-	$('#lightboxImage').magnificPopup({
-		type: 'image'
-	});
     $("#gallery div.imageContainer:first-child").click();
+});
+
+$('#lightboxImage').magnificPopup({
+	type: 'image'
 });
 
 $("#gallery").on("click", ".imageContainer", function(){
