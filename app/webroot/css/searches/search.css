@@ -150,8 +150,8 @@
 
 #pagination > span > a, span.current{
 	display: inline-block;
-	border: 2px solid #EDEDED;
-	padding: 5px 10px;
+	border: 3px solid #EDEDED;
+	padding: 4px 10px;
 	transition: .3s;
 	-webkit-transition: .3s;
 	-moz-transition: .3s;

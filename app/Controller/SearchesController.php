@@ -13,7 +13,6 @@
 			$conditions = array('OR' => array('Shop.name LIKE' => $search, 'Shop.description LIKE' => $search), 'AND' => array('Shop.canview' => 1));
 			$this->paginate = array('conditions' => $conditions, 'limit' => 24, 'order' => array('Shop.id' => 'desc'));
 			$results = $this->paginate('Shop');
-			//debug($results);
 			if(!empty($this->params->query['query'])){
 				$this->set("title_for_layout", "Search for ".$this->params->query['query']);
 				$this->set("search", $this->params->query['query']);
@@ -26,8 +25,8 @@
 		public function browse($category=NULL){
 			$category = $this->Category->find("first", array("conditions" => array("Category.short_name" => $category)));
 			$conditions = array("Shop.category_id" => $category['Category']['id'], "Shop.canview" => 1);
-			$results = $this->Shop->find('all', array('conditions' => $conditions, 'order' => array('Shop.id DESC')));
-			//debug($results);
+			$this->paginate = array('conditions' => $conditions, 'limit' => 24, 'order' => array('Shop.id' => 'desc'));
+			$results = $this->paginate('Shop');
 			$this->set("results", $results);
 			$this->set("category", $category);
 			$this->render("index");
