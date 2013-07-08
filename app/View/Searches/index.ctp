@@ -23,6 +23,7 @@ $this->end();
 				<?php echo $this->element('categories'); ?>
 		</div>
 		<div class="nine columns">
+			<div id="currentPage"><b>Page <?php echo $this->Paginator->counter(); ?> <?php if(!empty($search)){ ?> for '<?php echo $search; ?>'<?php } ?></b></div>
 		<?php if(!empty($results)){ ?>
 			<?php if(isset($category)){ ?>
 				<h3><?php echo $category['Category']['display_name']; ?></h3>
@@ -30,11 +31,12 @@ $this->end();
 			<div id="listings">
 				<?php echo $this->element('four_columns_listings', array('listings' => $results));
 				}else{ ?>
-		<h1> Unfortunately there were no matches for that search. </h1>
-		
-	<?php } ?>
-	</div>
-</div>
+				<h1> Unfortunately there were no matches for that search. </h1>
+				
+			<?php } ?>
+			</div>
+			<div id="pagination"><?php echo $this->Paginator->numbers(array('separator' => ' | ')); ?></div>
+		</div>
 	<div style="display:none;">
 		<h2 style="margin: 60px 0 10px 0; font-size: 16px; text-transform: uppercase;">Similar Items</h2>
 		<div id="similar">
