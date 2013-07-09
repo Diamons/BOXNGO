@@ -1,5 +1,6 @@
 <?php
 	class User extends AppModel{
+
 		public $validate = array(
 			'username' => array(
 				'required' => array(
@@ -100,7 +101,14 @@
 			)
 		);
 		
-		var $hasMany = array('Favorite', 'Shop', 'Purchase' => array('className' => 'Order', 'foreignKey' => 'buyer_id'), 'Order' => array('className' => 'Order', 'foreignKey' => 'seller_id'));
+		var $hasMany = array('Favorite', 'Shop', 
+			'Purchase' => array('className' => 'Order', 'foreignKey' => 'buyer_id'), 
+			'Order' => array('className' => 'Order', 'foreignKey' => 'seller_id'),
+			'ForumModerator' => array('className' => 'Forum.Moderator'),
+			'ForumPollVote' => array('className' => 'Forum.PollVote'),
+			'ForumPost' => array('className' => 'Forum.Post'),
+			'ForumSubscription' => array('className' => 'Forum.Subscription'),
+			'ForumTopic' => array('className' => 'Forum.Topic'));
 		
 		public function eduAddress($check){
 			return true;

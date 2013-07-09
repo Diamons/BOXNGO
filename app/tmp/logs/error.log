@@ -735,3 +735,63 @@ Stack Trace:
 #12 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ConciergesController), Object(CakeRequest), Object(CakeResponse))
 #13 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #14 {main}
+2013-07-09 19:57:35 Error: Fatal Error (64): Cannot redeclare User::$hasMany in [C:\wamp\www\rr\app\Model\User.php, line 112]
+2013-07-09 19:57:35 Error: [FatalErrorException] Cannot redeclare User::$hasMany
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 112)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 112, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 112, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 19:57:36 Error: Fatal Error (64): Cannot redeclare User::$hasMany in [C:\wamp\www\rr\app\Model\User.php, line 112]
+2013-07-09 19:57:36 Error: [FatalErrorException] Cannot redeclare User::$hasMany
+Request URL: /
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 112)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 112, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 112, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 19:58:51 Error: [MissingActionException] Action PagesController::forums() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'forums',
+)
+Request URL: /forums
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-09 19:59:18 Error: [MissingActionException] Action PagesController::forums() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'forums',
+)
+Request URL: /forums
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-09 19:59:21 Error: [MissingTableException] Table FORUM_PREFIXforums for model Forum was not found in datasource test.
+Exception Attributes: array (
+  'table' => 'FORUM_PREFIXforums',
+  'class' => 'Forum',
+  'ds' => 'test',
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('forums')
+#1 C:\wamp\www\rr\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\rr\app\Plugin\Forum\Model\Forum.php(277): Model->find('all', Array)
+#3 C:\wamp\www\rr\app\Plugin\Forum\Controller\ForumController.php(47): Forum->getIndex()
+#4 [internal function]: ForumController->index()
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ForumController), Array)
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}

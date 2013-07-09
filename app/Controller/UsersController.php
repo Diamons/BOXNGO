@@ -127,6 +127,7 @@
 		public function logout(){
 			$this->Session->setFlash("You have successfully been logged out.", "flash_success");
 			$this->Cookie->delete('al');
+			$this->Session->destroy();
 			$this->Auth->logout();
 			$this->redirect('/');
 		}
