@@ -1,0 +1,6 @@
+[submodule "Admin"]
+	path = Admin
+	url = https://github.com/milesj/Admin.git
+[submodule "Utility"]
+	path = Utility
+	url = https://github.com/milesj/Utility.git
