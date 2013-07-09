@@ -1,3 +1,0 @@
-[submodule "app/Plugin/Admin"]
-	path = app/Plugin/Admin
-	url = https://github.com/milesj/Admin.git
