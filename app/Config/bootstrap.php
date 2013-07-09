@@ -192,6 +192,8 @@ CakePlugin::load('Shipping', array('bootstrap' => false, 'routes' => false));
 CakePlugin::load('Stripe', array('bootstrap' => false, 'routes' => false));
 CakePlugin::load('Mailchimp', array('bootstrap' => array('config')));
 CakePlugin::load('Mongodb');
+CakePlugin::load('Utility', array('bootstrap' => true, 'core' => true, 'routes' => true));
+CakePlugin::load('Admin', array('bootstrap' => true, 'core' => true, 'routes' => true));
 
 Configure::write('Stripe.TestSecret', 'sk_test_Y8VOrxRBF3ivpLeJymyBDHTM');
 Configure::write('Stripe.TestPublishable', 'pk_test_vM0PKYtF5lngZJwOV5Y3ijx4');
@@ -211,6 +213,9 @@ Configure::write('Stripe.fields', array(
     'stripe_cvc_check' => array('card' => 'cvc_check'),
     'stripe_amount' => 'amount'
 ));
+
+//Set the ARO administrator alias in bootstrap
+Configure::write('Admin.aliases.administrator', 'Administrator');
 
 //Cross subdomain authentication
 ini_set("session.cookie_domain", ".theboxngo.com");
