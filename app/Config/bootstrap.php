@@ -191,10 +191,7 @@ CakeLog::config('error', array(
 // Optional constants before forums loading
 define('USER_MODEL', 'User'); // Name of the user model (supports plugin syntax)
 define('FORUM_PREFIX', 'forum_'); // Table prefix, must not be empty
-if(stristr(env('HTTP_HOST'), 'boxngo.local'))
-	define('FORUM_DATABASE', 'test');
-else
-	define('FORUM_DATABASE', 'default'); // Database config to create tables in
+
 //End forum constraints
 
 CakePlugin::load('Shipping', array('bootstrap' => false, 'routes' => false));
@@ -238,4 +235,4 @@ Configure::write('Forum.settings', array(
 	'email' => 'support@theboxngo.com',
 	'url' => 'http://theboxngo.com.com'
 ) + Configure::read('Forum.settings'));
-Configure::write('Forum.viewLayout', 'default');
+Configure::write('Forum.viewLayout', 'forum');

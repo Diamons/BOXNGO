@@ -11242,3 +11242,18 @@ Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 187
 Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
 [main] - APP/webroot/index.php, line 92
 
+2013-07-09 21:30:35 Debug: Notice (8): Undefined index: User in [C:\wamp\www\rr\app\Model\User.php, line 145]
+Trace:
+User::afterFind() - APP\Model\User.php, line 145
+DboSource::_filterResults() - CORE\Cake\Model\Datasource\DboSource.php, line 1158
+DboSource::read() - CORE\Cake\Model\Datasource\DboSource.php, line 1091
+Model::find() - CORE\Cake\Model\Model.php, line 2696
+ForumAppModel::getById() - APP\Plugin\Forum\Model\ForumAppModel.php, line 133
+Subscription::subscribeToForum() - APP\Plugin\Forum\Model\Subscription.php, line 131
+StationsController::subscribe() - APP\Plugin\Forum\Controller\StationsController.php, line 161
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 486
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 187
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 162
+[main] - APP\webroot\index.php, line 92
+

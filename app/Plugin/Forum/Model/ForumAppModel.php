@@ -92,7 +92,6 @@ class ForumAppModel extends AppModel {
 	 */
 	public function __construct($id = null, $table = null, $ds = null) {
 		parent::__construct($id, $table, $ds);
-
 		$this->Session = new CakeSession();
 	}
 

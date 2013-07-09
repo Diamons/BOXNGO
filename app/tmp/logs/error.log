@@ -795,3 +795,1197 @@ Stack Trace:
 #7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
 #8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2013-07-09 20:06:02 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:06:12 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:06:57 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [C:\wamp\www\rr\app\Config\bootstrap.php, line 197]
+2013-07-09 20:06:57 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 197)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 197, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 197, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:07:25 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:07:58 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:12:47 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:13:27 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:13:40 Error: [MissingControllerException] Controller class SearchesController could not be found.
+Exception Attributes: array (
+  'class' => 'SearchesController',
+  'plugin' => 'Forum',
+)
+Request URL: /forum/searches?query=
+Stack Trace:
+#0 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-09 20:13:55 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:13:57 Error: [MissingActionException] Action PagesController::forums() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'forums',
+)
+Request URL: /forums
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-09 20:14:00 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:14:26 Error: [MissingDatasourceConfigException] The datasource configuration "test" was not found in database.php
+Exception Attributes: array (
+  'config' => 'test',
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(93): ConnectionManager::_getConnectionObject('test')
+#1 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('test')
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('test')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#5 C:\wamp\www\rr\app\Model\Category.php(21): Model->find('all')
+#6 C:\wamp\www\rr\app\Controller\AppController.php(45): Category->findNonEmpty()
+#7 C:\wamp\www\rr\app\Plugin\Forum\Controller\ForumAppController.php(137): AppController->beforeFilter()
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\ForumController.php(83): ForumAppController->beforeFilter()
+#9 [internal function]: ForumController->beforeFilter(Object(CakeEvent))
+#10 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#11 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#13 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-07-09 20:14:38 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(93): ConnectionManager::_getConnectionObject('default')
+#1 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#5 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#8 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#9 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#10 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#11 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-07-09 20:14:45 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:15:24 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:18:27 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:18:30 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:18:32 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('item_reports')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(1319): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(260): Model->schema()
+#7 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(33): Admin::{closure}()
+#8 C:\wamp\www\rr\app\Plugin\Admin\Lib\Admin.php(307): Admin::cache(Array, Object(Closure))
+#9 C:\wamp\www\rr\app\Plugin\Admin\Controller\Component\AdminToolbarComponent.php(44): Admin::introspectModel('Admin.ItemRepor...')
+#10 [internal function]: AdminToolbarComponent->beforeRender(Object(ForumController))
+#11 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#12 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(921): CakeEventManager->dispatch(Object(CakeEvent))
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#16 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#17 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2013-07-09 20:20:00 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:20:00 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:22:23 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:22:23 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:23:16 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:23:16 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:27:21 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:27:21 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:29:36 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:29:36 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:30:23 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:30:23 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:31:45 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:31:45 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:32:02 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:32:02 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:32:21 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:32:21 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:32:35 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:32:35 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:32:44 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:32:44 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:34:26 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:34:26 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:42:45 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 46]
+2013-07-09 20:42:45 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 46, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 46, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:45:37 Error: Fatal Error (4): syntax error, unexpected 'use' (T_USE) in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 47]
+2013-07-09 20:45:37 Error: [FatalErrorException] syntax error, unexpected 'use' (T_USE)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 47, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 47, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:45:48 Error: Fatal Error (1): Trait 'Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 30]
+2013-07-09 20:45:48 Error: [FatalErrorException] Trait 'Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Trait 'Decoda' ...', 'C:\wamp\www\rr\...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Trait 'Decoda' ...', 'C:\wamp\www\rr\...', 30, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Trait 'Decoda' ...', 'C:\wamp\www\rr\...', 30, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:47:06 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 48]
+2013-07-09 20:47:06 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:47:49 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 48]
+2013-07-09 20:47:49 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:49:21 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 48]
+2013-07-09 20:49:21 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:49:39 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 48]
+2013-07-09 20:49:39 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:50:55 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 48]
+2013-07-09 20:50:55 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:51:44 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 48]
+2013-07-09 20:51:44 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:52:41 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 48]
+2013-07-09 20:52:41 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:52:54 Error: Fatal Error (1): Class 'Decoda\Decoda' not found in [C:\wamp\www\rr\app\Plugin\Utility\View\Helper\DecodaHelper.php, line 48]
+2013-07-09 20:52:54 Error: [FatalErrorException] Class 'Decoda\Decoda' not found
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Decoda\D...', 'C:\wamp\www\rr\...', 48, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 20:58:19 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /users/login
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-09 20:58:28 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /users/login
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-09 20:58:32 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /users/login
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-09 21:02:59 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /users/login
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-09 21:03:42 Error: [BadRequestException] The request has been black-holed
+Request URL: /forum/topics/add/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(TopicsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(TopicsController))
+#2 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-07-09 21:03:55 Error: [BadRequestException] The request has been black-holed
+Request URL: /forum/topics/add/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(TopicsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(TopicsController))
+#2 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-07-09 21:05:37 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('aros')
+#5 C:\wamp\www\rr\lib\Cake\Model\AclNode.php(63): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(404): AclNode->node(Array)
+#7 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(424): RequestObject->isChildOf('34', 'Administrator')
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(57): RequestObject->isAdmin('34')
+#9 [internal function]: ForumToolbarComponent->startup(Object(ForumController))
+#10 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#11 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-07-09 21:05:43 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('aros')
+#5 C:\wamp\www\rr\lib\Cake\Model\AclNode.php(63): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(404): AclNode->node(Array)
+#7 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(424): RequestObject->isChildOf('34', 'Administrator')
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(57): RequestObject->isAdmin('34')
+#9 [internal function]: ForumToolbarComponent->startup(Object(ForumController))
+#10 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#11 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-07-09 21:06:21 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum/stations/view/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('aros')
+#5 C:\wamp\www\rr\lib\Cake\Model\AclNode.php(63): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(404): AclNode->node(Array)
+#7 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(424): RequestObject->isChildOf('34', 'Administrator')
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(57): RequestObject->isAdmin('34')
+#9 [internal function]: ForumToolbarComponent->startup(Object(StationsController))
+#10 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#11 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationsController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-07-09 21:12:12 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum/stations/view/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('aros')
+#5 C:\wamp\www\rr\lib\Cake\Model\AclNode.php(63): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(404): AclNode->node(Array)
+#7 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(424): RequestObject->isChildOf('34', 'Administrator')
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(57): RequestObject->isAdmin('34')
+#9 [internal function]: ForumToolbarComponent->startup(Object(StationsController))
+#10 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#11 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationsController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-07-09 21:12:24 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /forum/stations/view/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(93): ConnectionManager::_getConnectionObject('default')
+#1 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('aros')
+#4 C:\wamp\www\rr\lib\Cake\Model\AclNode.php(63): Model->getDataSource()
+#5 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(404): AclNode->node(Array)
+#6 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(424): RequestObject->isChildOf('34', 'Administrator')
+#7 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(57): RequestObject->isAdmin('34')
+#8 [internal function]: ForumToolbarComponent->startup(Object(StationsController))
+#9 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#10 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#11 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationsController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-07-09 21:12:32 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. ',
+  'enabled' => true,
+)
+Request URL: /forum/stations/view/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('aros')
+#5 C:\wamp\www\rr\lib\Cake\Model\AclNode.php(63): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(404): AclNode->node(Array)
+#7 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(424): RequestObject->isChildOf('34', 'Administrator')
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(57): RequestObject->isAdmin('34')
+#9 [internal function]: ForumToolbarComponent->startup(Object(StationsController))
+#10 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#11 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationsController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-07-09 21:13:57 Error: [MissingDatasourceConfigException] The datasource configuration "test" was not found in database.php
+Exception Attributes: array (
+  'config' => 'test',
+)
+Request URL: /forum/stations/view/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(93): ConnectionManager::_getConnectionObject('test')
+#1 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('test')
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('test')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#5 C:\wamp\www\rr\app\Model\Category.php(21): Model->find('all')
+#6 C:\wamp\www\rr\app\Controller\AppController.php(45): Category->findNonEmpty()
+#7 C:\wamp\www\rr\app\Plugin\Forum\Controller\ForumAppController.php(137): AppController->beforeFilter()
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\StationsController.php(236): ForumAppController->beforeFilter()
+#9 [internal function]: StationsController->beforeFilter(Object(CakeEvent))
+#10 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#11 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#13 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationsController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-07-09 21:14:03 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum/stations/view/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('test')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('test')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Model\Category.php(21): Model->find('all')
+#7 C:\wamp\www\rr\app\Controller\AppController.php(45): Category->findNonEmpty()
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\ForumAppController.php(137): AppController->beforeFilter()
+#9 C:\wamp\www\rr\app\Plugin\Forum\Controller\StationsController.php(236): ForumAppController->beforeFilter()
+#10 [internal function]: StationsController->beforeFilter(Object(CakeEvent))
+#11 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationsController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-07-09 21:14:15 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum/stations/view/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('test')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('test')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('categories')
+#5 C:\wamp\www\rr\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Model\Category.php(21): Model->find('all')
+#7 C:\wamp\www\rr\app\Controller\AppController.php(45): Category->findNonEmpty()
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\ForumAppController.php(137): AppController->beforeFilter()
+#9 C:\wamp\www\rr\app\Plugin\Forum\Controller\StationsController.php(236): ForumAppController->beforeFilter()
+#10 [internal function]: StationsController->beforeFilter(Object(CakeEvent))
+#11 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationsController), Object(CakeRequest), Object(CakeResponse))
+#15 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-07-09 21:14:26 Error: Fatal Error (64): Cannot redeclare DATABASE_CONFIG::$default in [C:\wamp\www\rr\app\Config\database.php, line 106]
+2013-07-09 21:14:26 Error: [FatalErrorException] Cannot redeclare DATABASE_CONFIG::$default
+Request URL: /forum/stations/view/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 106)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 106, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 106, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 21:14:36 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum/stations/view/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('aros')
+#5 C:\wamp\www\rr\lib\Cake\Model\AclNode.php(63): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(404): AclNode->node(Array)
+#7 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(424): RequestObject->isChildOf('34', 'Administrator')
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(57): RequestObject->isAdmin('34')
+#9 [internal function]: ForumToolbarComponent->startup(Object(StationsController))
+#10 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#11 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationsController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-07-09 21:14:43 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum/
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('aros')
+#5 C:\wamp\www\rr\lib\Cake\Model\AclNode.php(63): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(404): AclNode->node(Array)
+#7 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(424): RequestObject->isChildOf('34', 'Administrator')
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(57): RequestObject->isAdmin('34')
+#9 [internal function]: ForumToolbarComponent->startup(Object(ForumController))
+#10 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#11 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-07-09 21:15:07 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) in [C:\wamp\www\rr\app\Config\database.php, line 62]
+2013-07-09 21:15:07 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION)
+Request URL: /forum/
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 62)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 62, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 62, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 21:15:34 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum/
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('aros')
+#5 C:\wamp\www\rr\lib\Cake\Model\AclNode.php(63): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(404): AclNode->node(Array)
+#7 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(424): RequestObject->isChildOf('34', 'Administrator')
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(57): RequestObject->isAdmin('34')
+#9 [internal function]: ForumToolbarComponent->startup(Object(ForumController))
+#10 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#11 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-07-09 21:17:14 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /forum/
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('aros')
+#5 C:\wamp\www\rr\lib\Cake\Model\AclNode.php(63): Model->getDataSource()
+#6 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(404): AclNode->node(Array)
+#7 C:\wamp\www\rr\app\Plugin\Admin\Model\RequestObject.php(424): RequestObject->isChildOf('34', 'Administrator')
+#8 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(57): RequestObject->isAdmin('34')
+#9 [internal function]: ForumToolbarComponent->startup(Object(ForumController))
+#10 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#11 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#13 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#14 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#15 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#16 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2013-07-09 21:29:20 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting case (T_CASE) or default (T_DEFAULT) or '}' in [C:\wamp\www\rr\app\Config\database.php, line 112]
+2013-07-09 21:29:20 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting case (T_CASE) or default (T_DEFAULT) or '}'
+Request URL: /forum/
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 112)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 112, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 112, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 21:29:50 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [C:\wamp\www\rr\app\Config\database.php, line 124]
+2013-07-09 21:29:50 Error: [FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /forum/
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 124)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\rr\...', 124, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\rr\...', 124, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 21:30:00 Error: [MissingDatasourceConfigException] The datasource configuration "test" was not found in database.php
+Exception Attributes: array (
+  'config' => 'test',
+)
+Request URL: /forum/
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Model\ConnectionManager.php(93): ConnectionManager::_getConnectionObject('test')
+#1 C:\wamp\www\rr\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('test')
+#2 C:\wamp\www\rr\lib\Cake\Model\Model.php(1108): Model->setDataSource('test')
+#3 C:\wamp\www\rr\lib\Cake\Model\Model.php(3243): Model->setSource('moderators')
+#4 C:\wamp\www\rr\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#5 C:\wamp\www\rr\app\Plugin\Forum\Model\Moderator.php(78): Model->find('list', Array)
+#6 C:\wamp\www\rr\app\Plugin\Forum\Controller\Component\ForumToolbarComponent.php(67): Moderator->getModerations('34')
+#7 [internal function]: ForumToolbarComponent->startup(Object(ForumController))
+#8 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#9 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#10 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#11 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#12 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#13 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ForumController), Object(CakeRequest), Object(CakeResponse))
+#14 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-07-09 21:30:35 Error: [UnauthorizedException] Unauthorized
+Request URL: /forum/stations/moderate/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\Auth\ControllerAuthorize.php(65): ForumAppController->isAuthorized(Array)
+#1 C:\wamp\www\rr\lib\Cake\Controller\Component\AuthComponent.php(412): ControllerAuthorize->authorize(Array, Object(CakeRequest))
+#2 C:\wamp\www\rr\lib\Cake\Controller\Component\AuthComponent.php(336): AuthComponent->isAuthorized(Array)
+#3 [internal function]: AuthComponent->startup(Object(StationsController))
+#4 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#5 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(StationsController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-07-09 21:30:38 Error: [BadRequestException] The request has been black-holed
+Request URL: /forum/topics/add/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(TopicsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(TopicsController))
+#2 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-07-09 21:30:44 Error: [BadRequestException] The request has been black-holed
+Request URL: /forum/topics/add/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(TopicsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(TopicsController))
+#2 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-07-09 21:32:08 Error: [BadRequestException] The request has been black-holed
+Request URL: /forum/topics/add/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(TopicsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(TopicsController))
+#2 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-07-09 21:33:10 Error: Fatal Error (64): Cannot redeclare TopicsController::beforeFilter() in [C:\wamp\www\rr\app\Plugin\Forum\Controller\TopicsController.php, line 304]
+2013-07-09 21:33:10 Error: [FatalErrorException] Cannot redeclare TopicsController::beforeFilter()
+Request URL: /forum/topics/add/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 304)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 304, Array)
+#2 C:\wamp\www\rr\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\rr\...', 304, Array)
+#3 C:\wamp\www\rr\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-09 21:33:32 Error: [BadRequestException] The request has been black-holed
+Request URL: /forum/topics/add/general-discussion
+Stack Trace:
+#0 C:\wamp\www\rr\lib\Cake\Controller\Component\SecurityComponent.php(244): SecurityComponent->blackHole(Object(TopicsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(TopicsController))
+#2 C:\wamp\www\rr\lib\Cake\Utility\ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp\www\rr\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp\www\rr\lib\Cake\Controller\Controller.php(671): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#7 C:\wamp\www\rr\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\rr\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}

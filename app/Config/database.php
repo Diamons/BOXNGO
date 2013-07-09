@@ -59,7 +59,8 @@
  */
 class DATABASE_CONFIG {
 
-	public $default = array(
+	public $default = NULL;
+	public $production = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
@@ -94,7 +95,7 @@ class DATABASE_CONFIG {
         'password' => 'pokemon',
     );
 	
-	public $test = array(
+	public $localhost = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
@@ -104,6 +105,19 @@ class DATABASE_CONFIG {
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
-	
+
+	function __construct (){		
+		if(isset($_SERVER['SERVER_NAME'])){
+			$this->default = $this->production;
+			switch($_SERVER['SERVER_NAME']){
+				case 'boxngo.local':
+					$this->default = $this->localhost;
+				break;
+			}
+		}
+		else{
+			$this->default = $this->production;
+		}
+	}
 	
 }
