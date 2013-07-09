@@ -4,3 +4,6 @@
 [submodule "Utility"]
 	path = Utility
 	url = https://github.com/milesj/Utility.git
+[submodule "app/Plugin/Admin"]
+	path = app/Plugin/Admin
+	url = https://github.com/milesj/Utility.git
