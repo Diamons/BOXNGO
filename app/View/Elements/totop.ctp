@@ -1,1 +1,0 @@
-<a href="#" id="toTop"><?php echo $this->Html->image('up-arrow.png'); ?> To Top</a>
