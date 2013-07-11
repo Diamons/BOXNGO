@@ -11,13 +11,13 @@
 		$links[] = $this->Html->link(__d('forum', 'View New Posts'), array('controller' => 'search', 'action' => 'index', 'new_posts', 'admin' => false));
 	} else {
 		if (!empty($userRoutes['forgotPass'])) {
-			$links[] = $this->Html->link(__d('forum', 'Forgot Password'), $userRoutes['forgotPass']);
+			$links[] = $this->Html->link(__d('forum', 'Forgot Password'), '/users');
 		}
 
-		$links[] = $this->Html->link(__d('forum', 'Login'), $userRoutes['login']);
+		$links[] = $this->Html->link(__d('forum', 'Login'), '/users');
 
 		if (!empty($userRoutes['signup'])) {
-			$links[] = $this->Html->link(__d('forum', 'Sign Up'), $userRoutes['signup']);
+			$links[] = $this->Html->link(__d('forum', 'Sign Up'), '/users');
 		}
 	}
 

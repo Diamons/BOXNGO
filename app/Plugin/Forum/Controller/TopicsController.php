@@ -54,10 +54,6 @@ class TopicsController extends ForumAppController {
 		$this->ForumToolbar->goToPage();
 	}
 
-	public function test($e){
-		debug($e);
-		die();
-	}
 	/**
 	 * Post a new topic or poll.
 	 *
@@ -304,7 +300,6 @@ class TopicsController extends ForumAppController {
 		$this->Security->unlockedFields = array('option', 'items');
 
 		$this->set('menuTab', 'forums');
-		$this->Security->blackHoleCallback = "test";
 	}
 
 }

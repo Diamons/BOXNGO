@@ -4,3 +4,6 @@
 [submodule "app/Plugin/Utility"]
 	path = app/Plugin/Utility
 	url = https://github.com/milesj/Utility.git
+[submodule "app/Plugin/composer"]
+	path = app/Plugin/composer
+	url = https://github.com/composer/installers.git
