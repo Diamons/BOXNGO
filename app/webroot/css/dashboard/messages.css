@@ -1,0 +1,68 @@
+.dashwrapper a.message_container{
+	border: none;
+	display: block;
+	border-bottom: 1px solid #53abd9;
+}
+
+.dashwrapper span.message_excerpt{
+	display:  block;
+	color: #999;
+	font-size: 11px;
+	font-style: italic;
+}
+
+.dashwrapper .row{
+	padding: 20px;
+}
+
+a.read, a.unread{
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	-webkit-transition: all .3s;
+}
+
+a.unread{
+	background: #ebf8ff;
+}
+
+a.unread:hover{
+	background: #86d4fc;
+}
+
+a.read:hover{
+	background: #F1F1F1;
+}
+.dashwrapper > div {
+	padding: 0;
+}
+
+.dashwrapper > .row{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+span.date{
+	color: black;
+	display: block;
+	color: #AAA;
+	font-size: 11px;
+}
+
+.alternative.message_individual{
+	background: #F7F7F7;
+}
+
+.profilepic_message{
+	max-width: 100px;
+	display: block;
+	margin: auto;
+}
+
+.message_individual > div.two.columns{
+	text-align: center;
+}	
+
+div.adminLabel{
+	display: block;
+}

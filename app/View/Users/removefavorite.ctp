@@ -1,0 +1,1 @@
+<div class="favoritemessage">The listing has been removed from your favorites.</div>

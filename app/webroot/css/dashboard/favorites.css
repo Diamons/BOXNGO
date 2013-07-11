@@ -1,0 +1,6 @@
+.listing .listing_box {
+	border-left: none;
+	float: none;
+	position: absolute;
+	top: 0;
+}

@@ -1,0 +1,37 @@
+.leftpanel{
+	background: url('/images/bearmessage.png') no-repeat;
+	height: 464px;
+	width: 449px;
+}
+
+#content.wrapper{
+	background: #008cd4;
+	padding: 40px;
+}
+
+.rightpanel{
+	background: #E9F8FF;
+	border-radius: 4px;
+	padding: 10px;
+	
+}
+
+.rightpanel > div, .rightpanel > p{
+	font-size: 11px;
+}
+
+.rightpanel > h1{
+	margin: 0;
+	margin-bottom: 15px;
+	font-size: 24px;
+	color: #008cd4;
+	text-align: center;
+}
+
+form#MessageTradeForm{
+	margin-top: 20px;
+}
+
+form#MessageTradeForm textarea{
+	min-height: 150px;
+}
