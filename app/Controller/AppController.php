@@ -44,9 +44,9 @@ class AppController extends Controller {
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
 		$this->set("layoutCategories", $this->Category->findNonEmpty());
 		
-		//$cookie = $this->Cookie->read('al');
-		//if(!empty($cookie) && !$this->Auth->loggedIn())
-		//	$this->Auth->login($this->UserLogin->checkUser($cookie, $this->Autologin->find("first", array("conditions" => array("Autologin.hash" => $cookie)))));
+		$cookie = $this->Cookie->read('al');
+		if(!empty($cookie) && !$this->Auth->loggedIn())
+			$this->Auth->login($this->UserLogin->checkUser($cookie, $this->Autologin->find("first", array("conditions" => array("Autologin.hash" => $cookie)))));
 		if($this->Auth->loggedIn()){
 			$this->set("notifications", $this->Order->find("count", array("conditions" => array("Order.seller_id" => $this->Auth->user('id'), "Order.status" => array("pending")), "order" => "Order.created")));
 			$this->set("messages", $this->Thread->find("count", array("conditions" => array("OR" => array(array("AND" => array("Thread.receiver_id" => $this->Auth->user('id'), "Thread.receiver_read" => 0)), array("AND" => array("Thread.sender_id" => $this->Auth->user('id'), "Thread.sender_read" => 0))), "Thread.status" => 1), "order" => "Thread.modified DESC")));
