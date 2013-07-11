@@ -59,6 +59,7 @@
  */
 class DATABASE_CONFIG {
 
+	public $default = NULL;
 	public $production = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
@@ -83,7 +84,18 @@ class DATABASE_CONFIG {
 		//'encoding' => 'utf8',
 	);
 	
-	public $default = array(
+	public $mongodb = array(
+        'datasource' => 'Mongodb.MongodbSource',
+        'host' => 'linus.mongohq.com',
+        'database' => 'app9620009',
+        'port' => 10085,
+        'prefix' => '',
+		'persistent' => 'true',
+        'login' => 'Diamons', 
+        'password' => 'pokemon',
+    );
+	
+	public $localhost = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
@@ -94,6 +106,18 @@ class DATABASE_CONFIG {
 		'encoding' => 'utf8',
 	);
 
-
+	function __construct (){		
+		if(isset($_SERVER['SERVER_NAME'])){
+			$this->default = $this->production;
+			switch($_SERVER['SERVER_NAME']){
+				case 'boxngo.local':
+					$this->default = $this->localhost;
+				break;
+			}
+		}
+		else{
+			$this->default = $this->production;
+		}
+	}
 	
 }
