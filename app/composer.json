@@ -4,5 +4,8 @@
 	},
 	"require": {
 		"mjohnson/forum": "4.*"
+	},
+	"require": {
+		"mjohnson/decoda": "6.*"
 	}
 }

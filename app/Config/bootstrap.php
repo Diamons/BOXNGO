@@ -188,10 +188,21 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
+// Optional constants before forums loading
+define('USER_MODEL', 'User'); // Name of the user model (supports plugin syntax)
+define('FORUM_PREFIX', 'forum_'); // Table prefix, must not be empty
+
+//End forum constraints
+
 CakePlugin::load('Shipping', array('bootstrap' => false, 'routes' => false));
 CakePlugin::load('Stripe', array('bootstrap' => false, 'routes' => false));
 CakePlugin::load('Mailchimp', array('bootstrap' => array('config')));
-CakePlugin::load('Mongodb');
+//CakePlugin::load('Mongodb');
+CakePlugin::load('Utility', array('bootstrap' => true, 'core' => true, 'routes' => true));
+CakePlugin::load('Admin', array('bootstrap' => true, 'core' => true, 'routes' => true));
+
+//Forums have additional configuration above and below. | ./app/Config/boostrap.php
+CakePlugin::load('Forum', array('bootstrap' => true, 'routes' => true));
 
 Configure::write('Stripe.TestSecret', 'sk_test_Y8VOrxRBF3ivpLeJymyBDHTM');
 Configure::write('Stripe.TestPublishable', 'pk_test_vM0PKYtF5lngZJwOV5Y3ijx4');
@@ -212,5 +223,16 @@ Configure::write('Stripe.fields', array(
     'stripe_amount' => 'amount'
 ));
 
+//Set the ARO administrator alias in bootstrap
+Configure::write('Admin.aliases.administrator', 'Administrator');
+
 //Cross subdomain authentication
 ini_set("session.cookie_domain", ".theboxngo.com");
+
+//Miles Forum Plugin Config
+Configure::write('Forum.settings', array(
+	'name' => 'BOX\'NGO',
+	'email' => 'support@theboxngo.com',
+	'url' => 'http://theboxngo.com.com'
+) + Configure::read('Forum.settings'));
+Configure::write('Forum.viewLayout', 'forum');

@@ -32,11 +32,4 @@ App::uses('Model', 'Model');
  */
 class AppModel extends Model {
 	
-	public function __construct($id = false, $table = null, $ds = null) {
-		
-		if(stristr(env('HTTP_HOST'), 'boxngo.local')){ 
-			$this->useDbConfig = "test";
-		}
-		parent::__construct($id, $table, $ds);
-	}
 }

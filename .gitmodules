@@ -1,0 +1,6 @@
+[submodule "app/Plugin/Admin"]
+	path = app/Plugin/Admin
+	url = https://github.com/milesj/Admin.git
+[submodule "app/Plugin/Utility"]
+	path = app/Plugin/Utility
+	url = https://github.com/milesj/Utility.git

@@ -1,7 +1,7 @@
 <?php
 	class ConciergesController extends AppController{
 		
-		var $uses = array('Course', 'Shop');
+		var $uses = array('Shop');
 		var $helpers = array('Book');
 		
 		public function beforeFilter(){
@@ -10,10 +10,12 @@
 		}
 		
 		public function hunter_college($course=NULL){
+			throw new notFoundException();
+			
 			if(isset($course)){
 
-				$searched = $this->Course->find("first", array("fields" => array("Course.code", "Course.full_text", "Course.course_number"), "conditions" => array("Course.code" => $course)));
-				$similar = $this->Course->find("all", array("fields" => array("Course.code", "Course.full_text", "Course.course_number"), "conditions" => array("Course.course_number" => str_replace("\\u00a0", " ", $searched['Course']['course_number']))));
+				//$searched = $this->Course->find("first", array("fields" => array("Course.code", "Course.full_text", "Course.course_number"), "conditions" => array("Course.code" => $course)));
+				//$similar = $this->Course->find("all", array("fields" => array("Course.code", "Course.full_text", "Course.course_number"), "conditions" => array("Course.course_number" => str_replace("\\u00a0", " ", $searched['Course']['course_number']))));
 				
 				$html = new DOMDocument();
 				$books = array();
