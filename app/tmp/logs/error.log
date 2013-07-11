@@ -714,3 +714,263 @@ Stack Trace:
 #3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-07-08 11:31:38 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?w=210&h=120&fit=crop
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:31:43 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?w=210&h=120&fit=crop
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:32:49 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?w=210&h=120&fit=crop
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:32:55 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?w=210&h=120&fit=crop
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:33:17 Error: Fatal Error (4): syntax error, unexpected T_RETURN, expecting ')' in [C:\wamp\www\boxngo2\app\Model\Image.php, line 25]
+2013-07-08 11:33:17 Error: [FatalErrorException] syntax error, unexpected T_RETURN, expecting ')'
+Request URL: /dashboard/myorders
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 25, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 25, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-08 11:33:48 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?w=210&h=120&fit=crop
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:35:33 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 378859 bytes) in [C:\wamp\www\boxngo2\lib\Cake\Utility\String.php, line 243]
+2013-07-08 11:35:33 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 378859 bytes)
+Request URL: /dashboard/myfavorites
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-08 11:35:50 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 378859 bytes) in [C:\wamp\www\boxngo2\lib\Cake\Utility\String.php, line 243]
+2013-07-08 11:35:51 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 378859 bytes)
+Request URL: /dashboard/myfavorites
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-08 11:35:54 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 378859 bytes) in [C:\wamp\www\boxngo2\lib\Cake\Utility\String.php, line 243]
+2013-07-08 11:35:54 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 378859 bytes)
+Request URL: /dashboard/myfavorites
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-08 11:35:57 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 379768 bytes) in [C:\wamp\www\boxngo2\lib\Cake\Utility\String.php, line 243]
+2013-07-08 11:35:57 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 379768 bytes)
+Request URL: /dashboard/myfavorites
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-08 11:36:37 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\boxngo2\app\View\Dashboards\myfavorites.ctp, line 5]
+2013-07-08 11:36:37 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /dashboard/myfavorites
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\box...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\box...', 5, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\box...', 5, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-08 11:37:08 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 408662 bytes) in [C:\wamp\www\boxngo2\lib\Cake\Utility\String.php, line 243]
+2013-07-08 11:37:08 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 408662 bytes)
+Request URL: /dashboard/myfavorites
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-08 11:38:05 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 408662 bytes) in [C:\wamp\www\boxngo2\lib\Cake\Utility\String.php, line 243]
+2013-07-08 11:38:05 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 408662 bytes)
+Request URL: /dashboard/myfavorites
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-08 11:38:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/pages/home.css
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:39:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/pages/home_user.css
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:39:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/pages/home_user.css
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:39:38 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/pages/home_user.css
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:39:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/pages/home_user.css
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:40:13 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 408662 bytes) in [C:\wamp\www\boxngo2\lib\Cake\Utility\String.php, line 243]
+2013-07-08 11:40:13 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 408662 bytes)
+Request URL: /dashboard/myfavorites
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#2 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\box...', 243, Array)
+#3 C:\wamp\www\boxngo2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-07-08 11:44:44 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?w=210&h=120&fit=crop
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:45:16 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?w=210&h=120&fit=crop
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:45:32 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?w=210&h=120&fit=crop
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:45:46 Error: [MissingControllerException] Controller class ConvertController could not be found.
+Exception Attributes: array (
+  'class' => 'ConvertController',
+  'plugin' => NULL,
+)
+Request URL: /convert?w=210&h=120&fit=crop
+Stack Trace:
+#0 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-07-08 11:46:44 Error: [MissingActionException] Action DashboardsController::<pre class=() could not be found.
+Exception Attributes: array (
+  'controller' => 'DashboardsController',
+  'action' => '<pre class=',
+)
+Request URL: /dashboard/%3Cpre%20class=
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-08 11:53:13 Error: [MissingActionException] Action DashboardsController::<pre class=() could not be found.
+Exception Attributes: array (
+  'controller' => 'DashboardsController',
+  'action' => '<pre class=',
+)
+Request URL: /dashboard/%3Cpre%20class=
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-08 11:59:17 Error: [MissingActionException] Action DashboardsController::<pre class=() could not be found.
+Exception Attributes: array (
+  'controller' => 'DashboardsController',
+  'action' => '<pre class=',
+)
+Request URL: /dashboard/%3Cpre%20class=
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-07-08 12:01:46 Error: [MissingActionException] Action DashboardsController::<pre class=() could not be found.
+Exception Attributes: array (
+  'controller' => 'DashboardsController',
+  'action' => '<pre class=',
+)
+Request URL: /dashboard/%3Cpre%20class=
+Stack Trace:
+#0 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\boxngo2\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(DashboardsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\boxngo2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

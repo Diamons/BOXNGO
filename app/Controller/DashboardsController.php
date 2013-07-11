@@ -55,9 +55,8 @@
 			$orders = $this->Order->find("all", array("conditions" => array("Order.seller_id" => $this->Auth->user('id')), "order" => "Order.created DESC"));
 			for($i = 0; $i < count($orders); $i++){
 				$a = $this->Image->getShopImage($orders[$i]['Order']['shop_id']);
-				$b = $this->User->read(NULL, $orders[$i]['Order']['seller_id']);
-				$orders[$i]['Image'] = $a['Image'];
-				$orders[$i]['User'] = $b['User'];
+				if(!empty($a['Image']))
+					$orders[$i]['Image'] = $a['Image'];
 			}
 			$this->set("orders", $orders);
 		}
@@ -66,17 +65,15 @@
 			$trades = $this->Trade->find("all", array("conditions" => array("Trade.user_id" => $this->Auth->user('id'))));
 			for($i = 0; $i < count($trades); $i++){
 				$a = $this->Image->getShopImage($trades[$i]['Trade']['shop_id']);
-				$trades[$i]['Image'] = $a['Image'];
+				if(!empty($a['Image']))
+					$trades[$i]['Image'] = $a['Image'];
 			}
 			$this->set("trades", $trades);
 		}
 		
 		public function myfavorites(){
+			$this->Favorite->recursive = 2;
 			$favorites = $this->Favorite->find("all", array("conditions" => array("Favorite.user_id" => $this->Auth->user('id')), "order" => "Favorite.created DESC"));
-			for($i=0;$i<count($favorites);$i++){
-				$favorites[$i]['Shop']['image'] = $this->Image->getShopImage($favorites[$i]['Shop']['id']);
-				$favorites[$i]['Shop']['image'] = $favorites[$i]['Shop']['image']['Image']['url'];
-			}
 			$this->set("favorites", $favorites);
 		}
 		

@@ -8,6 +8,8 @@ class PaymentsController extends AppController {
 	}
 	
 	public function pay($listingId=NULL){
+		$this->Session->setFlash("Payments are currently disabled while we perform maintenance and implement security features. - 7/10/13", "flash_warning");
+		redirect($this->referer());
 		if(isset($listingId) && !empty($listingId)){
 			$listing = $this->Shop->find("first", array("conditions" => array("Shop.id" => $listingId, "Shop.canview" => 1)));
 			if(!empty($listing)){
