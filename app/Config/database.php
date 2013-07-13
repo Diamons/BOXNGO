@@ -59,30 +59,6 @@
  */
 class DATABASE_CONFIG {
 
-	public $default = NULL;
-	public $production = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-		'port' => 3306,
-		'login' => 'root',
-		'password' => 'aCC23zzzY23',
-		'database' => 'boxngo_production',
-		'prefix' => '',
-		//'encoding' => 'utf8',
-	);
-
-	public $defaultOld = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'us-cdbr-east-03.cleardb.com',
-		'port' => 3306,
-		'login' => 'bd203a888f9dcf',
-		'password' => '6508d8a8',
-		'database' => 'heroku_5c30e26ec8f7395',
-		'prefix' => '',
-		//'encoding' => 'utf8',
-	);
 	
 	public $mongodb = array(
         'datasource' => 'Mongodb.MongodbSource',
@@ -95,7 +71,7 @@ class DATABASE_CONFIG {
         'password' => 'pokemon',
     );
 	
-	public $localhost = array(
+	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
@@ -106,18 +82,5 @@ class DATABASE_CONFIG {
 		'encoding' => 'utf8',
 	);
 
-	function __construct (){		
-		if(isset($_SERVER['SERVER_NAME'])){
-			$this->default = $this->production;
-			switch($_SERVER['SERVER_NAME']){
-				case 'boxngo.local':
-					$this->default = $this->localhost;
-				break;
-			}
-		}
-		else{
-			$this->default = $this->production;
-		}
-	}
 	
 }

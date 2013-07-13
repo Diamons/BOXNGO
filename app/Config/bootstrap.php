@@ -200,6 +200,7 @@ CakePlugin::load('Mailchimp', array('bootstrap' => array('config')));
 //CakePlugin::load('Mongodb');
 CakePlugin::load('Utility', array('bootstrap' => true, 'core' => true, 'routes' => true));
 CakePlugin::load('Admin', array('bootstrap' => true, 'core' => true, 'routes' => true));
+CakePlugin::load('Maxmind');
 
 //Forums have additional configuration above and below. | ./app/Config/boostrap.php
 CakePlugin::load('Forum', array('bootstrap' => true, 'routes' => true));

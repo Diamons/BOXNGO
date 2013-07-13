@@ -3,6 +3,7 @@
 		"vendor-dir": "Vendor"
 	},
 	"require": {
-		"mjohnson/forum": "4.*"
+		"mjohnson/forum": "4.*",
+		"minfraud/http": "~1.53"
 	}
 }

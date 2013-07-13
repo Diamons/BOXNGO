@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "d33c4c9cb9e4d00b55697f95d07331b8",
+    "hash": "e1d899c8ded8bd1ddecbd19d76aa35d5",
     "packages": [
         {
             "name": "composer/installers",
@@ -76,6 +76,48 @@
                 "zend"
             ],
             "time": "2013-06-20 02:36:19"
+        },
+        {
+            "name": "minfraud/http",
+            "version": "v1.53",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/ccfd-api-php.git",
+                "reference": "v1.53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/ccfd-api-php/zipball/v1.53",
+                "reference": "v1.53",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/CreditCardFraudDetection.php",
+                    "src/HTTPBase.php",
+                    "src/TelephoneVerification.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1+"
+            ],
+            "authors": [
+                {
+                    "name": "MaxMind, Inc.",
+                    "email": "support@maxmind.com",
+                    "homepage": "http://www.maxmind.com/"
+                }
+            ],
+            "description": "MaxMind minFraud HTTP API",
+            "homepage": "https://github.com/maxmind/ccfd-api-php",
+            "keywords": [
+                "fraud",
+                "maxmind",
+                "minfraud"
+            ],
+            "time": "2013-06-25 13:58:44"
         },
         {
             "name": "mjohnson/admin",
