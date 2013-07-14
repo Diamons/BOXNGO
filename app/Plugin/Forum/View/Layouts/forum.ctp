@@ -64,12 +64,12 @@ echo $this->OpenGraph->html(array('xmlns' => 'http://www.w3.org/1999/xhtml')); ?
 		</div>
 
 		<div class="footer">
-			<?php echo $this->element('copyright'); ?>
+			<?php //echo $this->element('copyright'); ?>
 		</div>
 	</div>
 
 	<?php if (!CakePlugin::loaded('DebugKit')) {
-		echo $this->element('sql_dump');
+		//echo $this->element('sql_dump');
 	} ?>
 </body>
 </html>
