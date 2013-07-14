@@ -296,6 +296,7 @@ div.submit input[type="submit"]{
 }
 
 .favoriteadd{
+	min-width:60px;
 	border: 1px solid #EFEFEF;
 	background: #ebf9fe;
 	padding: 7px 13px 4px 12px;
