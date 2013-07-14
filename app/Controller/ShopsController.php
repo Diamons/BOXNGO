@@ -131,7 +131,6 @@
 					$this->Favorite->recursive = -1;
 					$this->set("favorite", $this->Favorite->find("first", array("conditions" => array("Favorite.user_id" => $this->Auth->user('id'), "Favorite.shop_id" => $listingid))));
 				}
-				
 				$relatedItems = $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 8));
 				$this->set("comments", $this->Comment->find("all", array("conditions" => array("Comment.shop_id" => $listingid))));
 				$sameSchool = $this->School->sameSchool($this->Auth->user('username'), $listing['User']['username']);

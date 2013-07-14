@@ -298,10 +298,13 @@ div.submit input[type="submit"]{
 .favoriteadd{
 	border: 1px solid #EFEFEF;
 	background: #ebf9fe;
-	padding: 7px 4px 4px 4px;
+	padding: 7px 13px 4px 12px;
 	border-radius: 4px;
 	float: left;
 	margin: -4px 10px 0 0;
+	text-align: center;
+	font-size: 11px;
+	margin-bottom: 5px;
 }
 
 .addfavorite .heart, .addfavoriteused .heart, .addfavoritedisabled .heart{
