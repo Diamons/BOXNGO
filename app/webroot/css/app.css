@@ -691,7 +691,7 @@ img.profilePic{
 .favoriteadd i.loading{
 	font-size: 28px;
 	top: 3px;
-	left: 6px;
+	left: 16px;
 	display: none;
 	position: absolute;
 }
