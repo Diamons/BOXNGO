@@ -45,7 +45,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		<?php echo $this->fetch('content'); ?>
 		<?php echo $this->element('totop'); ?>
 		<?php
-			//echo $this->element('sql_dump');
+			echo $this->element('sql_dump');
 		?>
 		<div class="push"></div>
 	</div>

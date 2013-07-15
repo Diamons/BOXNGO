@@ -3,6 +3,7 @@
 	border-radius: 2px;
 	padding: 10px 0;
 	border: 1px solid #EEE;
+	margin-bottom: 10px;
 }
 
 #summary > *{
@@ -132,4 +133,8 @@ h1.subheader.profile{
 
 #summary .eight.columns{
 	font-size: 16px;
+}
+
+#summary .description{
+	font-size: 11px;
 }
