@@ -15,7 +15,7 @@ class PaymentsController extends AppController {
 			header("Location:$redirect");
 			exit;
 		}
-		$this->Session->setFlash("Payments are currently disabled while we perform maintenance and implement security features. - 7/10/13", "flash_warning");
+		//$this->Session->setFlash("Payments are currently disabled while we perform maintenance and implement security features. - 7/10/13", "flash_warning");
 		//redirect($this->referer());
 		if(isset($listingId) && !empty($listingId)){
 			$listing = $this->Shop->find("first", array("conditions" => array("Shop.id" => $listingId, "Shop.canview" => 1)));

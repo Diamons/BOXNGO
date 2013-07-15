@@ -17,7 +17,7 @@
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       Cake.Test.Case.Model
  * @since         1.2
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
 App::uses('AppModel', 'Model');
@@ -142,15 +142,15 @@ class TestBehavior extends ModelBehavior {
 		switch ($settings['afterSave']) {
 			case 'on':
 				$model->data[$model->alias]['aftersave'] = $string;
-			break;
+				break;
 			case 'test':
 				unset($model->data[$model->alias]['name']);
-			break;
+				break;
 			case 'test2':
 				return false;
 			case 'modify':
 				$model->data[$model->alias]['name'] .= ' ' . $string;
-			break;
+				break;
 		}
 	}
 
@@ -241,7 +241,7 @@ class TestBehavior extends ModelBehavior {
 		switch ($settings['afterDelete']) {
 			case 'on':
 				echo 'afterDelete success';
-			break;
+				break;
 		}
 	}
 

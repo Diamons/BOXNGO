@@ -199,9 +199,9 @@ if (!Configure::check('User.fieldMap')) {
 	Configure::write('User.fieldMap', array(
 		'username'	=> 'username',
 		'password'	=> 'password',
-		'email'		=> 'email',
+		'email'		=> 'username',
 		'status'	=> 'status',
-		'avatar'	=> 'avatar',
+		'avatar'	=> 'profilepic',
 		'locale'	=> 'locale',
 		'timezone'	=> 'timezone',
 		'lastLogin'	=> 'lastLogin'
@@ -214,9 +214,9 @@ if (!Configure::check('User.fieldMap')) {
  */
 if (!Configure::check('User.statusMap')) {
 	Configure::write('User.statusMap', array(
-		'pending'	=> 0,
-		'active'	=> 1,
-		'banned'	=> 2
+		'pending'	=> 'pending',
+		'active'	=> 'user',
+		'banned'	=> 'banned'
 	));
 }
 
@@ -225,11 +225,11 @@ if (!Configure::check('User.statusMap')) {
  */
 if (!Configure::check('User.routes')) {
 	Configure::write('User.routes', array(
-		'login' => array('plugin' => false, 'admin' => false, 'controller' => 'users', 'action' => 'login'),
+		'login' => array('plugin' => false, 'admin' => false, 'controller' => 'users', 'action' => 'index'),
 		'logout' => array('plugin' => false, 'admin' => false, 'controller' => 'users', 'action' => 'logout'),
-		'signup' => array('plugin' => false, 'admin' => false, 'controller' => 'users', 'action' => 'signup'),
-		'forgotPass' => array('plugin' => false, 'admin' => false, 'controller' => 'users', 'action' => 'forgot_password'),
-		'settings' => array('plugin' => false, 'admin' => false, 'controller' => 'users', 'action' => 'settings'),
+		'signup' => array('plugin' => false, 'admin' => false, 'controller' => 'users', 'action' => 'index'),
+		'forgotPass' => array('plugin' => false, 'admin' => false, 'controller' => 'users', 'action' => 'index'),
+		'settings' => array('plugin' => false, 'admin' => false, 'controller' => 'dashboard', 'action' => 'manageaccount'),
 		'profile' => array('plugin' => false, 'admin' => false, 'controller' => 'users', 'action' => 'profile', '{id}') // {slug}, {username}
 	));
 }

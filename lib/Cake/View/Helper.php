@@ -11,7 +11,7 @@
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       Cake.View
  * @since         CakePHP(tm) v 0.2.9
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
 App::uses('Router', 'Routing');
@@ -662,18 +662,16 @@ class Helper extends Object {
 		switch ($field) {
 			case '_method':
 				$name = $field;
-			break;
+				break;
 			default:
 				$name = 'data[' . implode('][', $this->entity()) . ']';
-			break;
 		}
 
 		if (is_array($options)) {
 			$options[$key] = $name;
 			return $options;
-		} else {
-			return $name;
 		}
+		return $name;
 	}
 
 /**
@@ -729,9 +727,8 @@ class Helper extends Object {
 		if (is_array($options)) {
 			$options[$key] = $result;
 			return $options;
-		} else {
-			return $result;
 		}
+		return $result;
 	}
 
 /**
@@ -920,7 +917,7 @@ class Helper extends Object {
 		do {
 			$oldstring = $this->_cleaned;
 			$this->_cleaned = preg_replace('#</*(applet|meta|xml|blink|link|style|script|embed|object|iframe|frame|frameset|ilayer|layer|bgsound|title|base)[^>]*>#i', "", $this->_cleaned);
-		} while ($oldstring != $this->_cleaned);
+		} while ($oldstring !== $this->_cleaned);
 		$this->_cleaned = str_replace(array("&amp;", "&lt;", "&gt;"), array("&amp;amp;", "&amp;lt;", "&amp;gt;"), $this->_cleaned);
 	}
 

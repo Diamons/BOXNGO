@@ -11,7 +11,7 @@
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       Cake.Utility
  * @since         CakePHP(tm) v 0.2.9
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
 /**
@@ -308,7 +308,7 @@ class Inflector {
 				} else {
 					self::$_transliteration = $rules + self::$_transliteration;
 				}
-			break;
+				break;
 
 			default:
 				foreach ($rules as $rule => $pattern) {
@@ -334,7 +334,6 @@ class Inflector {
 					}
 				}
 				self::${$var}['rules'] = $rules + self::${$var}['rules'];
-			break;
 		}
 	}
 

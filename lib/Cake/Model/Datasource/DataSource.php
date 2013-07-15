@@ -15,12 +15,15 @@
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       Cake.Model.Datasource
  * @since         CakePHP(tm) v 0.10.5.1790
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
 /**
  * DataSource base class
  *
+ * DataSources are the link between models and the source of data that models represent.
+ *
+ * @link          http://book.cakephp.org/2.0/en/models/datasources.html#basic-api-for-datasources
  * @package       Cake.Model.Datasource
  */
 class DataSource extends Object {
@@ -354,7 +357,7 @@ class DataSource extends Object {
 							}
 						}
 						$type = $model->getColumnType($model->primaryKey);
-					break;
+						break;
 					case '{$__cakeForeignKey__$}':
 						foreach ($model->associations() as $name) {
 							foreach ($model->$name as $assocName => $assoc) {
@@ -386,7 +389,7 @@ class DataSource extends Object {
 								}
 							}
 						}
-					break;
+						break;
 				}
 				if (empty($val) && $val !== '0') {
 					return false;

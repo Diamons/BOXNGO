@@ -15,8 +15,9 @@
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       Cake.Controller.Component
  * @since         CakePHP(tm) v 2.0
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+
 App::uses('Component', 'Controller');
 App::uses('Hash', 'Utility');
 
@@ -395,7 +396,9 @@ class PaginatorComponent extends Component {
 			}
 			$options['order'] = $order;
 		}
-
+		if (empty($options['order']) && !empty($object->order)) {
+			$options['order'] = $object->order;
+		}
 		return $options;
 	}
 
