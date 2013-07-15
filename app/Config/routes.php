@@ -35,8 +35,8 @@
 	Router::connect('/search', array('controller' => 'searches'));
 	Router::connect('/search/:action/*', array('controller' => 'searches'));
 	Router::connect('/api/:action/*', array('controller' => 'apis'));
-	//Router::connect('/admin', array('controller' => 'admins'));
-	//Router::connect('/admin/:action/*', array('controller' => 'admins'));
+	Router::connect('/admins', array('controller' => 'admins'));
+	Router::connect('/admins/:action/*', array('controller' => 'admins'));
 	Router::connect('/info/*', array('controller' => 'pages', 'action' => 'display'));
 	Router::connect('/schools/*', array('controller' => 'schools', 'action' => 'index'));
 	Router::connect('/browse/*', array('controller' => 'searches', 'action' => 'browse'));
