@@ -10,7 +10,7 @@ class PaymentsController extends AppController {
 	public function pay($listingId=NULL){
 		//REDIRECT TO HTTPS IF REQUEST IS NOT HTTPS
 		if($_SERVER['SERVER_NAME'] !== 'boxngo.local' && $_SERVER['HTTPS']!="on"){
-			$redirect= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+			$redirect= "https://www.".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 			header( "HTTP/1.1 301 Moved Permanently" );
 			header("Location:$redirect");
 			exit;
@@ -60,7 +60,7 @@ class PaymentsController extends AppController {
 	public function process($listingId = NULL){
 		//REDIRECT TO HTTPS IF REQUEST IS NOT HTTPS
 		if($_SERVER['SERVER_NAME'] !== 'boxngo.local' && $_SERVER['HTTPS']!="on"){
-			$redirect= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+			$redirect= "https://www.".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 			header( "HTTP/1.1 301 Moved Permanently" );
 			header("Location:$redirect");
 			exit;
