@@ -39,17 +39,16 @@ $this->end();
 				<div class="eight columns">
 					<div class="row">
 						<div class="featured_seller five columns">
-							<a href="http://theboxngo.com/shops/viewlisting/9122/music-note-necklace-limited-time-offer-ends-july-17-2013-1159pm-est"><img class="featured_seller_image" src="https://www.filepicker.io/api/file/LNUNwdESOOETfZEyI9ud/convert?width=175&height=175&fit=crop" /></a>
-							
-							<h2 class="role">Featured Deal</h2>
+							<a href="http://theboxngo.com/users/profile/38"><img class="featured_seller_image" src="https://www.filepicker.io/api/file/8X3zkMNUQLOxArpFO2n3/convert?width=75&height=75&fit=crop" /></a>
+							<h1 class="user_title"><a href="http://theboxngo.com/users/profile/38">The Awesome Shop</a></h1>
+							<h2 class="role">Featured Seller</h2>
 						</div>
 						<div class="featured_seller_info seven columns">
-							<h1 style="margin-bottom: 25px;" class="user_title"><a href="http://theboxngo.com/shops/viewlisting/9122/music-note-necklace-limited-time-offer-ends-july-17-2013-1159pm-est">$5 Music Note necklace - Limited Time Offer Ends July 17, 2013 11:59PM EST</a></h1>
-							Deal Revealed: Music note necklace $5 only! Limited Time offer, expires July 17, 2013 11:59 PM. Get it while you can!
+							"The Awesome Shop" was one of the first sellers on our site - back when BOX'NGO was for students only. Since then, this seller has listed many handmade pieces of work, exclusives like sold out Aldo shoes, textbooks, and much more. Whatever you're looking for, The Awesome Shop has something to admire or pique your interest regardless.
 						</div>
 					</div>
-					<a href="http://theboxngo.com/shops/viewlisting/9122/music-note-necklace-limited-time-offer-ends-july-17-2013-1159pm-est" class="bar">
-						View our Featured Deal <i class="icon-share-alt"></i>
+					<a href="http://theboxngo.com/users/profile/38" class="bar">
+						View our Featured Seller <i class="icon-share-alt"></i>
 					</a>
 				</div>
 				<div id="recent_activity" class="four columns">
