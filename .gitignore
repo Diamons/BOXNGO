@@ -1,5 +1,4 @@
 /app/tmp/logs
-/app/Plugin
 /app/tmp/cache
 /lib/Cake/Console/Templates/skel/tmp/
 /plugins
