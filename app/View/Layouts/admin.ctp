@@ -48,12 +48,12 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		<div class="row wrapper">
 			<div class="three columns">
 				<ul>
-					<li><a href="/admin/modifycategories">Modify Categories</a></li>
-					<li><a href="/admin/assigncategories">Assign Items to Categories</a></li>
-					<li><a href="/admin/editschools">Edit School Info</a></li>
-					<li><a href="/admin/markup">Markup Calculator</a></li>
-					<li><a href="/admin/paypalorders">Manage PayPal Orders <?php if($orders > 0){ ?><span class="notification"><?php echo $orders; ?></span><?php } ?></a></li>
-					<li><a href="/admin/managecollections">Manage Collections</a></li>
+					<li><a href="/admins/modifycategories">Modify Categories</a></li>
+					<li><a href="/admins/assigncategories">Assign Items to Categories</a></li>
+					<li><a href="/admins/editschools">Edit School Info</a></li>
+					<li><a href="/admins/markup">Markup Calculator</a></li>
+					<li><a href="/admins/paypalorders">Manage PayPal Orders <?php if($orders > 0){ ?><span class="notification"><?php echo $orders; ?></span><?php } ?></a></li>
+					<li><a href="/admins/managecollections">Manage Collections</a></li>
 				</ul>
 			</div>
 			<div class="nine columns">
