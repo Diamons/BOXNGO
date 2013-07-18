@@ -22,14 +22,14 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	<meta property="og:site_name" content="BOX&#039;NGO" />
 	<?php echo $this->fetch('facebookMeta'); ?>
 	<meta property="og:image" content="//theboxngo.com/boxngologofacebook.png" />
-	<?php echo $this->Html->script(array('http://code.jquery.com/jquery-latest.min.js', 'http://code.jquery.com/ui/1.10.0/jquery-ui.js')); ?>
+	<?php echo $this->Html->script(array('//code.jquery.com/jquery-latest.min.js', '//code.jquery.com/ui/1.10.0/jquery-ui.js')); ?>
 	
 	<?php
 		echo $this->fetch('script');
 	?>
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
 <body>
