@@ -25,22 +25,6 @@
 		
 		}
 
-		public function test(){
-			$order = array();
-			$order['Order']['seller_id'] = 38;
-			$order['Order']['buyer_id'] = 2850;
-			$order['Order']['status'] = "pending";
-			$order['Order']['shop_id'] = 9034;
-			$order['Order']['payment_id'] = "51f1d994-4038-4c22-aa75-25ecc0f18369";
-			$order['Order']['shipping_amount'] = 2.50;
-			$order['Order']['shop_amount'] = 35.00;
-			$order['Order']['payment'] = "paypal";
-			$this->Order->save($order);
-			$listing = $this->Shop->read(NULL, 9034);
-			parent::sendEmail("mzhao03@students.poly.edu", "[IMPORTANT] You have an order on BOX'NGO!", "order");
-			parent::sendEmail("jayne.klaustermeier@gmail.com", "Order Confirmation for BOX'NGO!", "orderconfirmation", $listing);
-		}
-
 		public function paypalorders($order=NULL){
 			if(!empty($order)){
 				$orderTmp = $this->Order->read(NULL, $order);
