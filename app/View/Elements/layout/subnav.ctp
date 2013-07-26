@@ -45,7 +45,7 @@
 							</li>
 						</ul>
 					</div>
-					<a id="notifications" href="#"><i class="icon-home"></i></a>
+					<a id="notifications" href="#"><i class="icon-envelope"></i></a>
 				</div>
 			<?php } ?>
 	</div>

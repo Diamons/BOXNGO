@@ -58,6 +58,8 @@ class PaymentsController extends AppController {
 	}
 	
 	public function process($listingId = NULL){
+		if($this->Auth->user('id') == 181)
+			Configure::write('debug', 2); 
 		//REDIRECT TO HTTPS IF REQUEST IS NOT HTTPS
 		if($_SERVER['SERVER_NAME'] !== 'boxngo.local' && $_SERVER['HTTPS']!="on"){
 			$redirect= "https://www.".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];

@@ -81,8 +81,9 @@ div.wrapper{
 }
 
 #user_container+#notifications{
+	height: 33px;
 	padding: 3px 15px 0 15px;
-	font-size: 28px;
+	font-size: 22px;
 }
 
 
