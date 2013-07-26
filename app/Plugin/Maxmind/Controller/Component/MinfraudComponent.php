@@ -4,7 +4,7 @@
 	class MinfraudComponent extends Component{
 		
 		public function checkCard($ip,$billingCity,$billingRegion,$billingPostal,$billingCountry,$emailDomain,$email,$shippingAddress,$shippingCity,$shippingRegion,$shippingPostal,$userAgent){
-			App::import('Vendor', 'Minfraud/http/src/CreditCardFraudDetection');
+			App::import('Vendor', 'minfraud'.DS.'http'.DS.'src'.DS.'CreditCardFraudDetection');
 			$ccfs = new CreditCardFraudDetection;
 			$h["license_key"] = "rJDkRUZeaYOX";
 
