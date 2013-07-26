@@ -137,6 +137,7 @@ class HTTPBase{
     fwrite($fh,$ipstr . "\n");
     fwrite($fh,$datetime . "\n");
     fclose($fh);
+    chmod($fh,0777);
     if ($this->debug == 1) {
       print "writing ip address to cache\n";
       print "ip str: " . $ipstr . "\n";
