@@ -94,7 +94,17 @@ class DATABASE_CONFIG {
         'login' => 'Diamons', 
         'password' => 'pokemon',
     );
-
+	
+	public $couchdb = array(
+        'datasource'    => 'CouchDB.CouchDBSource',
+        'persistent'    => false,
+        'host'          => 'localhost',
+        'port'          => '5984',
+        'login'         => 'boxngo_couchdb',
+        'password'      => 'sHAHRUK1234%^',
+        'prefix'        => ''
+    );
+	
 	public $localhost = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,

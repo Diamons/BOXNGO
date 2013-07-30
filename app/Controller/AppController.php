@@ -34,11 +34,14 @@ App::uses('Controller', 'Controller');
  
 App::uses('Sanitize', 'Utility');
 class AppController extends Controller {
-	var $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread');
+	var $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread', 'NewsItem');
 	var $components = array('UserLogin', 'Cookie', 'Auth', 'Security', 'Session');
 	var $helpers = array('Form');
 	
 	function beforeFilter(){
+		$data = array('NewsItem' => array('title' => 'My new title'));
+		if(!$this->NewsItem->save($data))
+			debug($this->NewsItem->validationErrors);
 		parent::beforeFilter(); 
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
