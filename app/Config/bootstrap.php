@@ -197,8 +197,8 @@ define('FORUM_PREFIX', 'forum_'); // Table prefix, must not be empty
 CakePlugin::load('Shipping', array('bootstrap' => false, 'routes' => false));
 CakePlugin::load('Stripe', array('bootstrap' => false, 'routes' => false));
 CakePlugin::load('Mailchimp', array('bootstrap' => array('config')));
-//CakePlugin::load('Mongodb');
-CakePlugin::load('CouchDB');
+CakePlugin::load('Mongodb');
+//CakePlugin::load('CouchDB');
 CakePlugin::load('Utility', array('bootstrap' => true, 'core' => true, 'routes' => true));
 CakePlugin::load('Admin', array('bootstrap' => true, 'core' => true, 'routes' => true));
 CakePlugin::load('Maxmind');

@@ -86,23 +86,11 @@ class DATABASE_CONFIG {
 
 	public $mongodb = array(
         'datasource' => 'Mongodb.MongodbSource',
-        'host' => 'linus.mongohq.com',
-        'database' => 'app9620009',
-        'port' => 10085,
+        'host' => 'localhost',
+        'database' => 'local',
+        'port' => 27017,
         'prefix' => '',
-		'persistent' => 'true',
-        'login' => 'Diamons', 
-        'password' => 'pokemon',
-    );
-	
-	public $couchdb = array(
-        'datasource'    => 'CouchDB.CouchDBSource',
-        'persistent'    => false,
-        'host'          => 'localhost',
-        'port'          => '5984',
-        'login'         => 'boxngo_couchdb',
-        'password'      => 'sHAHRUK1234%^',
-        'prefix'        => ''
+		'persistent' => true,
     );
 	
 	public $localhost = array(

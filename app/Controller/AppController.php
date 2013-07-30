@@ -40,8 +40,7 @@ class AppController extends Controller {
 	
 	function beforeFilter(){
 		$data = array('NewsItem' => array('title' => 'My new title'));
-		if(!$this->NewsItem->save($data))
-			debug($this->NewsItem->validationErrors);
+
 		parent::beforeFilter(); 
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
