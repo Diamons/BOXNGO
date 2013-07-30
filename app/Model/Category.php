@@ -19,6 +19,7 @@
 
 		public function findNonEmpty(){
 			$categories = $this->find("all");
+			$this->recursive = 1;
 			$newCategories;
 			$count = 0;
 			foreach($categories as $a){

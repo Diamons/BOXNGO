@@ -8,8 +8,38 @@
 ?>
 
 <div class="wrapper" id="content">
+		<div id="summary">	
+			<div class="row">
+				<div class="four columns">
+					<a href="<?php echo $listing['Shop']['full_url']; ?>"><?php echo $this->Html->image($listing['Image'][0]['url'], array('alt' => h($listing['Shop']['name']))); ?></a>
+				</div>
+				<div class="eight columns">
+					<a href="<?php echo $listing['Shop']['full_url']; ?>"><?php echo nl2br(h($listing['Shop']['name'])); ?></a>
+					<div class="description"><?php echo h($listing['Shop']['description']); ?></div>
+				</div>
+			</div>
+			<h1 class="header">Purchase Summary</h1>
+			<div class="row">
+				<div class="four columns">Shipping</div>
+				<div class="eight columns"><b>$<?php echo $listing['Shop']['shipping']; ?></b></div>
+			</div>
+			<div class="row">
+				<div class="four columns">Price</div>
+				<div class="eight columns"><b>$<?php echo $listing['Shop']['price']; ?></b></div>
+			</div>
+			<?php if($price['applied'] == true){ ?>
+			<div class="coupon_applied row">
+				<div class="four columns">Coupon</div>
+				<div class="eight columns"><b>-$<?php echo number_format($price['Price']['discount'], 2); ?></b></div>
+			</div>
+			<?php } ?>
+			<div class="total row">
+				<div class="four columns">Total</div>
+				<div class="eight columns"><b>$<?php echo number_format($price['Price']['total_price'], 2); ?></b></div>
+			</div>
+		</div>
 	<div class="row">
-		<div class="nine columns">
+		<div>
 			<?php echo $this->Form->create('Payment', array('id' => 'PaymentForm', 'data-coupon' => '/payments/pay/'.$listing['Shop']['id'], 'action' => 'process/'.$listing['Shop']['id'])); ?>
 			<div id="shipping_pane">
 				<h1 class="subheader">1. Shipping Information</h1>
@@ -49,38 +79,13 @@
 						  data-image="<?php echo $listing['Image'][0]['url']; ?>"
  						  data-amount="<?php echo ($price['Price']['total_price'] * 100); ?>" 
 						  data-name="<?php echo h($listing['Shop']['name']); ?>"
-						  data-description="<?php echo h($listing['Shop']['description']); ?>"
+						  data-description="Purchasing from user <?php echo $listing['User']['display_name']; ?> at TheBOXNGO.com"
 						  >
 						</script>
 					</div>
 				</div>
 			</div>
 			<?php echo $this->Form->end(); ?>
-		</div>
-
-		<div class="three columns">
-			<div id="summary">
-					<a href="<?php echo $this->webroot; ?>shops/viewlisting/<?php echo $listing['Shop']['id']; ?>"><?php echo nl2br(h($listing['Shop']['name'])); ?></a>
-				<h1 class="header">Purchase Summary</h1>
-				<div class="row">
-					<div class="four columns">Shipping</div>
-					<div class="eight columns"><b>$<?php echo $listing['Shop']['shipping']; ?></b></div>
-				</div>
-				<div class="row">
-					<div class="four columns">Price</div>
-					<div class="eight columns"><b>$<?php echo $listing['Shop']['price']; ?></b></div>
-				</div>
-				<?php if($price['applied'] == true){ ?>
-				<div class="coupon_applied row">
-					<div class="four columns">Coupon</div>
-					<div class="eight columns"><b>-$<?php echo number_format($price['Price']['discount'], 2); ?></b></div>
-				</div>
-				<?php } ?>
-				<div class="total row">
-					<div class="four columns">Total</div>
-					<div class="eight columns"><b>$<?php echo number_format($price['Price']['total_price'], 2); ?></b></div>
-				</div>
-			</div>
 		</div>
 		
 	</div>
