@@ -31,21 +31,21 @@ App::uses('Controller', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
- 
+
 App::uses('Sanitize', 'Utility');
 class AppController extends Controller {
-	var $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread', 'NewsItem');
+	var $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread', 'NotificationItem');
 	var $components = array('UserLogin', 'Cookie', 'Auth', 'Security', 'Session');
 	var $helpers = array('Form');
-	
-	function beforeFilter(){
-		$data = array('NewsItem' => array('title' => 'My new title'));
 
-		parent::beforeFilter(); 
+	function beforeFilter(){
+		$data = array('NotificationItem' => array('title' => 'My new title'));
+		$this->NotificationItem->save($data);
+		parent::beforeFilter();
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
 		$this->set("layoutCategories", $this->Category->findNonEmpty());
-		
+
 		$cookie = $this->Cookie->read('al');
 		if(!empty($cookie) && !$this->Auth->loggedIn())
 			$this->Auth->login($this->UserLogin->checkUser($cookie, $this->Autologin->find("first", array("conditions" => array("Autologin.hash" => $cookie)))));
@@ -60,7 +60,7 @@ class AppController extends Controller {
 			$this->Auth->login($user['User']);
 		} */
 	}
-	
+
 	public function sendEmail($to="shahruksemail@gmail.com",$subject="TEST",$template="default", $variables=NULL){
 		App::uses('CakeEmail', 'Network/Email');
 		$email = new CakeEmail('default');
@@ -71,9 +71,9 @@ class AppController extends Controller {
 		->emailFormat('html');
 		$email->viewVars(array("domain" => "http://theboxngo.com/", "variables" => $variables));
 		$email->send();
-		
+
 	}
-	
+
 	public function sendTradeEmail($to, $from, $subject, $listingId, $message, $contact){
 		App::uses('CakeEmail', 'Network/Email');
 		$email = new CakeEmail('default');
@@ -84,7 +84,7 @@ class AppController extends Controller {
 		->emailFormat('html');
 		$email->viewVars(array("message" => nl2br(h($message)), "contact" => nl2br(h($contact)), "domain" => "http://theboxngo.com/", "listing" => $listingId));
 		$email->send();
-		
-		
+
+
 	}
 }
