@@ -86,7 +86,6 @@ class FilterTest extends TestCase {
 			'lineBreaks' => Decoda::NL_CONVERT,
 			'autoClose' => false,
 			'preserveTags' => false,
-			'onlyTags' => false,
 			'contentPattern' => '',
 			'stripContent' => false,
 			'parent' => array(),

@@ -10,6 +10,7 @@ namespace Decoda;
 use Decoda\Exception\MissingFilterException;
 use Decoda\Exception\MissingHookException;
 use Decoda\Exception\MissingLocaleException;
+use \OutOfRangeException;
 use \InvalidArgumentException;
 
 /**
@@ -86,8 +87,7 @@ class Decoda {
 		'xhtmlOutput' => false,
 		'escapeHtml' => true,
 		'strictMode' => true,
-		'maxNewlines' => 3,
-		'lineBreaks' => true
+		'maxNewlines' => 3
 	);
 
 	/**
@@ -303,49 +303,6 @@ class Decoda {
 	}
 
 	/**
-	 * Remove any newlines above the max.
-	 *
-	 * @param string $string
-	 * @return string
-	 */
-	public function cleanNewlines($string) {
-		$string = trim($string);
-
-		if ($max = $this->getConfig('maxNewlines')) {
-			$string = preg_replace('/\n{' . ($max + 1) . ',}/', str_repeat("\n", $max), $string);
-		}
-
-		return $string;
-	}
-
-	/**
-	 * Convert newlines to line breaks.
-	 *
-	 * @param string $string
-	 * @return string
-	 */
-	public function convertLineBreaks($string) {
-		if ($this->getConfig('lineBreaks')) {
-			return nl2br($string, $this->getConfig('xhtmlOutput'));
-		}
-
-		return $string;
-	}
-
-	/**
-	 * Convert carriage returns to newlines.
-	 *
-	 * @param string $string
-	 * @return string
-	 */
-	public function convertNewlines($string) {
-		$string = str_replace("\r\n", "\n", $string);
-		$string = str_replace("\r", "\n", $string);
-
-		return $string;
-	}
-
-	/**
 	 * Apply default filters and hooks if none are set.
 	 *
 	 * @return \Decoda\Decoda
@@ -378,22 +335,6 @@ class Decoda {
 		$this->_config['disabled'] = (bool) $status;
 
 		return $this;
-	}
-
-	/**
-	 * Normalize line feeds and escape HTML characters.
-	 *
-	 * @param string $string
-	 * @return string
-	 */
-	public function escape($string) {
-		$string = $this->convertNewlines($string);
-
-		if ($this->getConfig('escapeHtml')) {
-			$string = str_replace(array('<', '>'), array('&lt;', '&gt;'), $string);
-		}
-
-		return $string;
 	}
 
 	/**
@@ -615,12 +556,12 @@ class Decoda {
 		if ($this->_isParseable($string)) {
 			$string = $this->_parse($this->_extractChunks($string));
 		} else {
-			$string = $this->convertLineBreaks($string);
+			$string = nl2br($string, $this->getConfig('xhtmlOutput'));
 		}
 
 		$string = $this->_triggerHook('afterParse', $string);
 
-		$this->_parsed = $this->cleanNewlines($string);
+		$this->_parsed = $this->_cleanNewlines($string);
 
 		if ($echo) {
 			echo $this->_parsed;
@@ -677,7 +618,7 @@ class Decoda {
 		$this->_whitelist = array();
 		$this->_parsed = '';
 		$this->_stripped = '';
-		$this->_string = $this->escape($string);
+		$this->_string = $this->_escape($string);
 
 		if ($flush) {
 			$this->resetFilters();
@@ -759,9 +700,6 @@ class Decoda {
 				case 'maxNewlines':
 					$this->setMaxNewlines($value);
 				break;
-				case 'lineBreaks':
-					$this->setLineBreaks($value);
-				break;
 			}
 		}
 
@@ -795,18 +733,6 @@ class Decoda {
 	 */
 	public function setEscaping($status = true) {
 		$this->_config['escapeHtml'] = (bool) $status;
-
-		return $this;
-	}
-
-	/**
-	 * Toggle new line to line break conversion.
-	 *
-	 * @param bool $status
-	 * @return \Decoda\Decoda
-	 */
-	public function setLineBreaks($status = true) {
-		$this->_config['lineBreaks'] = (bool) $status;
 
 		return $this;
 	}
@@ -908,7 +834,7 @@ class Decoda {
 		if ($this->_isParseable($string)) {
 			$string = $this->_strip($this->_extractChunks($string));
 		} else {
-			$string = $this->convertLineBreaks($string);
+			$string = nl2br($string, $this->getConfig('xhtmlOutput'));
 		}
 
 		$string = $this->_triggerHook('afterStrip', $string);
@@ -917,7 +843,7 @@ class Decoda {
 			$string = strip_tags($string);
 		}
 
-		$this->_stripped = $this->cleanNewlines($string);
+		$this->_stripped = $this->_cleanNewlines($string);
 
 		if ($echo) {
 			echo $this->_stripped;
@@ -964,7 +890,7 @@ class Decoda {
 			$type = self::TAG_CLOSE;
 
 		// Opening tag
-		} else if (preg_match('/' . preg_quote($oe, '/') . '([-a-z0-9\*]+)(.*?)' . preg_quote($ce, '/') . '/i', $string, $matches)) {
+		} else if (preg_match('/' . preg_quote($oe, '/') . '([-a-z0-9]+)(.*?)' . preg_quote($ce, '/') . '/i', $string, $matches)) {
 			$tag = trim($matches[1]);
 			$type = self::TAG_OPEN;
 		}
@@ -1110,7 +1036,7 @@ class Decoda {
 						continue;
 					}
 
-					if (!$parent['onlyTags']) {
+					if (!$parent['childrenWhitelist'] && !$parent['childrenBlacklist']) {
 						if (!empty($prevChunk) && $prevChunk['type'] === self::TAG_NONE) {
 							$chunk['text'] = $prevChunk['text'] . $chunk['text'];
 							array_pop($clean);
@@ -1228,6 +1154,39 @@ class Decoda {
 	}
 
 	/**
+	 * Remove any newlines above the max.
+	 *
+	 * @param string $string
+	 * @return string
+	 */
+	protected function _cleanNewlines($string) {
+		$string = trim($string);
+
+		if ($max = $this->getConfig('maxNewlines')) {
+			$string = preg_replace('/\n{' . ($max + 1) . ',}/', str_repeat("\n", $max), $string);
+		}
+
+		return $string;
+	}
+
+	/**
+	 * Normalize line feeds and escape HTML characters.
+	 *
+	 * @param string $string
+	 * @return string
+	 */
+	protected function _escape($string) {
+		$string = str_replace("\r\n", "\n", $string);
+		$string = str_replace("\r", "\n", $string);
+
+		if ($this->getConfig('escapeHtml')) {
+			$string = str_replace(array('<', '>'), array('&lt;', '&gt;'), $string);
+		}
+
+		return $string;
+	}
+
+	/**
 	 * Scan the string stack and extract any tags and chunks of text that were detected.
 	 *
 	 * @param string $string
@@ -1238,8 +1197,6 @@ class Decoda {
 		$strLength = mb_strlen($string);
 		$openBracket = $this->getConfig('open');
 		$closeBracket = $this->getConfig('close');
-		$hasList = isset($this->_filters['List']);
-		$starOpen = false;
 
 		while ($strPos < $strLength) {
 			$tag = array();
@@ -1282,40 +1239,6 @@ class Decoda {
 					// Valid tag
 					if ($newTag) {
 						$tag = $newTag;
-
-						// Special handling for star list items
-						if ($hasList) {
-							if ($tag['type'] === self::TAG_OPEN) {
-
-								// A new star item opened
-								if ($tag['tag'] === '*' && !$starOpen) {
-									$starOpen = true;
-
-								// Another star item appeared, so close the previous
-								} else if ($starOpen && $tag['tag'] === '*') {
-									$this->_chunks[] = array(
-										'tag' => '*',
-										'type' => self::TAG_CLOSE,
-										'text' => '[/*]',
-										'attributes' => array()
-									);
-								}
-
-							} else if ($tag['type'] === self::TAG_CLOSE) {
-								if ($starOpen && in_array($tag['tag'], array('list', 'olist'))) {
-									$starOpen = false;
-
-									$this->_chunks[] = array(
-										'tag' => '*',
-										'type' => self::TAG_CLOSE,
-										'text' => '[/*]',
-										'attributes' => array()
-									);
-								} else if ($tag['tag'] === '*') {
-									$starOpen = false;
-								}
-							}
-						}
 
 					// Not a valid tag
 					} else {
@@ -1519,6 +1442,7 @@ class Decoda {
 	 */
 	protected function _parse(array $nodes, array $wrapper = array()) {
 		$parsed = '';
+		$xhtml = $this->getConfig('xhtmlOutput');
 
 		if (!$nodes) {
 			return $parsed;
@@ -1527,7 +1451,7 @@ class Decoda {
 		foreach ($nodes as $node) {
 			if (is_string($node)) {
 				if (!$wrapper) {
-					$parsed .= $this->convertLineBreaks($node);
+					$parsed .= nl2br($node, $xhtml);
 				} else {
 					$parsed .= $node;
 				}
@@ -1548,6 +1472,7 @@ class Decoda {
 	 */
 	protected function _strip(array $nodes, array $wrapper = array()) {
 		$parsed = '';
+		$xhtml = $this->getConfig('xhtmlOutput');
 
 		if (!$nodes) {
 			return $parsed;
@@ -1556,7 +1481,7 @@ class Decoda {
 		foreach ($nodes as $node) {
 			if (is_string($node)) {
 				if (!$wrapper) {
-					$parsed .= $this->convertLineBreaks($node);
+					$parsed .= nl2br($node, $xhtml);
 				} else {
 					$parsed .= $node;
 				}

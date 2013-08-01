@@ -6,7 +6,6 @@
  */
 
 App::uses('ModelBehavior', 'Model');
-App::uses('CakeEmail', 'Network/Email');
 
 /**
  * A CakePHP Behavior that moderates and validates comments to check for spam.
@@ -23,7 +22,6 @@ App::uses('CakeEmail', 'Network/Email');
  *			`name` VARCHAR(50) NOT NULL,
  *			`email` VARCHAR(50) NOT NULL,
  *			`website` VARCHAR(50) NOT NULL,
- *			`ip` VARCHAR(50) NOT NULL,
  *			`content` TEXT NOT NULL,
  *			`created` DATETIME NULL DEFAULT NULL,
  *			`modified` DATETIME NULL DEFAULT NULL,
@@ -63,7 +61,7 @@ class SpamBlockerBehavior extends ModelBehavior {
 		'keywords' => array(
 			'levitra', 'viagra', 'casino', 'sex', 'loan', 'finance', 'slots', 'debt', 'free', 'stock', 'debt',
 			'marketing', 'rates', 'ad', 'bankruptcy', 'homeowner', 'discreet', 'preapproved', 'unclaimed',
-			'email', 'click', 'unsubscribe', 'buy', 'sell', 'sales', 'earn', 'cheap', 'sale'
+			'email', 'click', 'unsubscribe', 'buy', 'sell', 'sales', 'earn'
 		),
 		'blacklist' => array('.html', '.info', '.de', '.pl', '.cn', '.ru', '.biz'),
 		'columnMap' => array(
@@ -76,8 +74,7 @@ class SpamBlockerBehavior extends ModelBehavior {
 			'slug'			=> 'slug',
 			'title'			=> 'title',
 			'status'		=> 'status',
-			'points'		=> 'points',
-			'ip'			=> 'ip'
+			'points'		=> 'points'
 		),
 		'statusMap' => array(
 			'pending'	=> 0,
@@ -121,7 +118,6 @@ class SpamBlockerBehavior extends ModelBehavior {
 			$website = $data[$columnMap['website']];
 			$content = $data[$columnMap['content']];
 			$author = $data[$columnMap['author']];
-			$email = $data[$columnMap['email']];
 
 			// If referrer does not come from the originating domain
 			$referrer = env('HTTP_REFERER');
@@ -166,7 +162,7 @@ class SpamBlockerBehavior extends ModelBehavior {
 
 			if ($comments) {
 				foreach ($comments as $comment) {
-					if (in_array($comment[$model->alias][$columnMap['status']], array($statusMap['spam'], $statusMap['deleted']))) {
+					if ($comment[$model->alias][$columnMap['status']] == $statusMap['spam']) {
 						--$points;
 					}
 
@@ -258,33 +254,11 @@ class SpamBlockerBehavior extends ModelBehavior {
 
 			// Random character match
 			// -1 point per 5 consecutive consonants
-			$totalMatches = preg_match_all('/[^aAeEiIoOuU\s]{5,}+/i', $content);
+			preg_match_all('/[^aAeEiIoOuU\s]{5,}+/i', $content, $matches);
+			$totalConsonants = count($matches[0]);
 
-			if ($totalMatches > 0) {
-				$points = $points - $totalMatches;
-			}
-
-			// Email mostly consonants
-			// -5 points
-			if (preg_match('/[^aAeEiIoOuU\s]{5,}+/i', strstr($email, '@', true))) {
-				$points = $points - 5;
-			}
-
-			// IP has been marked as spam before
-			// -1 point per filtered IP
-			if (!empty($data[$columnMap['ip']])) {
-				$blockedIPs = $model->find('count', array(
-					'conditions' => array(
-						$columnMap['ip'] => $data[$columnMap['ip']],
-						$columnMap['status'] => array($statusMap['spam'], $statusMap['deleted'])
-					),
-					'recursive' => -1,
-					'contain' => false
-				));
-
-				if ($blockedIPs > 0) {
-					$points = $points - $blockedIPs;
-				}
+			if ($totalConsonants > 0) {
+				$points = $points - $totalConsonants;
 			}
 		}
 
@@ -324,7 +298,7 @@ class SpamBlockerBehavior extends ModelBehavior {
 	 *
 	 * @param Model $model
 	 * @param array $data
-	 * @param int $status
+	 * @param array $status
 	 * @param int $points
 	 * @return void
 	 */
@@ -333,63 +307,39 @@ class SpamBlockerBehavior extends ModelBehavior {
 		$columnMap = $settings['columnMap'];
 
 		if ($settings['model'] && $settings['link'] && $settings['email']) {
-			$Article = ClassRegistry::init(Inflector::classify($settings['model']));
+			$fields = array($columnMap['id'], $columnMap['title']);
 
-			$result = $Article->find('first', array(
+			if ($settings['useSlug']) {
+				$fields[] = $columnMap['slug'];
+			}
+
+			// Get result from foreign model
+			$article = ClassRegistry::init(Inflector::classify($settings['model']));
+			$result = $article->find('first', array(
+				'fields' => $fields,
 				'conditions' => array($columnMap['id'] => $data[$columnMap['foreignKey']]),
 				'recursive' => -1,
 				'contain' => false
 			));
 
-			// Build variables
-			$link = str_replace('{id}', $result[$Article->alias][$columnMap['id']], $settings['link']);
+			// Format the link
+			$link = str_replace('{id}', $result[$article->alias][$columnMap['id']], $settings['link']);
 
 			if ($settings['useSlug']) {
-				$link = str_replace('{slug}', $result[$Article->alias][$columnMap['slug']], $settings['link']);
+				$link = str_replace('{slug}', $result[$article->alias][$columnMap['slug']], $settings['link']);
 			}
 
-			$title = $result[$Article->alias][$columnMap['title']];
-			$email = $data[$columnMap['email']];
-			$author = $data[$columnMap['author']];
+			// Build message
+			$title = $result[$article->alias][$columnMap['title']];
+			$statuses = array_flip($settings['statusMap']);
+
+			$message  = sprintf("A new comment has been posted for: %s\n\n", $link);
+			$message .= sprintf("Name: %s <%s>\n", $data[$columnMap['author']], $data[$columnMap['email']]);
+			$message .= sprintf("Status: %s (%s points)\n", $statuses[$status], $points);
+			$message .= sprintf("Message:\n\n%s", $data[$columnMap['content']]);
 
 			// Send email
-			$Email = new CakeEmail();
-			$Email
-				->to($settings['email'])
-				->from(array($email => $author))
-				->subject('Comment Approval: ' . $title)
-				->helpers(array('Html', 'Time'))
-				->viewVars(array(
-					'settings' => $settings,
-					'article' => $result,
-					'comment' => $data,
-					'link' => $link,
-					'status' => $status,
-					'points' => $points
-				));
-
-			if (Configure::read('debug')) {
-				$Email->transport('Debug')->config(array('log' => true));
-			}
-
-			// Use a custom template
-			if (is_string($settings['sendEmail'])) {
-				$Email
-					->template($settings['sendEmail'])
-					->emailFormat('both')
-					->send();
-
-			// Send a simple message
-			} else {
-				$statuses = array_flip($settings['statusMap']);
-
-				$message  = sprintf("A new comment has been posted for: %s\n\n", $link);
-				$message .= sprintf("Name: %s <%s>\n", $author, $email);
-				$message .= sprintf("Status: %s (%s points)\n", $statuses[$status], $points);
-				$message .= sprintf("Message:\n\n%s", $data[$columnMap['content']]);
-
-				$Email->send($message);
-			}
+			mail($settings['email'], 'Comment Approval: ' . $title, $message, 'From: ' . $data[$columnMap['author']] . ' <' . $data[$columnMap['email']] . '>');
 		}
 	}
 

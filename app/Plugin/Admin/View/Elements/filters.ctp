@@ -27,13 +27,7 @@
 		} ?>
 
 		<div class="control-group <?php echo implode(' ', $classes); ?>">
-			<?php $label = $data['title'];
-
-			if (!empty($data['belongsTo'])) {
-				$label .= ' <span class="icon-search"></span>';
-			}
-
-			echo $this->Form->label($field, $label, array('class' => 'control-label', 'escape' => false)); ?>
+			<?php echo $this->Form->label($field, $data['title'], array('class' => 'control-label')); ?>
 
 			<div class="controls">
 				<?php

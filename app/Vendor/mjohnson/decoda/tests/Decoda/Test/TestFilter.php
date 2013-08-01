@@ -106,14 +106,12 @@ class TestFilter extends AbstractFilter {
 			'htmlTag' => 'parentWhitelist',
 			'displayType' => Decoda::TYPE_BLOCK,
 			'allowedTypes' => Decoda::TYPE_BLOCK,
-			'onlyTags' => true,
 			'childrenWhitelist' => array('whiteChild')
 		),
 		'parentBlacklist' => array(
 			'htmlTag' => 'parentBlacklist',
 			'displayType' => Decoda::TYPE_BLOCK,
 			'allowedTypes' => Decoda::TYPE_BLOCK,
-			'onlyTags' => true,
 			'childrenBlacklist' => array('whiteChild')
 		),
 		'whiteChild' => array(

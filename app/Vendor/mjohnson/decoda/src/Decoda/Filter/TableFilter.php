@@ -25,7 +25,6 @@ class TableFilter extends AbstractFilter {
 			'displayType' => Decoda::TYPE_BLOCK,
 			'allowedTypes' => Decoda::TYPE_BLOCK,
 			'lineBreaks' => Decoda::NL_REMOVE,
-			'onlyTags' => true,
 			'childrenWhitelist' => array('tr', 'thead', 'tbody', 'tfoot'),
 			'attributes' => array(
 				'class' => self::ALNUM
@@ -39,7 +38,6 @@ class TableFilter extends AbstractFilter {
 			'displayType' => Decoda::TYPE_BLOCK,
 			'allowedTypes' => Decoda::TYPE_BLOCK,
 			'lineBreaks' => Decoda::NL_REMOVE,
-			'onlyTags' => true,
 			'childrenWhitelist' => array('tr'),
 			'parent' => array('table')
 		),
@@ -48,7 +46,6 @@ class TableFilter extends AbstractFilter {
 			'displayType' => Decoda::TYPE_BLOCK,
 			'allowedTypes' => Decoda::TYPE_BLOCK,
 			'lineBreaks' => Decoda::NL_REMOVE,
-			'onlyTags' => true,
 			'childrenWhitelist' => array('tr'),
 			'parent' => array('table')
 		),
@@ -57,7 +54,6 @@ class TableFilter extends AbstractFilter {
 			'displayType' => Decoda::TYPE_BLOCK,
 			'allowedTypes' => Decoda::TYPE_BLOCK,
 			'lineBreaks' => Decoda::NL_REMOVE,
-			'onlyTags' => true,
 			'childrenWhitelist' => array('tr'),
 			'parent' => array('table')
 		),
@@ -66,7 +62,6 @@ class TableFilter extends AbstractFilter {
 			'displayType' => Decoda::TYPE_BLOCK,
 			'allowedTypes' => Decoda::TYPE_BLOCK,
 			'lineBreaks' => Decoda::NL_REMOVE,
-			'onlyTags' => true,
 			'childrenWhitelist' => array('td', 'th'),
 			'parent' => array('table', 'thead', 'tbody', 'tfoot')
 		),

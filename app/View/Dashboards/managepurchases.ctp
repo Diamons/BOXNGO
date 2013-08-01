@@ -5,5 +5,5 @@ $this->end();
 ?>
 <div id="dashmenu"><span>Manage my Purchases</span></div>
 <div class="dashwrapper">
-	<?php echo $this->element('dashboard/orderstatus'); ?>
+	<?php echo $this->element('dashboard/orderstatus', array('purchase' => true)); ?>
 </div>
