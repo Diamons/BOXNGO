@@ -51,8 +51,8 @@
 			)
 		);
 		
-		var $hasMany = array('Image', 'Favorite');
-		var $belongsTo = array('User', 'Category');
+		public $hasMany = array('Image', 'Favorite');
+		public $belongsTo = array('User', 'Category');
 		
 		function minprice($check, $limit){
 			if($check['price'] >= $limit)
@@ -131,7 +131,7 @@
 		}
 		
 		public function afterFind($results, $primary=FALSE){
-
+			parent::afterFind($results, $primary);
 			foreach($results as &$a){
 				if(isset($a['Shop']['permalink']))
 					$a['Shop']['full_url'] = $this->getFullUrl($a['Shop']['id'], $a['Shop']['permalink']);
@@ -140,6 +140,7 @@
 		}
 
 		function beforeSave($data = array()){
+			parent::beforeSave($data);
 			if(isset($this->data['Shop']['quantity']) && $this->data['Shop']['quantity'] <= 0){
 				$this->data['Shop']['quantity'] = 0;
 				$this->data['Shop']['canview'] = 2;

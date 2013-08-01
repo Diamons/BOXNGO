@@ -1,7 +1,7 @@
 <?php
 	class School extends AppModel{
 		
-		var $validate = array(
+		public $validate = array(
 			'domain' => array(
 				'rule' => 'isUnique',
 				'message' => 'That domain is already taken!'

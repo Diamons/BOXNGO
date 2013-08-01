@@ -1,8 +1,8 @@
 <?php
 	class Category extends AppModel{
-		var $displayField = 'display_name';
-		var $order = "Category.display_name ASC";
-		var $hasMany = array('Shop');
+		public $displayField = 'display_name';
+		public $order = "Category.display_name ASC";
+		public $hasMany = array('Shop');
 
 		public $validate = array(
 			'short_name' => array(
@@ -32,6 +32,7 @@
 		}
 
 		public function beforeSave($options = array()){
+			parent::beforeSave($options);
 			if(!empty($this->data[$this->alias]['short_name'])){
 				$this->data[$this->alias]['short_name'] = strtolower(str_replace(" ", "-", trim($this->data[$this->alias]['short_name'])));
 			}

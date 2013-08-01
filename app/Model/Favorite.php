@@ -1,4 +1,4 @@
 <?php
 	class Favorite extends AppModel{
-		var $belongsTo = array('Shop');
+		public $belongsTo = array('Shop');
 	}

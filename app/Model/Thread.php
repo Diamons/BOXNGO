@@ -19,9 +19,10 @@
 			)
 		);
 
-		var $hasMany = array('Message');
+		public $hasMany = array('Message');
 		
 		function beforeSave($data = array()){
+			parent::beforeSave($data);
 			if(isset($this->data['Thread']['message'])){
 				$this->data['Thread']['message'] = trim($this->data['Thread']['message']);
 			}

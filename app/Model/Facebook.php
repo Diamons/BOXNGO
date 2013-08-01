@@ -1,8 +1,8 @@
 <?php
 	class Facebook extends AppModel{
 		
-		var $useTable = false;
-		var $httpSocket = NULL;
+		public $useTable = false;
+		public $httpSocket = NULL;
 		
 		public function __construct($id = false, $table = null, $ds = null) {
 			App::uses('HttpSocket', 'Network/Http');

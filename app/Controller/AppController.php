@@ -39,8 +39,9 @@ class AppController extends Controller {
 	var $helpers = array('Form');
 
 	function beforeFilter(){
-		$data = array('NotificationItem' => array('title' => 'My new title'));
-		$this->NotificationItem->save($data);
+		debug(Cache::read('notifications.38', 'notifications'));
+		$data = array('NotificationItem' => array('notification_id' => 1, 'attachment_id' => 11, 'user_id' => 38, 'other_user' => 34));
+		debug($this->NotificationItem->save($data));
 		parent::beforeFilter();
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));

@@ -101,7 +101,7 @@
 			)
 		);
 		
-		var $hasMany = array('Favorite', 'Shop', 
+		public $hasMany = array('Favorite', 'Shop', 
 			'Purchase' => array('className' => 'Order', 'foreignKey' => 'buyer_id'), 
 			'Order' => array('className' => 'Order', 'foreignKey' => 'seller_id'),
 			'ForumModerator' => array('className' => 'Forum.Moderator'),
@@ -140,6 +140,7 @@
 		}
 		
 		public function afterFind($results, $primary = FALSE){
+			parent::afterFind($results, $primary);
 			if(isset($results[0]['User']) && empty($results[0]['User']['display_name'])){
 				for($i = 0; $i < count($results); $i++){
 					$a = explode("@", $results[$i]['User']['username']);
@@ -161,6 +162,7 @@
 		}
 		
 		public function beforeSave($options = array()) {
+			parent::beforeSave($options);
 			if (isset($this->data[$this->alias]['password'])) {
 				//$this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
 				$this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);

@@ -6,6 +6,7 @@
 		public $actsAs = array("ShopUrl");
 		
 		public function afterFind($results, $primary=FALSE){
+			parent::afterFind();
 			if(isset($results[0]['CollectionItem'])){
 				foreach($results as &$a){
 					for($i = 0; $i < count($a['CollectionItem']); $i++){

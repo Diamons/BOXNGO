@@ -96,6 +96,7 @@
  *		'persistent' => true, // [optional] set this to false for non-persistent connections
  *	));
  *//*
+ * 
 Cache::config('default', array(
 	'engine' => 'Redis',
 	'prefix' => Inflector::slug(APP_DIR) . '_',
@@ -106,7 +107,10 @@ Cache::config('default', array(
 	'timeout' => 0,
 	'persistent' => true
 ));
-/**
+
+/*
+ * 
+ *
  * The settings below can be used to set additional paths to models, views and controllers.
  *
  * App::build(array(
@@ -168,6 +172,18 @@ Cache::config('default', array(
  *
  * ));
  */
+
+Cache::config('default', array(
+	'engine' => 'Redis', //[required]
+	'duration'=> 3600, //[optional]
+	'probability'=> 100, //[optional]
+	'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
+	'server' => '127.0.0.1', // localhost
+	'port' => 6379, // default port 6379
+	'timeout' => 0 ,// timeout in seconds, 0 = unlimited
+	'persistent' => true, // [optional] set this to false for non-persistent connections
+));
+
 Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'

@@ -13,8 +13,9 @@
 			)
 		);
 		
-		var $belongsTo = array('Thread', 'User');
+		public $belongsTo = array('Thread', 'User');
 		function beforeSave($data = array()){
+			parent::beforeSave($data);
 			if(isset($this->data['Message']['message'])){
 				$this->data['Message']['message'] = trim($this->data['Message']['message']);
 			}

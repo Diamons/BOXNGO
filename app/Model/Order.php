@@ -15,6 +15,7 @@
 		);
 			
 		public function afterFind($data, $primary=FALSE){
+			parent::afterFind($data, $primary);
 			for($i = 0; $i < count($data); $i++){
 				if(isset($data[$i]['Order']['shipping_amount']) && isset($data[$i]['Order']['shop_amount']))
 					$data[$i]['Order']['totalPrice'] = $data[$i]['Order']['shipping_amount'] + $data[$i]['Order']['shop_amount'];

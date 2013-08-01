@@ -173,9 +173,21 @@ require_once dirname(__DIR__) . DS.'Vendor'.DS.'autoload.php';
  * the cake shell command: cake schema create Sessions
  *
  */
-	Configure::write('Session', array(
-		'defaults' => 'php'
-	));
+Configure::write('Session', array(
+	'defaults' => 'cache',
+	'timeout' => 100,
+	'start' => true,
+	'checkAgent' => false,
+	'handler' => array(
+		'config' => 'session'
+	)
+));
+
+Cache::config('notifications', array(
+    'engine' => 'Redis',
+    'duration' => '+999 days',
+    'groups' => array('comment', 'post')
+));
 
 /**
  * The level of CakePHP security.
@@ -240,7 +252,7 @@ require_once dirname(__DIR__) . DS.'Vendor'.DS.'autoload.php';
  *       Please check the comments in boostrap.php for more info on the cache engines available
  *       and their setttings.
  */
-$engine = 'File';
+$engine = 'Redis';
 if (extension_loaded('apc') && function_exists('apc_dec') && (php_sapi_name() !== 'cli' || ini_get('apc.enable_cli'))) {
 	$engine = 'Apc';
 }
@@ -263,9 +275,17 @@ Cache::config('_cake_core_', array(
 	'prefix' => $prefix . 'cake_core_',
 	'path' => CACHE . 'persistent' . DS,
 	'serialize' => ($engine === 'File'),
-	'duration' => $duration
+	'duration' => $duration,
+	'servers' => array(
+        '127.0.0.1:6379' // localhost, default port 11211
+    )
 ));
 
+Cache::config('session', array(
+    'engine' => $engine,
+    'prefix' => $prefix . 'cake_session_',
+    'duration' => $duration
+));
 /**
  * Configure the cache for model and datasource caches.  This cache configuration
  * is used to store schema descriptions, and table listings in connections.
@@ -275,7 +295,10 @@ Cache::config('_cake_model_', array(
 	'prefix' => $prefix . 'cake_model_',
 	'path' => CACHE . 'models' . DS,
 	'serialize' => ($engine === 'File'),
-	'duration' => $duration
+	'duration' => $duration,
+	'servers' => array(
+        '127.0.0.1:6379' // localhost, default port 11211
+    )
 ));
 
 Configure::write('Facebook.appId','116996495106723');

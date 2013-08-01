@@ -1,9 +1,6 @@
 <?php
 	class UsedCoupon extends AppModel{
 
-		public function hello(){
-			return "HELLO";
-		}
 		public function alreadyUsed($userId=NULL, $couponId=NULL, $override=FALSE){
 			$coupon = $this->find("first", array("conditions" => array("UsedCoupon.user_id" => $userId, "UsedCoupon.coupon_id" => $couponId)));
 			if(empty($coupon))

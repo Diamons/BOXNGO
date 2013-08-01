@@ -1,5 +1,5 @@
 <?php
 	class Trade extends AppModel{
 		
-		var $belongsTo = array('User', 'Shop');
+		public $belongsTo = array('User', 'Shop');
 	}
