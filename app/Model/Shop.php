@@ -169,6 +169,7 @@
 			parent::afterSave($created);
 			Cache::delete('Search.shop.all', 'long');
 			Cache::delete('latest_shop_items', 'long');
+			Cache::delete('nonempty_categories', 'long');
 		}
 
 

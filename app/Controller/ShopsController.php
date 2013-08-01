@@ -151,9 +151,10 @@
 				$this->Session->setFlash("Your comment was posted!", "flash_success");
 				$this->Shop->recursive = 1;
 				$shop = $this->Shop->read(NULL, $shopid);
-				parent::sendEmail($shop['User']['username'],"BOX'NGO :: New comment posted on your listing for ".$shop['Shop']['name'],"newcomment", array('link' => $shop['Shop']['full_url'], 'name' => $shop['Shop']['name']));
+				$this->NotificationItem->notify('comment_listing', $shop['User']['id'], $this->Auth->user('id'), $shopid); 
+				//parent::sendEmail($shop['User']['username'],"BOX'NGO :: New comment posted on your listing for ".$shop['Shop']['name'],"newcomment", array('link' => $shop['Shop']['full_url'], 'name' => $shop['Shop']['name']));
 			}
-			$this->redirect($this->referer());
+			$this->redirect('/shops/viewlisting/'.$shopid);
 
 		}
 

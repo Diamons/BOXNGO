@@ -18,13 +18,17 @@ $this->end();
 	<div class="row">
 		<div class="four columns">
 			<b>Add Images</b>
+			<div id="imageTip" class="clearfix tip">
+				<i class="icon-exclamation-sign"></i>
+				You can change the order of your images and which image appears first by dragging them up and down!
+			</div>
 		</div>
 		<div class="eight columns">
 			<div id="uploadImages">
 				<a href="#" id="upload">Upload Images</a>
-				<div class="detail">Drag and Drop to rearrange the order in which your images appear.</div>
+				<?php //<div class="detail">Drag and Drop to rearrange the order in which your images appear.</div> ?>
 				<?php echo $this->Form->textarea('Shop.images', array('style' => 'display:none;')); ?>
-				<div draggable="true" id="editor"></div>
+				<div draggable="true" id="editor" class="clearfix"></div>
 			</div>
 		</div>
 	</div>
@@ -60,7 +64,8 @@ $this->end();
 		</div>
 	</div>	
 	<div class="row">
-		<div class="four columns"><b>Selling Price</b><span class="detail">(How much would you like to charge?)</span></div>
+		<div class="four columns"><b>Selling Price</b><span class="detail">(How much would you like to charge?)</span>
+		</div>
 		<div class="eight columns">
 			<div class="row">
 			  <div class="two mobile-one columns">

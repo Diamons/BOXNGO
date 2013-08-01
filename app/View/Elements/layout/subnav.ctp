@@ -45,7 +45,7 @@
 							</li>
 						</ul>
 					</div>
-					<a id="notifications" href="#"><i class="icon-envelope"></i></a>
+					<a id="notifications" href="/notifications"><i class="icon-envelope"></i><?php if(isset($notificationItems) && $notificationItems > 0){ ?><span class="notification"><?php echo $notificationItems; ?></span> <?php } ?></a>
 				</div>
 			<?php } ?>
 	</div>

@@ -34,23 +34,22 @@ App::uses('Controller', 'Controller');
 
 App::uses('Sanitize', 'Utility');
 class AppController extends Controller {
-	var $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread', 'NotificationItem');
-	var $components = array('UserLogin', 'Cookie', 'Auth', 'Security', 'Session');
-	var $helpers = array('Form');
+	public $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread', 'NotificationItem');
+	public $components = array('UserLogin', 'Cookie', 'Auth', 'Security', 'Session');
+	public $helpers = array('Form');
 
 	public function beforeFilter(){
-		debug(Cache::read('notifications.38', 'notifications'));
-		$data = array('NotificationItem' => array('notification_id' => 1, 'attachment_id' => 11, 'user_id' => 38, 'other_user' => 34));
-		debug($this->NotificationItem->save($data));
+		
 		parent::beforeFilter();
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
 		$this->set("layoutCategories", $this->Category->findNonEmpty());
-
 		$cookie = $this->Cookie->read('al');
 		if(!empty($cookie) && !$this->Auth->loggedIn())
 			$this->Auth->login($this->UserLogin->checkUser($cookie, $this->Autologin->find("first", array("conditions" => array("Autologin.hash" => $cookie)))));
 		if($this->Auth->loggedIn()){
+			//debug($this->NotificationItem->save($data));
+			$this->set("notificationItems",Cache::read('notifications.'.$this->Auth->user('id'), 'long'));
 			$this->set("notifications", $this->Order->getNotifications($this->Auth->user('id')));
 			$this->set("messages", $this->Thread->getUserMessages($this->Auth->user('id')));
 			$this->set("auth",$this->Auth->user());

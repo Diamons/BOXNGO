@@ -2,15 +2,19 @@ div#content.wrapper{
 	background: url('../../images/stepsbg.jpg') repeat-y 35px;
 	border: 1px solid #ECECEC;
 	border-radius: 5px;
-	padding: 10px 0 30px 80px;
+	padding: 10px 30px 30px 80px;
 	position: relative;
 }
 
 div#content.wrapper > div{
 	border: 1px solid #ECECEC;
-	border-width: 0px 0 1px 1px;
-	padding: 20px 140px;
+	padding: 20px 80px;
 	background: #F7F7F7;
+}
+
+#editor div.placeholder{
+	border: none;
+	background: url('/img/loading.gif');
 }
 
 div#content.wrapper div.header{
@@ -33,27 +37,55 @@ div#content.wrapper div.header{
 	height: 50px;
 }
 
-#editor{
+#imageTip{
+	display: none;
 	margin-top: 40px;
+}
+
+.tip{
+	background: #d9edf7;
+	padding: 20px;
+	margin-left: -20px;
+	border-radius: 10px;
+	
+	border: 1px solid #bce8f1;
+}
+
+.tip i{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-right: 20px;
+	color: #3a87ad;
+	display: block;
+	float: left;
+	font-size: 72px;
+}
+
+#editor{
+	margin-top: 10px;
 }
 
 #editor > div{
 	position: relative;
-	float: left;
-	width: 128px;
-	height: 128px;
-	padding: 4px;
 	border: 1px solid #DDD;
 	margin: 10px;
 }
 #mainImage{
+	position: absolute;
+	top:0;
+	left:0;
+	background: rgba(0,0,0, .6);
 	text-align: center;
-	color: #0882c1;
-	font-size: 11px;
+	color: #FFF;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	border-radius: 0 0 3px 0;
 }
 #editor > div > img{
 	width: 100%;
 	height: 100%;
+	display: block;
 }
 
 #editor > div a{
@@ -66,4 +98,8 @@ div#content.wrapper div.header{
 	display: inline-block;
 	padding: 0 19px;
 	border-radius: 9px;
+}
+
+#editor > div:hover{
+	cursor: move;
 }

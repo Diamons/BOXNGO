@@ -82,8 +82,8 @@ div.wrapper{
 
 #user_container+#notifications{
 	height: 33px;
-	padding: 3px 15px 0 15px;
-	font-size: 22px;
+	padding: 5px 15px 0 15px;
+	font-size: 14px;
 }
 
 
@@ -291,7 +291,6 @@ footer a.support:hover{
 	display: block;
 	text-align: right;
 }
-
 
 #featured_recent div.featured_seller, #featured_recent div.featured_seller_image{
 	padding: 15px;
@@ -847,6 +846,24 @@ footer > .wrapper > .columns a{
 
 #toTop:hover{
 	background: #f95f32;
+}
+
+.notification_icon{
+	display: block;
+	float: left;
+	margin-right: 20px;
+}
+
+.notification_item{
+	border: 1px solid #EEE;
+	border-radius: 4px;
+	padding: 20px 15px 15px 15px;
+	margin-bottom: 10px;
+}
+
+.timeAgoInWords{
+	font-size: 11px;
+	color: #888;
 }
 
 .autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; }

@@ -12,7 +12,7 @@
 		}
 		
 		public function afterSave($created){
-			parent::beforeSave($created);
+			parent::afterSave($created);
 			if($created == TRUE){
 				$userId = $this->data[$this->alias]['user_id'];
 				Cache::increment('notifications.'.$userId, 1, 'notifications');

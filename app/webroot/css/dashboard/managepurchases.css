@@ -36,3 +36,7 @@ a.manageorderButton{
 	margin-bottom: 8px;
 	display: inline-block;
 }
+
+.listing_purchase > .columns:first-child{
+	padding-right: 10px;
+}

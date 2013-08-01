@@ -153,6 +153,7 @@
 								$this->set("listingname", $listing['Shop']['name']);
 								$this->layout = "ajax";
 								$this->autoRender = true;
+								$this->NotificationItem->notify('favorite_listing', $listing['Shop']['user_id'], $this->Auth->user('id'), $listingId);
 							}
 						}
 					} else {

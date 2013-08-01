@@ -8,8 +8,10 @@ editPane.onclick = function(){
 	filepicker.pickMultiple({
 		mimetype: 'image/*',
 	}, function(fpfiles) {
+		$("#editor").append("<div class='placeholder'></div>");
 		for(i = 0; i < fpfiles.length; i++){
 			filepicker.store(fpfiles[i], function(copy){
+				$("#editor .placeholder").remove();
 				$("input[type='submit']").fadeIn();
 				var idDiv = getId(copy.url);
 				var html="<div id='"+idDiv+"'><img src='"+copy.url+"' /><a href='#' onclick='deleteImage(\""+copy.url+"\"); return false;'>Delete</a></div>";
@@ -40,6 +42,9 @@ function appendImages(){
 	$("#mainImage").remove();
 	var div = document.createElement("div");
 	$(div).text('Main Image').attr({'id' : 'mainImage'});
+	if($("#editor > div img").length > 1){
+		$("#imageTip").slideDown();
+	}
 	$('#editor > div img').each(function(index) {
 		if(index==0){
 			$(this).parent().append(div);
@@ -51,9 +56,11 @@ function appendImages(){
 }
 $(document).ready(function(){
     $( "#editor" ).sortable({
-    stop: function() {
+    stop: function(event, ui) {
 		appendImages();
-    }
+    },
+    axis: "y",
+	tolerance: 'touch'
 	});
 	$("#editor").disableSelection();
 
