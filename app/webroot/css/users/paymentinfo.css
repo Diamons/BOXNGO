@@ -1,0 +1,99 @@
+#content{
+	background: #1a7ec5;
+	border-radius: 10px;
+	padding: 15px 50px;
+}
+
+div.bearhello{
+	background: url('/images/payments/bearhello.png') no-repeat;
+	height:525px;
+	width: 404px;
+	float: left;
+}
+
+.text{
+	color: #aee8ff;
+	margin-top: 60px;
+	font-weight: 800;
+	padding-left: 400px;
+}
+
+.paypal, .check{
+	background: url('/images/payments/paypal.png') no-repeat;
+	min-height: 50px;
+	padding-left: 130px;
+	padding-top: 6px;
+	color: #000;
+}
+
+.paypal{
+	margin-top: 20px;
+}
+
+.check{
+	background: url('/images/payments/check.png') no-repeat -10px;
+	min-height: 105px;
+	padding-top: 35px;
+}
+
+.choice{
+	background: #FFF;
+	border-radius: 20px;
+	transition: all .6s;
+	-moz-transition: all .6s; /* Firefox 4 */
+	-webkit-transition: all .6s; /* Safari and Chrome */
+	-o-transition: all .6s; /* Opera */
+	display: inline-block;
+	color: #999;
+	padding: 0 10px 0 20px;
+	height: 128px;
+	width: 170px;
+	padding: 10px;
+	margin-bottom: 30px;
+	border: 2px solid #FFF;
+}
+
+.choice:hover{
+	-moz-box-shadow: 0 0 10px #ECECEC;
+	-webkit-box-shadow: 0 0 10px #ECECEC;
+	box-shadow: 0 0 10px #ECECEC;
+	cursor: pointer;
+	border: 2px solid #2883ff;
+}
+
+.check_large.choice{
+	height: auto;
+	padding: 0 21px;
+	height: 128px;
+	margin-right: 20px;
+}
+.choices{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.choices .row{
+	margin-bottom: 5px;
+	min-width: 0;
+	background: rgba(0,0,0,.6);
+	padding: 9pt;
+	border-radius: 3px;
+}
+
+.choices .row > div:nth-child(odd){
+	text-align: center;
+	padding-top: 6px;
+	color: #FFF;
+	font-size: 10px;
+}
+#UserPaymentinfoForm input[type="text"]{
+	margin: 0;
+}
+
+#paypalChoice, #checkChoice, #UserPaymentinfoForm input[type="submit"], #checkmarks{
+	display: none;
+}
+
+div.error-message{
+	color: #ff3d3d;
+}

@@ -1,0 +1,94 @@
+#dashboard.wrapper{
+	border: 1px solid #ECECEC;
+	border-radius: 5px;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	background: #FAFAFA;
+}
+
+#dashmenu{
+	height: 100%;
+}
+
+#dashmenu > a, #dashmenu > span{
+	display: block;
+	padding: 10px 20px;
+	position: relative;
+}
+
+#dashmenu > a:hover{
+	background: #DDD;
+}
+
+#dashmenu > span{
+	border: none;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+#dashmenu > a:hover{
+	color: #008cd4;
+}
+
+.dashwrapper{
+	padding:20px;
+	background: #FFF;
+	min-height: 420px;
+}
+
+.dashwrapper > div > a{
+	display: inline-block;
+	border-bottom: 1px dashed #AAA;
+}
+
+.padded_columns > .columns{
+	padding: 20px 15px 20px 15px;
+}
+
+.product_item > a{
+	text-align: center;
+	display: block;
+}
+
+#myshop{
+	padding-top: 0;
+}
+.dashwrapper > div.padded_columns > b{
+	font-size:1.3em; 
+	color: #666;
+}
+
+.dashwrapper .product_item > img{
+	width: 245px;
+	height: 183px;
+}
+
+.dashwrapper .listing_purchase{
+	border: 1px solid #ECECEC;
+	border-width: 1px 0 1px 0;
+	margin-bottom: 20px;
+}
+
+#.product_item{
+	position: relative;
+}
+.product_item a.edit_link{
+	position: absolute;
+	top: 30px;
+	right: 25px;
+	color: white;
+	background: red;
+	font-size: 11px;
+	display: inline-block;
+	padding: 0 19px;
+	border-radius: 9px;
+}
+
+.noresults{
+	color: #777;
+	font-size: 24px;
+	text-align: center;
+	line-height: normal;
+	padding: 40px 0;
+}
