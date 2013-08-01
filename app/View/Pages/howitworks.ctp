@@ -26,23 +26,17 @@ $this->end();
 <div id="content" class="wrapper">
 	<div id="about_boxngo" class="wrapper modified_padding">
 		<div class="row">
-			<div class="four columns">
+			<div class="six columns">
 				<span class="typicn mobile enlarge"></span>
 				<h1>Buy</h1>
 				<div class="detail">Find local sellers just like you selling handmade crafts, electronics, clothing, and much more. BOX'NGO is the easiest way to buy from other people using our online marketplace.<br />
 				<a href="#buyinfo">How does it work?</a></div>
 			</div>
-			<div class="four columns">
+			<div class="six columns">
 				<span class="typicn tag enlarge"></span>
 				<h1>Sell</h1>
 				<div class="detail">There's no easier way to sell online than BOX'NGO. List your stuff, ship the package, and make money. Yes, it's just that easy. We take care of everything else, you just sell.
 				<a href="#sellinfo">How does it work?</a></div>
-			</div>
-			<div class="four columns">
-				<span class="typicn sync enlarge"></span>
-				<h1>Trade</h1>
-				<div class="detail">Ever wanted to trade for stuff you want? Want to make a mix of cash and trade? We cover that too! BOX'NGO lets you arrange trades with people that are selling in your area.
-				<a href="#tradeinfo">How does it work?</a></div>
 			</div>
 		</div>
 	</div>

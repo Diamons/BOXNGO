@@ -59,10 +59,12 @@ abstract class AbstractFilter extends AbstractComponent implements Filter {
 		 * lineBreaks		- (boolean) Convert line breaks within the content body
 		 * autoClose		- (boolean) HTML tag is self closing
 		 * preserveTags		- (boolean) Will not convert nested Decoda markup within this tag
+		 * onlyTags			- (boolean) Only Decoda tags are allowed within this tag, no text nodes
 		 */
 		'lineBreaks' => Decoda::NL_CONVERT,
 		'autoClose' => false,
 		'preserveTags' => false,
+		'onlyTags' => false,
 
 		/**
 		 * contentPattern	- (string) Regex pattern that the content or default attribute must pass
@@ -127,7 +129,8 @@ abstract class AbstractFilter extends AbstractComponent implements Filter {
 	 */
 	public function parse(array $tag, $content) {
 		$setup = $this->getTag($tag['tag']);
-		$xhtml = $this->getParser()->getConfig('xhtmlOutput');
+		$parser = $this->getParser();
+		$xhtml = $parser->getConfig('xhtmlOutput');
 
 		if (!$setup) {
 			return null;
@@ -154,10 +157,10 @@ abstract class AbstractFilter extends AbstractComponent implements Filter {
 			// Process line breaks
 			switch ($setup['lineBreaks']) {
 				case Decoda::NL_CONVERT:
-					$content = nl2br($content, $xhtml);
-				// Fall-through
+					$content = str_replace("\r", "", $parser->convertLineBreaks($content));
+				break;
 				case Decoda::NL_REMOVE:
-					$content = str_replace("\n", "", $content);
+					$content = str_replace(array("\r", "\n"), "", $content);
 				break;
 			}
 		}
@@ -192,7 +195,7 @@ abstract class AbstractFilter extends AbstractComponent implements Filter {
 		if ($setup['template']) {
 			$tag['attributes'] = $attributes + $this->_config;
 
-			$engine = $this->getParser()->getEngine();
+			$engine = $parser->getEngine();
 			$engine->setFilter($this);
 
 			$parsed = $engine->render($tag, $content);
@@ -202,8 +205,7 @@ abstract class AbstractFilter extends AbstractComponent implements Filter {
 
 			// Normalize
 			} else {
-				$parsed = str_replace("\r\n", "\n", $parsed);
-				$parsed = str_replace("\r", "\n", $parsed);
+				$parsed = $parser->convertNewlines($parsed);
 			}
 
 			return $parsed;

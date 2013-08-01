@@ -17,7 +17,7 @@
         "time": "2013-06-25 13:58:44",
         "type": "library",
         "installation-source": "dist",
-        "autoloadDisabled": {
+        "autoload": {
             "files": [
                 "src/CreditCardFraudDetection.php",
                 "src/HTTPBase.php",

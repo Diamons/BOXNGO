@@ -15,7 +15,7 @@
 	    <tr>
 	      <td>Creating an Account</td>
 	      <td>Free</td>
-	      <td>Free</td>
+	      <td>Free - Annual Membership</td>
 	    </tr>
 	    <tr>
 	      <td>Listing an Item</td>
@@ -23,9 +23,24 @@
 	      <td>10 - 30 Cents</td>
 	    </tr>
 	    <tr>
-	      <td>Content</td>
-	      <td>This is longer content</td>
-	      <td>Content</td>
+	      <td>Additional Images</td>
+	      <td>Free</td>
+	      <td>35 Cents</td>
+	    </tr>
+	    <tr>
+	      <td>Payment Fee</td>
+	      <td>Free</td>
+	      <td>2.9% plus 30 Cents</td>
+	    </tr>
+	    <tr>
+	      <td>Commission</td>
+	      <td>10%</td>
+	      <td>3 - 5%</td>
+	    </tr>
+	    <tr>
+	      <td><b>Fee Overview</b></td>
+	      <td><b>Flat 10% Fee</b></td>
+	      <td><b>(10 to 30 Cents) + 35 cents + (2.9% + 30 Cents Payment Fee) + (3 to 5%)</b></td>
 	    </tr>
 	  </tbody>
 	</table>

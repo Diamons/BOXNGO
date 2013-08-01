@@ -324,3 +324,36 @@ img#coverBanner{
 	display:block; 
 	float:right;
 }
+
+.questions_menu a{
+	display: block;
+	padding: 4px 8px;
+	border-radius: 4px;
+	margin-right: 60px;
+	border-bottom: 1px solid #EEE;
+}
+
+.questions_menu a:hover{
+	background: #EEE;
+}
+
+.support_options{
+	text-align: center;
+	border-bottom: 1px solid #EEE;
+	margin-bottom: 40px;
+	padding: 20px 0;
+}
+
+.support_options i{
+	font-size: 128px;
+}
+
+.support_options .columns:first-child{
+	border-right: 1px solid #EEE;
+}
+
+.support_options p{
+	width: 350px;
+	text-align: left;
+	margin: auto;
+}
