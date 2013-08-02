@@ -1,49 +1,61 @@
 <?php
 $this->start('css');
-	echo $this->Html->css(array('dashboard/manageaccount'));
+	echo $this->Html->css(array());
 $this->end();
 $this->start('scriptBottom');
 	echo $this->Html->script(array('//api.filepicker.io/v1/filepicker.js', 'dashboard/manageaccount'));
 $this->end();
 ?>
-<?php echo $this->Form->create("User", array("inputDefaults" => array("label" => false, "div" => false))); ?>
+
+<style>
+	#UserProfilepic {
+		display: none;
+	}
+	
+	.form-group{
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #EEE;
+	}
+</style>
+<?php echo $this->Form->create("User", array("class" => "form-horizontal", "inputDefaults" => array("label" => false, "div" => false))); ?>
 <?php echo $this->Form->hidden("User.id"); ?>
-	<div class="row">
-		<div class="four columns">
+	<div class="form-group">
+		<div class="col-4 col-lg-4">
 			<b>Display Name</b>
-			<span class="detail">
+			<div class="detail">
 				How do you want other users to see you on BOX'NGO?
-			</span>
+			</div>
 		</div>
-		<div class="eight columns">
-			<?php echo $this->Form->input("User.display_name"); ?>
+		<div class="col-8 col-lg-8">
+			<?php echo $this->Form->input("User.display_name", array("class" => "form-control")); ?>
 		</div>
 	</div>
-	<div class="row">
-		<div class="four columns">
+	<div class="form-group">
+		<div class="col-4 col-lg-4">
 			<b>Profile Picture</b>
-			<span class="detail">
-				An image to represent you on BOX'NGO.
-			</span>
+				<div class="detail">
+					An image to represent you on BOX'NGO.
+				</div>
 		</div>
-		<div class="eight columns">
+		<div class="col-8 col-lg-8">
 			<div id="uploadImages">
 					<a href="#" id="upload">Upload Profile Picture</a>
-					<?php echo $this->Form->textarea("User.profilepic"); ?>
-					<span class="detail">Once you upload your picture, click Save Info.</span>
+					<?php echo $this->Form->textarea("User.profilepic", array("class" => "form-control")); ?>
+					<div class="detail">Once you upload your picture, click Save Info.</div>
 					<div id="editor"></div>
 				</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="four columns">
+	<div class="form-group">
+		<div class="col-4 col-lg-4">
 			<b>Small Description</b>
-			<span class="detail">
+			<div class="detail">
 				A few words to describe you on your profile page.
-			</span>
+			</div>
 		</div>
-		<div class="eight columns">
-			<?php echo $this->Form->textarea('User.profile_info'); ?>
+		<div class="col-8 col-lg-8">
+			<?php echo $this->Form->textarea('User.profile_info', array("class" => "form-control")); ?>
 			<div class="countdown"></div>
 			<?php echo $this->Form->error('User.profile_info'); ?>
 		</div>

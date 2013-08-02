@@ -37,6 +37,14 @@ a img{
 form{
 	margin: 0;
 }	
+
+.detail{
+	display: block;
+	font-style: italic;
+	font-size: 11px;
+	color: #777;
+}
+
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */

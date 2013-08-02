@@ -31,12 +31,6 @@
 	height: 100%;
 	width: 100%;
 }
-
-.listing a.image_container{
-	display: block;
-	background: #000;
-	height: 251px;
-}
 .similar_listing > div.similar_container{
 	background: url('../../images/photoframe.png') no-repeat;
 	width: 237px;
@@ -65,7 +59,7 @@
 }
 
 .listing h1.listing_title{
-	line-height: 16px; 
+	line-height: 1.2em; 
 	margin: 0;
 	color: #68A7B6; 
 	font-size: 14px;

@@ -10,32 +10,32 @@
 <div class="wrapper" id="content">
 		<div id="summary">	
 			<div class="row">
-				<div class="four columns">
+				<div class="col-4 col-lg-4">
 					<a href="<?php echo $listing['Shop']['full_url']; ?>"><?php echo $this->Html->image($listing['Image'][0]['url'], array('alt' => h($listing['Shop']['name']))); ?></a>
 				</div>
-				<div class="eight columns">
+				<div class="col-8 col-lg-8">
 					<a href="<?php echo $listing['Shop']['full_url']; ?>"><?php echo nl2br(h($listing['Shop']['name'])); ?></a>
 					<div class="description"><?php echo h($listing['Shop']['description']); ?></div>
 				</div>
 			</div>
 			<h1 class="header">Purchase Summary</h1>
 			<div class="row">
-				<div class="four columns">Shipping</div>
-				<div class="eight columns"><b>$<?php echo $listing['Shop']['shipping']; ?></b></div>
+				<div class="col-4 col-lg-4">Shipping</div>
+				<div class="col-8 col-lg-8"><b>$<?php echo $listing['Shop']['shipping']; ?></b></div>
 			</div>
 			<div class="row">
-				<div class="four columns">Price</div>
-				<div class="eight columns"><b>$<?php echo $listing['Shop']['price']; ?></b></div>
+				<div class="col-4 col-lg-4">Price</div>
+				<div class="col-8 col-lg-8"><b>$<?php echo $listing['Shop']['price']; ?></b></div>
 			</div>
 			<?php if($price['applied'] == true){ ?>
 			<div class="coupon_applied row">
-				<div class="four columns">Coupon</div>
-				<div class="eight columns"><b>-$<?php echo number_format($price['Price']['discount'], 2); ?></b></div>
+				<div class="col-4 col-lg-4">Coupon</div>
+				<div class="col-8 col-lg-8"><b>-$<?php echo number_format($price['Price']['discount'], 2); ?></b></div>
 			</div>
 			<?php } ?>
 			<div class="total row">
-				<div class="four columns">Total</div>
-				<div class="eight columns"><b>$<?php echo number_format($price['Price']['total_price'], 2); ?></b></div>
+				<div class="col-4 col-lg-4">Total</div>
+				<div class="col-8 col-lg-8"><b>$<?php echo number_format($price['Price']['total_price'], 2); ?></b></div>
 			</div>
 		</div>
 	<div class="row">
@@ -44,21 +44,21 @@
 			<div id="shipping_pane">
 				<h1 class="subheader">1. Shipping Information</h1>
 				<div class="row">
-					<div class="six columns"><?php echo $this->Form->input('Payment.firstName'); ?></div>
-					<div class="six columns"><?php echo $this->Form->input('Payment.lastName'); ?></div>
+					<div class="col-6 col-lg-6"><?php echo $this->Form->input('Payment.firstName'); ?></div>
+					<div class="col-6 col-lg-6"><?php echo $this->Form->input('Payment.lastName'); ?></div>
 				</div>
 				<div class="row">
-					<div class="four columns"><?php echo $this->Form->input('Payment.streetAddress'); ?></div>
-					<div class="four columns"><?php echo $this->Form->input('Payment.city'); ?></div>
-					<div class="two columns"><?php echo $this->Form->input('Payment.state'); ?></div>
-					<div class="two columns"><?php echo $this->Form->input('Payment.zipcode', array('label' => 'Postal or Zip Code')); ?></div>
+					<div class="col-4 col-lg-4"><?php echo $this->Form->input('Payment.streetAddress'); ?></div>
+					<div class="col-4 col-lg-4"><?php echo $this->Form->input('Payment.city'); ?></div>
+					<div class="col-2 col-lg-2"><?php echo $this->Form->input('Payment.state'); ?></div>
+					<div class="col-2 col-lg-2"><?php echo $this->Form->input('Payment.zipcode', array('label' => 'Postal or Zip Code')); ?></div>
 				</div>
 			</div>
 			<div id="payment_options">
 				<div class="clearfix payment_container">
 					<h1 class="subheader">2. Payment Options</h1>
 					<div class="row">
-						<div class="eleven columns">
+						<div class="col-11 col-lg-11">
 							<?php if($price['applied'] == FALSE){ ?>
 								<?php echo $this->Form->input('Coupon.code'); ?>
 							<?php }else{ ?>
@@ -66,7 +66,7 @@
 								<?php echo $this->Form->hidden('Coupon.code'); ?>
 							<?php } ?>
 						</div>
-						<div class="one columns">
+						<div class="col-1 col-lg-1s">
 							<?php if($price['applied'] == FALSE){ ?>
 								<a href="#" id="applyCoupon">Apply</a>
 							<?php } ?>

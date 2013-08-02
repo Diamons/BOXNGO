@@ -9,24 +9,24 @@ $this->end();
 <div class="wrapper" id="content">
 	<div class="aboutus row">
 		<div class="row founder">
-			<div class="two columns">
+			<div class="col-2 col-lg-2">
 				<img src="/images/founders/shahruk.jpg" />
 			</div>
-			<div class="ten columns">
+			<div class="col-10 col-lg-10">
 				<h2>Shahruk Khan Age 19 <span class="title">Co-Founder</span></h2>
 				<p>I got into web development in my senior year Web Development class at Brooklyn Tech High School. From there, I picked up Java, HTML, CSS, PHP, and Javascript. After graduating, I attended Hunter College and joined a company working $5 an hour for 40 hours a week in after classes and on the weekends. I also started a web development business when I turned 18 on the side and worked with clients such as lawyers, restaurants, artisans, and more. From there I learned various methodologies and skills such as PHP5, Python, MVC, Git, marketing, public speaking, MongoDB, AngularJS, and much more.</p>
 				<p>BOX'NGO was originally my final project for my high school senior year Web Development class. Originally, the idea was a for a trading escrow service. Eventually, we got interviewed by the NYU Poly Incubator program and a major rehaul of our idea was necessary. Shortly afterward, I began discussing BOX'NGO with my long time friend Minling Zhao and from there we launched the site on December 2nd, 2012. From there, we've constantly iterated with improvements to the homepage, adding features like the <a href="/concierges/hunter_college">Concierge</a> feature, working on Facebook integration, and much more. BOX'NGO is a continuous process and entirely funded by the money we make.</p>
 			</div>
 		</div>
 		<div class="row founder">
-			<div class="ten columns">
+			<div class="col-10 col-lg-10">
 				<h2>Minling Zhao Age 19 <span class="title">Co-Founder</span></h2>
 				<p>I've been selling online for quite some time now. When I was 13, I started my eBay shop and from there I've been selling on platforms like eBay and Etsy. I've managed to make enough profit off my stores to keep myself going through college. Currently, I am a Bio-Medical major at NYU Poly. I founded BOX'NGO with Shahruk because I was tired of the way the only selling marketplace is right now. eBay recently raised its fees and many platforms are just too complicated and impersonal. You list something and it becomes hard for people to find your listings very quickly. Right now BOX'NGO helps solve that by charging a flat fee to the seller, having quick customer service and an easy listing process, and promoting listings that aren't doing so well across the site.</p>
 				<p>
 					Right now, we run BOX'NGO under the company Chocolate Squared LLC. We registered with New York State in January 2013 as an official business. I currently work on BOX'NGO in between school and homework and am always working on making the site grow.
 				</p>
 			</div>
-			<div class="two columns">
+			<div class="col-2 col-lg-2">
 				<img src="/images/founders/minling.jpg" />
 			</div>
 		</div>

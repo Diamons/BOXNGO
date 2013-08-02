@@ -8,7 +8,7 @@ $this->end();
 
 <div id="content" class="wrapper">
 	<div class="row">
-		<div class="userInfo two columns">
+		<div class="userInfo col-2 col-lg-2">
 			
 	<div class="container">
 		<div class="profile_snippet">
@@ -19,11 +19,11 @@ $this->end();
 		<?php echo $userInfo['User']['display_name']; ?>
 		<div class="data content">
 			<div class="row">
-				<div class="six columns">
+				<div class="col-6 col-lg-6">
 					<?php echo number_format($shopFavorites); ?>
 					<span>Shop Favorites</span>
 				</div>
-				<div class="six columns">
+				<div class="col-6 col-lg-6">
 					<?php echo number_format($shopViews); ?>
 					<span>Shop Views</span>
 				</div>
@@ -34,7 +34,7 @@ $this->end();
 
 	</div>
 		</div>
-		<div id="profile_feed" class="ten columns">
+		<div id="profile_feed" class="col-10 col-lg-10">
 			<div class="alert">
 				<?php if(!empty($userInfo['User']['profile_info'])){ echo nl2br(h($userInfo['User']['profile_info'])); } else { ?>
 				<i>This user has not filled this out yet. To fill this information out, click <a href="/dashboard/manageaccount">here</a>.</i>

@@ -6,10 +6,10 @@ $this->end();
 <div class="wrapper" id="content">
 	<?php echo $this->Form->create("Search", array("class" => "custom")); ?>
 	<div class="row" id="refinesearch">
-		<div class="two columns">
+		<div class="col-2 col-lg-2">
 			<b>Refine Search</b>
 		</div>
-		<div class="three columns">
+		<div class="col-3 col-lg-3">
 			<?php if(isset($school)){
 					echo $this->Form->input('Search.school', array('label' => 'Only show results from', 'type' => 'checkbox', 'value' => '1'));
 				} ?>
@@ -19,10 +19,10 @@ $this->end();
 		</div>
 	</div>
 	<div class="row">
-		<div id="categories" class="three columns">
+		<div id="categories" class="col-3 col-lg-3">
 				<?php echo $this->element('categories'); ?>
 		</div>
-		<div class="nine columns">
+		<div class="col-9 col-lg-9">
 			<div id="currentPage"><b>Page <?php echo $this->Paginator->counter(); ?> <?php if(!empty($search)){ ?> for '<?php echo $search; ?>'<?php } ?></b></div>
 		<?php if(!empty($results)){ ?>
 			<?php if(isset($category)){ ?>
@@ -42,7 +42,7 @@ $this->end();
 		<div id="similar">
 			<div class="row contentbox-wrapper">
 				<?php for($i = 0; $i< 4; $i++): ?>
-				<div class="three columns similar_listing">
+				<div class="col-3 col-lg-3 similar_listing">
 					<div class="similar_container">
 						<img style="width:200px; height: 128px;" src="https://sphotos-b.xx.fbcdn.net/hphotos-ash3/78162_295114220592958_1155000282_o.jpg" />
 					</div>

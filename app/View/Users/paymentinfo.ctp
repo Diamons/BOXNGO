@@ -28,22 +28,22 @@ $this->end();
 				?>
 			</div>
 			<div id="paypalChoice" class="row">
-				<div class="four columns">Paypal E-mail Address</div><div class="eight columns"><?php echo $this->Form->input("User.paypal", array("required" => false)); ?></div>
+				<div class="col-4 col-lg-4">Paypal E-mail Address</div><div class="col-8 col-lg-8"><?php echo $this->Form->input("User.paypal", array("required" => false)); ?></div>
 			</div>
 			<div id="checkChoice">
 				<div class="row">
-					<div class="four columns">First Name</div><div class="eight columns"><?php echo $this->Form->input("User.first_name"); ?></div>
+					<div class="col-4 col-lg-4">First Name</div><div class="col-8 col-lg-8"><?php echo $this->Form->input("User.first_name"); ?></div>
 				</div>
 				<div class="row">
-					<div class="four columns">Last Name</div><div class="eight columns"><?php echo $this->Form->input("User.last_name"); ?></div>
+					<div class="col-4 col-lg-4">Last Name</div><div class="col-8 col-lg-8"><?php echo $this->Form->input("User.last_name"); ?></div>
 				</div>
 				<div class="row">
-					<div class="four columns">Street Address</div><div class="eight columns"><?php echo $this->Form->input("User.streetAddress"); ?></div>
+					<div class="col-4 col-lg-4">Street Address</div><div class="col-8 col-lg-8"><?php echo $this->Form->input("User.streetAddress"); ?></div>
 				</div>
 				<div class="row">
-					<div class="two columns">City</div><div class="two columns"><?php echo $this->Form->input("User.city"); ?></div>
-					<div class="two columns">State</div><div class="two columns"><?php echo $this->Form->input("User.state"); ?></div>
-					<div class="two columns">Zip Code</div><div class="two columns"><?php echo $this->Form->input("User.zipcode", array("type" => "text")); ?></div>
+					<div class="col-2 col-lg-2">City</div><div class="col-2 col-lg-2"><?php echo $this->Form->input("User.city"); ?></div>
+					<div class="col-2 col-lg-2">State</div><div class="col-2 col-lg-2"><?php echo $this->Form->input("User.state"); ?></div>
+					<div class="col-2 col-lg-2">Zip Code</div><div class="col-2 col-lg-2"><?php echo $this->Form->input("User.zipcode", array("type" => "text")); ?></div>
 				</div>
 			</div>
 			<?php 

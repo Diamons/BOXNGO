@@ -51,34 +51,34 @@ $this->end();
 	<div class="info_panel">It's free to get started selling today! Read more about <a href="/info/howitworks">How it Works</a></div></div>
 	<div>
 		<?php echo $this->Form->create('User', array('class' => '', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
-		<div style="padding-right: 100px;" class="six columns">
+		<div style="padding-right: 100px;" class="col-6 col-lg-6">
 			<h1 class="subheader">Login to Account</h1>
 				<div style="text-align: right; margin: 0 103px 5px 0;">
 					<a class="loginFacebookButton" data-redirect="users/facebookregister" href="#"></a>
 				</div>
 				<div class="modified_padding row">
-					<div class="four columns">
+					<div class="col-4 col-lg-4">
 						<label class="right inline"><b>Email</b></label>
 					</div>
-					<div class="eight columns">
+					<div class="col-8 col-lg-8">
 						<?php echo $this->Form->input('User.username', array('placeholder' => 'Email Address')); ?>
 					</div>
 				</div>
 				<div class="modified_padding row">
-					<div class="four columns">
+					<div class="col-4 col-lg-4">
 						<label class="right inline"><b>Password</b></label>
 					</div>
-					<div class="eight columns">
+					<div class="col-8 col-lg-8">
 						<?php echo $this->Form->input('User.password', array('placeholder' => 'Password')); ?>
 					</div>
 				</div>
 				<div class="modified_padding row">
-					<div class="four columns"></div>
-					<div class="eight columns" style="text-align:right; font-size: 11px;"><a data-reveal-id="forgotpassword" href="#">Forgot your Password?</a></div>
+					<div class="col-4 col-lg-4"></div>
+					<div class="col-8 col-lg-8" style="text-align:right; font-size: 11px;"><a data-reveal-id="forgotpassword" href="#">Forgot your Password?</a></div>
 				</div>
 					<?php echo $this->Form->end('Login'); ?>
 		</div>
-		<div class="six columns" id="register_panel">
+		<div class="col-6 col-lg-6" id="register_panel">
 		
 			<img src="<?php echo $this->webroot;?>images/or.png" id="or" />
 			<h1 class="subheader">Signup for <span class="logo">Box'<span class="emphasis">nGo</span></span></h1>
@@ -89,26 +89,26 @@ $this->end();
 					<a class="loginFacebookButton" data-redirect="users/facebookregister" href="#"></a>
 				</div>
 				<div class="modified_padding row">
-					<div class="four columns">
+					<div class="col-4 col-lg-4">
 						<label class="right inline"><b>Email</b></label>
 					</div>
-					<div class="eight columns">
+					<div class="col-8 col-lg-8">
 						<?php echo $this->Form->input('User.username', array('placeholder' => 'Email Address')); ?>
 					</div>
 				</div>
 				<div class="modified_padding row">
-					<div class="four columns">
+					<div class="col-4 col-lg-4">
 						<label class="right inline"><b>Password</b></label>
 					</div>
-					<div class="eight columns">
+					<div class="col-8 col-lg-8">
 						<?php echo $this->Form->input('User.passwordcreate', array('placeholder' => 'Password', 'type' => 'password')); ?>
 					</div>
 				</div>
 				<div class="modified_padding row">
-					<div class="four columns">
+					<div class="col-4 col-lg-4">
 						<label class="right inline"><b>Confirm Password</b></label>
 					</div>
-					<div class="eight columns">
+					<div class="col-8 col-lg-8">
 						<?php echo $this->Form->input('User.passwordconfirmation', array('placeholder' => 'Password', 'type'=>'password')); ?>
 					</div>
 				</div>

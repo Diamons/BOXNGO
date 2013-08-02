@@ -1,5 +1,4 @@
 $(function(){
-	$(document).foundationCustomForms();
 	$("#categories ul li").hover(function(){
 		$(this).find("ul.submenu").stop(true,true).delay(100).slideDown();
 	}, function(){

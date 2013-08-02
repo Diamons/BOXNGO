@@ -23,12 +23,6 @@ div#content.wrapper div.header{
 	margin-top: 30px;
 	border: none;
 }
-.detail{
-	display: block;
-	font-style: italic;
-	font-size: 11px;
-	color: #777;
-}
 
 .step{
 	position: absolute;

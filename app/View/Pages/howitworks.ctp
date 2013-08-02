@@ -26,13 +26,13 @@ $this->end();
 <div id="content" class="wrapper">
 	<div id="about_boxngo" class="wrapper modified_padding">
 		<div class="row">
-			<div class="six columns">
+			<div class="col-6 col-lg-6">
 				<span class="typicn mobile enlarge"></span>
 				<h1>Buy</h1>
 				<div class="detail">Find local sellers just like you selling handmade crafts, electronics, clothing, and much more. BOX'NGO is the easiest way to buy from other people using our online marketplace.<br />
 				<a href="#buyinfo">How does it work?</a></div>
 			</div>
-			<div class="six columns">
+			<div class="col-6 col-lg-6">
 				<span class="typicn tag enlarge"></span>
 				<h1>Sell</h1>
 				<div class="detail">There's no easier way to sell online than BOX'NGO. List your stuff, ship the package, and make money. Yes, it's just that easy. We take care of everything else, you just sell.
@@ -44,21 +44,21 @@ $this->end();
 	<div id="buyinfo" class="wrapper modified_padding moreinfo">
 		<a href="#" class="close">Close</a>
 		<div class="row">
-			<div class="four columns">
+			<div class="col-4 col-lg-4">
 				<span class="typicn directions enlarge"></span>
 				<h4>Browse</h4>
 				<div class="detail">
 					Search through our listings for textbooks, handmade jewelry, electronics, and so much more!
 				</div>
 			</div>
-			<div class="four columns">
+			<div class="col-4 col-lg-4">
 				<span class="enlarge">$</span>
 				<h4>Buy / Trade</h4>
 				<div class="detail">
 					Once you find something you like, simply pay for it online or choose to either pay in cash, or make a trade offer.
 				</div>
 			</div>
-			<div class="four columns">
+			<div class="col-4 col-lg-4">
 				<span class="enlarge typicn tick"></span>
 				<h4>Receive Your Item</h4>
 				<div class="detail">
@@ -71,21 +71,21 @@ $this->end();
 	<div id="sellinfo" class="wrapper modified_padding moreinfo">
 		<a href="#" class="close">Close</a>
 		<div class="row">
-			<div class="four columns">
+			<div class="col-4 col-lg-4">
 				<span class="typicn list enlarge"></span>
 				<h4>List</h4>
 				<div class="detail">
 					Quickly list your item within minutes by using our simple <a style="color: #0072ac;" href="/shops/shoplist">List an Item</a> form. For online credit card and debit card transactions, we charge a 10% fee.
 				</div>
 			</div>
-			<div class="four columns">
+			<div class="col-4 col-lg-4">
 				<span class="typicn forward enlarge"></span>
 				<h4>Ship</h4>
 				<div class="detail">
 					Once you receive a notification someone has bought your item, package your stuff into a box and purchase a tracking number. Simply input the tracking number into BOX'NGO and you're set!
 				</div>
 			</div>
-			<div class="four columns">
+			<div class="col-4 col-lg-4">
 				<span class="enlarge typicn thumbsUp"></span>
 				<h4>Get Paid</h4>
 				<div class="detail">
@@ -98,21 +98,21 @@ $this->end();
 	<div id="tradeinfo" class="wrapper modified_padding moreinfo">
 		<a href="#" class="close">Close</a>
 		<div class="row">
-			<div class="four columns">
+			<div class="col-4 col-lg-4">
 				<span class="typicn unknown enlarge"></span>
 				<h4>Make an Offer</h4>
 				<div class="detail">
 					Send a message to the seller asking if they would be willing to make a trade for what you have to offer. Currently trades and offers are restricted to students attending the same university.
 				</div>
 			</div>
-			<div class="four columns">
+			<div class="col-4 col-lg-4">
 				<span class="typicn chat enlarge"></span>
 				<h4>Arrange to Meet</h4>
 				<div class="detail">
 					Set up a time and place to meet that is convenient for both of you! We generally recommend this be a familar environment such as your college or school.
 				</div>
 			</div>
-			<div class="four columns">
+			<div class="col-4 col-lg-4">
 				<span class="enlarge sync typicn"></span>
 				<h4>Make the Trade</h4>
 				<div class="detail">

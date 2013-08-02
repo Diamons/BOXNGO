@@ -67,8 +67,8 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	</div>
 	<?php echo $this->element('layout'.DS.'footer'); ?>
 	<?php 
-		echo $this->Html->script('foundation.min');
-		
+		echo $this->Html->script('bootstrap.min');
+		echo $this->Html->script('app');
 		echo $this->Html->script('main');
 		echo $this->fetch('scriptBottom');
 	?>

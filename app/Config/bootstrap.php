@@ -175,7 +175,7 @@ Cache::config('default', array(
 
 if(strtoupper(substr(PHP_OS, 0, 3)) === "WIN"){
 	Cache::config('default', array(
-	'engine' => 'File')
+	'engine' => 'File'));
 }else{
 	Cache::config('default', array(
 	'engine' => 'Redis', //[required]

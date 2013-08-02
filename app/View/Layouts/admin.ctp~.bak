@@ -13,6 +13,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap.min');
+		echo $this->Html->css('typicons');
 		echo $this->Html->css('app');
 		
 		echo $this->fetch('meta');
@@ -79,8 +80,8 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		</div>
 	</footer>
 	<?php 
-		echo $this->Html->script('bootstrap.min');
-		
+		echo $this->Html->script('foundation.min');
+		echo $this->Html->script('app');
 		echo $this->Html->script('main');
 		echo $this->fetch('scriptBottom');
 	?>
