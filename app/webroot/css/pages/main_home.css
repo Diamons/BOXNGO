@@ -48,7 +48,7 @@ a#logo{
 }
 
 #main_content{
-	margin-top: 40px;
+	margin-top: 10px;
 }
 
 #main_content h1{
@@ -65,26 +65,6 @@ a#logo{
 	font-size: 16px;
 	line-height: 1.5em;
 	font-weight: bold;
-}
-
-#collectionHome{
-	padding-left: 100px;
-}
-
-#collectionHome img, #collectionHome .note_block{
-	display: block;
-	padding: 2px;
-	border: 1px solid #EEE;
-	border-right: none;
-	border-bottom: none;
-}
-
-#collectionHome .row .columns:last-child img, #collectionHome .note_block{
-	border-right: 1px solid #EEE;
-}
-
-#collectionHome .row:last-child img, #collectionHome .note_block{
-	border-bottom: 1px solid #EEE;
 }
 
 a#buyAndSell{
@@ -143,44 +123,12 @@ div.asterisk{
 	margin-bottom: 15px;
 }
 
-#collectionHome .note_block{
-	display: block;
-	text-align: center;
-	padding: 2px;
-}
-
-#collectionHome .note_block > div{
-	background: #acd225;
-	font-size: 24px;
-	color: #FFF;
-	padding-top: 25px;
-}
-
-#collectionHome .note_block > a:hover{
-	background: #ff8400;
-}
-
-#collectionHome .note_block span.small{
-	display: block;
-	font-size: 12px;
-	margin-top: 10px;
-	text-transform: uppercase;
-}
-
-#browse_note > a{
-	padding: 2px;
-	background: #009cff;
-	display: block;
-	color: #FFF;
-	padding-top: 15px;
-	font-size: 16px;
-	text-transform: uppercase;
-	transition: .5s;
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
+.recent_activity_container{
+	padding-left: 40px;
 }
 
 #recent_activity{
-	max-height:460px;
+	max-height:360px;
 	padding-left: 5px;
+	padding: 0;
 }

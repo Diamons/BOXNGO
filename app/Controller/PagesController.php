@@ -74,7 +74,7 @@ class PagesController extends AppController {
 		if($path[0] == "home"){
 			$title_for_layout = "Online Selling Redefined";
 			$this->Shopview->recursive = 1;
-			$this->set("activity", $this->Shopview->find("all", array("order" => "Shopview.created DESC", "limit" => 10)));
+			$this->set("activity", $this->Shopview->find("all", array("order" => "Shopview.created DESC", "limit" => 24)));
 			if($this->Auth->loggedIn()){		
 				$this->Shop->recursive = 1;	
 				$this->set("listings", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 16)));
