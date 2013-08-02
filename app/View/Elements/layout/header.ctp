@@ -1,13 +1,43 @@
-<header>
-	<div class="row clearfix wrapper">
-			<div class="col-2 col-lg-2" id="logo"><a href="<?php echo $this->webroot;?>"><img src="/logo.png" alt="BOX'NGO" /></a></div>
-			<div class="col-9 col-lg-9" id="search_container">
-				<i id="searchTrigger" class="icon-search"></i>
-				<?php echo $this->Form->input('Search.query', array('placeholder' => 'Electronics, Textbooks, Jewelry, and more!')); ?>
-				<?php echo $this->Form->submit('Search', array('class' => 'mainpage', 'div'=>false)); ?>
-			</div>
-			<div class="col-1 col-lg-1s" id="newListing">
-				<a href="#" id="listButton">Search</a>
-			</div>
-	</div>
-</header>
+<style>
+	.navbar{
+		background: transparent;
+		margin-bottom: 10px;
+	}
+	body{
+		background: #FAFAFA;
+	}
+	
+	div#content.wrapper {
+		background: #FFF;
+		padding: 20px;
+		border: 1px solid #F1F1F1;
+		border-radius: 9px;
+	}
+	
+	.navbar li a{
+		margin-top: 5px;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+	
+	.navbar li a:hover{
+		border-bottom: 4px solid #CCC;
+	}
+	
+	.navbar ul.nav{
+		margin-left: 10px;
+	}
+
+</style>
+<link href='http://fonts.googleapis.com/css?family=Podkova' rel='stylesheet' type='text/css'>
+
+<div class="navbar">
+  <div class="wrapper">
+    <a class="navbar-brand" href="/"><img src="/logo.png" alt="BOX'NGO" /></a>
+	<ul class="nav navbar-nav">
+		<li><a href="/shops/shoplist">Sell</a></li>
+		<?php $notifications = 3; ?>
+		<li><a href="/dashboard">Dashboard<?php if(isset($notifications) && $notifications > 0){echo "<span class='notification'>".$notifications."</span>";};?></a></li>
+	</ul>
+  </div>
+</div>

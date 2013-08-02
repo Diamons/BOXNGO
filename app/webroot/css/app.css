@@ -473,7 +473,7 @@ header > div.wrapper .link .notification{
 	font-size: 32px;
 }
 
-.addfavorite .heart, .addfavoriteused .heart, .addfavoritedisabled .heart{
+.addfavorite .icon-heart, .addfavoriteused .icon-heart, .addfavoritedisabled .icon-heart{
 	display: block;
 	margin-top: 3px;
 	font-size: 28px;
@@ -482,10 +482,10 @@ header > div.wrapper .link .notification{
 	-webkit-transition: all .5s;
 }
 
-.addfavorite .heart:hover {
+.addfavorite .icon-heart:hover {
 	color: #e71212;
 }
-.addfavoriteused .heart {
+.addfavoriteused .icon-heart {
 	color: red;
 }
 
@@ -585,31 +585,32 @@ form.custom span.custom.radio.checked::before{
 
 form input[type="submit"], .usermessage{
 	-webkit-appearance: none;
-	margin: 20px;
-	padding: 12px 18px;
+	margin: 20px 0;
+	padding: 8px 12px;
 	display: inline-block;
 	float:right;
 	background: transparent;
-	border:none;
 	color: white;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 18px;
 	transition: background .4s;
+	border: 1px solid #428bca;
 	-webkit-transition: background .4s;
 	-moz-transition: background .4s;
 	-o-transition: background .4s;
-	background: #0899FF;
-	border-radius: 4px;
+	background: #428bca;
+	border-radius: 6px;
 }
 
 #sendmessage form input[type="submit"]{
 	margin: 0;
-	margin-top: 20px;
+	margin-left: 20px;
 }
 
 form input[type="submit"]:hover, .usermessage:hover{
 	cursor: pointer;
-	background: #FF7E00;
+	background: #474949;
+	border-color: #474949;
 }
 
 .usermessage{
@@ -667,13 +668,6 @@ form input[type="submit"].mainpage:hover{
 img.profilePic{
 	display: block;
 	margin: auto;
-	border: 1px solid #DDD;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-box-shadow: 0 0 5px #888;
-	-webkit-box-shadow: 0 0 5px#888;
-	box-shadow: 0 0 5px #888;
 }
 
 .favoritemessage{

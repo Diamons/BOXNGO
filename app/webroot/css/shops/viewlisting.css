@@ -102,57 +102,14 @@ h1#listingName{
 
 #buyNow{
 	text-shadow: 1px 1px 1px #888;
-	padding: 10px 15px;
 	color: #FFFFFF;
 	display: block;
-	font: bold 12px Arial,Helvetica,sans-serif;
-	text-align: center;
-	text-transform: uppercase;
-	white-space: nowrap;
-	cursor: pointer;
+	font-size: 32px;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
-	-webkit-box-shadow: inset 0px 1px 1px #EEE;
-	-moz-box-shadow: inset 0px 1px 1px #EEE;
-	box-shadow: inset 0px 1px 1px #EEE;
-	border: 1px solid #6e9927;
-	color: #FFF;
-	font-size: 24px;
 	padding: 20px;
-	text-align: center;
-	margin-bottom: 10px;
-background: #9dd53a; /* Old browsers */
-background: -moz-linear-gradient(top, #9dd53a 0%, #78bc47 49%, #80c217 51%, #7cbc0a 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9dd53a), color-stop(49%,#78bc47), color-stop(51%,#80c217), color-stop(100%,#7cbc0a)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #9dd53a 0%,#78bc47 49%,#80c217 51%,#7cbc0a 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #9dd53a 0%,#78bc47 49%,#80c217 51%,#7cbc0a 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #9dd53a 0%,#78bc47 49%,#80c217 51%,#7cbc0a 100%); /* IE10+ */
-background: linear-gradient(to bottom, #9dd53a 0%,#78bc47 49%,#80c217 51%,#7cbc0a 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
-
-}
-
-#buyNow:hover{
-	background: #7cbc0a; /* Old browsers */
-background: -moz-linear-gradient(top, #7cbc0a 0%, #80c217 50%, #a1d54f 50%, #9dd53a 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7cbc0a), color-stop(50%,#80c217), color-stop(50%,#a1d54f), color-stop(100%,#9dd53a)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #7cbc0a 0%,#80c217 50%,#a1d54f 50%,#9dd53a 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #7cbc0a 0%,#80c217 50%,#a1d54f 50%,#9dd53a 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #7cbc0a 0%,#80c217 50%,#a1d54f 50%,#9dd53a 100%); /* IE10+ */
-background: linear-gradient(to bottom, #7cbc0a 0%,#80c217 50%,#a1d54f 50%,#9dd53a 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cbc0a', endColorstr='#9dd53a',GradientType=0 ); /* IE6-9 */
-}
-
-#buyNow:active{
-	background: #7cbc0a; /* Old browsers */
-background: -moz-linear-gradient(top, #7cbc0a 0%, #80c217 50%, #a1d54f 100%, #9dd53a 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7cbc0a), color-stop(50%,#80c217), color-stop(100%,#a1d54f), color-stop(100%,#9dd53a)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #7cbc0a 0%,#80c217 50%,#a1d54f 100%,#9dd53a 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #7cbc0a 0%,#80c217 50%,#a1d54f 100%,#9dd53a 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #7cbc0a 0%,#80c217 50%,#a1d54f 100%,#9dd53a 100%); /* IE10+ */
-background: linear-gradient(to bottom, #7cbc0a 0%,#80c217 50%,#a1d54f 100%,#9dd53a 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cbc0a', endColorstr='#9dd53a',GradientType=0 ); /* IE6-9 */
+	margin-bottom: 5px;
 }
 
 div.user_info{
@@ -216,10 +173,11 @@ div.user_info{
 	margin-bottom: 5px;
 }
 
-a.addComment{
+a.#addComment{
 	text-align: right;
-	display: block;
 	margin: 5px 0;
+	float: right;
+	
 }
 
 #buy .price, #buy .page_views{
@@ -349,7 +307,7 @@ a#edit:hover{
 #similarItems h5{
 	margin: 0;
 	overflow-y: hidden;
-	max-height: 1em;
+	max-height: 1.2em;
 	font-size: 11px;
 	color: inherit;
 	font-weight: normal;

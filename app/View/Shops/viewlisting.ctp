@@ -10,7 +10,6 @@
 		<meta property="og:type"   content="object" /> 
 		<meta property="og:url"    content="<?php echo Router::url(null, true) ?>" /> 
 		<meta property="og:title"  content="$<?php echo $listing['Shop']['price']." ".$listing['Shop']['name']; ?>" /> 
-		<meta property="og:description"  content="" /> 
 		<meta itemprop="image" property="og:image"  content="<?php echo $listing['Image'][0]['url']; ?>/convert?w=200&height=200&fit=crop" /> 
 	<?php $this->end();
 	$this->start('pinterest');
@@ -34,12 +33,12 @@
 		<?php if(isset($auth) && $auth['id'] == $listing['Shop']['user_id']) { ?>
 			<a id="edit" href="/shops/edit/<?php echo $listing['Shop']['id']; ?>">Edit this Listing</a>
 		<?php } ?>
-		<div class="clearfix">
+		<div class="col-12">
 			<div class="favoriteadd"><a href="#" class="addfavorite<?php if(!isset($auth) || empty($auth)){
 					echo "disabled"; }elseif(isset($auth) && !empty($favorite)){
 								echo "used";
 							}
-					?>" data-listingid="<?php echo $listing['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="typicn heart" data-title="heart"></span><i class="loading icon-spinner icon-spin"></i></a>
+					?>" data-listingid="<?php echo $listing['Shop']['id']; ?>" href="<?php if(!isset($auth) || empty($auth)){ echo $this->webroot."users"; } ?>"><span class="icon-heart" data-title="heart"></span><i class="loading icon-spinner icon-spin"></i></a>
 			(<?php echo count($listing['Favorite']); ?>)
 			</div><h1 id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
 		</div>
@@ -73,7 +72,9 @@
 			</div>
 			<div id="comments" class="row">
 				<?php if(isset($auth)){ ?>
-					<a id="addComment" class="addComment" href="#"><span class="plus typicn"></span> Write a Comment</a>
+					<div style="margin-bottom: 10px;"  class="clearfix">
+						<a id="addComment" class="btn btn-default pull-right" href="#"><span class="plus typicn"></span> Write a Comment</a>
+					</div>
 				<?php } ?>
 				<?php echo $this->Form->create("Comment", array("url" => "/shops/comment/".$listing['Shop']['id'])); ?>
 				<?php echo $this->Form->input("Comment.message", array("type" => "textarea")); ?>
@@ -82,7 +83,9 @@
 			    	for($i = 0; $i < count($comments); $i++){?>
 				    <div class="<?php if($listing['Shop']['user_id'] == $comments[$i]['Comment']['user_id']){ ?>seller <?php } ?>row comment">
 				    	<div class="userInfo col-2 col-lg-2">
-				    		<?php echo $this->Html->image($comments[$i]['User']['profilepic'], array('class' => 'profilePic')); ?>
+				    		<a class="thumbnail" href="/users/profile/<?php echo $comments[$i]['User']['id']; ?>">
+								<?php echo $this->Html->image($comments[$i]['User']['profilepic'], array('class' => 'profilePic')); ?>
+							</a>
 				    		<?php echo $this->Html->link($comments[$i]['User']['display_name'], "/users/profile/".$comments[$i]['User']['id']); ?>
 				    		<?php if($listing['Shop']['user_id'] == $comments[$i]['Comment']['user_id']){ ?><div class="radius success label">Seller</div><?php } ?>
 				    	</div>
@@ -100,7 +103,7 @@
 			</div>
 		</div>
 		<div class="col-4 col-lg-4">
-			<a id="buyNow" href="https://www.theboxngo.com/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
+			<a class="btn btn-success" id="buyNow" href="https://www.theboxngo.com/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
 			<div class="row" id="buy">
 				<div class="col-6 col-lg-6 page_views">
 					<?php echo $views; ?>
@@ -132,14 +135,15 @@
 				<section class="clearfix">
 					<h3 class="subheader">User Info</h3>
 					<div class="user_info">
-						<a href="/users/profile/<?php echo $listing['User']['id']; ?>">
+						<a class="thumbnail" href="/users/profile/<?php echo $listing['User']['id']; ?>">
 						<img src="<?php echo $listing['User']['profilepic']; ?>" class="profilePic" />
-						<?php echo $listing['User']['display_name']; ?></a>
+						</a>
+						<a href="/users/profile/<?php echo $listing['User']['id']; ?>"><?php echo $listing['User']['display_name']; ?></a>
 					</div>
 					<div>
 						<a href="/users/profile/<?php echo $listing['User']['id']; ?>"><span class="user typicn"></span> View <?php echo $listing['User']['display_name']; ?>'s Profile</a>
 						<?php if(isset($auth)){ ?>
-							<a data-reveal-id="sendmessage" href="/users/profile/<?php echo $listing['User']['id']; ?>"><span class="write typicn"></span> Message <?php echo $listing['User']['display_name']; ?></a>
+							<a data-toggle="modal" href="#sendmessage"><span class="icon-envelope-alt"></span> Message <?php echo $listing['User']['display_name']; ?></a>
 						<?php } ?>
 					</div>
 				</section>
@@ -147,7 +151,8 @@
 				<h3 class="subheader">Other Listings of Interest</h3>
 				<?php for($i = 0; $i < count($relatedItems); $i++){ ?>
 					<div class="col-6 col-lg-6">
-						<a href="/shops/viewlisting/<?php echo $relatedItems[$i]['Shop']['id']; ?>/<?php echo $relatedItems[$i]['Shop']['permalink']; ?>"><img src="<?php echo $relatedItems[$i]['Image'][0]['url']; ?>/convert?w=180&height=120&fit=crop" /><h5><?php echo $relatedItems[$i]['Shop']['name']; ?></h5></a>
+						<a class="thumbnail" href="<?php echo $relatedItems[$i]['Shop']['full_url']; ?>"><img src="<?php echo $relatedItems[$i]['Image'][0]['url']; ?>/convert?w=180&height=120&fit=crop" /></a><h5>
+						<a href="<?php echo $relatedItems[$i]['Shop']['full_url']; ?>"><?php echo $relatedItems[$i]['Shop']['name']; ?></a></h5>
 					</div>
 				<?php } ?>
 			</div>
@@ -156,16 +161,27 @@
 		</div>
 	</div>
 <?php if(isset($auth)){ ?>
-	<div id="sendmessage" class="reveal-modal medium">
-	  <h2>Message <?php echo $listing['User']['display_name']; ?></h2>
-	  <p class="lead">Got a question or comment?</p>
-	  <p>
-		<?php echo $this->Form->create("Message", array("url" => "/users/message/".$listing['User']['id'])); ?>
-		<?php echo $this->Form->input("Thread.subject", array("type" => "text", "value" => "Question about ".$listing['Shop']['name'])); ?>
-		<?php echo $this->Form->input("Thread.message", array("type" => "textarea", "value" => "\n\n\n".$listing['Shop']['full_url'])); ?>
-		<?php echo $this->Form->end("Send Message"); ?>
-	  </p>
-	  <a class="close-reveal-modal">&#215;</a>
+	<div id="sendmessage" class="modal fade">
+	<?php echo $this->Form->create("Message", array("url" => "/users/message/".$listing['User']['id'])); ?>
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Message <?php echo $listing['User']['display_name']; ?></h4>
+				</div>
+				<div class="modal-body">
+				
+					<?php echo $this->Form->input("Thread.subject", array("class" => "form-control", "type" => "text", "value" => "Question about ".$listing['Shop']['name'])); ?>
+					<?php echo $this->Form->input("Thread.message", array("class" => "form-control", "type" => "textarea", "value" => "\n\n\n".$listing['Shop']['full_url'])); ?>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-medium btn-default" data-dismiss="modal">Close</button>
+					<?php echo $this->Form->submit("Send Message", array("div" => false)); ?>
+					<?php echo $this->Form->end(); ?>
+				</div>
+			</div>
+		</div>
 	</div>
+
 <?php } ?>
 </div>

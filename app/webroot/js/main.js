@@ -36,7 +36,7 @@ $(function(){
 			data: {listingid: $(_this).data('listingid'), facebook_story: facebookId, url: window.location.href},
 			success: function(response){
 				$(_this).find('.loading').hide();
-				$(_this).find('.typicn.heart').show();
+				$(_this).find('.icon-heart').css({opacity: 1});;
 				favoriteClicked.removeClass('addfavorite');
 				favoriteClicked.addClass('addfavoriteused');
 				$("body .favoritemessage").remove();
@@ -50,14 +50,14 @@ $(function(){
 	$("body").on("click", "a.addfavorite", function(event){
 		event.preventDefault();
 		var favoriteClicked = $(this);
-		$(this).find('.typicn.heart').hide();
+		$(this).find('.icon-heart').css({opacity: 0});;
 		$(this).find('i.loading').show();
 		postLike(this, $(this).data('listingid'));
 	});
 	$("body").on("click", "a.addfavoriteused", function(event){
 		event.preventDefault();
 		var favoriteClicked = $(this);
-		$(this).find('.typicn.heart').hide();
+		$(this).find('.icon-heart').css({opacity: 0});;
 		$(this).find('i.loading').show();
 		var _this = this;
 		$.ajax({
@@ -65,7 +65,7 @@ $(function(){
 			data: {listingid: $(this).data('listingid')},
 			success: function(response){
 				$(_this).find('.loading').hide();
-				$(_this).find('.typicn.heart').show();
+				$(_this).find('.icon-heart').css({opacity: 1});;
 				favoriteClicked.removeClass('addfavoriteused');
 				favoriteClicked.addClass('addfavorite');
 				$("body .favoritemessage").remove();

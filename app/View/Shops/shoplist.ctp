@@ -5,7 +5,7 @@ $this->start('scriptBottom');
 echo $this->Html->script(array('http://code.jquery.com/ui/1.9.2/jquery-ui.js','//api.filepicker.io/v1/filepicker.js', 'shops/shoplist'));
 $this->end();
 ?>
-<?php echo $this->Form->create('Shop', array('class' => 'custom', 'inputDefaults' => array('div' => false, 'label' => false))); ?>
+<?php echo $this->Form->create('Shop', array('inputDefaults' => array('div' => false, 'label' => false))); ?>
 <?php if(isset($edit)){ ?>
 	<?php echo $this->Form->input("Shop.id", array("value" => $edit)); ?>
 <?php } ?>
@@ -39,15 +39,15 @@ $this->end();
 	</div>
 	<div class="row">
 		<div class="col-4 col-lg-4"><b>Name</b><span class="detail">(What are you selling?)</span></div>
-		<div class="col-8 col-lg-8"><?php echo $this->Form->input('Shop.name'); ?></div>
+		<div class="col-8 col-lg-8"><?php echo $this->Form->input('Shop.name', array('class' => 'form-control')); ?></div>
 	</div>	
 	<div class="row">
 		<div class="col-4 col-lg-4"><b>Select a Category</b><span class="detail">(Where does this belong?)</span></div>
-		<div class="col-8 col-lg-8"><?php echo $this->Form->input('Shop.category_id', array('empty' => true, 'options' => $categories)); ?></div>
+		<div class="col-8 col-lg-8"><?php echo $this->Form->input('Shop.category_id', array('class' => 'form-control', 'empty' => true, 'options' => $categories)); ?></div>
 	</div>
 	<div class="row">
 		<div class="col-4 col-lg-4"><b>Description</b></div>
-		<div class="col-8 col-lg-8"><?php echo $this->Form->input('Shop.description', array('type' => 'textarea')); ?></div>
+		<div class="col-8 col-lg-8"><?php echo $this->Form->input('Shop.description', array('class' => 'form-control', 'type' => 'textarea')); ?></div>
 	</div>
 	
 	<div class="header">
@@ -59,7 +59,7 @@ $this->end();
 		<div class="col-4 col-lg-4"><b>Quantity</b></div>
 		<div class="col-8 col-lg-8">
 			<?php
-				echo $this->Form->input('Shop.quantity', array('empty' => false, 'options' => array_combine(range(1,10,1), range(1,10,1))));
+				echo $this->Form->input('Shop.quantity', array('class' => 'form-control', 'empty' => false, 'options' => array_combine(range(1,10,1), range(1,10,1))));
 			?>
 		</div>
 	</div>	
@@ -67,43 +67,38 @@ $this->end();
 		<div class="col-4 col-lg-4"><b>Selling Price</b><span class="detail">(How much would you like to charge?)</span>
 		</div>
 		<div class="col-8 col-lg-8">
-			<div class="row">
-			  <div class="col-2 col-lg-2">
-				<span class="prefix">$</span>
-			  </div>
-			  <div class="col-10 col-lg-10">
-				<?php echo $this->Form->input('Shop.price', array('type' => 'text', 'placeholder' => '10.00')); ?>
-			  </div>
+			<div class="input-group">
+				<span class="input-group-addon">$</span>
+				<?php echo $this->Form->input('Shop.price', array('class' => 'form-control', 'type' => 'text', 'placeholder' => '10.00')); ?>
 			</div>
 		</div>
 	</div>		
 	<div class="row">
 		<div class="col-4 col-lg-4"><b>Shipping Option</b></div>
 		<div class="col-8 col-lg-8">
-			  <?php 
+			<div class="radio"><?php 
 				$options = array(0 => '<b>FREE</b> Shipping');
 				$options2 = array(1 => 'Extra Charge');
 				$attributes = array('default' => 0, 'legend' => false, 'label' => false); ?>
 				<label onclick='$("#shipping").slideUp();' for="ShopShipping0">
 					<?php echo $this->Form->radio('Shop.shipping', $options, $attributes); ?>
 				</label>
+			</div>
+			<div class="radio">
 				<label onclick='$("#shipping").slideDown();' for="ShopShipping1">
 					<?php echo $this->Form->radio('Shop.shipping', $options2, $attributes); ?>
 				</label>
+			</div>
 			  <div style="margin-top:5px; display:none;" id="shipping" class="row">
-					 <div style="margin:0;" class="row">
-					  <div style="padding:0 0 0 4px;" class="two mobile-one columns">
-						<span class="prefix">$</span>
-					  </div>
-					  <div style="padding:0 8px 0 0;" class="ten mobile-col-3 col-lg-3">
-						<?php 
-							if(!isset($edit))
-								echo $this->Form->input('Shop.shipping_price', array('type' => 'text', 'value' => '5.00'));
-							else
-								echo $this->Form->input('Shop.shipping_price', array('type' => 'text'));
-						?>
-					  </div>
-					</div>
+				<div class="input-group">
+					<span class="input-group-addon">$</span>
+					<?php 
+						if(!isset($edit))
+							echo $this->Form->input('Shop.shipping_price', array('class' => 'form-control', 'type' => 'text', 'value' => '5.00'));
+						else
+							echo $this->Form->input('Shop.shipping_price', array('class' => 'form-control', 'type' => 'text'));
+					?>
+				</div>
 			  </div>
 		</div>
 	</div>	
