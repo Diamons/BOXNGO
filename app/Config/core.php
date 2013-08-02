@@ -183,12 +183,6 @@ Configure::write('Session', array(
 	)
 ));
 
-Cache::config('notifications', array(
-    'engine' => 'Redis',
-    'duration' => '+999 days',
-    'groups' => array('comment', 'post')
-));
-
 /**
  * The level of CakePHP security.
  */
@@ -252,7 +246,10 @@ Cache::config('notifications', array(
  *       Please check the comments in boostrap.php for more info on the cache engines available
  *       and their setttings.
  */
-$engine = 'Redis';
+if (strtoupper(substr(PHP_OS, 0, 3)) === "WIN")
+	$engine = 'File';
+else
+	$engine = 'Redis';
 if (extension_loaded('apc') && function_exists('apc_dec') && (php_sapi_name() !== 'cli' || ini_get('apc.enable_cli'))) {
 	$engine = 'Apc';
 }
@@ -291,6 +288,11 @@ Cache::config('long', array(
     'duration' => '+1 week',
     'probability' => 100,
     'path' => CACHE . 'long' . DS,
+));
+Cache::config('notifications', array(
+    'engine' => $engine,
+    'duration' => '+999 days',
+    'groups' => array('comment', 'post')
 ));
 /**
  * Configure the cache for model and datasource caches.  This cache configuration

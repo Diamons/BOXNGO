@@ -173,7 +173,11 @@ Cache::config('default', array(
  * ));
  */
 
-Cache::config('default', array(
+if(strtoupper(substr(PHP_OS, 0, 3)) === "WIN"){
+	Cache::config('default', array(
+	'engine' => 'File')
+}else{
+	Cache::config('default', array(
 	'engine' => 'Redis', //[required]
 	'duration'=> 3600, //[optional]
 	'probability'=> 100, //[optional]
@@ -182,8 +186,8 @@ Cache::config('default', array(
 	'port' => 6379, // default port 6379
 	'timeout' => 0 ,// timeout in seconds, 0 = unlimited
 	'persistent' => true, // [optional] set this to false for non-persistent connections
-));
-
+	));
+}
 Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'
