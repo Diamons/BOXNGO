@@ -11,7 +11,8 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-		echo $this->Html->css('bootstrap.min');
+		echo $this->Html->css('foundation.min');
+		echo $this->Html->css('typicons');
 		echo $this->Html->css('font-awesome.min');
 		echo $this->Html->css('app');
 		
@@ -50,7 +51,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	</div>
 	<?php echo $this->element('layout'.DS.'footer'); ?>
 	<?php 
-		echo $this->Html->script('bootstrap.min');
+		echo $this->Html->script('foundation.min');
 		echo $this->Html->script('app');
 		echo $this->Html->script('main');
 		echo $this->fetch('scriptBottom');

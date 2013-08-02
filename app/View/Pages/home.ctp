@@ -20,7 +20,7 @@ $this->start('meta'); ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-		echo $this->Html->css('foundation.min');
+		echo $this->Html->css('bootstrap.min');
 		echo $this->Html->css('typicons');
 		echo $this->Html->css('font-awesome.min');
 		echo $this->Html->css('app');
@@ -43,21 +43,13 @@ $this->start('meta'); ?>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<script>
-	function resize(){
-		var highestCol = Math.max($('#collectionHome img').height());
-		$('.note_block > div, #browse_note > a').innerHeight(highestCol);
-	}
 	$(window).load(function(){
-		resize();
 		$("#recent_activity").mCustomScrollbar({
 	    	scrollButtons:{
 				enable:true
 			},
 			theme: "dark"
 	    });
-	});
-	$(window).resize(function(){
-		resize();
 	});
 	</script>
 </head>
