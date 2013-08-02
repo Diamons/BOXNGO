@@ -1,5 +1,5 @@
 <?php $this->start('css');
-	echo $this->Html->css(array('searches/search', 'pages/main', 'users/profile', 'bootstrap.min', 'http://fonts.googleapis.com/css?family=Quicksand:300,400,700', 'http://fonts.googleapis.com/css?family=Lato:400,300'));
+	echo $this->Html->css(array('searches/search', 'pages/main', 'users/profile', 'http://fonts.googleapis.com/css?family=Quicksand:300,400,700', 'http://fonts.googleapis.com/css?family=Lato:400,300'));
 $this->end();
 $this->start('scriptBottom');
 	echo $this->Html->script(array('users/profile'));

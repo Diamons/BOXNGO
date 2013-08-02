@@ -173,58 +173,15 @@ h1.faq{
 }
 
 #categories > nav{
-	margin-bottom: 20px;
-	border: 1px solid #d4ffad;
-	border-radius: 9px;
-	padding: 0 10px 10px 10px;
-	background: #f1ffe4;
-}
-
-
-#categories .panel > .row{
 	margin-bottom: 15px;
-}
-
-#categories nav li{
-	display: block;
-}
-
-nav.newlyListed .newlyListedInfo > a{
-	display: block;
-	font-size: 11px;
-}
-
-#categories nav.newlyListed a.newlyListedName{
-	height: 1.7em;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-#categories nav:first-child a{
-	display: block;
-	padding: 10px 0;
-	font-size: 12px;
-	transition: all .2s;
-	-moz-transition: all .2s;
-	-webkit-transition: all .2s;
-	-o-transition: all .2s;
-	border-bottom: 1px solid #EEE;
 }
 
 #categories nav a i{
 	padding-right: 25px;
 }
 
-#categories nav a:hover{
-	color: #f9833d;
-}
-
-#categories nav div.header{
-	font-weight: bold;
-	padding: 10px 0;
-	color: #666;
-	border-bottom: 2px solid #2ba6cb;
-
+#categories .panel > .row{
+	margin-bottom: 15px;
 }
 
 div.price{
@@ -271,7 +228,7 @@ img#coverBanner{
 }
 
 #listings .userlisted{
-	height: 14px;
+	height: 18px;
 	overflow: hidden;
 }
 

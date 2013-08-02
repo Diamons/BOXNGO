@@ -2,7 +2,7 @@
 echo  $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'pages/home_user'));
 $this->end();
 $this->start('css');
-echo $this->Html->css(array('shops/jquery.mCustomScrollbar', 'searches/search', 'pages/main', 'bootstrap.min'));
+echo $this->Html->css(array('shops/jquery.mCustomScrollbar', 'searches/search', 'pages/main'));
 $this->end();
 ?>
 
@@ -15,7 +15,6 @@ $this->end();
 			<?php echo $this->element('categories'); ?>
 			<div class="panel panel-primary">
 				<div class="panel-heading">Newly Listed</div>
-
 				<?php for($i = 0; $i < count($recent); $i++){ ?>
 				<div class="row">
 					<div class="col-3 col-lg-3">
@@ -34,7 +33,8 @@ $this->end();
 		</div>
 		<div class="col-9 col-lg-9">
 			<?php //<a id="promo_container" href="/promotions/july4th"><img id="promo" alt="July 4th" src="/images/promo.png" /></a> ?>
-			<div id="featured_recent" class="row">
+			<?php
+			 /*<div id="featured_recent" class="row">
 				<div class="col-8 col-lg-8">
 					<div class="row">
 						<div class="featured_seller col-5 col-lg-5">
@@ -60,6 +60,7 @@ $this->end();
 					</div>
 				</div>
 			</div>
+			*/ ?>
 			<div id="listings">
 				<?php echo $this->element('four_columns_listings', array('listings' => $listings)); ?>
 			</div>
