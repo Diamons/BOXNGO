@@ -249,10 +249,14 @@ Configure::write('Stripe.fields', array(
 Configure::write('Admin.aliases.administrator', 'Administrator');
 
 //Cross subdomain authentication
-if($_SERVER['SERVER_NAME'] == 'boxngo.local')
+if($_SERVER['SERVER_NAME'] == 'boxngo.local'){
 	ini_set("session.cookie_domain", "boxngo.local");
-else
+	debug("A");
+}
+else{
 	ini_set("session.cookie_domain", ".theboxngo.com");
+	debug("B");
+}
 
 //Miles Forum Plugin Config
 Configure::write('Forum.settings', array(

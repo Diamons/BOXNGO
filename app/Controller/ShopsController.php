@@ -9,6 +9,11 @@
 			parent::beforeFilter();
 			$this->Auth->allow('viewlisting');
 			$this->Security->unlockedActions = array('shoplist');
+			$this->Security->blackHoleCallback = 'blackhole';
+			
+		}
+		public function blackhole($type) {
+			parent::sendEmail("shahruksemail@gmail.com","BOX'NGO BLACKHOLE! $type");
 		}
 		
 		public function shoplist(){
@@ -151,7 +156,7 @@
 				$this->Session->setFlash("Your comment was posted!", "flash_success");
 				$this->Shop->recursive = 1;
 				$shop = $this->Shop->read(NULL, $shopid);
-				$this->NotificationItem->notify('comment_listing', $shop['User']['id'], $this->Auth->user('id'), $shopid); 
+				//$this->NotificationItem->notify('comment_listing', $shop['User']['id'], $this->Auth->user('id'), $shopid); 
 				//parent::sendEmail($shop['User']['username'],"BOX'NGO :: New comment posted on your listing for ".$shop['Shop']['name'],"newcomment", array('link' => $shop['Shop']['full_url'], 'name' => $shop['Shop']['name']));
 			}
 			$this->redirect('/shops/viewlisting/'.$shopid);

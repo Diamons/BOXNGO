@@ -77,8 +77,10 @@
 					</div>
 				<?php } ?>
 				<?php echo $this->Form->create("Comment", array("url" => "/shops/comment/".$listing['Shop']['id'])); ?>
-				<?php echo $this->Form->input("Comment.message", array("type" => "textarea")); ?>
-				<?php echo $this->Form->end("Leave Comment"); ?>
+				<?php echo $this->Form->input("Comment.message", array("class" => "form-control", "type" => "textarea")); ?>
+				<div class="row">
+					<?php echo $this->Form->end("Leave Comment"); ?>
+				</div>
 			    <?php if(!empty($comments)){ 
 			    	for($i = 0; $i < count($comments); $i++){?>
 				    <div class="<?php if($listing['Shop']['user_id'] == $comments[$i]['Comment']['user_id']){ ?>seller <?php } ?>row comment">
