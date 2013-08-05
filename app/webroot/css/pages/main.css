@@ -12,6 +12,10 @@ h1.faq{
 	font-weight: 800;
 }
 
+.newListingContainer{
+	display: block;
+}
+
 #contactus{
 	position: relative;
 }

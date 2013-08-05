@@ -24,11 +24,10 @@
 		</a>
 		<?php } ?>
 		<div style="width: 40%;"class="nav navbar-text pull-right input-group">
-			<?php echo $this->Form->create("Search", array("method" => "GET", "action" => "/search", "inputDefaults" => array("label" => false, "div" => false))); ?>
 			<?php echo $this->Form->input("Search.query", array("id" => "SearchQuery", "class" => "form-control")); ?>
-			<?php echo $this->Form->end("A"); ?>
+			<?php echo $this->Form->end(); ?>
 			<span class="input-group-btn">
-				<button class="btn btn-default" type="button">Go!</button>
+				<button id="searchTriggerButton" class="btn btn-default" type="button">Go!</button>
 			</span>
 		</div>
 	

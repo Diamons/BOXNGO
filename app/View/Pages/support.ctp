@@ -6,15 +6,20 @@ $this->end(); ?>
 	<div>
 		When it comes to selling online, lots of things can happen that make things harder than expected. At BOX'NGO, we're a team of sellers that have been selling online for quite some time now. We've gone out of our way to refine the selling process to be much more intuitive and user friendly. In case you have any questions or concerns with selling online or at <a href="http://theboxngo.com/">TheBOXNGO.com</a>, we've created this simple Frequently Asked Questions page to answer most of the common questions. We encourage you to contact us if your question or concern remains unanswered.
 		<div class="row support_options">
-			<div class="clearfix col-6 col-lg-6">
+			<div class="clearfix col-4 col-lg-4">
 				<i class="icon-envelope"></i>
 				<h3>E-mail Support</h3>
 				<p>Email us at <a href="mailto:support@theboxngo.com">support@theboxngo.com</a> for any issues and we'll respond to you quickly. Average response time is 30 minutes - 90 minutes.</p>
 			</div>
-			<div class="clearfix col-6 col-lg-6">
+			<div class="clearfix col-4 col-lg-4">
 				<i class="icon-comment"></i>
 				<h3>Chat Support</h3>
 				<p>We're available to chat via the <a href="/dashboard">Dashboard</a> portion of the website. Unfortunately this is not available to guests, only registered users of BOX'NGO.</p>
+			</div>
+			<div class="clearfix col-4 col-lg-4">
+				<i class="icon-phone"></i>
+				<h3>Phone Support (Beta)</h3>
+				<p>Currently, we can be reached at <b>1-888-731-4321</b> for any questions or concerns between 12 PM and 5 PM EST (GMT -5). Phone support is currently experimental.</p>
 			</div>
 		</div>
 	</div>

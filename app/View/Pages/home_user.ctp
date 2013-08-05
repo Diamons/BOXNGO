@@ -17,12 +17,12 @@ $this->end();
 				<div class="panel-heading">Newly Listed</div>
 				<?php for($i = 0; $i < count($recent); $i++){ ?>
 				<div class="row">
-					<div class="col-3 col-lg-3">
-						<a href="<?php echo $recent[$i]['Shop']['full_url']; ?>">
-							<?php echo $this->Html->image($recent[$i]['Image'][0]['url'].'/convert?w=64&height=64&fit=crop', array('class' => 'newListingImage', 'alt' => $recent[$i]['Shop']['name'])); ?>
+					<div class="col-4 col-lg-4">
+						<a class="thumbnail newListingContainer" href="<?php echo $recent[$i]['Shop']['full_url']; ?>">
+							<?php echo $this->Html->image($recent[$i]['Image'][0]['url'].'/convert?w=256&height=256&fit=crop', array('class' => 'img-responsive newListingImage', 'alt' => $recent[$i]['Shop']['name'])); ?>
 						</a>	
 					</div>
-					<div class="newlyListedInfo col-9 col-lg-9">
+					<div class="newlyListedInfo col-8 col-lg-8">
 						<a class="newlyListedName" href="<?php echo $recent[$i]['Shop']['full_url']; ?>"> <?php echo $recent[$i]['Shop']['name']; ?></a>
 						<div class="category"><a href="/searches/browse/<?php echo $recent[$i]['Category']['short_name']; ?>"><?php echo $recent[$i]['Category']['display_name']; ?></a></div>
 						<div class="price">$<?php echo number_format($recent[$i]['Shop']['price'], 2); ?></div>

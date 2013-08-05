@@ -86,6 +86,10 @@ $(function(){
 	        $('#toTop').fadeOut();
 	    }
 	});
+	
+	$("#searchTriggerButton").click(function(event){
+		$("#SearchIndexForm").submit();
+	});
 });
 
 function getDomain(){
