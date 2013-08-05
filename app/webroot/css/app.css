@@ -52,10 +52,7 @@ a:hover{
    Shared Styles
 ----------------------------------------- */
 html, body{
-	line-height: 1.5em;
-	width: 100%;
 	word-break: break-word;
-	font-family: "Open Sans", "Arial", sans-serif;
 }
 #sitenotice{
 	font-size: 11px; 
@@ -71,9 +68,22 @@ html, body{
 div.wrapper{
 	min-width: 960px;
 	width: 100%;
-	padding: 0 10px;
 	max-width: 1300px;
 	margin: auto;
+}
+
+.nav.user_logged{
+	margin-top: 20px;
+}
+
+#notificationItems{
+	margin-right: 20px;
+	margin-top: 9px;
+	font-size: 32px;
+}
+
+.nav.user_logged.unread{
+	color: #B5E01B;
 }
 
 #user_container,#notifications{
@@ -805,9 +815,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9db80', end
 	padding: 0 0 0 10px;
 }
 
-footer > .wrapper > .columns a{
+footer > .wrapper  a{
 	display: block;
-	font-size: 11px;
+	font-size: 12px;
+	margin-bottom: 4px;
 }
 
 #footer_logo{
@@ -905,4 +916,37 @@ html[xmlns] .clearfix {
 	#listButton{
 		padding: 5px 0;
 	}
+}
+
+.navbar{
+	background: transparent;
+	margin-bottom: 10px;
+}
+body{
+	background: #FAFAFA;
+}
+
+div#content.wrapper {
+	background: #FFF;
+	padding: 20px;
+	border: 1px solid #F1F1F1;
+	border-radius: 9px;
+}
+
+.navbar li a{
+	margin-top: 5px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.navbar li a:hover{
+	border-bottom: 4px solid #CCC;
+}
+
+.navbar ul.nav{
+	margin-left: 10px;
+}
+
+.navbar .user_actions{
+	margin-top: 5px;
 }

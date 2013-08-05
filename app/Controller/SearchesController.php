@@ -7,6 +7,7 @@
 		}
 		
 		public function index($category=NULL){
+		debug($this->params->query);
 			if(!empty($this->params->query['query'])){
 				$search = "%".$this->params->query['query']."%";
 				$conditions = array('OR' => array('Shop.name LIKE' => $search, 'Shop.description LIKE' => $search), 'AND' => array('Shop.canview' => 1));

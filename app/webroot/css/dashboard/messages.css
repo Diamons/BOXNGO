@@ -59,7 +59,7 @@ span.date{
 	margin: auto;
 }
 
-.message_individual > div.two.columns{
+.message_individual > div.col-2{
 	text-align: center;
 }	
 

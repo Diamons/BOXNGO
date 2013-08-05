@@ -1,21 +1,17 @@
-#content{
-	background: #1a7ec5;
-	border-radius: 10px;
-	padding: 15px 50px;
-}
-
+/*
 div.bearhello{
 	background: url('/images/payments/bearhello.png') no-repeat;
 	height:525px;
 	width: 404px;
 	float: left;
 }
-
+*/
 .text{
-	color: #aee8ff;
-	margin-top: 60px;
 	font-weight: 800;
-	padding-left: 400px;
+}
+
+.choices{
+	text-align: center;
 }
 
 .paypal, .check{
@@ -67,28 +63,12 @@ div.bearhello{
 	height: 128px;
 	margin-right: 20px;
 }
-.choices{
-	text-align: center;
-	margin-top: 20px;
-}
+
 
 .choices .row{
-	margin-bottom: 5px;
-	min-width: 0;
-	background: rgba(0,0,0,.6);
-	padding: 9pt;
-	border-radius: 3px;
+	font-weight: bold;
 }
 
-.choices .row > div:nth-child(odd){
-	text-align: center;
-	padding-top: 6px;
-	color: #FFF;
-	font-size: 10px;
-}
-#UserPaymentinfoForm input[type="text"]{
-	margin: 0;
-}
 
 #paypalChoice, #checkChoice, #UserPaymentinfoForm input[type="submit"], #checkmarks{
 	display: none;

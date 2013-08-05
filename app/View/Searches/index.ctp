@@ -35,7 +35,13 @@ $this->end();
 				
 			<?php } ?>
 			</div>
-			<div id="pagination"><?php echo $this->Paginator->numbers(array('separator' => ' | ')); ?></div>
+			<div class="text-center">
+				<ul class="pagination pagination-large">
+					<?php echo $this->Paginator->first('<< first', array('tag' => 'li')); ?>
+					<?php echo $this->Paginator->numbers(array('ellipsis' => false, 'tag' => 'li', 'first' => 2, 'last' => 2, 'separator' => false)); ?>
+					<?php echo $this->Paginator->last('last >>', array('tag' => 'li')); ?>
+				</ul>
+			</div>
 		</div>
 	<div style="display:none;">
 		<h2 style="margin: 60px 0 10px 0; font-size: 16px; text-transform: uppercase;">Similar Items</h2>

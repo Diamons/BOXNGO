@@ -1,3 +1,16 @@
+.pagination li.current{
+	float: left;
+	padding: 4px 12px;
+	line-height: 1.428571429;
+	text-decoration: none;
+	background-color: #428bca;
+	color: #FFF;
+	border: 1px solid #ddd;
+	border-left-width: 0;
+	padding: 10px 16px;
+	font-size: 18px;
+}
+
 .row > .listing > .img{
 	width: 100%;
 }

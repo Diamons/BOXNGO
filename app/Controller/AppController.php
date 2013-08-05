@@ -39,7 +39,6 @@ class AppController extends Controller {
 	public $helpers = array('Form');
 
 	public function beforeFilter(){
-		
 		parent::beforeFilter();
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));

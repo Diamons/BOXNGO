@@ -48,7 +48,7 @@
 		}
 		
 		public function myshop(){
-			$listings = $this->Shop->find("all", array("conditions" => array("Shop.user_id" => $this->Auth->user('id')), "order" => "Shop.created DESC"));
+			$listings = $this->Shop->find("all", array("conditions" => array("Shop.user_id" => $this->Auth->user('id'),"OR" => array("Shop.canview" => array(2,1))), "order" => "Shop.created DESC"));	
 			$this->set("listings", $listings);
 		}
 		public function myorders(){
@@ -59,16 +59,6 @@
 					$orders[$i]['Image'] = $a['Image'];
 			}
 			$this->set("orders", $orders);
-		}
-		
-		public function mytrades(){
-			$trades = $this->Trade->find("all", array("conditions" => array("Trade.user_id" => $this->Auth->user('id'))));
-			for($i = 0; $i < count($trades); $i++){
-				$a = $this->Image->getShopImage($trades[$i]['Trade']['shop_id']);
-				if(!empty($a['Image']))
-					$trades[$i]['Image'] = $a['Image'];
-			}
-			$this->set("trades", $trades);
 		}
 		
 		public function myfavorites(){

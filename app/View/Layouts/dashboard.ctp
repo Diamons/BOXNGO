@@ -15,6 +15,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		echo $this->Html->css('bootstrap.min');
 		echo $this->Html->css('font-awesome.min');
 		echo $this->Html->css('app');
+		echo $this->Html->css('pages/main');
 		echo $this->Html->css('dashboard/main');
 		
 		echo $this->fetch('facebookMeta');
@@ -36,28 +37,25 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	<?php echo $this->element('includes'.DS.'facebookscript'); ?>
 	<div class="boxngo_wrapper">
 		<?php echo $this->Form->create('Search', array('action' => 'index', 'type' => 'GET', 'inputDefaults' => array('div'=>false,'label'=>false),'class' => 'custom')); ?>
-		<?php echo $this->element('layout'.DS.'subnav'); ?>
+		<?php //echo $this->element('layout'.DS.'subnav'); ?>
 		<?php echo $this->element('layout'.DS.'header'); ?>
 		<?php echo $this->Form->end(); ?>
 		
 		<?php echo $this->Session->flash(); ?>
-		<div id="dashboard" class="wrapper row">
+		<div id="content" class="wrapper row">
 			<div class="col-3 col-lg-3">
-				<div id="dashmenu">
-					<a href="/dashboard/myshop">My Shop Items</a>
-					<a href="/dashboard/myfavorites">My Favorites</a>
-					<a href="/dashboard/managepurchases">My Purchases</a>
-					<a href="/dashboard/myorders">My Orders<?php if(isset($notifications) && $notifications > 0){echo "<span class='notification'>".$notifications."</span>";};?></a>
-					<a href="/dashboard/messages">My Messages <?php if($messages > 0) { echo "<span class='notification'>".$messages."</span>"; } ?></a>
-					<hr />
-					<a href="/dashboard/manageaccount">Edit Profile</a>
-					<a href="/users/paymentinfo">Manage Payment Information</a>
-				</div>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="/dashboard/myshop">My Shop Items</a></li>
+					<li><a href="/dashboard/myfavorites">My Favorites</a></li>
+					<li><a href="/dashboard/managepurchases">My Purchases</a></li>
+					<li><a href="/dashboard/myorders">My Orders<?php if(isset($notifications) && $notifications > 0){echo "<span class='notification'>".$notifications."</span>";};?></a></li>
+					<li><a href="/dashboard/messages">My Messages <?php if($messages > 0) { echo "<span class='notification'>".$messages."</span>"; } ?></a></li>
+					<li><a href="/dashboard/manageaccount">Edit Profile</a></li>
+					<li><a href="/users/paymentinfo">Manage Payment Information</a></li>
+				</ul>
 			</div>
 			<div class="col-9 col-lg-9">
-				<div class="dashwrapper">
-					<?php echo $this->fetch('content'); ?>
-				</div>
+				<?php echo $this->fetch('content'); ?>
 			</div>
 		</div>
 		<?php

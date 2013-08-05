@@ -7,7 +7,7 @@
 		<div class="col-4 col-lg-4">
 			<a href="/blog/">Blog</a>
 			<a href="/info/about">Meet the Founders</a>
-			<a href="/info/howitworks">How it Works</a>
+			<a href="/info/fees">Fees</a>
 			<a class="support" href="/info/support">FAQ / Support</a>			
 			<a href="/info/privacy">Privacy Policy</a>
 		</div>

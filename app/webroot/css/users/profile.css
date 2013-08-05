@@ -17,6 +17,13 @@
 	margin-right: 5px;
 }
 
+.bio > img{
+	width: 100%;
+}
+
+.tab-content > div{
+	margin-top: 10px;
+}
 #content .row {
 	margin: 0;
 }

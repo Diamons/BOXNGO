@@ -31,9 +31,11 @@
 <div class="wrapper" id="content">
 	<div class="row">	
 		<?php if(isset($auth) && $auth['id'] == $listing['Shop']['user_id']) { ?>
-			<a id="edit" href="/shops/edit/<?php echo $listing['Shop']['id']; ?>">Edit this Listing</a>
+			<div class="col-12 col-12-lg">
+				<a class="btn btn-info btn-small" href="/shops/edit/<?php echo $listing['Shop']['id']; ?>">Edit this Listing</a>
+			</div>
 		<?php } ?>
-		<div class="col-12">
+		<div class="col-12 col-12-lg">
 			<div class="favoriteadd"><a href="#" class="addfavorite<?php if(!isset($auth) || empty($auth)){
 					echo "disabled"; }elseif(isset($auth) && !empty($favorite)){
 								echo "used";
@@ -51,11 +53,7 @@
 					if(!empty($listing['Image'])){
 						for($i = 0; $i < count($listing['Image']); $i++){ ?>
 						<?php 
-							if($i == 0){
-								echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."' class='imageContainer selected'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop', array('alt' => $listing['Shop']['name']))."</div>";
-							} else {
-								echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."' class='imageContainer'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?height=420&fit=crop', array('alt' => $listing['Shop']['name']))."</div>";
-							}
+							echo "<div data-order='".$i."' data-image='".$listing['Image'][$i]['url']."/convert?h=420' class='imageContainer'>".$this->Html->image($listing['Image'][$i]['url'].'/convert?h=420', array('alt' => $listing['Shop']['name']))."</div>";
 						}
 					}else{
 						echo $this->Html->image("loading.gif");
@@ -63,11 +61,12 @@
 				</div>
 				<div id="displayPicture">
 					<?php for($i = 0; $i < count($listing['Image']); $i++){ ?>
-						<a id="lightboxImage<?php echo $i; ?>" href="<?php echo $listing['Image'][$i]['url']; ?>"><img src="<?php echo $listing['Image'][$i]['url']; ?>" /></a>
+						<a id="lightboxImage<?php echo $i; ?>" href="<?php echo $listing['Image'][$i]['url']; ?>"><img src="<?php echo $listing['Image'][$i]['url'].'/convert?h=420'; ?>" /></a>
 					<?php } ?>
 				</div>
 			</div>
 			<div itemprop="description" id="description">
+				<h3 class="subheader">Description</h3>
 				<?php echo nl2br(h($listing['Shop']['description'])); ?>
 			</div>
 			<div id="comments" class="row">
@@ -143,7 +142,7 @@
 						<a href="/users/profile/<?php echo $listing['User']['id']; ?>"><?php echo $listing['User']['display_name']; ?></a>
 					</div>
 					<div>
-						<a href="/users/profile/<?php echo $listing['User']['id']; ?>"><span class="user typicn"></span> View <?php echo $listing['User']['display_name']; ?>'s Profile</a>
+						<a href="/users/profile/<?php echo $listing['User']['id']; ?>"><span class="icon-user"></span> View <?php echo $listing['User']['display_name']; ?>'s Profile</a>
 						<?php if(isset($auth)){ ?>
 							<a data-toggle="modal" href="#sendmessage"><span class="icon-envelope-alt"></span> Message <?php echo $listing['User']['display_name']; ?></a>
 						<?php } ?>
@@ -177,7 +176,7 @@
 					<?php echo $this->Form->input("Thread.message", array("class" => "form-control", "type" => "textarea", "value" => "\n\n\n".$listing['Shop']['full_url'])); ?>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-medium btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-large btn-default" data-dismiss="modal">Close</button>
 					<?php echo $this->Form->submit("Send Message", array("div" => false)); ?>
 					<?php echo $this->Form->end(); ?>
 				</div>

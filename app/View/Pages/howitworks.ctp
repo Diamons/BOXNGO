@@ -27,13 +27,13 @@ $this->end();
 	<div id="about_boxngo" class="wrapper modified_padding">
 		<div class="row">
 			<div class="col-6 col-lg-6">
-				<span class="typicn mobile enlarge"></span>
+				<span class="icon-credit-card enlarge"></span>
 				<h1>Buy</h1>
 				<div class="detail">Find local sellers just like you selling handmade crafts, electronics, clothing, and much more. BOX'NGO is the easiest way to buy from other people using our online marketplace.<br />
 				<a href="#buyinfo">How does it work?</a></div>
 			</div>
 			<div class="col-6 col-lg-6">
-				<span class="typicn tag enlarge"></span>
+				<span class="icon-tag enlarge"></span>
 				<h1>Sell</h1>
 				<div class="detail">There's no easier way to sell online than BOX'NGO. List your stuff, ship the package, and make money. Yes, it's just that easy. We take care of everything else, you just sell.
 				<a href="#sellinfo">How does it work?</a></div>

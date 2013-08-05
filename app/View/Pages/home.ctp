@@ -56,7 +56,7 @@ $this->start('meta'); ?>
 <body>
 	<?php //debug($collection); ?>
 		<div id="content_container">
-			<div id="content" class="wrapper">
+			<div style="background: transparent; border: none; padding: 10px 0;" id="content" class="wrapper">
 				<div class="row">
 					<div id="guest_links">
 						<a href="/search">Browse Listings</a>

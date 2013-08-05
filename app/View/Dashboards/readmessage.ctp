@@ -13,7 +13,8 @@ $this->end();
 					<?php echo $this->Html->image($user['profilepic'], array('class' => 'profilepic_message')); ?>
 
 					<a href="/users/profile/<?php echo $user['id']; ?>"><?php echo $user['display_name']; ?></a>
-						<?php if($user['role'] == "admin"){ ?><div class="adminLabel radius alert label">Administrator</div><?php } ?><span class="date"><?php echo $this->Time->timeAgoInWords($thread['Message'][$i]['created'], array('format' => 'F jS, Y', 'end' => '+1 month')); ?></span>
+					<span class="date"><?php echo $this->Time->timeAgoInWords($thread['Message'][$i]['created'], array('format' => 'F jS, Y', 'end' => '+1 month')); ?></span>
+						<?php if($user['role'] == "admin"){ ?><div class="label">Administrator</div><?php } ?>
 				</div>
 				<div class="col-9 col-lg-9">
 					<?php echo nl2br(h($thread['Message'][$i]['message'])); ?>
@@ -23,6 +24,6 @@ $this->end();
 	</div>
 	
 	<?php echo $this->Form->create('Message', array('url' => '/users/message/0/'.$thread['Thread']['id'])); ?>
-		<?php echo $this->Form->input("Message.message"); ?>
+		<?php echo $this->Form->input("Message.message", array("class" => "form-control")); ?>
 		<?php echo $this->Form->end("Reply"); ?>
 </div>

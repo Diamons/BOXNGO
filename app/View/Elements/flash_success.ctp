@@ -1,5 +1,5 @@
 <div class="wrapper">
-	<div class="session_success">
+	<div class="alert alert-success">
 		<?php echo $message; ?>
 	</div>
 </div>

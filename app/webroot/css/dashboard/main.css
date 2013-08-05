@@ -31,12 +31,6 @@
 	color: #008cd4;
 }
 
-.dashwrapper{
-	padding:20px;
-	background: #FFF;
-	min-height: 420px;
-}
-
 .dashwrapper > div > a{
 	display: inline-block;
 	border-bottom: 1px dashed #AAA;

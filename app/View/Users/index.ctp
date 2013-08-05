@@ -48,12 +48,13 @@ $this->end();
 
 <div class="wrapper" id="content">
 	<div id="questions"><div class="question_mark">?</div> 
-	<div class="info_panel">It's free to get started selling today! Read more about <a href="/info/howitworks">How it Works</a></div></div>
-	<div>
+	<div class="info_panel">It's free to get started selling today! Read more about <a href="/info/fees">Selling Fees</a></div></div>
+	<div class="row">
+		
+		<div id="login_panel" style="padding-right: 100px;" class="col-6 col-lg-6">
 		<?php echo $this->Form->create('User', array('class' => '', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
-		<div style="padding-right: 100px;" class="col-6 col-lg-6">
 			<h1 class="subheader">Login to Account</h1>
-				<div style="text-align: right; margin: 0 103px 5px 0;">
+				<div style="text-align: right; margin: 0 143px 5px 0;">
 					<a class="loginFacebookButton" data-redirect="users/facebookregister" href="#"></a>
 				</div>
 				<div class="modified_padding row">
@@ -61,7 +62,7 @@ $this->end();
 						<label class="right inline"><b>Email</b></label>
 					</div>
 					<div class="col-8 col-lg-8">
-						<?php echo $this->Form->input('User.username', array('placeholder' => 'Email Address')); ?>
+						<?php echo $this->Form->input('User.username', array('class' => 'form-control', 'placeholder' => 'Email Address')); ?>
 					</div>
 				</div>
 				<div class="modified_padding row">
@@ -69,12 +70,12 @@ $this->end();
 						<label class="right inline"><b>Password</b></label>
 					</div>
 					<div class="col-8 col-lg-8">
-						<?php echo $this->Form->input('User.password', array('placeholder' => 'Password')); ?>
+						<?php echo $this->Form->input('User.password', array('class' => 'form-control', 'placeholder' => 'Password')); ?>
 					</div>
 				</div>
 				<div class="modified_padding row">
 					<div class="col-4 col-lg-4"></div>
-					<div class="col-8 col-lg-8" style="text-align:right; font-size: 11px;"><a data-reveal-id="forgotpassword" href="#">Forgot your Password?</a></div>
+					<div class="col-8 col-lg-8" style="text-align:right; font-size: 11px;"><a data-toggle="modal" href="#forgotpassword">Forgot your Password?</a></div>
 				</div>
 					<?php echo $this->Form->end('Login'); ?>
 		</div>
@@ -85,15 +86,15 @@ $this->end();
 			<h5 class="subheader">BOX'NGO is an online buying, selling, and trading platform for sellers. Register today using your email address in order to become a part of the thriving community.</h5>
 
 			<?php echo $this->Form->create('User', array('class'=>'', 'inputDefaults' => array('div'=>false, 'label'=>false))); ?>
-				<div style="text-align: right; margin: 0 114px 5px 0;">
+				<div style="text-align: right; margin: 0 157px 5px 0;">
 					<a class="loginFacebookButton" data-redirect="users/facebookregister" href="#"></a>
 				</div>
 				<div class="modified_padding row">
 					<div class="col-4 col-lg-4">
-						<label class="right inline"><b>Email</b></label>
+						<label class="inline"><b>Email</b></label>
 					</div>
 					<div class="col-8 col-lg-8">
-						<?php echo $this->Form->input('User.username', array('placeholder' => 'Email Address')); ?>
+						<?php echo $this->Form->input('User.username', array('class' => 'form-control', 'placeholder' => 'Email Address')); ?>
 					</div>
 				</div>
 				<div class="modified_padding row">
@@ -101,7 +102,7 @@ $this->end();
 						<label class="right inline"><b>Password</b></label>
 					</div>
 					<div class="col-8 col-lg-8">
-						<?php echo $this->Form->input('User.passwordcreate', array('placeholder' => 'Password', 'type' => 'password')); ?>
+						<?php echo $this->Form->input('User.passwordcreate', array('class' => 'form-control', 'placeholder' => 'Password', 'type' => 'password')); ?>
 					</div>
 				</div>
 				<div class="modified_padding row">
@@ -109,7 +110,7 @@ $this->end();
 						<label class="right inline"><b>Confirm Password</b></label>
 					</div>
 					<div class="col-8 col-lg-8">
-						<?php echo $this->Form->input('User.passwordconfirmation', array('placeholder' => 'Password', 'type'=>'password')); ?>
+						<?php echo $this->Form->input('User.passwordconfirmation', array('class' => 'form-control', 'placeholder' => 'Password', 'type'=>'password')); ?>
 					</div>
 				</div>
 					<?php echo $this->Form->input('User.accepttos', array('label' => 'I accept the', 'type' => 'checkbox', 'value' => '1')); ?>
@@ -119,14 +120,25 @@ $this->end();
 		</div>
 	</div>
 </div>
-
-	<div id="forgotpassword" class="reveal-modal small">
-		<h1>Forgot your password?</h1>
-		<p class="lead">Never fear, BOX'NGO is here! Simply enter the email address you used to signup below and we'll help you recover your account.</p>
-		<p>
-			<?php echo $this->Form->create("User", array("action" => "forgotpassword")); ?>
-			<?php echo $this->Form->input("User.email", array("type" => "text")); ?>
-			<?php echo $this->Form->end("Recover Password"); ?>
-	  </p>
-	  <a class="close-reveal-modal">&#215;</a>
-	</div>
+ <div class="modal fade" id="forgotpassword">
+ <?php echo $this->Form->create("User", array("action" => "forgotpassword")); ?>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Forgot your password?</h4>
+        </div>
+        <div class="modal-body">
+			<p>Never fear, BOX'NGO is here! Simply enter the email address you used to signup below and we'll help you recover your account.</p>
+			<p>
+				
+				<?php echo $this->Form->input("User.email", array("class" => "form-control", "type" => "text")); ?>
+		  </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-large btn-default" data-dismiss="modal">Close</button>
+          <?php echo $this->Form->end("Recover Password"); ?>
+        </div>
+      </div>
+    </div>
+  </div>

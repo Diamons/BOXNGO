@@ -1,5 +1,5 @@
 <div class="wrapper">
-	<div class="session_warning">
+	<div class="alert">
 		<?php echo $message; ?>
 	</div>
 </div>

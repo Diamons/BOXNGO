@@ -1,5 +1,5 @@
 <?php $this->start('css');
-echo $this->Html->css(array('pages/main', 'promotions/july4th'));
+echo $this->Html->css(array('searches/search'));
 $this->end(); ?>	
 <?php if(!empty($favorites)){ ?>
 	<div id="listings">

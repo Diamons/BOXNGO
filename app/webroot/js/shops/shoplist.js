@@ -19,6 +19,10 @@ editPane.onclick = function(){
 				appendImages();
 			});
 		}
+	}, function(FPError){
+		console.log(FPError);
+		$("#editor .placeholder").remove();
+		alert("Our image provider encountered an error. Please try and upload your image again or refresh the webpage. If the problem persists, please let us know at support@theboxngo.com.");
 	});
 };
 

@@ -4,7 +4,7 @@
 		Sellers appreciate simplicity. At BOX'NGO, we're sellers as well and one thing we hate about selling online is how complicated it has become. Our mission is to make online selling easy and to do that we've completely eliminated the typical fee structure of most other online selling platforms.
 	</p>
 	<p><b>We charge one flat 10% fee.</b> This fee includes everything from listing your item to getting paid. When you make a sale, you are paid 90% of your sale. </p>
-	<table class="twelve">
+	<table class="table">
 	  <thead>
 	    <tr>
 	      <th>Fees and Charges</th>

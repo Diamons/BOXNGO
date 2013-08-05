@@ -163,11 +163,7 @@ h1.faq{
 .columns{
 	padding: 0;
 }
-
-#content.wrapper #categories{
-	padding: 0;	
-}
-
+=
 #categories nav ul{
 	margin: 0;
 }
@@ -227,12 +223,12 @@ img#coverBanner{
 	font-size: 11px;
 }
 
-#listings .userlisted{
+#listings .userlisted, .listings .userlisted{
 	height: 18px;
 	overflow: hidden;
 }
 
-#listings .userlisted img{
+#listings .userlisted img, .listings .userlisted img{
 	height: 10px;
 }
 
@@ -250,11 +246,11 @@ img#coverBanner{
 	text-decoration: underline;
 }
 
-#listings .category{
+#listings .category, .listings .category{
 	margin-top: -6px;
 }
 
-#listings .col-3{
+#listings .col-3, .listings .col-3{
 	margin-bottom: 30px;
 }
 

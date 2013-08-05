@@ -3,7 +3,7 @@ $this->start('css');
 echo $this->Html->css(array('dashboard/managepurchases'));
 $this->end();
 ?>
-<div id="dashmenu"><span>Manage my Purchases</span></div>
+<h2><span>Manage my Purchases</h2>
 <div class="dashwrapper">
 	<?php echo $this->element('dashboard/orderstatus', array('purchase' => true)); ?>
 </div>

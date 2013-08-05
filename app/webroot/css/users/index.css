@@ -1,8 +1,5 @@
-#content.wrapper > div{
-	border: 1px solid #ECECEC;
-	border-radius: 5px;
-	overflow: hidden;
-	position: relative;
+#register_panel, #login_panel{
+	padding: 20px;
 }
 
 #register_panel{
@@ -109,7 +106,7 @@ a.loginFacebookButton{
 	padding: 0;
 }
 
-#about_boxngo .columns, .moreinfo .columns{
+#about_boxngo .col-6, .moreinfo .col-6{
 	border-right: 1px solid #eae7e7;
 	text-align: center;
 	padding: 40px 30px;
@@ -119,13 +116,13 @@ a.loginFacebookButton{
 	-o-transition: .3s;
 }
 
-#about_boxngo .columns:last-child, .moreinfo .columns:last-child{
+#about_boxngo .col-6:last-child, .moreinfo .col-6:last-child{
 	border: none;
 }
 
 
 
-#about_boxngo .columns .enlarge.active, .moreinfo .columns .enlarge.active{
+#about_boxngo .col-6 .enlarge.active, .moreinfo .col-6 .enlarge.active{
 	color: #008cd4;
 }
 
@@ -189,7 +186,7 @@ form input[type="submit"], .usermessage{
 }
 
 div.submit{
-	margin: 20px 13px;
+	margin-left: 20px;
 }
 
 label[for="UserAccepttos"]+div.error-message{

@@ -2,7 +2,7 @@
 echo $this->Html->css('shops/shoplist');
 $this->end();
 $this->start('scriptBottom');
-echo $this->Html->script(array('http://code.jquery.com/ui/1.9.2/jquery-ui.js','//api.filepicker.io/v1/filepicker.js', 'shops/shoplist'));
+echo $this->Html->script(array('http://code.jquery.com/ui/1.10.3/jquery-ui.js','//api.filepicker.io/v1/filepicker.js', 'shops/shoplist'));
 $this->end();
 ?>
 <?php echo $this->Form->create('Shop', array('inputDefaults' => array('div' => false, 'label' => false))); ?>

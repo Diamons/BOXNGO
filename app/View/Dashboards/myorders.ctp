@@ -3,7 +3,7 @@ $this->start('css');
 echo $this->Html->css(array('dashboard/managepurchases'));
 $this->end();
 ?>
-<div id="dashmenu"><span>Manage my Orders</span></div>
+<h2>Manage my Orders</h2>
 <div class="dashwrapper">
 	<?php for($i = 0; $i < count($orders); $i++){ ?>
 	<div class="row listing_purchase">
