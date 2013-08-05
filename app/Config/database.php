@@ -106,7 +106,6 @@ class DATABASE_CONFIG {
 
 	function __construct (){		
 		if(isset($_SERVER['SERVER_NAME'])){
-			print_r($_SERVER['SERVER_NAME']);
 			$this->default = $this->production;
 			switch($_SERVER['SERVER_NAME']){
 				case 'boxngo.local':
