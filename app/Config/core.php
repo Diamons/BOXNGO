@@ -206,7 +206,7 @@ Configure::write('Session', array(
  * Set to `true` to apply timestamps when debug > 0. Set to 'force' to always enable
  * timestamping regardless of debug value.
  */
-	//Configure::write('Asset.timestamp', true);
+	Configure::write('Asset.timestamp', 'force');
 
 /**
  * Compress CSS output by removing comments, whitespace, repeating tags, etc.
@@ -236,7 +236,7 @@ Configure::write('Session', array(
  * Uncomment this line and correct your server timezone to fix
  * any date & time related errors.
  */
-	//date_default_timezone_set('UTC');
+	date_default_timezone_set('UTC');
 
 /**
  * Pick the caching engine to use.  If APC is enabled use it.
