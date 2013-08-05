@@ -114,7 +114,7 @@ class DATABASE_CONFIG {
 			}
 		}
 		else{
-			$this->default = $this->localhost;
+			$this->default = $this->production;
 		}
 	}
 
