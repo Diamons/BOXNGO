@@ -4,7 +4,8 @@
 		'foreignKey' => 'seller_id'
 		));
 		public $actsAs = array('Shipping.Shipping');
-
+		public $hasOne = array('UsedCoupon');
+		
 		public $validate = array(
 			'tracking_code' => array(
 				'checkCarrier'=>array(

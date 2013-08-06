@@ -41,8 +41,8 @@ $this->end();
 				
 			</div>
 			<ul id="userProfileSections" class="nav nav-pills">
-				<li class="active"><a href="#listings" data-toggle="tab"><?php echo $userInfo['User']['display_name']; ?>'s Listings</a></li>
-				<li><a href="#favorites" data-toggle="tab"><?php echo $userInfo['User']['display_name']; ?>'s Favorites</a></li>
+				<li class="active"><a href="#listings" data-toggle="tab"><?php echo h($userInfo['User']['display_name']); ?>'s Listings</a></li>
+				<li><a href="#favorites" data-toggle="tab"><?php echo h($userInfo['User']['display_name']); ?>'s Favorites</a></li>
 			</ul>
 			<div id="userProfileSectionsContent" class="tab-content">
 				<div class="tab-pane fade active in" id="listings">
