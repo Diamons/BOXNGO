@@ -45,10 +45,8 @@
 		}
 		
 		public function afterSave($created){
-			if($created == TRUE){
-				if(isset($this->data[$this->alias]['seller_id'])){
-					Cache::delete('Orders.'.$this->data[$this->alias]['seller_id'], 'long');
-				}
+			if(isset($this->data[$this->alias]['seller_id'])){
+				Cache::delete('Orders.'.$this->data[$this->alias]['seller_id'], 'long');
 			}
 		}
 		

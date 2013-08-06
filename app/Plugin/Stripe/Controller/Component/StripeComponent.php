@@ -98,6 +98,9 @@ class StripeComponent extends Component {
  * @throws CakeException
  */
 	public function charge($data) {
+		if(stristr(env('HTTP_HOST'), 'boxngo.local'))
+			$this->mode = "Test";
+
 		// set the Stripe API key
 		$key = Configure::read('Stripe.' . $this->mode . 'Secret');
 		if (!$key) {
