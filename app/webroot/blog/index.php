@@ -12,6 +12,10 @@
  * @var bool
  */
 define('WP_USE_THEMES', true);
+if($_SERVER['REQUEST_URI'] == "/app/webroot/blog/"){
+	header('Location: http://'.$_SERVER['HTTP_HOST'].'/blog/') ;
+	die();
+}
 
 /** Loads the WordPress Environment and Template */
 require('./wp-blog-header.php');
