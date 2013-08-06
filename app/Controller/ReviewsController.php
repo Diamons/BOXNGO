@@ -8,7 +8,7 @@
 			$a = $this->Image->find("first", array("conditions" => array("Image.shop_id" => $order['Shop']['id'])));
 			$order['Image'] = $a['Image'];
 			$shopCount = $this->Shop->find("count", array("conditions" => array("Shop.user_id" => $order['User']['id'], "Shop.canview" => 1)));
-			$order['Stripe'] = $this->Stripe->retrieveCharge($order['Payment']['stripe_id']);
+			$order['Stripe'] = $this->Stripe->retrieveToken($order['Payment']['stripe_id']);
 			$this->set("order", $order);
 			$this->set("shopCount", $shopCount);
 		}

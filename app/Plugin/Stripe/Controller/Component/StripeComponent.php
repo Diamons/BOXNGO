@@ -191,7 +191,13 @@ class StripeComponent extends Component {
 		));*/
 	}
 	
-	public function retrieveCharge($token=NULL, $chargeId=NULL){
+	public function retrieveCharge($chargeId=NULL){
+		$key = Configure::read('Stripe.' . $this->mode . 'Secret');
+		Stripe::setApiKey($key);
+		return Stripe_Charge::retrieve($chargeId);
+	}
+	
+	public function retrieveToken($token=NULL){
 		$key = Configure::read('Stripe.' . $this->mode . 'Secret');
 		Stripe::setApiKey($key);
 		return Stripe_Token::retrieve($token);
