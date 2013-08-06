@@ -12,6 +12,14 @@
 	.orderSummary{
 		padding-left: 20px;
 	}
+	
+	.starRatings{
+		display: inline-block;
+	}
+	
+	.ratingSection{
+		margin: 20px 0;
+	}
 </style>
 <?php $this->start('css'); ?>
 	<?php echo $this->Html->css('jRating.jquery'); ?>
@@ -19,7 +27,7 @@
 <?php $this->start('scriptBottom'); ?>
 	<?php echo $this->Html->script(array('jRating.jquery', 'feedback')); ?>
 <?php $this->end(); ?>
-<?php //debug($order); ?>
+<?php debug($order['Payment']); ?>
 <div id="content" class="wrapper">
 	<div class="row">
 		<div class="col-8 col-lg-8">
@@ -32,7 +40,7 @@
 					<table class="table">
 						<tr>
 							<td>Username</td>
-							<td><?php echo h($order['User']['display_name']); ?></td>
+							<td><a href="<?php echo $order['User']['id']; ?>"><?php echo h($order['User']['display_name']); ?></a></td>
 						</tr>
 						<tr>
 							<td>Registered</td>
@@ -46,7 +54,7 @@
 				</div>
 			</div>
 			<hr />
-			<h1>Seller Feedback</h1>
+			<h1>Leave Seller Feedback</h1>
 			<p>Seller feedback helps establish reputation amongst the community and helps sellers stay motivated. Sellers appreciate receiving feedback and it helps other buyers make choices when choosing to purchase a listing. Be fair, be honest, and above all be genuine.</p>
 			<?php echo $this->Form->create("Review"); ?>
 			<div style="display:none;">
@@ -55,10 +63,21 @@
 				echo $this->Form->radio("Review.rating", $options);
 			?>
 			</div>
-			<div class="starRatings" data-average="3" data-id="1"></div>
+			<?php if(!$review){ ?>
+				<div class="ratingSection">
+					<b>Your Rating: </b> <div class="starRatings" data-average="10" data-id="1"></div>
+				</div>
 
-			<?php echo $this->Form->textarea("Review.message", array("class" => "form-control")); ?>
-			<?php echo $this->Form->end("Submit Feedback"); ?>
+				<?php echo $this->Form->textarea("Review.message", array("placeholder" => "Please describe your overall experience with this seller including speed, satisfaction, clarity, and anything else you find relevant.", "class" => "form-control")); ?>
+				<?php echo $this->Form->end("Submit Feedback"); ?>
+			<?php }else{ ?>
+				<div class="ratingSection">
+					<b>Your Rating: </b> <?php for($i = 0; $i < $review['Review']['rating']; $i++){ ?><i class="icon-star"></i><?php } ?>
+					<p>
+						<?php echo $review['Review']['message']; ?>
+					</p>
+				</div>
+			<?php } ?>
 		</div>
 		<div class="orderSummary col-4 col-lg-4">
 			<h1>Order Summary</h1>
@@ -87,6 +106,16 @@
 				</tr>
 				<tr>
 					<td>Carrier</td><td><?php echo $order['Order']['carrier']; ?></td>
+				</tr>
+				<tr>
+					<td>Shipping Address</td>
+					<td>
+							<?php echo $order['Payment']['streetAddress']; ?><br />
+							<?php if(isset($order['Payment']['streetAddress2'])){ ?>
+								<?php echo $order['Payment']['streetAddress2']; ?><br />
+							<?php } ?>
+							<?php echo $order['Payment']['city']; ?>, <?php echo $order['Payment']['state']; ?> <?php echo $order['Payment']['zipcode']; ?>
+					</td>
 				</tr>
 			</table>
 			<h1>Payment Summary</h1>

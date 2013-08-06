@@ -61,7 +61,7 @@ class StripeComponent extends Component {
 			'file' => 'Stripe' . DS . 'lib' . DS . 'Stripe.php')
 		);
 		if (!class_exists('Stripe')) {
-			throw new CakeException('Stripe API Libaray is missing or could not be loaded.');
+			throw new CakeException('Stripe API Library is missing or could not be loaded.');
 		}
 
 		// if mode is set in bootstrap.php, use it. otherwise, Test.
@@ -84,6 +84,8 @@ class StripeComponent extends Component {
 	}
 	
 	public function getKey($type="Publishable"){
+		if(stristr(env('HTTP_HOST'), 'boxngo.local'))
+			$this->mode = "Test";
 		$key = Configure::read('Stripe.' . $this->mode . $type);
 		return $key;
 	}
@@ -98,11 +100,9 @@ class StripeComponent extends Component {
  * @throws CakeException
  */
 	public function charge($data) {
-		if(stristr(env('HTTP_HOST'), 'boxngo.local'))
-			$this->mode = "Test";
 
 		// set the Stripe API key
-		$key = Configure::read('Stripe.' . $this->mode . 'Secret');
+		$key = $this->getKey('Secret');
 		if (!$key) {
 			throw new CakeException('Stripe API key is not set.');
 		}
@@ -195,13 +195,13 @@ class StripeComponent extends Component {
 	}
 	
 	public function retrieveCharge($chargeId=NULL){
-		$key = Configure::read('Stripe.' . $this->mode . 'Secret');
+		$key = $this->getKey('Secret');
 		Stripe::setApiKey($key);
 		return Stripe_Charge::retrieve($chargeId);
 	}
 	
 	public function retrieveToken($token=NULL){
-		$key = Configure::read('Stripe.' . $this->mode . 'Secret');
+		$key = $this->getKey('Secret');
 		Stripe::setApiKey($key);
 		return Stripe_Token::retrieve($token);
 	}

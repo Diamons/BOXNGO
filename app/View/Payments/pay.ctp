@@ -44,14 +44,14 @@
 			<div id="shipping_pane">
 				<h1 class="subheader">1. Shipping Information</h1>
 				<div class="row">
-					<div class="col-6 col-lg-6"><?php echo $this->Form->input('Payment.firstName'); ?></div>
-					<div class="col-6 col-lg-6"><?php echo $this->Form->input('Payment.lastName'); ?></div>
+					<div class="col-6 col-lg-6"><?php echo $this->Form->input('Payment.firstName', array('class' => 'form-control')); ?></div>
+					<div class="col-6 col-lg-6"><?php echo $this->Form->input('Payment.lastName', array('class' => 'form-control')); ?></div>
 				</div>
 				<div class="row">
-					<div class="col-4 col-lg-4"><?php echo $this->Form->input('Payment.streetAddress'); ?></div>
-					<div class="col-4 col-lg-4"><?php echo $this->Form->input('Payment.city'); ?></div>
-					<div class="col-2 col-lg-2"><?php echo $this->Form->input('Payment.state'); ?></div>
-					<div class="col-2 col-lg-2"><?php echo $this->Form->input('Payment.zipcode', array('label' => 'Postal or Zip Code')); ?></div>
+					<div class="col-4 col-lg-4"><?php echo $this->Form->input('Payment.streetAddress', array('class' => 'form-control')); ?></div>
+					<div class="col-4 col-lg-4"><?php echo $this->Form->input('Payment.city', array('class' => 'form-control')); ?></div>
+					<div class="col-2 col-lg-2"><?php echo $this->Form->input('Payment.state', array('class' => 'form-control')); ?></div>
+					<div class="col-2 col-lg-2"><?php echo $this->Form->input('Payment.zipcode', array('class' => 'form-control', 'label' => 'Postal or Zip Code')); ?></div>
 				</div>
 			</div>
 			<div id="payment_options">
@@ -60,10 +60,10 @@
 					<div class="row">
 						<div class="col-11 col-lg-11">
 							<?php if($price['applied'] == FALSE){ ?>
-								<?php echo $this->Form->input('Coupon.code'); ?>
+								<?php echo $this->Form->input('Coupon.code', array('class' => 'form-control')); ?>
 							<?php }else{ ?>
 								<?php echo $price['Price']['message']; ?>
-								<?php echo $this->Form->hidden('Coupon.code'); ?>
+								<?php echo $this->Form->hidden('Coupon.code', array('class' => 'form-control')); ?>
 							<?php } ?>
 						</div>
 						<div class="col-1 col-lg-1s">

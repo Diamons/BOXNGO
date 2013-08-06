@@ -7,8 +7,8 @@ $(function(){
 		canRateAgain: true,
 		nbRates: 10,
 		step: true,
-		onSuccess: function(a,b){
-			console.log(b);
+		onSuccess: function(elem,value){
+			$("#ReviewRating"+value).click();
 		}
 	});
 });
