@@ -1,11 +1,6 @@
 .dashwrapper > div.listing_purchase{
 	padding: 10px 10px 10px 10px;
-}
-
-.dashwrapper .totalPrice{
-	font-size: 14px;
-	color: #2BA6CB;
-	font-weight: 800;
+	font-size: 12px;
 }
 
 .process{
@@ -20,21 +15,18 @@
 
 .process > div > span.current{
 	color: #0188cc;
-	font-weight: 700;
 }
 
-.process span.typicn{
-	float: left;
-	margin-top: 0;
-	margin-right: 12px;
-	font-weight: 300;
+.process div span{
+	font-size: 12px;
 }
 
 a.manageorderButton{
-	border-bottom: 1px solid #DDD;
+	border-bottom: 1px solid #EEE;
 	padding-bottom: 4px 8px;
-	margin-bottom: 8px;
+	margin-bottom: 4px;
 	display: inline-block;
+	font-size: 12px;
 }
 
 .listing_purchase > .columns:first-child{

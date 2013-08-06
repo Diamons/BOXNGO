@@ -12,7 +12,7 @@
 		<div class="process col-3 col-lg-3">
 			<?php if($purchases[$i]['Order']['status'] == "cancelled"){ ?>
 			<div>
-				<span class="current"><span class="typicn tick" data-title="tick"></span><span style="color: red;">Seller Declined</span></span>
+				<span class="current"><span style="color: red;">Seller Declined</span></span>
 			</div>
 			<?php } else {?>
 			<div>

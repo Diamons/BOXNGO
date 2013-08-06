@@ -5,7 +5,7 @@ $this->start('css');
 echo $this->Html->css(array('shops/jquery.mCustomScrollbar', 'searches/search', 'pages/main'));
 $this->end();
 ?>
-
+<?php debug($auth);?>
 <div id="content" class="wrapper">
 	<div class="row">
 		<?php /*<div id="update" class="alert">

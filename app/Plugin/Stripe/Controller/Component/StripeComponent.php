@@ -157,7 +157,7 @@ class StripeComponent extends Component {
 			return (string)$error;
 		}
 
-		CakeLog::info('Stripe: charge id ' . $charge->id, 'stripe');
+		//CakeLog::info('Stripe: charge id ' . $charge->id, 'stripe');
 
 		return $this->_formatResult($charge);
 	}
@@ -191,8 +191,9 @@ class StripeComponent extends Component {
 		));*/
 	}
 	
-	public function retrieveCharge($chargeId=NULL){
-		Stripe::setApiKey($this->getKey("Secret"));
-		return Stripe_Charge::retrieve($chargeId);
+	public function retrieveCharge($token=NULL, $chargeId=NULL){
+		$key = Configure::read('Stripe.' . $this->mode . 'Secret');
+		Stripe::setApiKey($key);
+		return Stripe_Token::retrieve($token);
 	}
 }
