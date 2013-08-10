@@ -21,7 +21,7 @@ echo $this->Html->docType();
 
 		<?php echo $this->element('layout'.DS.'header'); ?>
 
-		<div id="content" class="wrapper">
+		<div id="content" class="clearfix wrapper">
 			<?php //echo $this->element('search'); ?>
 			<?php echo $this->element('breadcrumbs'); ?>
 
