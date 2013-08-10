@@ -1,7 +1,7 @@
 <?php
 	class AdminsController extends AppController{
-		var $uses = array('Collection', 'CollectionItem', 'Category', 'Image', 'Shop', 'User', 'School');
-		var $components = array('Shipping.Shipping', 'RequestHandler');
+		public $uses = array('Collection', 'CollectionItem', 'Category', 'Image', 'Shop', 'User', 'School');
+		public $components = array('Shipping.Shipping', 'RequestHandler');
 
 		public function beforeFilter(){
 			parent::beforeFilter();

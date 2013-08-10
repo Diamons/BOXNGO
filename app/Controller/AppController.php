@@ -35,7 +35,7 @@ App::uses('Controller', 'Controller');
 App::uses('Sanitize', 'Utility');
 class AppController extends Controller {
 	public $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread', 'NotificationItem');
-	public $components = array('UserLogin', 'Cookie', 'Auth', 'Security' => array('csrfUseOnce' => false), 'Session');
+	public $components = array('UserLogin', 'Cookie', 'Auth', 'Security' => array('csrfCheck' => false), 'Session');
 	public $helpers = array('Form');
 
 	public function beforeFilter(){
