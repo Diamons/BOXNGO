@@ -18,9 +18,8 @@ $this->Breadcrumb->add($forum['Forum']['title'], array('controller' => 'stations
 
 <?php if ($forum['Children']) { ?>
 
-	<div class="container">
+	<div>
 		<div class="containerHeader">
-			<a href="javascript:;" onclick="return Forum.toggleForums(this, <?php echo $forum['Forum']['id']; ?>);" class="toggle">-</a>
 			<h3><?php echo __d('forum', 'Sub-Forums'); ?></h3>
 		</div>
 
@@ -54,7 +53,7 @@ if ($forum['Forum']['parent_id']) {
 		'forum' => $forum
 	)); ?>
 
-	<div class="container" id="topics">
+	<div id="topics">
 		<div class="containerContent">
 			<?php echo $this->element('pagination'); ?>
 

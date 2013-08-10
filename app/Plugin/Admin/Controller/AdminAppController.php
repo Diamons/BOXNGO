@@ -12,7 +12,7 @@ App::uses('ActionLog', 'Admin.Model');
  * @property Model $Model
  * @property AdminToolbarComponent $AdminToolbar
  */
-class AdminAppController extends Controller {
+class AdminAppController extends AppController {
 
 	/**
 	 * Remove parent models.
@@ -137,6 +137,10 @@ class AdminAppController extends Controller {
 
 			if (isset($data[$key . '_filter'])) {
 				$named[$key . '_filter'] = urlencode($data[$key . '_filter']);
+			}
+
+			if (isset($data[$key . '_type_ahead'])) {
+				$named[$key . '_type_ahead'] = urlencode($data[$key . '_type_ahead']);
 			}
 		}
 

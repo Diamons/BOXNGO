@@ -32,6 +32,33 @@ class AdminToolbarComponent extends Component {
 		if (substr($controller->action, 0, 6) === 'admin_' && empty($controller->request->params['override'])) {
 			throw new ForbiddenException();
 		}
+
+		// Set ACL session
+		$user_id = $this->Auth->user('id');
+
+		if (!$user_id || $this->Auth->user(Configure::read('User.fieldMap.status')) == Configure::read('User.statusMap.banned')) {
+			return;
+		}
+
+		if (!$this->Session->check('Acl')) {
+			$roles = ClassRegistry::init('Admin.RequestObject')->getRoles($user_id);
+			$isAdmin = false;
+			$isSuper = false;
+
+			foreach ($roles as $role) {
+				if (!$isAdmin && $role['RequestObject']['alias'] == Configure::read('Admin.aliases.administrator')) {
+					$isAdmin = true;
+				}
+
+				if (!$isSuper && $role['RequestObject']['alias'] == Configure::read('Admin.aliases.superModerator')) {
+					$isSuper = true;
+				}
+			}
+
+			$this->Session->write('Acl.isAdmin', $isAdmin);
+			$this->Session->write('Acl.isSuper', $isSuper);
+			$this->Session->write('Acl.roles', Hash::extract($roles, '{n}.RequestObject.id'));
+		}
 	}
 
 	/**
@@ -234,7 +261,11 @@ class AdminToolbarComponent extends Component {
 		$enum = $model->enum;
 
 		foreach ($data as $key => $value) {
-			if (mb_substr($key, -7) === '_filter' || !isset($fields[$key])) {
+			if (mb_substr($key, -7) === '_filter' || mb_substr($key, -11) === '_type_ahead') {
+				$data[$key] = urldecode($value);
+				continue;
+
+			} else if (!isset($fields[$key])) {
 				continue;
 			}
 
@@ -243,7 +274,7 @@ class AdminToolbarComponent extends Component {
 
 			// Dates, times, numbers
 			if (isset($data[$key . '_filter'])) {
-				$operator = urldecode($data[$key . '_filter']);
+				$operator = $data[$key . '_filter'];
 				$operator = ($operator === '=') ? '' : ' ' . $operator;
 
 				if ($field['type'] === 'datetime') {

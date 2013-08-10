@@ -148,7 +148,7 @@ if (!empty($topic['Poll']['id'])) { ?>
 					</td>
 				</tr>
 				<tr>
-					<td valign="top" style="width: 25%">
+					<td valign="top" style="text-align: center; width: 20%">
 						<h4 class="username"><?php echo $this->Html->link($post['User'][$userFields['username']], $this->Forum->profileUrl($post['User'])); ?></h4>
 
 						<?php echo $this->Forum->avatar($post) ?>

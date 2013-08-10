@@ -3,8 +3,7 @@
 }
 
 if ($this->Paginator->counter(array('format' => '%count%')) > 0) { ?>
-	<div class="pagination">
-		<span><?php echo $this->Paginator->counter(array('format' => __d('forum', 'Displaying %start%-%end% of %count%'))); ?></span>
+	<div class="paginationDiv">
 
 		<ul>
 			<?php // Numbers

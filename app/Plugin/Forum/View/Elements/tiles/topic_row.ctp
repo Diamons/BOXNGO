@@ -41,9 +41,6 @@ $columns = isset($columns) ? $columns : array(); ?>
 		<?php if (!empty($topic['LastPost']['id'])) {
 			echo $this->Time->timeAgoInWords($topic['LastPost']['created'], array('userOffset' => $this->Forum->timezone())); ?>
 
-			<?php if (!empty($topic['LastUser']['id'])) { ?>
-				<span class="gray"><?php echo __d('forum', 'by'); ?> <?php echo $this->Html->link($topic['LastUser'][$userFields['username']], $this->Forum->profileUrl($topic['LastUser'])); ?></span>
-			<?php } ?>
 
 			<?php echo $this->Html->image('/forum/img/goto.png', array('alt' => '', 'url' => array('controller' => 'topics', 'action' => 'view', $topic['Topic']['slug'], 'page' => $topic['Topic']['page_count'], '#' => 'post-' . $topic['Topic']['lastPost_id']))); ?>
 		<?php } else { ?>

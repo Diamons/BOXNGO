@@ -197,11 +197,11 @@ Configure::write('User.model', USER_MODEL);
  */
 if (!Configure::check('User.fieldMap')) {
 	Configure::write('User.fieldMap', array(
-		'username'	=> 'username',
+		'username'	=> 'display_name',
 		'password'	=> 'password',
-		'email'		=> 'email',
+		'email'		=> 'username',
 		'status'	=> 'status',
-		'avatar'	=> 'avatar',
+		'avatar'	=> 'profilepic',
 		'locale'	=> 'locale',
 		'timezone'	=> 'timezone',
 		'lastLogin'	=> 'lastLogin'

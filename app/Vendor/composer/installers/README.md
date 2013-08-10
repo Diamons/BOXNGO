@@ -28,7 +28,7 @@ is not needed to install packages with these frameworks:
 
 > Stable types are marked as **bold**, this means that installation paths
 > for those type will not be change. Any adjustment for those types would
-> require creation of brand new type that will cover requred changes.
+> require creation of brand new type that will cover required changes.
 
 | Framework    | Types
 | ---------    | -----
@@ -52,7 +52,7 @@ is not needed to install packages with these frameworks:
 | PPI          | **`ppi-module`**
 | SilverStripe | `silverstripe-module`<br>`silverstripe-theme`
 | symfony1     | **`symfony1-plugin`**
-| TYPO3 Flow   | `typo3-flow-package`<br>`typo3-flow-framework`<br>`typo3-flow-plugin`<br>`typo3-flow-site`<br>`typo3-flow-build`
+| TYPO3 Flow   | `typo3-flow-package`<br>`typo3-flow-framework`<br>`typo3-flow-plugin`<br>`typo3-flow-site`<br>`typo3-flow-boilerplate`<br>`typo3-flow-build`
 | WordPress    | <b>`wordpress-plugin`<br>`wordpress-theme`</b><br>`wordpress-muplugin`
 | Zend         | `zend-library`<br>`zend-extra`
 

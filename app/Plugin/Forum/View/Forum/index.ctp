@@ -5,9 +5,8 @@ $this->Breadcrumb->add(__d('forum', 'Forums'), array('action' => 'index'));
 if ($forums) {
 	foreach ($forums as $forum) { ?>
 
-<div class="container" id="forum-<?php echo $forum['Forum']['id']; ?>">
+<div id="forum-<?php echo $forum['Forum']['id']; ?>">
 	<div class="containerHeader">
-		<a href="javascript:;" onclick="return Forum.toggleForums(this, <?php echo $forum['Forum']['id']; ?>);" class="toggle">-</a>
 		<h3><?php echo h($forum['Forum']['title']); ?></h3>
 	</div>
 
@@ -46,27 +45,3 @@ if ($forums) {
 <?php } } ?>
 
 <?php echo $this->element('login'); ?>
-
-<div class="statistics">
-	<div class="totalStats">
-		<strong><?php echo __d('forum', 'Statistics'); ?>:</strong> <?php printf(__d('forum', '%d topics, %d posts, and %d users'), $totalTopics, $totalPosts, $totalUsers); ?>
-	</div>
-
-    <?php if ($newestUser) { ?>
-		<div class="newestUser">
-			<strong><?php echo __d('forum', 'Newest User'); ?>:</strong> <?php echo $this->Html->link($newestUser['User'][$userFields['username']], $this->Forum->profileUrl($newestUser['User'])); ?>
-		</div>
-   	<?php }
-
-	if ($whosOnline) {
-		$onlineUsers = array();
-
-		foreach ($whosOnline as $online) {
-			$onlineUsers[] = $this->Html->link($online['User'][$userFields['username']], $this->Forum->profileUrl($online['User']));
-		} ?>
-
-		<div class="whosOnline">
-			<strong><?php echo __d('forum', 'Whos Online'); ?>:</strong> <?php echo implode(', ', $onlineUsers); ?>
-		</div>
-    <?php } ?>
-</div>

@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "fe7e9fddd5afb39355ea2ed085ed5cf2",
+    "hash": "e1d899c8ded8bd1ddecbd19d76aa35d5",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "v1.0.4"
+                "reference": "v1.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/v1.0.4",
-                "reference": "v1.0.4",
+                "url": "https://api.github.com/repos/composer/installers/zipball/v1.0.5",
+                "reference": "v1.0.5",
                 "shasum": ""
             },
             "replace": {
@@ -46,7 +46,7 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "http://dontkry.com",
+                    "homepage": "https://github.com/shama",
                     "role": "Developer"
                 }
             ],
@@ -75,7 +75,7 @@
                 "wordpress",
                 "zend"
             ],
-            "time": "2013-06-20 02:36:19"
+            "time": "2013-08-07 17:25:08"
         },
         {
             "name": "minfraud/http",
@@ -121,16 +121,16 @@
         },
         {
             "name": "mjohnson/admin",
-            "version": "1.0.3",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/milesj/Admin.git",
-                "reference": "1.0.3"
+                "reference": "1.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/milesj/Admin/zipball/1.0.3",
-                "reference": "1.0.3",
+                "url": "https://api.github.com/repos/milesj/Admin/zipball/1.0.5",
+                "reference": "1.0.5",
                 "shasum": ""
             },
             "require": {
@@ -165,20 +165,20 @@
                 "read",
                 "update"
             ],
-            "time": "2013-08-01 19:49:37"
+            "time": "2013-08-05 04:50:26"
         },
         {
             "name": "mjohnson/decoda",
-            "version": "6.2.0",
+            "version": "6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/milesj/Decoda.git",
-                "reference": "6.2.0"
+                "reference": "6.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/milesj/Decoda/zipball/6.2.0",
-                "reference": "6.2.0",
+                "url": "https://api.github.com/repos/milesj/Decoda/zipball/6.2.1",
+                "reference": "6.2.1",
                 "shasum": ""
             },
             "require": {
@@ -211,7 +211,7 @@
                 "markup",
                 "parser"
             ],
-            "time": "2013-07-24 20:04:51"
+            "time": "2013-08-05 18:11:58"
         },
         {
             "name": "mjohnson/forum",
