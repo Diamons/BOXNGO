@@ -33,9 +33,6 @@ echo $this->Html->docType();
 			<?php echo $this->element('breadcrumbs'); ?>
 		</div>
 
-		<div class="footer">
-			<?php //echo $this->element('copyright'); ?>
-		</div>
 	</div>
 
 	<?php if (!CakePlugin::loaded('DebugKit')) {

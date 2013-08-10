@@ -44,4 +44,4 @@ if ($forums) {
 
 <?php } } ?>
 
-<?php echo $this->element('login'); ?>
+<?php //echo $this->element('login'); ?>
