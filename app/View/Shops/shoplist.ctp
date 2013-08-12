@@ -11,6 +11,17 @@ $this->end();
 <?php } ?>
 <div class="wrapper" style="background: #FFF;">
 	<div class="wrapper" id="content">
+		<?php if(isset($edit)){ ?>
+			<?php if($this->request->data['Shop']['canview'] == 3){ ?>
+				<div class="clearfix">
+					<a onclick="return confirm('Are you sure you want to un-pause this listing? This will return this listing to searches and re-enable purchases.');" class="btn btn-medium btn-success" href="<?php echo $this->webroot; ?>shops/holdlisting/<?php echo $edit; ?>">Un-Pause Listing</a>
+				</div>
+			<?php } else { ?>
+				<div class="clearfix">
+					<a onclick="return confirm('Are you sure you want to put this listing on hold?  This will cause it to not appear in any searches and disable any purchases until you re-enable this listing.');" class="btn btn-medium btn-info" href="<?php echo $this->webroot; ?>shops/holdlisting/<?php echo $edit; ?>">Pause Listing</a>
+				</div>
+			<?php } ?>
+		<?php } ?>
 		<div class="header">
 			<span class="step" style="background: url('/images/step1.png') no-repeat;"></span>
 			<h3>Images</h3>
@@ -104,7 +115,9 @@ $this->end();
 			</div>
 		</div>	
 		<section class="clearfix">
-		<?php if(isset($edit)){ ?><a onclick="return confirm('Are you sure you want to delete this listing?');" class="deletebutton" href="<?php echo $this->webroot; ?>shops/deletelisting/<?php echo $edit; ?>">DELETE</a><?php } ?>	
+		<?php if(isset($edit)){ ?>
+			<a onclick="return confirm('Are you sure you want to delete this listing?');" class="deletebutton" href="<?php echo $this->webroot; ?>shops/deletelisting/<?php echo $edit; ?>">DELETE</a>
+		<?php } ?>	
 		<?php if(isset($edit)){ ?><?php echo $this->Form->end('Save Changes', array('div' => false)); ?>
 		<?php } else { ?><?php echo $this->Form->end('List it Now', array('div' => false)); ?><?php } ?>
 		</section>

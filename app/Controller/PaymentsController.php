@@ -50,6 +50,7 @@ class PaymentsController extends AppController {
 				$this->set("price", $price);
 				$this->set("listing", $listing);
 			} else {
+				$this->Session->setFlash("That listing is not available for purchase at this time.", "flash_error");
 				$this->redirect($this->referer());
 			}
 		} else {

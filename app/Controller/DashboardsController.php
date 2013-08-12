@@ -20,7 +20,7 @@
 			
 			$shopItems = array();
 			
-			$listings = $this->Shop->find("all", array("conditions" => array("Shop.user_id" => $this->Auth->user('id'),"OR" => array("Shop.canview" => array(2,1))), "order" => "Shop.created DESC", "limit" => 4));	
+			$listings = $this->Shop->find("all", array("conditions" => array("Shop.user_id" => $this->Auth->user('id'),"OR" => array("Shop.canview" => array(3,2,1))), "order" => "Shop.created DESC", "limit" => 4));	
 			$listingsCount = $this->Shop->find("count", array("conditions" => array("Shop.user_id" => $this->Auth->user('id'),"OR" => array("Shop.canview" => array(2,1)))));	
 			$favorites = $this->Favorite->find("all", array("conditions" => array("Favorite.user_id" => $this->Auth->user('id')), "order" => "Favorite.created DESC", "limit" => 4));
 			$favoritesCount = $this->Favorite->find("count", array("conditions" => array("Favorite.user_id" => $this->Auth->user('id'))));			
@@ -48,7 +48,7 @@
 		}
 		
 		public function myshop(){
-			$listings = $this->Shop->find("all", array("conditions" => array("Shop.user_id" => $this->Auth->user('id'),"OR" => array("Shop.canview" => array(2,1))), "order" => "Shop.created DESC"));	
+			$listings = $this->Shop->find("all", array("conditions" => array("Shop.user_id" => $this->Auth->user('id'),"OR" => array("Shop.canview" => array(3,2,1))), "order" => "Shop.created DESC"));	
 			$this->set("listings", $listings);
 		}
 		public function myorders(){

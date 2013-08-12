@@ -733,6 +733,10 @@ img.profilePic{
 	border-radius: 4px;
 }
 
+.deletebutton.hold{
+	background: #FF8400;
+}
+
 .deletebutton:hover{
 	background: #444;
 	color: #FFF;

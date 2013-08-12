@@ -105,11 +105,14 @@
 		public function viewlisting($listingid=NULL, $permalink=NULL){
 			if(empty($listingid))
 				$this->redirect($this->referer());
-			$listing = $this->Shop->find("first", array("conditions" => array("Shop.id" => $listingid, "OR" => array("Shop.canview" => array(1,2)))));
+			$listing = $this->Shop->find("first", array("conditions" => array("Shop.id" => $listingid, "OR" => array("Shop.canview" => array(1,2,3)))));
 			if(empty($listing)){
 				$this->Session->setFlash("Unfortunately we can't find that listing. Please contact Support if you believe this is a mistake.", "flash_warning");
 				$this->redirect($this->referer());
 			}else{
+				if($listing['Shop']['canview'] == 3)
+					$this->Session->setFlash("This listing is currently <b>paused</b>. You will be unable to purchase this listing.", "flash_warning");
+					
 				//None created, mostly for old functions, create and save one.
 				if(empty($listing['Shop']['permalink']))
 					$this->Shop->addPermalink($listing['Shop']['id'], $listing['Shop']['name']);
@@ -177,6 +180,28 @@
 				$this->redirect(array('controller' => 'dashboard'));
 			}
 		}
+		
+		public function holdlisting($listingid=NULL){
+			if(empty($listingid))
+				$this->redirect($this->referer());
+			$listing = $this->Shop->find("first", array("conditions" => array("Shop.id" => $listingid, "Shop.user_id" => $this->Auth->user('id'))));
+			if(empty($listing)){
+				$this->Session->setflash("We couldn't find that listing. Please contact support if you believe this may be a mistake.", "flash_error");
+				$this->redirect($this->referer());
+			} else {
+				$this->Shop->id = $listingid;
+				if($this->Shop->field('canview') == 3){
+					$this->Session->setFlash("That listing has been <b>re-enabled.</b> Happy selling!", "flash_success");
+					$this->Shop->saveField('canview', 1);
+				}else{
+					$this->Session->setFlash("That listing has been placed on hold. You can re-enable the listing at any time by going to edit your listing.", "flash_success");
+					$this->Shop->saveField('canview', 3);
+				}
+				
+				$this->redirect(array('controller' => 'dashboard'));
+			}
+		}
+		
 		public function edit($listingid=NULL){
 			$categories = $this->Category->find("list");
 			$this->set("categories", $categories);
