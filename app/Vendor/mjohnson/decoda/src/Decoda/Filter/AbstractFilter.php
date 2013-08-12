@@ -149,8 +149,12 @@ abstract class AbstractFilter extends AbstractComponent implements Filter {
 		if ($content) {
 			// If content doesn't match the pattern, don't wrap in a tag
 			if ($setup['contentPattern']) {
-				if (!preg_match($setup['contentPattern'], $content)) {
-					return sprintf('(Invalid %s)', $tag['tag']);
+				if(!preg_match($setup['contentPattern'], $content)) {
+					if(($tag['tag'] == "img") && parse_url($content, PHP_URL_HOST) == "www.filepicker.io"){
+						debug("A");
+					}else{
+						return sprintf('(Invalid %s)', $tag['tag']);
+					}
 				}
 			}
 

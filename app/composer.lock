@@ -169,16 +169,16 @@
         },
         {
             "name": "mjohnson/decoda",
-            "version": "6.2.1",
+            "version": "6.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/milesj/Decoda.git",
-                "reference": "6.2.1"
+                "reference": "6.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/milesj/Decoda/zipball/6.2.1",
-                "reference": "6.2.1",
+                "url": "https://api.github.com/repos/milesj/Decoda/zipball/6.2.2",
+                "reference": "6.2.2",
                 "shasum": ""
             },
             "require": {
@@ -211,7 +211,7 @@
                 "markup",
                 "parser"
             ],
-            "time": "2013-08-05 18:11:58"
+            "time": "2013-08-11 20:00:55"
         },
         {
             "name": "mjohnson/forum",
