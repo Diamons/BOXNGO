@@ -24,7 +24,7 @@ class ForumAppController extends AppController {
 	 * @var array
 	 */
 	public $components = array(
-		'Session', 'Security', 'Cookie', 'Acl',
+		'Session', 'Security' => array('csrfCheck' => false), 'Cookie', 'Acl',
 		'Auth' => array(
 			'authorize' => array('Controller')
 		),
