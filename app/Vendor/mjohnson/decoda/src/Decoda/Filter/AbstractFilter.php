@@ -129,9 +129,9 @@ abstract class AbstractFilter extends AbstractComponent implements Filter {
 	 */
 	public function parse(array $tag, $content) {
 		$setup = $this->getTag($tag['tag']);
+	
 		$parser = $this->getParser();
 		$xhtml = $parser->getConfig('xhtmlOutput');
-
 		if (!$setup) {
 			return null;
 		}
@@ -145,15 +145,17 @@ abstract class AbstractFilter extends AbstractComponent implements Filter {
 				return null;
 			}
 		}
-
 		if ($content) {
+			
 			// If content doesn't match the pattern, don't wrap in a tag
 			if ($setup['contentPattern']) {
-				if (!preg_match($setup['contentPattern'], $content)) {
-					return sprintf('(Invalid %s)', $tag['tag']);
+				if(!preg_match($setup['contentPattern'], $content)) {
+					if(($tag['tag'] == "img") && parse_url($content, PHP_URL_HOST) == "www.filepicker.io"){
+					}else{
+						return sprintf('(Invalid %s)', $tag['tag']);
+					}
 				}
 			}
-
 			// Process line breaks
 			switch ($setup['lineBreaks']) {
 				case Decoda::NL_CONVERT:

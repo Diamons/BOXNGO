@@ -598,6 +598,7 @@ class Decoda {
 	 * @return string
 	 */
 	public function parse($echo = false) {
+		
 		if ($this->_parsed) {
 			if ($echo) {
 				echo $this->_parsed;
@@ -611,6 +612,7 @@ class Decoda {
 		$string = $this->_triggerHook('beforeParse', $this->_string);
 
 		if ($this->_isParseable($string)) {
+			debug("A");
 			$string = $this->_parse($this->_extractChunks($string));
 		} else {
 			$string = $this->convertLineBreaks($string);
