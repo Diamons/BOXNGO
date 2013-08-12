@@ -81,7 +81,6 @@ class ImageFilter extends AbstractFilter {
 		if (empty($tag['attributes']['alt'])) {
 			$tag['attributes']['alt'] = '';
 		}
-
 		return parent::parse($tag, $content);
 	}
 

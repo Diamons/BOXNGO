@@ -18,8 +18,8 @@
 		</div>
 		<?php if(!isset($auth)){ ?>
 		<div class="text-right user_actions col-3 col-lg-3">
-			<a class="btn btn-default navbar-btn" href="/users">Sign In</a>
-			<a class="btn btn-primary navbar-btn" href="/users">Register</a>
+			<a class="btn btn-default" href="/users">Sign In</a>
+			<a class="btn btn-primary" href="/users">Register</a>
 		</div>
 		<?php }else{ ?>
 			<div class="col-3 col-lg-3 text-right">
