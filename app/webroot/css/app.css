@@ -77,9 +77,11 @@ div.wrapper{
 }
 
 #notificationItems{
-	margin-right: 20px;
-	margin-top: 9px;
 	font-size: 32px;
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: -5px;
 }
 
 .nav.user_logged.unread{
@@ -217,12 +219,19 @@ div#content.wrapper{
 
 #SearchQuery{
 	color: #777;
-	margin: 0;
 	font-size: 11px;
 	border: 1px solid #EFEFEF;
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
+}
+
+.navbar > .wrapper > div{
+	padding: 0;
+	margin-top: 15px;
+}
+.navbar .searchNav{
+	margin-top: 15px;
 }
 
 header > div.wrapper{
@@ -937,13 +946,18 @@ div#content.wrapper {
 	border-radius: 9px;
 }
 
-.navbar li a{
+.navbar a.menu_link{
+	padding-bottom: 10px;
+	line-height: 20px;
+	color: #777;
+	display: block;
+	text-align: center;
 	margin-top: 5px;
-	font-size: 14px;
+	font-size: 12px;
 	text-transform: uppercase;
 }
 
-.navbar li a:hover{
+.navbar a.menu_link:hover{
 	border-bottom: 4px solid #CCC;
 }
 
