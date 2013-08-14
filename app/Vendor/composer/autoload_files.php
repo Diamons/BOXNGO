@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    $vendorDir . '/minfraud/http/src/CreditCardFraudDetection.php',
+    //$vendorDir . '/minfraud/http/src/CreditCardFraudDetection.php',
     $vendorDir . '/titon/utility/src/Titon/bootstrap.php',
     //$vendorDir . '/minfraud/http/src/HTTPBase.php',
     $vendorDir . '/minfraud/http/src/TelephoneVerification.php',
