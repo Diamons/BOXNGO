@@ -19,7 +19,21 @@
 		public function blackhole($type) {
 		  debug($type);
 		}
-		
+		public function test(){
+			$order = array();
+			$order['Order']['seller_id'] = 2816;
+			$order['Order']['buyer_id'] = 2861;
+			$order['Order']['status'] = "pending";
+			$order['Order']['shop_id'] = 8893;
+			$order['Order']['payment_id'] = "5208094e-5c24-4bec-92fb-6282c0f18369";
+			$order['Order']['shipping_amount'] = 0.00;
+			$order['Order']['shop_amount'] = 45.00;
+			$order['Order']['payment'] = "paypal";
+			$this->Order->save($order);			
+			$listing = $this->Shop->read(NULL, 9034);
+			parent::sendEmail("originalfashion@ymail.com", "[IMPORTANT] You have an order on BOX'NGO!", "order");
+			parent::sendEmail("Kat_connolly@hotmail.com", "Order Confirmation for BOX'NGO!", "orderconfirmation", $listing);
+		}
 		
 		public function index(){
 		
