@@ -1,3 +1,3 @@
 <?php
-        vardump(new DateTime('now'));
+        var_dump(new DateTime('now'));
 ?>
