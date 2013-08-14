@@ -36,10 +36,10 @@ App::uses('Sanitize', 'Utility');
 class AppController extends Controller {
 	public $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread', 'NotificationItem');
 	public $components = array('UserLogin', 'Cookie', 'Auth', 'Security' => array('csrfCheck' => false), 'Session');
-	public $helpers = array('Form');
+	public $helpers = array('Form', 'Time');
 
 	public function beforeFilter(){
-		parent::beforeFilter();
+		parent::beforeFilter();		
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
 		$this->set("layoutCategories", $this->Category->findNonEmpty());

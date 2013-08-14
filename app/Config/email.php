@@ -44,12 +44,12 @@ class EmailConfig {
 
 
 	public $default = array(
-		'port'=>'587',
-		'timeout'=>'30',
-		'host' => 'smtp.mailgun.org',
-		'username'=>'postmaster@app9620009.mailgun.org',
-		'password'=>'0r0wibis4w-3',
-		'domain' => 'app9620009.mailgun.org',
+		'port'=> 587,
+		'timeout'=> 30,
+		'host' => 'smtp.mandrillapp.com',
+		'username'=>'support@theboxngo.com',
+		'password'=>'GgjKXWTOFF1bCGjo8BFtPg',
+		'domain' => 'support@theboxngo.com',
 		'transport' => 'Smtp',
 	);
 

@@ -47,9 +47,9 @@ class ForumController extends ForumAppController {
 		$this->set('forums', 		$this->Topic->Forum->getIndex());
 		$this->set('totalPosts', 	$this->Topic->Post->getTotal());
 		$this->set('totalTopics', 	$this->Topic->getTotal());
-		$this->set('totalUsers', 	$this->ForumUser->getTotal());
-		$this->set('newestUser', 	$this->ForumUser->getNewestUser());
-		$this->set('whosOnline', 	$this->ForumUser->whosOnline());
+		//$this->set('totalUsers', 	$this->ForumUser->getTotal());
+		//$this->set('newestUser', 	$this->ForumUser->getNewestUser());
+		//$this->set('whosOnline', 	$this->ForumUser->whosOnline());
 	}
 
 	/**
