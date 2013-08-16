@@ -18,7 +18,9 @@
 		
 		public function remindTest(){
 			$orders = $this->Order->find("all",array("conditions" => array("Order.status" => "pending", "DATEDIFF(CURDATE(), DATE(Order.created)) <" => 4)));
+			$this->out(count($orders));
 			for($i = 0; $i < count($orders); $i++){
+				
 				$expire = new DateTime($orders[$i]['Order']['created'], new DateTimeZone('America/New_York'));
 				$expire = $expire->modify('+4 day');
 				$image = $this->Shop->Image->getShopImage($orders[$i]['Shop']['id']);
