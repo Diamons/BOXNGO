@@ -67,7 +67,7 @@
 		
 		public function facebookregister(){
 			$user = $this->User->find("first", array("conditions" => array("User.facebook_id" => $this->request->query['fb'])));
-			/*if(empty($user)){
+			if(empty($user)){
 				$this->redirect(array('controller' => 'users', 'action' => 'index'));
 			}else{
 				if($this->request->is('post')){
@@ -97,7 +97,7 @@
 						}
 					}
 				}
-			}*/
+			}
 		}
 		
 		public function facebook($self=NULL){
