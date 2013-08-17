@@ -205,4 +205,9 @@ class StripeComponent extends Component {
 		Stripe::setApiKey($key);
 		return Stripe_Token::retrieve($token);
 	}
+	
+	public function refund($chargeId=NULL){
+		$ch = Stripe_Charge::retrieve($chargeId);
+		return $ch->refund();
+	}
 }

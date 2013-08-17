@@ -1,26 +1,4 @@
-<?php echo $this->Html->css(array('pages/main')); ?>
-<style>
-	#content.wrapper{
-		border-radius: 9px;
-		border: 1px solid #DDD;
-	}
-	
-	h1{
-		font-size: 22px;
-	}
-	
-	.orderSummary{
-		padding-left: 20px;
-	}
-	
-	.starRatings{
-		display: inline-block;
-	}
-	
-	.ratingSection{
-		margin: 20px 0;
-	}
-</style>
+<?php echo $this->Html->css(array('pages/main', 'reviews/main')); ?>
 <?php $this->start('css'); ?>
 	<?php echo $this->Html->css('jRating.jquery'); ?>
 <?php $this->end(); ?>
@@ -63,7 +41,7 @@
 				echo $this->Form->radio("Review.rating", $options);
 			?>
 			</div>
-			<?php if(!$review){ ?>
+			<?php if(!isset($review)){ ?>
 				<div class="ratingSection">
 					<b>Your Rating: </b> <div class="starRatings" data-average="10" data-id="1"></div>
 				</div>

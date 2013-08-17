@@ -14,7 +14,7 @@ div#content.wrapper{
 	font-weight: bold;
 	left: 450px;
 	top: 141px;
-	width: 300px;
+	width: 320px;
 	height: 180px;
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -25,6 +25,7 @@ div#content.wrapper{
 	line-height: 37px;
 }
 #UserUsername{
+	line-height: 20px;
 	height: 25px;
 	margin-top: 6px;
 	width: 220px;

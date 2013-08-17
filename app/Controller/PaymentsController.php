@@ -148,17 +148,25 @@ class PaymentsController extends AppController {
 		if(empty($orderId))
 			$this->redirect($this->referer());
 		$order = $this->Order->find("first", array("conditions" => array("Order.id" => $orderId, "Order.seller_id" => $this->Auth->user('id'))));
+		$order['Stripe'] = $this->Stripe->retrieveCharge($order['Payment']['stripe_id']);
 		if(isset($action)){
 			$this->Order->id = $orderId;
 			switch($action){
 				case "accept":
-					if($order['Order']['status'] == "pending" && $this->Order->saveField("status", "accepted"))
-						$this->Session->setFlash("You have accepted the order. You have 5 days to ship the item.", "flash_success");
+					if($order['Order']['status'] == "pending" && $this->Order->saveField("status", "accepted")){
+						$this->Session->setFlash("You have accepted the order. You have 4 days to ship the item.", "flash_success");
+						$this->Shop->reduceQuantity($order['Shop']['id']);
+					}
 				break;
 				case "cancel":
-					if($order['Order']['status'] == "pending" && $this->Order->saveField("status", "cancelled")){
+					if($order['Order']['status'] == "pending" && $this->Order->saveField("status", "pending")){
 						$this->Shop->addQuantity(1, $order['Shop']['id']);
 						$this->Session->setFlash("You have cancelled the order. The buyer will be notified.", "flash_warning");
+						$this->User->recursive = 0;
+						$user = $this->User->read('username', $order['Order']['buyer_id']);
+						$image = $this->Shop->Image->getShopImage($order['Shop']['id']);
+						parent::sendEmail($user['User']['username'], "BOX'NGO :: Your order has been cancelled by the seller!", "cancelorder", array("name" => $order['Shop']['name'], "link" => $order['Shop']['full_url'], "imageUrl" => $image['Image']['url'], "Order" => $order['Order'], "Payment" => $order['Payment'], "totalPrice" => $order['Order']['totalPrice'], "stripe" => $order['Stripe']));
+						debug($this->Stripe->refund($order['Payment']['stripe_id']));
 					}
 				break;
 				case "ship":

@@ -1,0 +1,20 @@
+#content.wrapper{
+	border-radius: 9px;
+	border: 1px solid #DDD;
+}
+
+h1{
+	font-size: 22px;
+}
+
+.orderSummary{
+	padding-left: 20px;
+}
+
+.starRatings{
+	display: inline-block;
+}
+
+.ratingSection{
+	margin: 20px 0;
+}
