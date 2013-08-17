@@ -159,7 +159,7 @@ class PaymentsController extends AppController {
 					}
 				break;
 				case "cancel":
-					if($order['Order']['status'] == "pending" && $this->Order->saveField("status", "pending")){
+					if($order['Order']['status'] == "pending" && $this->Order->saveField("status", "cancelled")){
 						$this->Shop->addQuantity(1, $order['Shop']['id']);
 						$this->Session->setFlash("You have cancelled the order. The buyer will be notified.", "flash_warning");
 						$this->User->recursive = 0;
