@@ -11,7 +11,7 @@
 		<div id="summary">	
 			<div class="row">
 				<div class="col-4 col-lg-4">
-					<a class="thumbnail" href="<?php echo $listing['Shop']['full_url']; ?>"><?php echo $this->Html->image($listing['Image'][0]['url'], array('alt' => h($listing['Shop']['name']))); ?></a>
+					<a class="thumbnail" href="<?php echo $listing['Shop']['full_url']; ?>"><?php echo $this->Html->image($listing['Image'][0]['url'], array('data-src' => $listing['Image'][0]['url'], 'alt' => h($listing['Shop']['name']))); ?></a>
 				</div>
 				<div class="col-8 col-lg-8">
 					<a href="<?php echo $listing['Shop']['full_url']; ?>"><?php echo nl2br(h($listing['Shop']['name'])); ?></a>
