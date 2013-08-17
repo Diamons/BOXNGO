@@ -81,7 +81,7 @@ class PaymentsController extends AppController {
 				$charge = $this->Stripe->charge(array('description' => $this->Auth->user('username'), 'amount'=>$this->Shop->getTotalPrice($listing['Shop']['id']), 'stripeToken' => $this->request->data['stripeToken']));	
 				$a = $this->Stripe->retrieveCharge($charge['stripe_id']);
 				if(is_array($charge)){
-					$this->request->data['Payment']['stripe_id'] = $this->request->data['stripeToken'];
+					$this->request->data['Payment']['stripe_id'] = $charge['stripe_id'];
 					$this->request->data['Payment']['shop_id'] = $listingId;
 					$this->request->data['Payment']['email'] = $this->Auth->user('username');
 					$this->request->data['Payment']['user_id'] = $this->Auth->user('id');
