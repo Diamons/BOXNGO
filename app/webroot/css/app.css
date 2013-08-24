@@ -66,7 +66,6 @@ html, body{
 	height: 38px;
 }
 div.wrapper{
-	min-width: 960px;
 	width: 100%;
 	max-width: 1300px;
 	margin: auto;
@@ -605,13 +604,13 @@ form.custom span.custom.radio.checked::before{
 form input[type="submit"], .usermessage{
 	-webkit-appearance: none;
 	margin: 20px 0;
-	padding: 8px 12px;
+	padding: 6px 12px;
 	display: inline-block;
 	float:right;
 	background: transparent;
 	color: white;
 	font-weight: 700;
-	font-size: 18px;
+	font-size: 14px;
 	transition: background .4s;
 	border: 1px solid #428bca;
 	-webkit-transition: background .4s;
@@ -947,12 +946,14 @@ div#content.wrapper {
 }
 
 .navbar a.menu_link{
+	padding: 0 10px;
 	padding-bottom: 10px;
 	line-height: 20px;
 	color: #777;
-	display: block;
+	display: inline-block;
 	text-align: center;
 	margin-top: 5px;
+	margin: 0 12px;
 	font-size: 12px;
 	text-transform: uppercase;
 }

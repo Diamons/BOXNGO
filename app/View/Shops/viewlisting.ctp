@@ -29,13 +29,13 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="wrapper" id="content">
+	<?php if(isset($auth) && $auth['id'] == $listing['Shop']['user_id']) { ?>
+		<div>
+			<a class="btn btn-info btn-small" href="/shops/edit/<?php echo $listing['Shop']['id']; ?>">Edit this Listing</a>
+		</div>
+	<?php } ?>
 	<div class="row">	
-		<?php if(isset($auth) && $auth['id'] == $listing['Shop']['user_id']) { ?>
-			<div class="col-12 col-12-lg">
-				<a class="btn btn-info btn-small" href="/shops/edit/<?php echo $listing['Shop']['id']; ?>">Edit this Listing</a>
-			</div>
-		<?php } ?>
-		<div class="col-12 col-12-lg">
+		<div class="row clearfix">
 			<div class="favoriteadd"><a href="#" class="addfavorite<?php if(!isset($auth) || empty($auth)){
 					echo "disabled"; }elseif(isset($auth) && !empty($favorite)){
 								echo "used";
@@ -44,7 +44,7 @@
 			(<?php echo count($listing['Favorite']); ?>)
 			</div><h1 id="listingName"><?php echo h($listing['Shop']['name']); ?></h1>
 		</div>
-		<div itemscope itemtype="http://schema.org/Product" class="col-8 col-lg-8">
+		<div itemscope itemtype="http://schema.org/Product" class="col-12 col-lg-8">
 			<meta itemprop="name" content="<?php echo h($listing['Shop']['name']); ?>" />
 			<meta itemprop="image" content="<?php echo $listing['Image'][0]['url']; ?>/convert?w=200&height=200&fit=crop" />
 			<div class="row" id="listingPics">
@@ -103,7 +103,7 @@
 				<?php } ?>
 			</div>
 		</div>
-		<div class="col-4 col-lg-4">
+		<div class="col-12 col-lg-4">
 			<a class="btn btn-success" id="buyNow" href="https://www.theboxngo.com/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
 			<div class="row" id="buy">
 				<div class="col-6 col-lg-6 page_views">
