@@ -260,7 +260,7 @@ div.submit input[type="submit"]{
 	float: left;
 	text-align: center;
 	font-size: 11px;
-	margin: 5px auto;
+	margin: 0 15px 15px 15px
 }
 
 .addfavorite .heart, .addfavoriteused .heart, .addfavoritedisabled .heart{

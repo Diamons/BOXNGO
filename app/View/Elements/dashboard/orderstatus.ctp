@@ -32,9 +32,14 @@
 		<div class="process col-2 col-lg-2">
 			<?php if(!$purchase){ ?>
 				<a class="manageorderButton" href="<?php echo $this->webroot; ?>payments/manageorder/<?php echo $purchases[$i]['Order']['id']; ?>">Manage Order</a>
-			<?php } elseif($purchases[$i]['Order']['status'] == "delivered") { ?>
-				<a class="manageorderButton" href="/reviews/feedback/<?php echo $purchases[$i]['Order']['id']; ?>">Leave Feedback</a>
-			<?php } ?>
+			<?php } else {
+					if($purchases[$i]['Order']['status'] == "delivered") { ?>
+						<a class="manageorderButton" href="/reviews/feedback/<?php echo $purchases[$i]['Order']['id']; ?>">Leave Feedback</a>
+				<?php }
+					if($purchases[$i]['Order']['status'] == "shipped" || $purchases[$i]['Order']['status'] == "delivered" || $purchases[$i]['Order']['status'] == "paid") { ?>
+						<a class="manageorderButton" href="/
+					<?php } ?>
+				 ?>
 			<a href="/users/profile/<?php echo $purchases[$i]['Shop']['user_id']; ?>" class="manageorderButton">Seller's Profile</a>
 		</div>
 </div>

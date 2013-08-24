@@ -9,7 +9,7 @@ $this->end();
 <div id="content" class="wrapper">
 	<div class="row">
 		<div class="userInfo col-2 col-lg-2">
-			<div class="container">
+			<div>
 				<div class="profile_snippet">
 					<div class="bio">
 						<?php echo $this->Html->image($userInfo['User']['profilepic'], array('class' => 'bg')); ?>
@@ -35,9 +35,9 @@ $this->end();
 		<div id="profile_feed" class="col-10 col-lg-10">
 			<div class="panel panel-info">
 				<div class="panel-heading">Profile Info</div>
-				<p><?php if(!empty($userInfo['User']['profile_info'])){ echo nl2br(h($userInfo['User']['profile_info'])); } else { ?>
+				<div class="panel-body"><?php if(!empty($userInfo['User']['profile_info'])){ echo nl2br(h($userInfo['User']['profile_info'])); } else { ?>
 				<i>This user has not filled this out yet. To fill this information out, click <a href="/dashboard/manageaccount">here</a>.</i>
-				<?php } ?></p>
+				<?php } ?></div>
 				
 			</div>
 			<ul id="userProfileSections" class="nav nav-pills">
@@ -57,12 +57,12 @@ $this->end();
 </div>
 <?php if(isset($auth) && !empty($auth)){ ?>
 <div id="sendmessage" class="modal fade">
-	<?php echo $this->Form->create("Message", array("url" => "/users/message/".$listing['User']['id'])); ?>
+	<?php echo $this->Form->create("Message", array("url" => "/users/message/".$userInfo['User']['id'])); ?>
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Message <?php echo $listing['User']['display_name']; ?></h4>
+					<h4 class="modal-title">Message <?php echo $userInfo['User']['display_name']; ?></h4>
 				</div>
 				<div class="modal-body">
 				

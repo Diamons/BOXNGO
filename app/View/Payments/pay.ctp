@@ -66,7 +66,7 @@
 								<?php echo $this->Form->hidden('Coupon.code', array('class' => 'form-control')); ?>
 							<?php } ?>
 						</div>
-						<div class="col-1 col-lg-1s">
+						<div class="col-1 col-lg-1">
 							<?php if($price['applied'] == FALSE){ ?>
 								<a href="#" id="applyCoupon">Apply</a>
 							<?php } ?>
