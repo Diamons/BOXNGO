@@ -1,4 +1,5 @@
-<div class="navbar row">
+<div class="navbar">
+	
 	<div class="wrapper">
 		<div style="margin-top: 0;" class="col-2 col-lg-2">
 			<a class="navbar-brand" href="/"><img src="/logo.png" alt="BOX'NGO" /></a>
@@ -8,6 +9,7 @@
 			<a class="menu_link" href="/dashboard">Dashboard<?php if(isset($auth) && ((int)$notifications + (int)$messages) > 0){echo "<span class='notification'>".((int)$notifications + (int)$messages)."</span>";};?></a>
 		</div>
 		<div class="col-5 col-lg-5 input-group searchNav">
+			<?php echo $this->Form->create('Search', array('action' => 'index', 'type' => 'GET', 'inputDefaults' => array('div'=>false,'label'=>false),'class' => 'custom')); ?>
 			<?php echo $this->Form->input("Search.query", array("label" => false, "id" => "SearchQuery", "class" => "form-control")); ?>
 			<?php echo $this->Form->end(); ?>
 			<span class="input-group-btn">

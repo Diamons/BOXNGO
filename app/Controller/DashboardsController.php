@@ -1,7 +1,7 @@
 <?php
 	class DashboardsController extends AppController{
-		var $uses = array('Favorite', 'Shop', 'Order', 'User', 'Image', 'Message', 'Thread', 'Trade');
-		
+		public $uses = array('Favorite', 'Shop', 'Order', 'User', 'Image', 'Message', 'Thread', 'Trade');
+		public $helpers = array('Country.Country');
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->layout = "dashboard";
@@ -114,6 +114,7 @@
 				$this->request->data['User']['display_name'] = Sanitize::html($this->request->data['User']['display_name'], array('remove' => true));
 				if($this->User->save($this->request->data)){
 					$this->Session->setFlash("Your information has been saved!", "flash_success");
+					$this->redirect($this->referer());
 				}else{
 					$this->Session->setFlash("Please check the form below for any errors.", "flash_error");
 				}

@@ -36,10 +36,8 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 <body>
 	<?php echo $this->element('includes'.DS.'facebookscript'); ?>
 	<div class="boxngo_wrapper">
-		<?php echo $this->Form->create('Search', array('action' => 'index', 'type' => 'GET', 'inputDefaults' => array('div'=>false,'label'=>false),'class' => 'custom')); ?>
 		<?php //echo $this->element('layout'.DS.'subnav'); ?>
 		<?php echo $this->element('layout'.DS.'header'); ?>
-		<?php echo $this->Form->end(); ?>
 		
 		<?php echo $this->Session->flash(); ?>
 		<div id="content" class="wrapper row">

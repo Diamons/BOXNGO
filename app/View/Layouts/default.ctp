@@ -35,10 +35,8 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	<?php echo $this->fetch('pinterest'); ?>
 	<?php echo $this->element('includes/facebookscript'); ?>
 	<div class="boxngo_wrapper">
-		<?php echo $this->Form->create('Search', array('action' => 'index', 'type' => 'GET', 'inputDefaults' => array('div'=>false,'label'=>false),'class' => 'custom')); ?>
 		<?php //echo $this->element('layout'.DS.'subnav'); ?>
 		<?php echo $this->element('layout'.DS.'header'); ?>
-		<?php echo $this->Form->end(); ?>
 		
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>

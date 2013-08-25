@@ -33,6 +33,29 @@ $this->end();
 	</div>
 	<div class="form-group">
 		<div class="col-4 col-lg-4">
+			<b>City</b>
+				<div class="detail">
+					Which city will you be selling from?
+				</div>
+		</div>
+		<div class="col-8 col-lg-8">
+			<?php echo $this->Form->input("User.seller_city", array("class" => "form-control")); ?>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-4 col-lg-4">
+			<b>Country</b>
+				<div class="detail">
+					Which country are you located in?
+				</div>
+		</div>
+		<div class="col-8 col-lg-8">
+		<?php debug($auth); ?>
+			<?php echo $this->country->countrySelect('User.country', array('class' => 'form-control', 'default' => $auth['country'], 'label' => false)); ?>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-4 col-lg-4">
 			<b>Profile Picture</b>
 				<div class="detail">
 					An image to represent you on BOX'NGO.

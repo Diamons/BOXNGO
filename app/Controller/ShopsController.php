@@ -3,7 +3,7 @@
 		
 		public $uses = array('Comment', 'Shop', 'Image', 'Payment', 'School', 'Shopview', 'Facebook', 'Category', 'Favorite', 'Message', 'Thread', 'Trade');
 		public $components = array('Cookie');
-		public $helpers = array('Time');
+		public $helpers = array('Time', 'Country.Country');
 
 		public function beforeFilter(){
 			parent::beforeFilter();

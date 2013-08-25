@@ -23,7 +23,8 @@
 			'facebook_id' => array(
 				'unique' => array(
 					'rule' => 'isUnique',
-					'message' => 'That Facebook account has already been linked.'
+					'message' => 'That Facebook account has already been linked.',
+					'on' => 'create'
 				)
 			),
 			'passwordcreate' => array(
@@ -97,6 +98,19 @@
 					'required' => true,
 					'message' => 'You must agree to the terms of use',
 					'on' => 'create'
+				)
+			),
+			'seller_city' => array(
+				'rule' => 'notEmpty',
+				'message' => 'You must input a city. This is used to help buyers know where purchases are shipping from.'
+			),
+			'country' => array(
+				'notEmpty' => array(
+					'rule' => 'notEmpty',
+					'message' => 'You must select a country.'
+				),
+				'lengthMinimum' => array(
+					'rule' => array('maxLength', 2),
 				)
 			)
 		);
