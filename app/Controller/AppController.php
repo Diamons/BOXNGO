@@ -48,7 +48,8 @@ class AppController extends Controller {
 		if(!empty($cookie) && !$this->Auth->loggedIn())
 			$this->Auth->login($this->UserLogin->checkUser($cookie, $this->Autologin->find("first", array("conditions" => array("Autologin.hash" => $cookie)))));
 		if($this->Auth->loggedIn()){
-			if(!$this->Auth->user('country') && !($this->params['controller'] == "dashboards")){
+			$user = $this->User->read(NULL, $this->Auth->user('id'));
+			if(!$user['User']['country'] && !($this->params['controller'] == "dashboards")){
 				$this->Session->setFlash("Our site has changed and we just need a bit more information from you! Please put in your location.", "flash_success");
 				$this->redirect(array('controller' => 'dashboard', 'action' => 'manageaccount'));
 			}
@@ -56,7 +57,7 @@ class AppController extends Controller {
 			$this->set("notificationItems",Cache::read('notifications.'.$this->Auth->user('id'), 'long'));
 			$this->set("notifications", $this->Order->getNotifications($this->Auth->user('id')));
 			$this->set("messages", $this->Thread->getUserMessages($this->Auth->user('id')));
-			$user = $this->User->read(NULL, $this->Auth->user('id'));
+			
 			$this->set("auth", $user['User']);
 		}
 		//Debug Function
