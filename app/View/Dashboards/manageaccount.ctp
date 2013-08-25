@@ -42,6 +42,17 @@ $this->end();
 			<?php echo $this->Form->input("User.seller_city", array("class" => "form-control")); ?>
 		</div>
 	</div>
+	<div id="stateSelect" class="form-group">
+		<div class="col-4 col-lg-4">
+			<b>State</b>
+				<div class="detail">
+					Which state will you be selling from? <small>(optional)</small>
+				</div>
+		</div>
+		<div class="col-8 col-lg-8">
+			<?php echo $this->Country->stateSelect('User.seller_state', array('class' => 'form-control', 'default' => $auth['seller_state'], 'label' => false)); ?>
+		</div>
+	</div>
 	<div class="form-group">
 		<div class="col-4 col-lg-4">
 			<b>Country</b>
@@ -50,8 +61,7 @@ $this->end();
 				</div>
 		</div>
 		<div class="col-8 col-lg-8">
-		<?php debug($auth); ?>
-			<?php echo $this->country->countrySelect('User.country', array('class' => 'form-control', 'default' => $auth['country'], 'label' => false)); ?>
+			<?php echo $this->Country->countrySelect('User.seller_country', array('class' => 'form-control', 'default' => $auth['seller_country'], 'label' => false)); ?>
 		</div>
 	</div>
 	<div class="form-group">

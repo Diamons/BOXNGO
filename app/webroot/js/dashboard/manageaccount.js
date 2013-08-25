@@ -33,6 +33,19 @@ $(document).ready(function(){
 	if($("#UserProfilepic").val() != ""){
 		$("#editor").html("<img src='"+$("#UserProfilepic").val()+"' />");
 	}
+	if($("#UserSellerCountry").val() !== "us"){
+		$("#stateSelect").slideUp();
+		$("#UserSellerState").val("");
+	}
+	$("#UserSellerCountry").change(function(){
+		var selectedValue = $(this).find(":selected").val();
+		if(selectedValue == "us"){
+			$("#stateSelect").slideDown();
+		}else{
+			$("#stateSelect").slideUp();
+			$("#UserSellerState").val("");
+		}
+	});
 	/*updateCountdown();
     $('#UserProfileInfo').change(updateCountdown);
     $('#UserProfileInfo').keyup(updateCountdown);*/

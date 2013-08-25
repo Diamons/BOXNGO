@@ -285,7 +285,60 @@ class CountryHelper extends FormHelper {
         'zm' => 'Zambia',
         'zw' => 'Zimbabwe'
     );
-
+	private $stateList = array(
+		'AL'=>"Alabama",  
+		'AK'=>"Alaska",  
+		'AZ'=>"Arizona",  
+		'AR'=>"Arkansas",  
+		'CA'=>"California",  
+		'CO'=>"Colorado",  
+		'CT'=>"Connecticut",  
+		'DE'=>"Delaware",  
+		'DC'=>"District Of Columbia",  
+		'FL'=>"Florida",  
+		'GA'=>"Georgia",  
+		'HI'=>"Hawaii",  
+		'ID'=>"Idaho",  
+		'IL'=>"Illinois",  
+		'IN'=>"Indiana",  
+		'IA'=>"Iowa",  
+		'KS'=>"Kansas",  
+		'KY'=>"Kentucky",  
+		'LA'=>"Louisiana",  
+		'ME'=>"Maine",  
+		'MD'=>"Maryland",  
+		'MA'=>"Massachusetts",  
+		'MI'=>"Michigan",  
+		'MN'=>"Minnesota",  
+		'MS'=>"Mississippi",  
+		'MO'=>"Missouri",  
+		'MT'=>"Montana",
+		'NE'=>"Nebraska",
+		'NV'=>"Nevada",
+		'NH'=>"New Hampshire",
+		'NJ'=>"New Jersey",
+		'NM'=>"New Mexico",
+		'NY'=>"New York",
+		'NC'=>"North Carolina",
+		'ND'=>"North Dakota",
+		'OH'=>"Ohio",  
+		'OK'=>"Oklahoma",  
+		'OR'=>"Oregon",  
+		'PA'=>"Pennsylvania",  
+		'RI'=>"Rhode Island",  
+		'SC'=>"South Carolina",  
+		'SD'=>"South Dakota",
+		'TN'=>"Tennessee",  
+		'TX'=>"Texas",  
+		'UT'=>"Utah",  
+		'VT'=>"Vermont",  
+		'VA'=>"Virginia",  
+		'WA'=>"Washington",  
+		'WV'=>"West Virginia",  
+		'WI'=>"Wisconsin",  
+		'WY'=>"Wyoming"
+	);
+	
     private $languages = array(
         'ab' => 'Abkhazian',
         'aa' => 'Afar',
@@ -609,6 +662,10 @@ class CountryHelper extends FormHelper {
 	public function countryName($code){
 		return $this->countries[$code];
 	}
+	
+	public function stateName($code){
+		return $this->stateList[$code];
+	}
     /**
      * Finds selected element
      *
@@ -659,6 +716,28 @@ class CountryHelper extends FormHelper {
 			$selected = $this->countryCode;
         $opts = array();
         $opts['options'] = $this->countries;
+        $opts['selected'] = $selected;
+        $opts['multiple'] = false;
+        $opts['label'] = $options['label'];
+        if ($options['class'] !== null) {
+            $opts['class'] = $options['class'];
+        }
+        $out = $this->Form->input($fieldName, $opts);
+        return $this->output($out);
+    }
+	
+	public function stateSelect($fieldName, $options=array()) {
+        $options = array_merge(array(
+            'label' => __('State', true),
+            'default' => $this->defaultState,
+            'class' => null
+        ), $options);
+        $selected = $this->getSelected($fieldName);
+        $selected = $options['default'];
+		if(empty($selected))
+			$selected = $this->countryCode;
+        $opts = array();
+        $opts['options'] = $this->stateList;
         $opts['selected'] = $selected;
         $opts['multiple'] = false;
         $opts['label'] = $options['label'];

@@ -49,7 +49,7 @@ class AppController extends Controller {
 			$this->Auth->login($this->UserLogin->checkUser($cookie, $this->Autologin->find("first", array("conditions" => array("Autologin.hash" => $cookie)))));
 		if($this->Auth->loggedIn()){
 			$user = $this->User->read(NULL, $this->Auth->user('id'));
-			if(!$user['User']['country'] && !($this->params['controller'] == "dashboards")){
+			if(!$user['User']['seller_country'] && !($this->params['controller'] == "dashboards")){
 				$this->Session->setFlash("Our site has changed and we just need a bit more information from you! Please put in your location.", "flash_success");
 				$this->redirect(array('controller' => 'dashboard', 'action' => 'manageaccount'));
 			}

@@ -65,10 +65,10 @@
 					<?php } ?>
 				</div>
 			</div>
-			<?php if($listing['User']['country']){ ?>
+			<?php if($listing['User']['seller_country']){ ?>
 			<div>
 				<h3 class="subheader"><i class="icon-truck"></i> Shipping Info</h3>
-				Shipping from <?php echo $listing['User']['seller_city']; ?>, <?php echo $this->Country->countryName($listing['User']['country']); ?>.
+				Shipping from <?php echo $listing['User']['seller_city']; ?>, <?php if($listing['User']['seller_country'] == "us"){ ?><?php echo $this->Country->stateName($listing['User']['seller_state']); ?>, <?php } ?><?php echo $this->Country->countryName($listing['User']['seller_country']); ?>.
 			</div>
 			<?php } ?>
 			<div itemprop="description" id="description">
