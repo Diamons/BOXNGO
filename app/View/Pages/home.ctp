@@ -66,13 +66,13 @@ $this->start('meta'); ?>
 					<a href="/" id="logo"><img src="/logo.png" /></a>
 				</div>
 				<div class="row" id="main_content">
-					<div class="col-6 col-6-lg">
+					<div class="col-6 col-lg-6">
 						<h1>Online Buying and Selling Made Easy!</h1>
 						<h2>Free registration, easy listing, quick payments via check or PayPal, one flat fee*, user reviews, quick support, and much more! Buying and selling online has never been so simple.</h2>
 						<a href="/users" id="buyAndSell"><i class="icon-signin"></i> Sign up for Free</a>
 						<div class="asterisk">*BOX'NGO charges a flat 10% fee. There are no additional listing fees, image fees, PayPal fees, or anything else period. Our job is to make selling online easy and no seller should have to add up fees and percentages of a sale to figure out how much they earned. We take care of everything for you and give you 90% profit of each and every sale.</div>
 					</div>
-					<div class="recent_activity_container col-6 col-6-lg">
+					<div class="recent_activity_container col-6 col-lg-6">
 						<div id="recent_activity">
 							<div class="recent_container">
 								<?php foreach($activity as $a){ ?>
@@ -88,7 +88,7 @@ $this->start('meta'); ?>
 		</div>
 		<div id="features_body" class="wrapper">
 			<div class="row">
-				<div class="col-6 col-6-lg">
+				<div class="col-6 col-lg-6">
 					<div class="feature row">
 						<div class="col-4 col-4-lg">
 							<i class="icon-credit-card"></i>
