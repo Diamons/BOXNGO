@@ -34,11 +34,11 @@ class AppShell extends Shell {
 		$email->from(array('shahruk@theboxngo.com' => 'BOXNGO'))
 		->to($to)
 		->subject($subject)
-		->template('default', $template)
+		->template($template, 'default')
 		->emailFormat('html');
 		$email->viewVars(array("domain" => "http://theboxngo.com/", "variables" => $variables));
 		$email->send();
-		
+
 	}
 
 }
