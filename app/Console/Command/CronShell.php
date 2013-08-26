@@ -20,7 +20,7 @@
 			$purchases = $this->Order->find("all", array("conditions" => array("Order.status" => "delivered", "Order.reviewed" => 0, "Order.email_review_sent" => 0, "DATEDIFF(CURDATE(), DATE(Order.modified)) >" => 3)));
 			for($i = 0; $i < count($purchases); $i++){
 				$user = $this->Shop->User->read(NULL, $purchases[$i]['Order']['buyer_id']);
-				parent::sendEmail("shahruksemail@gmail.com", "BOX'NGO :: Feedback requested on recent order!", "feedbackrequested", array("display_name" => $user['User']['display_name']));
+				parent::sendEmail($user['User']['username'], "BOX'NGO :: Feedback requested on recent order!", "feedbackrequested", array("display_name" => $user['User']['display_name']));
 				$this->Order->id = $purchases[$i]['Order']['id'];
 				$this->Order->saveField("email_review_sent", 1);
 			}
