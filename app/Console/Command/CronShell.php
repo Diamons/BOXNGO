@@ -15,4 +15,13 @@
 				parent::sendEmail("shahruk@theboxngo.com", "BOX'NGO :: Important reminder that you have an order awaiting your acceptance!", "remindseller", array("link" => $orders[$i]['Shop']['full_url'], "imageUrl" => $image['Image']['url'], "totalPrice" => $orders[$i]['Order']['totalPrice'], "name" => $orders[$i]['Shop']['name'], "expire" => $expire->format('Y-m-d h:i:s A')));
 			}
 	    }
+		
+		public function askFeedback(){
+			$purchases = $this->Order->find("all", array("conditions" => array("Order.status" => "delivered", "Order.reviewed" => 0, "Order.email_review_sent" => 0, "DATEDIFF(CURDATE(), DATE(Order.modified)) >" => 3)));
+			for($i = 0; $i < count($purchases); $i++){
+				$this->sendEmail("shahruksemail@gmail.com", "BOX'NGO :: Feedback requested on recent order!", "feedbackrequested", array("username" => $purchases[$i]['User']['display_name']));
+				$this->Order->id = $purchases[$i]['Order']['id'];
+				$this->Order->saveField("email_review_sent", 1);
+			}
+		}
 	}

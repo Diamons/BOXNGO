@@ -40,7 +40,6 @@ class AppController extends Controller {
 
 	public function beforeFilter(){
 		parent::beforeFilter();
-		
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
 		$this->set("layoutCategories", $this->Category->findNonEmpty());
