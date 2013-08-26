@@ -1,7 +1,5 @@
 #gallery{
 	overflow: auto;
-	float: left;
-	width: 8%;
 	max-height: 420px;
 }
 
@@ -30,10 +28,11 @@
 }
 
 #displayPicture{
-	margin-left: 1%;
-	float: left;
-	width: 91%;
 	text-align: center;
+}
+
+#listingPics > div.col-2, #listingPics > div.col-lg-2, #listingPics > div.col-lg-10, #listingPics > div.col-10{
+	padding: 0;
 }
 
 #displayPicture > a, #displayPicture > a.hidden{

@@ -48,7 +48,7 @@
 			<meta itemprop="name" content="<?php echo h($listing['Shop']['name']); ?>" />
 			<meta itemprop="image" content="<?php echo $listing['Image'][0]['url']; ?>/convert?w=200&height=200&fit=crop" />
 			<div class="row" id="listingPics">
-				<div id="gallery">
+				<div class="col-2 col-lg-2" id="gallery">
 					<?php 
 					if(!empty($listing['Image'])){
 						for($i = 0; $i < count($listing['Image']); $i++){ ?>
@@ -59,7 +59,7 @@
 						echo $this->Html->image("loading.gif");
 					}?>
 				</div>
-				<div id="displayPicture">
+				<div class="col-10 col-lg-10" id="displayPicture">
 					<?php for($i = 0; $i < count($listing['Image']); $i++){ ?>
 						<a id="lightboxImage<?php echo $i; ?>" href="<?php echo $listing['Image'][$i]['url']; ?>"><img src="<?php echo $listing['Image'][$i]['url'].'/convert?h=420'; ?>" /></a>
 					<?php } ?>
