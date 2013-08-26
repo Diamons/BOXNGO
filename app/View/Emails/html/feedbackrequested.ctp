@@ -1,5 +1,5 @@
 <p>
-	Hey <?php echo $variables['display_name']; ?>,<br /><br />
+	Hey <b><?php echo $variables['display_name']; ?></b>,<br /><br />
 	Recently you placed an order on our site <a href="<?php echo $domain; ?>">BOX'NGO</a>. Feedback for the seller is appreciated and strongly encouraged to help foster trust and reputation in the community. Sellers appreciate feedback to better understand how they are performing. Other users also appreciate seeing this feedback because it helps them decide if they want to purchase from a particular seller.
 </p>
 <p>
