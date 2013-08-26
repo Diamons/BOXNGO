@@ -2,6 +2,7 @@
 	overflow: auto;
 	float: left;
 	width: 8%;
+	max-height: 420px;
 }
 
 #gallery div.imageContainer img{
