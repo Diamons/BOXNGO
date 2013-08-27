@@ -11,7 +11,7 @@
 		display: inline-block;
 		background: #006cff;
 		color: #FFF;
-		padding: 15px;wwwwwwwww
+		padding: 15px;
 
 	}
 </style>
@@ -22,6 +22,6 @@
 			<li>Track code <?php echo $paypalOrders[$i]['Order']['tracking_code']; ?> on <?php echo  $paypalOrders[$i]['Order']['tracker']; ?></li>
 			<li>Send <b><?php echo $paypalOrders[$i]['User']['paypal']; ?></b> via PayPal the amount: <b>$<?php echo round($paypalOrders[$i]['Order']['totalPrice'] * .9, 2); ?></b></li>
 		</ol>
-		<a href="/admin/paypalorders/<?php echo $paypalOrders[$i]['Order']['id']; ?>" class="submit">Mark Completed</a>
+		<a href="/admins/paypalorders/<?php echo $paypalOrders[$i]['Order']['id']; ?>" class="submit">Mark Completed</a>
 	</div>
 <?php } ?>

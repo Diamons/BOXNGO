@@ -30,7 +30,7 @@
 				$this->Order->id = $order;
 				$this->Order->saveField("completed", 1);
 				$this->Order->saveField("status", "delivered");
-				parent::sendEmail($orderTmp['User']['username'], "Payment for Order #".$orderTmp['Order']['id'], "sellerpaidpaypal", array('orderId' => $orderTmp['Order']['id'], 'amount' => round($orderTmp['Order']['totalPrice']*.9, 2), 'originalAmount' => $orderTmp['Order']['totalPrice'], 'username' => $orderTmp['User']['username']));
+				parent::sendEmail($orderTmp['User']['username'], "Payment for Order #".$orderTmp['Order']['id'], "sellerpaidpaypal", array('orderId' => $orderTmp['Order']['id'], 'amount' => round($orderTmp['Order']['totalPrice']*.9, 2), 'originalAmount' => $orderTmp['Order']['totalPrice'], 'paypal' => $orderTmp['User']['paypal'], 'username' => $orderTmp['User']['username']));
 				$this->Session->setFlash("Seller was notified of payment!", "flash_success");
 			}
 

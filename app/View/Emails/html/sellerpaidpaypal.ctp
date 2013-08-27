@@ -7,9 +7,9 @@
 </style>
 <p>Hi <?php echo $variables['username']; ?>,</p>
 
-<p>Recently you received an order on our site <a href="<?php echo $domain; ?>">BOX'NGO</a> for the amount of <b>$<?php echo $variables['originalAmount']; ?></b>. </p>
+<p>Recently you received an order on our site <a href="<?php echo $domain; ?>">BOX'NGO</a> for the amount of <b>$<?php echo number_format($variables['originalAmount'], 2); ?></b>. </p>
 
-<p>We have transferred <b>$<?php echo $variables['amount']; ?></b> to your PayPal email address (<?php echo $variables['username']; ?>).</p>
+<p>We have transferred <b>$<?php echo $variables['amount']; ?></b> to your PayPal email address (<?php echo $variables['paypal']; ?>).</p>
 
 <p>We hope you enjoyed selling with our site and encourage you to tell us about your selling experience :) Here are some questions you might have going forward.</p>
 
