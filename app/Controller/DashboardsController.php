@@ -124,6 +124,10 @@
 			}
 		}
 		
+		public function earnpoints(){
+		
+		}
+		
 		private function addUniqueShops($newEntries, &$shopItems){
 			
 			for($i = 0; $i < count($newEntries); $i++){

@@ -48,8 +48,11 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 					<li><a href="/dashboard/managepurchases">My Purchases</a></li>
 					<li><a href="/dashboard/myorders">My Orders<?php if(isset($notifications) && $notifications > 0){echo "<span class='notification'>".$notifications."</span>";};?></a></li>
 					<li><a href="/dashboard/messages">My Messages <?php if($messages > 0) { echo "<span class='notification'>".$messages."</span>"; } ?></a></li>
+					<hr />
 					<li><a href="/dashboard/manageaccount">Edit Profile</a></li>
 					<li><a href="/users/paymentinfo">Manage Payment Information</a></li>
+					<hr />
+					<li><a href="/dashboard/earnpoints">Earn Points</a></li>
 				</ul>
 			</div>
 			<div class="col-9 col-lg-9">
