@@ -331,7 +331,7 @@
 			if($this->request->is('put')){
 				$this->autoRender = true;
 				if($this->User->save($this->request->data)){
-					$this->Session->setFlash("Your password has been changed! Cya on BOX'NGO! :)", "flash_success");
+					$this->Session->setFlash("Your password has been changed! Hope to see you on BOX'NGO!", "flash_success");
 					$this->redirect('/users');
 				}
 			}

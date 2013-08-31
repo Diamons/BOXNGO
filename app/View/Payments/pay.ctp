@@ -63,7 +63,7 @@
 								<?php echo $this->Form->input('Coupon.code', array('class' => 'form-control')); ?>
 							<?php }else{ ?>
 								<?php echo $price['Price']['message']; ?>
-								<?php echo $this->Form->hidden('Coupon.code', array('class' => 'form-control')); ?>
+								<?php echo $this->Form->hidden('Coupon.code', array('label' => 'Coupon Code', 'class' => 'form-control')); ?>
 							<?php } ?>
 						</div>
 						<div class="col-1 col-lg-1">
