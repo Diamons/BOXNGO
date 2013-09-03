@@ -71,6 +71,12 @@ class DATABASE_CONFIG {
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
+	
+	public $index = array(
+		'datasource' => 'Elastic.ElasticSource',
+		'index' => 'search',
+		'port' => 9200
+	);
 
 	public $defaultOld = array(
 		'datasource' => 'Database/Mysql',

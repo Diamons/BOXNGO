@@ -10,3 +10,6 @@
 [submodule "app/Plugin/Mongodb"]
 	path = app/Plugin/Mongodb
 	url = git@github.com:ichikaway/cakephp-mongodb.git
+[submodule "app/Plugin/Elastic"]
+	path = app/Plugin/Elastic
+	url = git://github.com/dkullmann/CakePHP-Elastic-Search-DataSource.git

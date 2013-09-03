@@ -34,11 +34,25 @@ App::uses('Controller', 'Controller');
 
 App::uses('Sanitize', 'Utility');
 class AppController extends Controller {
-	public $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread', 'NotificationItem');
+	public $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread', 'NotificationItem', 'ShopSearch');
 	public $components = array('UserLogin', 'Cookie', 'Auth', 'Security' => array('csrfCheck' => false), 'Session');
 	public $helpers = array('Form', 'Time');
 
 	public function beforeFilter(){
+		$a = $this->Shop->find("all", array("limit" => 1));
+		/*for($i = 0; $i < count($a); $i++){
+			$data['user_id'] = $a[$i]['User']['id'];
+			$data['ShopSearch']['shop_id'] = $a[$i]['Shop']['id'];
+			$data['ShopSearch']['image'] = $a[$i]['Image'][0]['url'];
+			$data['ShopSearch']['name'] = $a[$i]['Shop']['name'];
+			$data['ShopSearch']['description'] = $a[$i]['Shop']['description'];
+			$data['ShopSearch']['full_url'] = $a[$i]['Shop']['full_url'];
+			$data['ShopSearch']['display_name'] = $a[$i]['User']['display_name'];
+			$this->ShopSearch->save($data);
+			$this->Shop->delete(array('Shop.id' => $a[$i]['Shop']['id']));
+			
+		}*/
+		debug($this->ShopSearch->find("all"));
 		parent::beforeFilter();
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
