@@ -1,34 +1,40 @@
 <?php
 	class SearchesController extends AppController {
-		public $uses = array('User', 'Shop', 'Image', 'School', 'Category');
+		public $uses = array('User', 'Shop', 'ShopSearch', 'Image', 'School', 'Category');
 		function beforeFilter(){
 			parent::beforeFilter();
 			$this->Auth->allow('index', 'browse');
 		}
 		
 		public function index($category=NULL){
+
 			if(!empty($this->params->query['query'])){
-				$search = "%".$this->params->query['query']."%";
-				$conditions = array('OR' => array('Shop.name LIKE' => $search, 'Shop.description LIKE' => $search), 'AND' => array('Shop.canview' => 1));
+				$this->paginate = array('query' => array('multi_match' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'query' => $this->params->query['query'])), 'limit' => 24);
 			}else{
-				$conditions = array('Shop.canview' => 1);
+				$this->paginate = array('conditions' => array('ShopSearch.canview' => 1));
 			}
-			$this->paginate = array('conditions' => $conditions, 'limit' => 24, 'order' => array('Shop.id' => 'desc'));
-			$results = $this->paginate('Shop');
+			debug($this->ShopSearch->find('all'));
+			
+			$results = $this->paginate('ShopSearch');
 			if(!empty($this->params->query['query'])){
 				$this->set("title_for_layout", "Search for ".$this->params->query['query']);
 				$this->set("search", $this->params->query['query']);
 			}
 			else
 				$this->set("title_for_layout", "Browsing BOX'NGO");
+			
+			for($i = 0; $i < count($results); $i++){
+				$tmpCategory = $this->Category->read(NULL, $results[$i]['ShopSearch']['category_id']);
+				$results[$i]['Category'] = $tmpCategory['Category'];
+			}
 			$this->set("results", $results);
 		}
 		
 		public function browse($category=NULL){
 			$category = $this->Category->find("first", array("conditions" => array("Category.short_name" => $category)));
-			$conditions = array("Shop.category_id" => $category['Category']['id'], "Shop.canview" => 1);
-			$this->paginate = array('conditions' => $conditions, 'limit' => 24, 'order' => array('Shop.id' => 'desc'));
-			$results = $this->paginate('Shop');
+			$conditions = array("ShopSearch.category_id" => $category['Category']['id'], "ShopSearch.canview" => 1);
+			$this->paginate = array('conditions' => $conditions, 'limit' => 24, 'order' => array('ShopSearch.shop_id' => 'desc'));
+			$results = $this->paginate('ShopSearch');
 			$this->set("results", $results);
 			$this->set("category", $category);
 			$this->render("index");

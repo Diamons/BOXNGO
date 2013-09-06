@@ -29,7 +29,7 @@ $this->end();
 				<h3><?php echo $category['Category']['display_name']; ?></h3>
 			<?php } ?>
 			<div id="listings">
-				<?php echo $this->element('four_columns_listings', array('listings' => $results));
+				<?php echo $this->element('four_columns_listings_search', array('listings' => $results));
 				}else{ ?>
 				<h1> Unfortunately there were no matches for that search. </h1>
 				

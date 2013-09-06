@@ -39,20 +39,17 @@ class AppController extends Controller {
 	public $helpers = array('Form', 'Time');
 
 	public function beforeFilter(){
-		$a = $this->Shop->find("all", array("limit" => 1));
-		/*for($i = 0; $i < count($a); $i++){
-			$data['user_id'] = $a[$i]['User']['id'];
-			$data['ShopSearch']['shop_id'] = $a[$i]['Shop']['id'];
-			$data['ShopSearch']['image'] = $a[$i]['Image'][0]['url'];
-			$data['ShopSearch']['name'] = $a[$i]['Shop']['name'];
-			$data['ShopSearch']['description'] = $a[$i]['Shop']['description'];
-			$data['ShopSearch']['full_url'] = $a[$i]['Shop']['full_url'];
-			$data['ShopSearch']['display_name'] = $a[$i]['User']['display_name'];
-			$this->ShopSearch->save($data);
-			$this->Shop->delete(array('Shop.id' => $a[$i]['Shop']['id']));
-			
+		$a = $this->Shop->find("all", array("limit" => 10000));
+		for($i = 0; $i < count($a); $i++){
+			//$this->ShopSearch->saveShop($a[$i]);
+		}
+		
+		debug($this->ShopSearch->find('count'));
+		/*for($i = 0; $i < count($b); $i++){
+			debug($b[$i]['ShopSearch']['id']);
+			debug($b[$i]['ShopSearch']);
+			debug($this->ShopSearch->delete($b[$i]['ShopSearch']['id']));
 		}*/
-		debug($this->ShopSearch->find("all"));
 		parent::beforeFilter();
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
@@ -61,11 +58,8 @@ class AppController extends Controller {
 		if(!empty($cookie) && !$this->Auth->loggedIn())
 			$this->Auth->login($this->UserLogin->checkUser($cookie, $this->Autologin->find("first", array("conditions" => array("Autologin.hash" => $cookie)))));
 		if($this->Auth->loggedIn()){
+			$this->User->recursive = 0;
 			$user = $this->User->read(NULL, $this->Auth->user('id'));
-			if(!$user['User']['seller_country'] && !($this->params['controller'] == "dashboards")){
-				$this->Session->setFlash("Our site has changed and we just need a bit more information from you! Please put in your location.", "flash_success");
-				$this->redirect(array('controller' => 'dashboard', 'action' => 'manageaccount'));
-			}
 			//debug($this->NotificationItem->save($data));
 			$this->set("notificationItems",Cache::read('notifications.'.$this->Auth->user('id'), 'long'));
 			$this->set("notifications", $this->Order->getNotifications($this->Auth->user('id')));

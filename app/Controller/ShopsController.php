@@ -32,12 +32,13 @@
 				$this->Shop->set($this->request->data);
 				if($this->Shop->validates()){
 					if(!empty($this->request->data['Shop']['images'])){
-
 						//Permalink
 						$this->request->data['Shop']['permalink'] = $this->Shop->permalink($this->request->data['Shop']['name']);
 						if($this->Shop->save($this->request->data)){
-							$shop = $this->Shop->read(NULL, $this->Shop->id);
+							$shop = $this->Shop->read(array('Shop.id'), $this->Shop->id);
 							$this->Image->saveImages($this->request->data['Shop']['images'], $this->Shop->id);
+							$shop = $this->Shop->read(NULL, $this->Shop->id);
+							$this->ShopSearch->saveShop($shop);
 							$this->Session->setFlash("Congratulations! Your listing has been successfully posted.", "flash_success");
 							$this->redirect(array('controller' => 'shops', 'action' => 'share', $this->Shop->id));
 						} else {
@@ -67,7 +68,8 @@
 				if(!empty($user['User']['facebook_access_token'])){
 					$link = "http://theboxngo.com/shops/viewlisting/".$listingId."/".$listing['Shop']['permalink'];
 					$results = $this->Facebook->shareListing($listing['Shop']['name'], $link, $user['User']['facebook_id'], $user['User']['facebook_access_token'], '', $listing['Image'][0]['url']);
-					$this->redirect(array('controller' => 'shops', 'action' => 'viewlisting', $listingId,$listing['Shop']['permalink']));					
+					$this->redirect(array('controller' => 'shops', 'action' => 'viewlisting', $listingId,$listing['Shop']['permalink']));
+					$this->ShopView->delete(array("ShopView.shop_id" => $listingId));					
 				}
 				$this->set("shoplink", $listingId);
 			}
