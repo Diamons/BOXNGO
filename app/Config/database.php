@@ -59,7 +59,17 @@
  */
 class DATABASE_CONFIG {
 
-	public $default = NULL;
+	public $default = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'localhost',
+		'login' => 'root',
+		'password' => '',
+		'database' => 'boxngo_new',
+		'prefix' => '',
+		'encoding' => 'utf8',
+	);
+	
 	public $production = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
@@ -78,50 +88,5 @@ class DATABASE_CONFIG {
 		'port' => 9200
 	);
 
-	public $defaultOld = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'us-cdbr-east-03.cleardb.com',
-		'port' => 3306,
-		'login' => 'bd203a888f9dcf',
-		'password' => '6508d8a8',
-		'database' => 'heroku_5c30e26ec8f7395',
-		'prefix' => '',
-		//'encoding' => 'utf8',
-	);
-
-	public $mongodb = array(
-        'datasource' => 'Mongodb.MongodbSource',
-        'host' => 'localhost',
-        'database' => 'local',
-        'port' => 27017,
-        'prefix' => '',
-		'persistent' => true,
-    );
-	
-	public $localhost = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'root',
-		'password' => '',
-		'database' => 'boxngo_new',
-		'prefix' => '',
-		'encoding' => 'utf8',
-	);
-
-	function __construct (){		
-		if(isset($_SERVER['SERVER_NAME'])){
-			$this->default = $this->production;
-			switch($_SERVER['SERVER_NAME']){
-				case 'boxngo.local':
-					$this->default = $this->localhost;
-				break;
-			}
-		}
-		else{
-			$this->default = $this->production;
-		}
-	}
 
 }

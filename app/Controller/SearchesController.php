@@ -9,13 +9,13 @@
 		public function index($category=NULL){
 
 			if(!empty($this->params->query['query'])){
-				$this->paginate = array('query' => array('multi_match' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'query' => $this->params->query['query'])), 'limit' => 24);
+				$this->paginate = array('conditions' => array('ShopSearch.canview' => 1), 'query' => array('multi_match' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'query' => $this->params->query['query'])), 'limit' => 24);
 			}else{
 				$this->paginate = array('conditions' => array('ShopSearch.canview' => 1));
 			}
-			debug($this->ShopSearch->find('all'));
 			
 			$results = $this->paginate('ShopSearch');
+
 			if(!empty($this->params->query['query'])){
 				$this->set("title_for_layout", "Search for ".$this->params->query['query']);
 				$this->set("search", $this->params->query['query']);

@@ -7,7 +7,7 @@
 			'user_id' => array('type' => 'integer'),
 			'image' => array('type' => 'string'),
 			'shop_id' => array('type' => 'integer'),
-			'price' => array('type' => 'double'),
+			'price' => array('type' => 'float'),
 			'name' => array('type' => 'string'),
 			'description' => array('type' => 'string'),
 			'full_url' => array('type' => 'string'),
@@ -29,7 +29,7 @@
 			$data['ShopSearch']['description'] = $listing['Shop']['description'];
 			$data['ShopSearch']['full_url'] = $listing['Shop']['full_url'];
 			$data['ShopSearch']['display_name'] = $listing['User']['display_name'];
-			$data['ShopSearch']['price'] = $listing['Shop']['price'] + $listing['Shop']['shipping'];
+			$data['ShopSearch']['price'] = $listing['Shop']['price'];
 			$this->save($data);
 		}
 		

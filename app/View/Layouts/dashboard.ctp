@@ -67,7 +67,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	<?php echo $this->element('layout'.DS.'footer'); ?>
 	<?php 
 		echo $this->Html->script('bootstrap.min');
-		
+		echo $this->Html->script('jquery.autocomplete');
 		echo $this->Html->script('main');
 		echo $this->fetch('scriptBottom');
 	?>

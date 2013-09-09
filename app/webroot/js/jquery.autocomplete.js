@@ -575,14 +575,13 @@
                 $(that.suggestionsContainer).scrollTop(offsetTop - that.options.maxHeight + heightDelta);
             }
 
-            that.el.val(that.getValue(that.suggestions[index].value));
+            that.el.val(that.getValue(that.suggestions[index].display_text));
         },
 
         onSelect: function (index) {
             var that = this,
                 onSelectCallback = that.options.onSelect,
                 suggestion = that.suggestions[index];
-
             that.el.val(that.getValue(suggestion.value));
 
             if ($.isFunction(onSelectCallback)) {
