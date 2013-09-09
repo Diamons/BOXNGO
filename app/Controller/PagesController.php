@@ -84,11 +84,12 @@ class PagesController extends AppController {
 				$recents = array();
 				$this->set("recentlyViewed", $recents = $this->Shop->getShopviewItems($this->Shopview->find("all", array("conditions" => array("Shopview.user_id" => $this->Auth->user('id')), "order" => "Shopview.created DESC", "limit" => 4))));
 				
+				$results = array();
 				//Results and then add the category
-				$results = $this->ShopSearch->find('all', array('conditions' => array('ShopSearch.canview' => 1), 'query' => array('flt' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'like_text' => $recents[0]['Shop']['name'])), 'limit' => 6));
+				$resultsTmp = $this->ShopSearch->find('all', array('conditions' => array('ShopSearch.canview' => 1), 'query' => array('flt' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'like_text' => $recents[0]['Shop']['name'])), 'limit' => 6));
 				//Cuz 1st one = the original search
-				for($i = 0; $i < 4; $i++){
-					$results[$i] = $results[$i+1];
+				for($i = 0; $i < 3; $i++){
+					$results[$i] = $resultsTmp[$i+1];
 				}
 				for($i = 0; $i < count($results); $i++){
 					$tmpCategory = $this->Category->read(NULL, $results[$i]['ShopSearch']['category_id']);
