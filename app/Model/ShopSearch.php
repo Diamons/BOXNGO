@@ -34,8 +34,9 @@
 		}
 		
 		public function delete($shopId){
+			App::uses('HttpSocket', 'Network/Http');
 			$http = new HttpSocket();
-			$record = $this->find("first", array("conditions" => array("ShopSearch.shop_id" => $shopid)));
+			$record = $this->find("first", array("conditions" => array("ShopSearch.shop_id" => $shopId)));
 			$results = $http->delete('http://localhost:9200/search/shop_searches/'.$record['ShopSearch']['id']);
 			return $results;
 		}
