@@ -1,3 +1,4 @@
+<?php debug($similarItems); ?>
 <?php $this->start('scriptBottom');
 echo  $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'pages/home_user'));
 $this->end();
@@ -62,7 +63,12 @@ $this->end();
 			</div>
 			*/ ?>
 			<div id="listings">
-				<?php echo $this->element('four_columns_listings', array('listings' => $listings)); ?>
+				<h4>Top Picks</h4>
+				<?php echo $this->element('four_columns_listings', array('listings' => $topPicks)); ?>
+				<h4>Similar Items</h4>
+				<?php echo $this->element('four_columns_listings_search', array('listings' => $similarItems)); ?>
+				<h4>Recently Viewed</h4>
+				<?php echo $this->element('four_columns_listings', array('listings' => $recentlyViewed)); ?>
 			</div>
 		</div>
 	</div>

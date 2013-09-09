@@ -18,6 +18,10 @@ html, body {
 	margin: 0;
 }
 
+.navbar{
+	z-index: 1;
+}
+
 .boxngo_wrapper{
 	min-height: 100%;
 	height: auto !important;

@@ -35,6 +35,10 @@
 			$conditions = array("ShopSearch.category_id" => $category['Category']['id'], "ShopSearch.canview" => 1);
 			$this->paginate = array('conditions' => $conditions, 'limit' => 24, 'order' => array('ShopSearch.shop_id' => 'desc'));
 			$results = $this->paginate('ShopSearch');
+			for($i = 0; $i < count($results); $i++){
+				$tmpCategory = $this->Category->read(NULL, $results[$i]['ShopSearch']['category_id']);
+				$results[$i]['Category'] = $tmpCategory['Category'];
+			}
 			$this->set("results", $results);
 			$this->set("category", $category);
 			$this->render("index");

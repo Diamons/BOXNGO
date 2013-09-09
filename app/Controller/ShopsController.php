@@ -130,7 +130,7 @@
 				
 				//Set cookie for viewed
 				if(!$this->Cookie->read('Viewed.'.$listingid)){
-					$this->Shopview->save(array('Shopview'=>array('shop_id' => $listingid)));
+					$this->Shopview->save(array('Shopview'=>array('shop_id' => $listingid, 'user_id' => $this->Auth->user('id'))));
 					$this->Cookie->write('Viewed.'.$listingid, 1);
 				}
 
