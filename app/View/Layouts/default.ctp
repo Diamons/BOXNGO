@@ -17,8 +17,6 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		echo $this->Html->script('//code.jquery.com/jquery-latest.min.js');
-		echo $this->Html->script('//code.jquery.com/ui/1.10.0/jquery-ui.js');
 	?>
 	<meta property="og:site_name" content="BOX&#039;NGO" />
 	<?php echo $this->fetch('facebookMeta'); ?>
@@ -51,7 +49,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	<?php echo $this->element('layout'.DS.'footer'); ?>
 	<?php 
 		echo $this->Html->script('bootstrap.min');
-		echo $this->Html->script('jquery.autocomplete');
+		echo $this->Html->script('jquery.autocomplete.min');
 		echo $this->Html->script('main');
 		echo $this->fetch('scriptBottom');
 	?>
