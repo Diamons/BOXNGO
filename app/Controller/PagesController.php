@@ -86,9 +86,9 @@ class PagesController extends AppController {
 				
 				$results = array();
 				//Results and then add the category
-				$resultsTmp = $this->ShopSearch->find('all', array('conditions' => array('ShopSearch.canview' => 1), 'query' => array('flt' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'like_text' => $recents[0]['Shop']['name'])), 'limit' => 6));
+				$resultsTmp = $this->ShopSearch->find('all', array('conditions' => array('ShopSearch.canview' => 1), 'query' => array('flt' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'like_text' => $recents[0]['Shop']['name'])), 'limit' => 5));
 				//Cuz 1st one = the original search
-				for($i = 0; $i < 3; $i++){
+				for($i = 0; $i < 4; $i++){
 					$results[$i] = $resultsTmp[$i+1];
 				}
 				for($i = 0; $i < count($results); $i++){
