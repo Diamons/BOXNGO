@@ -33,6 +33,13 @@
 			$this->save($data);
 		}
 		
+		public function delete($shopId){
+			$http = new HttpSocket();
+			$record = $this->find("first", array("conditions" => array("ShopSearch.shop_id" => $shopid)));
+			$results = $http->delete('http://localhost:9200/search/shop_searches/'.$record['ShopSearch']['id']);
+			return $results;
+		}
+		
 		public function elasticMapping() {
 			return $this->_mapping;
 		}

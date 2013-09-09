@@ -179,6 +179,7 @@
 				$this->Shop->id = $listingid;
 				$this->Shop->saveField('canview', 0);
 				$this->Favorite->deleteAll(array("Favorite.shop_id" => $listingid), false);
+				$this->ShopSearch->delete($listingid);
 				$this->redirect(array('controller' => 'dashboard'));
 			}
 		}
