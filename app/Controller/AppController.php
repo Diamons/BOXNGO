@@ -39,9 +39,9 @@ class AppController extends Controller {
 	public $helpers = array('Form', 'Time');
 
 	public function beforeFilter(){
-		$a = $this->Shop->find("all", array("limit" => 10000));
+		$a = $this->Shop->find("all", array("limit" => 100));
 		for($i = 0; $i < count($a); $i++){
-			//$this->ShopSearch->saveShop($a[$i]);
+			$this->ShopSearch->saveShop($a[$i]);
 		}
 		
 		debug($this->ShopSearch->find('count'));
