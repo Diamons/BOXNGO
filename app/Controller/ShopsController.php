@@ -1,7 +1,7 @@
 <?php
 	class ShopsController extends AppController{
 		
-		public $uses = array('Comment', 'Shop', 'Image', 'Payment', 'School', 'Shopview', 'Facebook', 'Category', 'Favorite', 'Message', 'Thread', 'Trade');
+		public $uses = array('Comment', 'ShopSearch', 'Shop', 'Image', 'Payment', 'School', 'Shopview', 'Facebook', 'Category', 'Favorite', 'Message', 'Thread', 'Trade');
 		public $components = array('Cookie');
 		public $helpers = array('Time', 'Country.Country');
 
@@ -130,7 +130,10 @@
 				
 				//Set cookie for viewed
 				if(!$this->Cookie->read('Viewed.'.$listingid)){
-					$this->Shopview->save(array('Shopview'=>array('shop_id' => $listingid)));
+					if($this->Auth->loggedIn())
+						$this->Shopview->save(array('Shopview'=>array('shop_id' => $listingid, 'user_id' => $this->Auth->user('id'))));
+					else
+						$this->Shopview->save(array('Shopview'=>array('shop_id' => $listingid)));
 					$this->Cookie->write('Viewed.'.$listingid, 1);
 				}
 
@@ -179,7 +182,8 @@
 				$this->Shop->id = $listingid;
 				$this->Shop->saveField('canview', 0);
 				$this->Favorite->deleteAll(array("Favorite.shop_id" => $listingid), false);
-				$this->redirect(array('controller' => 'dashboard'));
+				debug($this->ShopSearch->delete($listingid));
+				//$this->redirect(array('controller' => 'dashboard'));
 			}
 		}
 		
@@ -194,9 +198,12 @@
 				$this->Shop->id = $listingid;
 				if($this->Shop->field('canview') == 3){
 					$this->Session->setFlash("That listing has been <b>re-enabled.</b> Happy selling!", "flash_success");
+					$shop = $this->read(NULL, $listingid);
+					$this->ShopSearch->save($shop);
 					$this->Shop->saveField('canview', 1);
 				}else{
 					$this->Session->setFlash("That listing has been placed on hold. You can re-enable the listing at any time by going to edit your listing.", "flash_success");
+					$this->ShopSearch->delete($listingid);
 					$this->Shop->saveField('canview', 3);
 				}
 				

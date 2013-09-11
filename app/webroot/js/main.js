@@ -1,4 +1,22 @@
 $(function(){
+	
+	$(function(){
+		$("#SearchQuery").autocomplete({
+			serviceUrl: '/api/autocomplete',
+			minChars: 4,
+			onSearchStart: function(){
+				$(this).addClass('loading');
+			},
+			onSearchComplete: function(){
+				$(this).delay(5000).removeClass('loading');
+			},
+			onSelect: function(result){
+				$("#SearchQuery").val(result.display_text);
+				window.location.href = result.data;
+			}
+		});
+	});
+		
 	$("#categories ul li").hover(function(){
 		$(this).find("ul.submenu").stop(true,true).delay(100).slideDown();
 	}, function(){

@@ -27,7 +27,7 @@ App::uses('Shell', 'Console');
  * @package       app.Console.Command
  */
 class AppShell extends Shell {
-
+	public $uses = array('Shop', 'ShopSearch');
 	public function sendEmail($to="shahruksemail@gmail.com",$subject="TEST",$template="default", $variables=NULL){
 		App::uses('CakeEmail', 'Network/Email');
 		$email = new CakeEmail('default');
@@ -39,6 +39,15 @@ class AppShell extends Shell {
 		$email->viewVars(array("domain" => "http://theboxngo.com/", "variables" => $variables));
 		$email->send();
 
+	}
+	
+	public function mapSearches(){
+		error_reporting(0);
+		$shops = $this->Shop->find("all");
+		for($i = 0; $i < count($shops); $i++){
+			$this->ShopSearch->saveShop($shops[$i]);
+			$this->out($i."/".count($shops));
+		}
 	}
 
 }

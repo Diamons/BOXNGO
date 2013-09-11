@@ -77,12 +77,29 @@ class PagesController extends AppController {
 			$this->set("activity", $this->Shopview->find("all", array("order" => "Shopview.created DESC", "limit" => 24)));
 			if($this->Auth->loggedIn()){		
 				$this->Shop->recursive = 1;	
-				$this->set("listings", $this->Shop->find("all", array("conditions" => array("Shop.canview" => 1), "order" => "RAND()", "limit" => 16)));
+				$this->Collection->recursive = 1;
+				//Top Picks
+				$this->set("topPicks", $this->Shop->getCollectionItems($this->Collection->find("first", array("conditions" => array("Collection.short_name" => "homepage_users")))));
+				//Recents
+				$recents = array();
+				$this->set("recentlyViewed", $recents = $this->Shop->getShopviewItems($this->Shopview->find("all", array("conditions" => array("Shopview.user_id" => $this->Auth->user('id')), "order" => "Shopview.created DESC", "limit" => 4))));
+				
+				$results = array();
+				//Results and then add the category
+				$resultsTmp = $this->ShopSearch->find('all', array('conditions' => array('ShopSearch.canview' => 1), 'query' => array('flt' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'like_text' => $recents[0]['Shop']['name'])), 'limit' => 5));
+				//Cuz 1st one = the original search
+				for($i = 0; $i < 4; $i++){
+					$results[$i] = $resultsTmp[$i+1];
+				}
+				for($i = 0; $i < count($results); $i++){
+					$tmpCategory = $this->Category->read(NULL, $results[$i]['ShopSearch']['category_id']);
+					$results[$i]['Category'] = $tmpCategory['Category'];
+				}
+				$this->set('similarItems', $results);
 				$path[0] = "home_user";
 				$this->set("recent", $this->Shop->getLatest());
 			}else{
 				$this->Collection->recursive = 3;
-				$this->set("collection", $this->Collection->find("first", array("conditions" => array("Collection.short_name" => "homepage"))));
 				$this->layout ="ajax";
 			}
 		}

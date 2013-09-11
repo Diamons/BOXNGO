@@ -39,21 +39,11 @@ class AppController extends Controller {
 	public $helpers = array('Form', 'Time');
 
 	public function beforeFilter(){
-		$a = $this->Shop->find("all", array("limit" => 100));
-		for($i = 0; $i < count($a); $i++){
-			$this->ShopSearch->saveShop($a[$i]);
-		}
-		
-		debug($this->ShopSearch->find('count'));
-		/*for($i = 0; $i < count($b); $i++){
-			debug($b[$i]['ShopSearch']['id']);
-			debug($b[$i]['ShopSearch']);
-			debug($this->ShopSearch->delete($b[$i]['ShopSearch']['id']));
-		}*/
 		parent::beforeFilter();
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
-		$this->set("layoutCategories", $this->Category->findNonEmpty());
+		$this->Category->recursive = 0;
+		$this->set("layoutCategories", $this->Category->find("all"));
 		$cookie = $this->Cookie->read('al');
 		if(!empty($cookie) && !$this->Auth->loggedIn())
 			$this->Auth->login($this->UserLogin->checkUser($cookie, $this->Autologin->find("first", array("conditions" => array("Autologin.hash" => $cookie)))));

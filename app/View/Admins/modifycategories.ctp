@@ -3,7 +3,7 @@
 	<ul>
 		<?php 
 			for($i=0; $i < count($categories); $i++){ ?>
-				<li><a href="/admin/modifycategories/<?php echo $categories[$i]['Category']['id']; ?>"><?php echo $categories[$i]['Category']['display_name']; ?></a></li>
+				<li><a href="/admins/modifycategories/<?php echo $categories[$i]['Category']['id']; ?>"><?php echo $categories[$i]['Category']['display_name']; ?></a></li>
 		<?php } ?>
 	</ul>
 <?php } ?>

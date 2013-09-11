@@ -148,6 +148,21 @@
 			return $results;
 		}
 		
+		public function getShopviewItems($shopviews){
+			$results = array();
+			for($i = 0; $i < count($shopviews); $i++){
+				$results[$i] = $this->read(NULL, $shopviews[$i]['Shopview']['shop_id']);
+			}
+			return $results;
+		}
+		
+		public function getCollectionItems($collection){
+			$results = array();
+			for($i = 0; $i < count($collection['CollectionItem']); $i++){
+				$results[$i] = $this->read(NULL, $collection['CollectionItem'][$i]['shop_id']);
+			}
+			return $results;
+		}
 		function beforeSave($data = array()){
 			parent::beforeSave($data);
 			if(isset($this->data['Shop']['quantity']) && $this->data['Shop']['quantity'] <= 0){

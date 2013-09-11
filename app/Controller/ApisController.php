@@ -1,30 +1,22 @@
 <?php
 	class ApisController extends AppController{
 		
-		var $uses = array('Course', 'Favorite');
+		public $uses = array('Course', 'Favorite', 'Shop', 'ShopSearch');
 		
 		public function beforeFilter(){
-			parent::beforeFilter();
 			$this->Auth->allow('autocomplete'); 
 		}
 		
 		public function autocomplete(){
 			$this->layout = "json";
 			
-			//Query format
-			$queries = explode(" ", $this->request->query['query']);
-			$regexString = "^";
-			foreach($queries as $q => $val){
-				$regexString .= "(?=.*".$val.")";
-			}
-			$regexString .= ".*$/i";
-			
-			$regex = new MongoRegex($regexString); 
-			$courses = $this->Course->find("all", array("conditions" => array(
-				"Course.full_text" => $regex)
-			));
-			foreach($courses as $a){
-				$results['suggestions'][] = array('value' => $a['Course']['full_text'], 'data' => $a['Course']['code']);
+			$courses = $this->ShopSearch->find('all', array('conditions' => array('ShopSearch.canview' => 1), 'query' => array('multi_match' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'query' => $this->params->query['query'])), 'limit' => 24));
+			if(empty($courses)){
+				$results['suggestions'][] = array('value' => 'No results found.');
+			}else{
+				foreach($courses as $a){
+					$results['suggestions'][] = array('value' => '<div class="clearfix"><img src="'.$a['ShopSearch']['image'].'/convert?width=65&height=65&fit=crop" />'.h($a['ShopSearch']['name']).'<p>'.substr(h($a['ShopSearch']['description']), 0, 150).'</p></div>', 'data' => $a['ShopSearch']['full_url'], 'display_text' => h($a['ShopSearch']['name']));
+				}
 			}
 			$results['query'] = $this->request->query['query'];
 			$this->set("results", $results);
