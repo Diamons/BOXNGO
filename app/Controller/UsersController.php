@@ -1,12 +1,12 @@
 <?php
 	class UsersController extends AppController{
 		
-		public $uses = array('Autologin', 'Favorite', 'Verification', 'Facebook', 'Cookie', 'Thread', 'Message', 'ForgotPassword', 'Shopview');
+		public $uses = array('Referral', 'Autologin', 'Favorite', 'Verification', 'Facebook', 'Cookie', 'Thread', 'Message', 'ForgotPassword', 'Shopview');
 		public $components = array('Mailchimp.Mailchimp');
 		
 		function beforeFilter(){
 			parent::beforeFilter();
-			$this->Auth->allow('unsubscribe', 'index', 'verifyaccount', 'ajaxlogin', 'ajaxregister', 'facebook', 'facebookregister', 'profile', 'forgotpassword');  
+			$this->Auth->allow('unsubscribe', 'index', 'verifyaccount', 'ajaxlogin', 'ajaxregister', 'facebook', 'facebookregister', 'profile', 'forgotpassword', 'referral');  
 			$this->Security->blackHoleCallback = 'blackhole';
 
 		}
@@ -22,6 +22,7 @@
 				if($this->User->save($this->request->data)){
 					$verification['Verification']['user_id'] = $this->User->id;
 					if($this->Verification->save($verification)){
+						$this->Referral->save($this->User->id, $this->Cookie->read('referral'));
 						$this->verificationEmail($this->request->data['User']['username'], "BOX'NGO Verification Email :: Activate Your Account", "default", array('activation' => $this->Verification->id));
 						$this->Session->setFlash("You have successfully been registered! Please check your email for a verification email. Your email is <b>".$this->request->data['User']['username']."</b>", "flash_success");
 						$this->redirect('/users/?registered');
@@ -75,6 +76,7 @@
 					if($this->User->save($this->request->data)){
 						$verification['Verification']['user_id'] = $this->User->id;
 						if($this->Verification->save($verification)){
+							$this->Referral->save($this->User->id, $this->Cookie->read('referral'));
 							$this->verificationEmail($this->request->data['User']['username'], "BOX'NGO Verification Email :: Activate Your Account", "default", array('activation' => $this->Verification->id));
 							$this->Session->setFlash("You have successfully been registered! Please check your email for a verification email. Your email is <b>".$this->request->data['User']['username']."</b>", "flash_success");
 							$this->redirect('/users/?registered');
@@ -232,6 +234,11 @@
 			}
 			
 			$this->redirect(array('controller' => 'users', 'action' => 'index'));
+		}
+		
+		public function referral($userId){
+			$this->Cookie->write('referral', $userId);
+			$this->redirect('/');
 		}
 		
 		public function profile($userId=NULL){

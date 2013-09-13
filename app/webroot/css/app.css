@@ -30,6 +30,12 @@ html, body {
 	margin: 0 auto -170px;
 }
 
+#millz{
+	float: left;
+	margin-top: 1px;
+	margin-left: 4px;
+}
+
 #SearchQuery.loading{
 	background: url('/img/ajax-loader.gif') #FFF no-repeat 98%;
 }

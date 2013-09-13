@@ -34,12 +34,14 @@ App::uses('Controller', 'Controller');
 
 App::uses('Sanitize', 'Utility');
 class AppController extends Controller {
-	public $uses = array('Autologin', 'User', 'Category', 'Shop', 'Order', 'School', 'Message', 'Thread', 'NotificationItem', 'ShopSearch');
+	public $uses = array('Autologin', 'Reward', 'User', 'Category', 'Shop', 'Point', 'Spin', 'Order', 'School', 'Message', 'Thread', 'NotificationItem', 'ShopSearch');
 	public $components = array('UserLogin', 'Cookie', 'Auth', 'Security' => array('csrfCheck' => false), 'Session');
 	public $helpers = array('Form', 'Time');
 
 	public function beforeFilter(){
 		parent::beforeFilter();
+		
+		
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'index');
 		$this->Auth->authenticate = array('Form', 'all' => array('scope' => array('User.banned' => 0)));
 		$this->Category->recursive = 0;
@@ -54,7 +56,7 @@ class AppController extends Controller {
 			$this->set("notificationItems",Cache::read('notifications.'.$this->Auth->user('id'), 'long'));
 			$this->set("notifications", $this->Order->getNotifications($this->Auth->user('id')));
 			$this->set("messages", $this->Thread->getUserMessages($this->Auth->user('id')));
-			
+			$this->set("points", $this->Point->getUserPoints($this->Auth->user('id')));
 			$this->set("auth", $user['User']);
 		}
 		//Debug Function

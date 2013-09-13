@@ -79,13 +79,15 @@ class PagesController extends AppController {
 				$this->Shop->recursive = 1;	
 				$this->Collection->recursive = 1;
 				//Top Picks
-				$this->set("topPicks", $this->Shop->getCollectionItems($this->Collection->find("first", array("conditions" => array("Collection.short_name" => "homepage_users")))));
+				$this->set("topPicks", $topPicks = $this->Shop->getCollectionItems($this->Collection->find("first", array("conditions" => array("Collection.short_name" => "homepage_users")))));
 				//Recents
 				$recents = array();
 				$this->set("recentlyViewed", $recents = $this->Shop->getShopviewItems($this->Shopview->find("all", array("conditions" => array("Shopview.user_id" => $this->Auth->user('id')), "order" => "Shopview.created DESC", "limit" => 4))));
 				
 				$results = array();
 				//Results and then add the category
+				if(empty($recents[0]['Shop']))
+					$recents[0] = $topPicks[0];
 				$resultsTmp = $this->ShopSearch->find('all', array('conditions' => array('ShopSearch.canview' => 1), 'query' => array('flt' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'like_text' => $recents[0]['Shop']['name'])), 'limit' => 5));
 				//Cuz 1st one = the original search
 				for($i = 0; $i < 4; $i++){

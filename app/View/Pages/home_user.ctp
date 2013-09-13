@@ -1,4 +1,3 @@
-<?php debug($similarItems); ?>
 <?php $this->start('scriptBottom');
 echo  $this->Html->script(array('shops/jquery.mCustomScrollbar.min', 'pages/home_user'));
 $this->end();

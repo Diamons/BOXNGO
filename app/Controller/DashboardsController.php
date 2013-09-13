@@ -1,7 +1,9 @@
 <?php
 	class DashboardsController extends AppController{
-		public $uses = array('Favorite', 'Shop', 'Order', 'User', 'Image', 'Message', 'Thread', 'Trade');
+		public $uses = array('Favorite', 'Shop', 'Order', 'Point', 'User', 'Image', 'Message', 'Thread', 'Trade');
 		public $helpers = array('Country.Country');
+		public $components = array('Rewards');
+		
 		public function beforeFilter(){
 			parent::beforeFilter();
 			$this->layout = "dashboard";
@@ -11,9 +13,6 @@
 		}
 		public function index(){
 		
-			/*$this->User->recursive = 3;
-			$this->set("user", $this->User->read(NULL, $this->Auth->user('id')));
-			debug($this->User->read(NULL, $this->Auth->user('id'))); */
 			$this->Shop->recursive = 0;
 			$this->Favorite->recursive = 0;
 			$this->Order->recursive = 0;
@@ -35,7 +34,6 @@
 			$this->addUniqueShops($orders, $shopItems);
 			$this->set(compact('listingsCount', 'listings', 'favoritesCount', 'favoritesCount', 'favorites', 'ordersCount', 'orders', 'shopItems'));
 			
-			//debug($shopItems);
 		}
 		
 		public function managepurchases(){
@@ -124,8 +122,33 @@
 			}
 		}
 		
-		public function earnpoints(){
+		public function earnpoints(){			
+			$this->set("earn", $this->Reward->find("all", array("order" => "Reward.points ASC")));
+		}
 		
+		public function hourlymillz(){
+			if($this->Rewards->canHourlyMillz($this->Auth->user('id')) == "true"){
+				//Do the points, this guy's legit.
+				if($this->request->is('ajax')){
+					$this->layout = "json";
+					$reward = $this->Rewards->generateHourlyMillz();
+					$points['Point']['user_id'] = $this->Auth->user('id');
+					$points['Point']['rewards_id'] = 0;
+					$points['Point']['amount'] = $reward;
+					
+					if($this->Point->save($points)){
+						$spin['Spin']['user_id'] = $this->Auth->user('id');
+						$spin['Spin']['points_id'] = $this->Point->id;
+						$this->Spin->save($spin);
+						$this->set("results", array("result" => $reward));
+					}
+					$this->render(false);
+				}
+			}else{
+				$this->Session->setFlash("Unfortunately you will need to wait until you can redeem your hourly Millz again. Sorry!", "flash_error");
+				$this->redirect(array('controller' => 'dashboards', 'action' => 'earnpoints'));
+				
+			}
 		}
 		
 		private function addUniqueShops($newEntries, &$shopItems){

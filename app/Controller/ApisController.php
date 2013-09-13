@@ -2,9 +2,11 @@
 	class ApisController extends AppController{
 		
 		public $uses = array('Course', 'Favorite', 'Shop', 'ShopSearch');
+		public $components = array('Rewards');
 		
 		public function beforeFilter(){
-			$this->Auth->allow('autocomplete'); 
+			parent::beforeFilter();
+			$this->Auth->allow('autocomplete', 'checkSpinTime', 'checkfacebookuser'); 
 		}
 		
 		public function autocomplete(){
@@ -37,5 +39,10 @@
 						$this->set("result", "false");
 				}
 			}
+		}
+		
+		public function checkSpinTime(){
+			$this->layout = "json";
+			$this->set("results", array("time" => $this->Rewards->canHourlyMillz($this->Auth->user('id'))));
 		}
 	}
