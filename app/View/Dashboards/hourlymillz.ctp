@@ -1,24 +1,7 @@
-<style>
-	.jSlots-wrapper {
-		overflow: hidden;
-		display: block;
-		height: 170px;
-		text-align: center;
-	}
-	.slot {
-		display: inline-block;
-	}
-	
-	.slot li{
-		list-style-type: none;
-		font-size: 120px;
-	}
-	
-	#done{
-		display: none;
-	}
-</style>
 <?php
+$this->start('css');
+echo $this->Html->css(array('dashboard/hourlymillz'));
+$this->end();
 $this->start('scriptBottom');
 echo $this->Html->script(array('jquery.slots', 'dashboard/hourlymillz'));
 $this->end();
