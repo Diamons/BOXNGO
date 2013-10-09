@@ -27,9 +27,9 @@
 			$data['ShopSearch']['category_id'] = $listing['Shop']['category_id'];
 			$data['ShopSearch']['image'] = $listing['Image'][0]['url'];
 			$data['ShopSearch']['name'] = htmlspecialchars(mysqli_real_escape_string($listing['Shop']['name']));
-			$data['ShopSearch']['description'] = htmlspecialchars(mysqli_real_escape_string($$listing['Shop']['description']));
+			$data['ShopSearch']['description'] = htmlspecialchars(mysqli_real_escape_string($listing['Shop']['description']));
 			$data['ShopSearch']['full_url'] = $listing['Shop']['full_url'];
-			$data['ShopSearch']['display_name'] = htmlspecialchars(mysqli_real_escape_string($$listing['User']['display_name']));
+			$data['ShopSearch']['display_name'] = htmlspecialchars(mysqli_real_escape_string($listing['User']['display_name']));
 			$data['ShopSearch']['price'] = $listing['Shop']['price'];
 			$this->save($data);
 		}
