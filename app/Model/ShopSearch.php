@@ -19,21 +19,23 @@
 		);
 		
 		public function saveShop($listing){
+			return true;
 			$data = array();
 			$data['ShopSearch']['user_id'] = $listing['User']['id'];
 			$data['ShopSearch']['shop_id'] = $listing['Shop']['id'];
 			$data['ShopSearch']['canview'] = $listing['Shop']['canview'];
 			$data['ShopSearch']['category_id'] = $listing['Shop']['category_id'];
 			$data['ShopSearch']['image'] = $listing['Image'][0]['url'];
-			$data['ShopSearch']['name'] = $listing['Shop']['name'];
-			$data['ShopSearch']['description'] = $listing['Shop']['description'];
+			$data['ShopSearch']['name'] = htmlspecialchars(mysqli_real_escape_string($listing['Shop']['name']));
+			$data['ShopSearch']['description'] = htmlspecialchars(mysqli_real_escape_string($$listing['Shop']['description']));
 			$data['ShopSearch']['full_url'] = $listing['Shop']['full_url'];
-			$data['ShopSearch']['display_name'] = $listing['User']['display_name'];
+			$data['ShopSearch']['display_name'] = htmlspecialchars(mysqli_real_escape_string($$listing['User']['display_name']));
 			$data['ShopSearch']['price'] = $listing['Shop']['price'];
 			$this->save($data);
 		}
 		
-		public function delete($shopId){
+		public function delete($shopId=NULL, $cascade = true){
+			return true;
 			App::uses('HttpSocket', 'Network/Http');
 			$http = new HttpSocket();
 			$record = $this->find("first", array("conditions" => array("ShopSearch.shop_id" => $shopId)));

@@ -116,8 +116,7 @@ class PaymentsController extends AppController {
 						if(!$this->Order->save($order))
 							parent::sendEmail("shahruksemail@gmail.com", "BOX'NGO! URGENT! THIS [ORDER] DID NOT SAVE!", "error", $this->request->data);
 						$order['FakeOrder'] = $order['Order'];
-						if(!$this->FakeOrder->save($order))
-							parent::sendEmail("shahruksemail@gmail.com", "BOX'NGO! URGENT! THIS [ORDER] DID NOT SAVE!", "error", $this->request->data);
+
 						//parent::sendEmail("support@theboxngo.com", "[IMPORTANT] Possible fraud!", "fraud", array("output" => $fraudCheck, "stripeInfo" => $a, "ip" => $_SERVER['REMOTE_ADDR']));
 						parent::sendEmail($listing['User']['username'], "[IMPORTANT] You have an order on BOX'NGO!", "order");
 						parent::sendEmail($this->Auth->user('username'), "Order Confirmation for BOX'NGO!", "orderconfirmation", $listing);
