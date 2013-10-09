@@ -46,7 +46,7 @@ class AppShell extends Shell {
 		$shops = $this->Shop->find("all");
 		for($i = 0; $i < count($shops); $i++){
 			$this->ShopSearch->saveShop($shops[$i]);
-			$this->out($i."/".count($shops).": ".$shops[$i]['Shop']['name']));
+			$this->out($i."/".count($shops).": ".$shops[$i]['Shop']['name']);
 		}
 	}
 
