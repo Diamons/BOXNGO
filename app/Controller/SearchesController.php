@@ -3,11 +3,13 @@
 		public $uses = array('User', 'Shop', 'ShopSearch', 'Image', 'School', 'Category');
 		function beforeFilter(){
 			parent::beforeFilter();
+			if($this->Auth->user('role') == 'admin')
+				Configure::write('debug', 2); 
 			$this->Auth->allow('index', 'browse');
 		}
 		
 		public function index($category=NULL){
-
+	
 			if(!empty($this->params->query['query'])){
 				$this->paginate = array('conditions' => array('ShopSearch.canview' => 1), 'order' => array('ShopSearch.shop_id' => 'ASC'), 'query' => array('multi_match' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'query' => $this->params->query['query'])), 'limit' => 24);
 			}else{
@@ -15,7 +17,6 @@
 			}
 			
 			$results = $this->paginate('ShopSearch');
-
 			if(!empty($this->params->query['query'])){
 				$this->set("title_for_layout", "Search for ".$this->params->query['query']);
 				$this->set("search", $this->params->query['query']);
@@ -27,6 +28,7 @@
 				$tmpCategory = $this->Category->read(NULL, $results[$i]['ShopSearch']['category_id']);
 				$results[$i]['Category'] = $tmpCategory['Category'];
 			}
+			debug($results);
 			$this->set("results", $results);
 		}
 		
