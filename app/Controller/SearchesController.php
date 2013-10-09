@@ -4,7 +4,7 @@
 		function beforeFilter(){
 			parent::beforeFilter();
 			if($this->Auth->user('role') == 'admin')
-				Configure::write('debug', 2); 
+				Configure::write('debug', 0); 
 			$this->Auth->allow('index', 'browse');
 		}
 		
@@ -13,7 +13,8 @@
 			if(!empty($this->params->query['query'])){
 				$this->paginate = array('conditions' => array('ShopSearch.canview' => 1), 'order' => array('ShopSearch.shop_id' => 'DESC'), 'query' => array('multi_match' => array('fields' => array('ShopSearch.name^2', 'ShopSearch.description'), 'query' => $this->params->query['query'])), 'limit' => 24);
 			}else{
-				$this->paginate = array('conditions' => array('ShopSearch.canview' => 1), 'limit' => 9999);			}
+				$this->paginate = array('conditions' => array('ShopSearch.canview' => 1));
+			}
 			
 			$results = $this->paginate('ShopSearch');
 			if(!empty($this->params->query['query'])){
