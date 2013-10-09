@@ -26,6 +26,7 @@
 			
 			for($i = 0; $i < count($results); $i++){
 				$tmpCategory = $this->Category->read(NULL, $results[$i]['ShopSearch']['category_id']);
+				debug($tmpCategory);
 				$results[$i]['Category'] = $tmpCategory['Category'];
 			}
 			debug($results);
