@@ -19,7 +19,7 @@
 		);
 		
 		public function saveShop($listing){
-			return true;
+			//return true;
 			$data = array();
 			$data['ShopSearch']['user_id'] = $listing['User']['id'];
 			$data['ShopSearch']['shop_id'] = $listing['Shop']['id'];
