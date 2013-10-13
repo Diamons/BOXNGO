@@ -245,6 +245,7 @@
 			if(empty($userId)){
 				$userId = $this->Auth->user('id');
 			}
+			$this->User->recursive = 1;
 			$userInfo = $this->User->find("first", array("conditions" => array("User.id" => $userId, "User.banned" => 0)));
 			if(empty($userInfo)){
 				$this->redirect($this->referer());
@@ -254,6 +255,7 @@
 			$favorites = array();
 			$index = 0;
 			for($i=0;$i<count($userInfo['Favorite']);$i++){
+				
 				$shopTmp = $this->Shop->read(NULL,$userInfo['Favorite'][$i]['shop_id']);
 				if(!empty($shopTmp)){
 					$favorites[$index] = $shopTmp;
