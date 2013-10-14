@@ -22,7 +22,7 @@
 
 		public function splitSave($data = array()){
 			$collectionId = $data['CollectionItem']['collection_id'];
-			$this->delete(array('CollectionItem.collection_id' => $collectionId));
+			$this->deleteAll(array('CollectionItem.collection_id' => $collectionId));
 			if(isset($data[$this->alias]['shop_id'])){
 				$newResults = array();
 				for($i = 0; $i < count($data[$this->alias]['shop_id']); $i++){
