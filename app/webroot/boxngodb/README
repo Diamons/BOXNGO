@@ -1,51 +1,84 @@
-SQL Buddy - Web based MySQL administration
-http://www.sqlbuddy.com/
+phpMyAdmin - Readme
+===================
 
-2008 Calvin Lough <http://calv.in>
+Version 4.0.8
 
-INTRODUCTION
+A set of PHP-scripts to manage MySQL over the web.
 
-SQL Buddy is open source! Use of the application is governed by
-a MIT license - see LICENSE file for details.
+http://www.phpmyadmin.net/
 
-CHANGELOG
+Copyright
+---------
 
-A list of changes made in this version is available online 
-at http://www.sqlbuddy.com/releasenotes/
+Copyright (C) 1998-2000
+    Tobias Ratschiller <tobias_at_ratschiller.com>
 
-INSTALLATION
+Copyright (C) 2001-2013
+    Marc Delisle <marc_at_infomarc.info>
+    Olivier Müller <om_at_omnis.ch>
+    Robin Johnson <robbat2_at_users.sourceforge.net>
+    Alexander M. Turek <me_at_derrabus.de>
+    Michal Čihař <michal_at_cihar.com>
+    Garvin Hicking <me_at_supergarv.de>
+    Michael Keck <mkkeck_at_users.sourceforge.net>
+    Sebastian Mendel <cybot_tm_at_users.sourceforge.net>
+    [check documentation for more details]
 
-To start using SQL Buddy take the folder of unzipped files and 
-ftp them to your server. I would recommend placing them in a 
-folder such as http://www.yourserver.com/sqlbuddy/. But in
-reality, it shouldn't matter where you put them or what you call
-the folder.
+License
+-------
 
-If you are interested, there is a few variables in config.php that you
-can change if you want to customize your installation. It is totally 
-optional, and your setup will work just fine if you leave the values at
-their defaults.
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License version 2, as published by the
+Free Software Foundation.
 
-UPGRADING
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+details.
 
-To upgrade SQL Buddy, its probably best to delete the old version then
-unzip the new version in its place.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-KEYBOARD SHORTCUTS
+Requirements
+------------
 
-There is a bunch of keyboard shortcuts available to speed up things like
-navigating through results, editing rows, etc. A list of shortcuts is
-available on the home tab after you login. If you find the shortcuts 
-annoying and would like to disable them, there is a line in main.js that you 
-can disable. Its about 50 lines down, and I have left a comment indicating 
-which line you need to comment out.
+* PHP 5.2 or later
+* MySQL 5.0 or later
+* a web-browser (doh!)
 
-HELP
+Summary
+-------
 
-If you need help, first check http://www.sqlbuddy.com/help/
+phpMyAdmin is intended to handle the administration of MySQL over the web.
+For a summary of features, please see the documentation in the doc folder.
 
-A forum is also available at http://groups.google.com/group/sql-buddy/topics
+Download
+--------
 
-Thanks for your support,
+You can get the newest version at http://www.phpmyadmin.net/.
 
-Calvin
+More Information
+----------------
+
+Please see the documentation in the doc folder.
+
+Support
+-------
+
+See reference about support forums under http://www.phpmyadmin.net/
+
+
+Enjoy!
+------
+
+The phpMyAdmin Devel team
+
+
+PS:
+
+Please, don't send us emails with question like "How do I compile PHP with
+MySQL-support". We just don't have the time to be your free help desk.
+
+Please send your questions to the appropriate mailing lists / forums.  Before
+contacting us, please read the documentation (especially the FAQ part).
+
