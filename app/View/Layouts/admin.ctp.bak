@@ -45,7 +45,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		</header>
 		<?php echo $this->Session->flash(); ?>
 		<div class="row wrapper">
-			<div class="col-3 col-lg-3">
+			<div class="col-xs-3 col-md-3">
 				<ul>
 					<li><a href="/admins/modifycategories">Modify Categories</a></li>
 					<li><a href="/admins/assigncategories">Assign Items to Categories</a></li>
@@ -55,7 +55,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 					<li><a href="/admins/managecollections">Manage Collections</a></li>
 				</ul>
 			</div>
-			<div class="col-9 col-lg-9">
+			<div class="col-xs-9 col-md-9">
 				<div id="content">
 					<?php echo $this->fetch('content'); ?>
 				</div>
@@ -80,7 +80,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 	</footer>
 	<?php 
 		echo $this->Html->script('bootstrap.min');
-		echo $this->Html->script('app');
+		
 		echo $this->Html->script('main');
 		echo $this->fetch('scriptBottom');
 	?>

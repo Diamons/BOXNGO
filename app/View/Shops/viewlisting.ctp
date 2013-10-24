@@ -48,7 +48,7 @@
 			<meta itemprop="name" content="<?php echo h($listing['Shop']['name']); ?>" />
 			<meta itemprop="image" content="<?php echo $listing['Image'][0]['url']; ?>/convert?w=200&height=200&fit=crop" />
 			<div class="row" id="listingPics">
-				<div class="col-2 col-lg-2" id="gallery">
+				<div class="col-xs-2 col-md-2" id="gallery">
 					<?php 
 					if(!empty($listing['Image'])){
 						for($i = 0; $i < count($listing['Image']); $i++){ ?>
@@ -59,7 +59,7 @@
 						echo $this->Html->image("loading.gif");
 					}?>
 				</div>
-				<div class="col-10 col-lg-10" id="displayPicture">
+				<div class="col-xs-10 col-md-10" id="displayPicture">
 					<?php for($i = 0; $i < count($listing['Image']); $i++){ ?>
 						<a id="lightboxImage<?php echo $i; ?>" href="<?php echo $listing['Image'][$i]['url']; ?>"><img src="<?php echo $listing['Image'][$i]['url'].'/convert?h=420'; ?>" /></a>
 					<?php } ?>
@@ -89,14 +89,14 @@
 			    <?php if(!empty($comments)){ 
 			    	for($i = 0; $i < count($comments); $i++){?>
 				    <div class="<?php if($listing['Shop']['user_id'] == $comments[$i]['Comment']['user_id']){ ?>seller <?php } ?>row comment">
-				    	<div class="userInfo col-2 col-lg-2">
+				    	<div class="userInfo col-xs-2 col-md-2">
 				    		<a class="thumbnail" href="/users/profile/<?php echo $comments[$i]['User']['id']; ?>">
 								<?php echo $this->Html->image($comments[$i]['User']['profilepic'], array('class' => 'profilePic')); ?>
 							</a>
 				    		<?php echo $this->Html->link($comments[$i]['User']['display_name'], "/users/profile/".$comments[$i]['User']['id']); ?>
 				    		<?php if($listing['Shop']['user_id'] == $comments[$i]['Comment']['user_id']){ ?><div class="radius success label">Seller</div><?php } ?>
 				    	</div>
-				    	<div class="col-10 col-lg-10">
+				    	<div class="col-xs-10 col-md-10">
 				    		<div class="date">
 				    			<?php echo $this->Time->timeAgoInWords($comments[$i]['Comment']['created'], array('format' => 'F jS, Y', 'end' => '+1 year')); ?>
 				    		</div>
@@ -109,14 +109,14 @@
 				<?php } ?>
 			</div>
 		</div>
-		<div class="col-12 col-lg-4">
+		<div class="col-xs-4 col-md-4">
 			<a class="btn btn-success" id="buyNow" href="https://www.theboxngo.com/payments/pay/<?php echo $listing['Shop']['id']; ?>">Buy Now</a>
 			<div class="row" id="buy">
-				<div class="col-6 col-lg-6 page_views">
+				<div class="col-xs-6 col-md-6 page_views">
 					<?php echo $views; ?>
 					<div>Views</div>
 				</div>
-				<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="col-6 col-lg-6 price">
+				<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="col-xs-6 col-md-6 price">
 					<link itemprop="availability" href="http://schema.org/InStock" content="In Stock" />
 					<meta itemprop="priceCurrency" content="USD" />
 					<span>$<span itemprop="price"><?php echo $listing['Shop']['price']; ?></span></span>
@@ -157,7 +157,7 @@
 				<section id="similarItems" class="row clearfix">
 				<h3 class="subheader">Other Listings of Interest</h3>
 				<?php for($i = 0; $i < count($relatedItems); $i++){ ?>
-					<div class="col-6 col-lg-6">
+					<div class="col-xs-6 col-md-6">
 						<a class="thumbnail" href="<?php echo $relatedItems[$i]['Shop']['full_url']; ?>"><img src="<?php echo $relatedItems[$i]['Image'][0]['url']; ?>/convert?w=180&height=120&fit=crop" /></a><h5>
 						<a href="<?php echo $relatedItems[$i]['Shop']['full_url']; ?>"><?php echo $relatedItems[$i]['Shop']['name']; ?></a></h5>
 					</div>

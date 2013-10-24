@@ -4,7 +4,7 @@
 ?>
 <div id="content" class="wrapper bordered">
 	<div class="row">
-		<div class="main_books col-9 col-lg-9">
+		<div class="main_books col-xs-9 col-md-9">
 			<h1>Books Used in <?php echo $searched['Course']['course_number']; ?> Classes</h1>
 			<?php 
 			if(count($books) > 0){ ?>
@@ -16,7 +16,7 @@
 						</div>
 						<div class="content">
 							<div class="row">
-								<div class="book_image col-3 col-lg-3">
+								<div class="book_image col-xs-3 col-md-3">
 									<div class="panel callout radius">
 										<p>
 											<?php echo $this->Book->getImage($books[$i]['isbn']); ?>
@@ -24,14 +24,14 @@
 										</p>
 									</div>
 								</div>
-								<div class="col-9 col-lg-9">
+								<div class="col-xs-9 col-md-9">
 									<?php if(!empty($books[$i]['listings'])): ?>
 										<?php 
 											for($k = 0; $k < count($books[$i]['listings']); $k++):
 												if($k == 0 || $k % 3 == 0): ?>
 													<div class="row">
 												<?php endif; ?>
-													<div class="book_listings col-4 col-lg-4">
+													<div class="book_listings col-xs-4 col-md-4">
 														<div class="listing">
 															<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $books[$i]['listings'][$k]['Shop']['id'];?>">
 															<?php if(!empty($books[$i]['listings'][$k]['Image'][0]['url'])){?>
@@ -42,7 +42,7 @@
 															<h1 class="listing_title"><a href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo nl2br(h($books[$i]['listings'][$k]['Shop']['id']));?>"><?php echo nl2br(h($books[$i]['listings'][$k]['Shop']['name'])); ?></a></h1>
 															<div class="userlisted">
 																<div class="category"><span class="price">$<?php echo $books[$i]['listings'][$k]['Shop']['price']; ?></span></div>
-																<span class="typicn user"></span> <a href="/users/profile/<?php echo $books[$i]['listings'][$k]['User']['id']; ?>"><?php echo $books[$i]['listings'][$k]['User']['display_name']; ?></a>
+																<span class="icon-user"></span> <a href="/users/profile/<?php echo $books[$i]['listings'][$k]['User']['id']; ?>"><?php echo $books[$i]['listings'][$k]['User']['display_name']; ?></a>
 															</div>
 														</div>
 													</div>
@@ -66,7 +66,7 @@
 			?>
 			<div class="fb-comments" data-href="<?php echo "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-num-posts="2" data-width="814"></div>
 		</div>
-		<div class="similar_classes col-3 col-lg-3">
+		<div class="similar_classes col-xs-3 col-md-3">
 			<?php foreach($similar as $s){ ?>
 				<div><?php echo $s['Course']['full_text']; ?></div>
 			<?php } ?>

@@ -19,12 +19,12 @@ $this->end();
 			</div>
 			<div>
 				<div class="row">
-					<div class="col-6 col-lg-6">
+					<div class="col-xs-6 col-md-6">
 						<?php if($promotion['february2013.step1'] == true){ ?><img class="check" src="/images/checkmarkbox.png" /><?php } ?>
 						<h1><a href="http://www.facebook.com/theboxngo" target="_blank">Step 2 - Like our Facebook Page!</a></h1>
 						Visit our Facebook page using your Facebook account and like the BOX'NGO page! We will not be able to deliver charms to people who haven't liked our page.
 					</div>
-					<div style="min-height:86px;" class="col-6 col-lg-6">
+					<div style="min-height:86px;" class="col-xs-6 col-md-6">
 						<div class="fb-like-box" data-href="http://www.facebook.com/theboxngo" data-width="292" data-border-color="#FFFFFF" data-show-faces="true" data-stream="false" data-header="false"></div>
 					</div>
 				</div>
@@ -44,13 +44,13 @@ $this->end();
 			<?php echo $this->Form->input("Entry.last_name"); ?>
 			<?php echo $this->Form->input("Entry.street_address"); ?>
 			<div class="row">
-				<div class="col-4 col-lg-4">
+				<div class="col-xs-4 col-md-4">
 					<?php echo $this->Form->input("Entry.city"); ?>
 				</div>
-				<div class="col-4 col-lg-4">
+				<div class="col-xs-4 col-md-4">
 					<?php echo $this->Form->input("Entry.state"); ?>
 				</div>
-				<div class="col-4 col-lg-4">
+				<div class="col-xs-4 col-md-4">
 					<?php echo $this->Form->input("Entry.zipcode"); ?>
 				</div>
 			</div>

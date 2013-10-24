@@ -10,32 +10,32 @@
 <div class="wrapper" id="content">
 		<div id="summary">	
 			<div class="row">
-				<div class="col-4 col-lg-4">
+				<div class="col-xs-4 col-md-4">
 					<a class="thumbnail" href="<?php echo $listing['Shop']['full_url']; ?>"><?php echo $this->Html->image($listing['Image'][0]['url'], array('style' => 'display:block;', 'data-src' => $listing['Image'][0]['url'], 'alt' => h($listing['Shop']['name']))); ?></a>
 				</div>
-				<div class="col-8 col-lg-8">
+				<div class="col-xs-8 col-md-8">
 					<a href="<?php echo $listing['Shop']['full_url']; ?>"><?php echo nl2br(h($listing['Shop']['name'])); ?></a>
 					<div class="description"><?php echo h($listing['Shop']['description']); ?></div>
 				</div>
 			</div>
 			<h1 class="header">Purchase Summary</h1>
 			<div class="row">
-				<div class="col-4 col-lg-4">Shipping</div>
-				<div class="col-8 col-lg-8"><b>$<?php echo $listing['Shop']['shipping']; ?></b></div>
+				<div class="col-xs-4 col-md-4">Shipping</div>
+				<div class="col-xs-8 col-md-8"><b>$<?php echo $listing['Shop']['shipping']; ?></b></div>
 			</div>
 			<div class="row">
-				<div class="col-4 col-lg-4">Price</div>
-				<div class="col-8 col-lg-8"><b>$<?php echo $listing['Shop']['price']; ?></b></div>
+				<div class="col-xs-4 col-md-4">Price</div>
+				<div class="col-xs-8 col-md-8"><b>$<?php echo $listing['Shop']['price']; ?></b></div>
 			</div>
 			<?php if($price['applied'] == true){ ?>
 			<div class="coupon_applied row">
-				<div class="col-4 col-lg-4">Coupon</div>
-				<div class="col-8 col-lg-8"><b>-$<?php echo number_format($price['Price']['discount'], 2); ?></b></div>
+				<div class="col-xs-4 col-md-4">Coupon</div>
+				<div class="col-xs-8 col-md-8"><b>-$<?php echo number_format($price['Price']['discount'], 2); ?></b></div>
 			</div>
 			<?php } ?>
 			<div class="total row">
-				<div class="col-4 col-lg-4">Total</div>
-				<div class="col-8 col-lg-8"><b>$<?php echo number_format($price['Price']['total_price'], 2); ?></b></div>
+				<div class="col-xs-4 col-md-4">Total</div>
+				<div class="col-xs-8 col-md-8"><b>$<?php echo number_format($price['Price']['total_price'], 2); ?></b></div>
 			</div>
 		</div>
 	<div class="row">
@@ -44,21 +44,21 @@
 			<div id="shipping_pane">
 				<h1 class="subheader">1. Shipping Information</h1>
 				<div class="row">
-					<div class="col-6 col-lg-6"><?php echo $this->Form->input('Payment.firstName', array('class' => 'form-control')); ?></div>
-					<div class="col-6 col-lg-6"><?php echo $this->Form->input('Payment.lastName', array('class' => 'form-control')); ?></div>
+					<div class="col-xs-6 col-md-6"><?php echo $this->Form->input('Payment.firstName', array('class' => 'form-control')); ?></div>
+					<div class="col-xs-6 col-md-6"><?php echo $this->Form->input('Payment.lastName', array('class' => 'form-control')); ?></div>
 				</div>
 				<div class="row">
-					<div class="col-4 col-lg-4"><?php echo $this->Form->input('Payment.streetAddress', array('class' => 'form-control')); ?></div>
-					<div class="col-4 col-lg-4"><?php echo $this->Form->input('Payment.city', array('class' => 'form-control')); ?></div>
-					<div class="col-2 col-lg-2"><?php echo $this->Form->input('Payment.state', array('class' => 'form-control')); ?></div>
-					<div class="col-2 col-lg-2"><?php echo $this->Form->input('Payment.zipcode', array('class' => 'form-control', 'label' => 'Postal or Zip Code')); ?></div>
+					<div class="col-xs-4 col-md-4"><?php echo $this->Form->input('Payment.streetAddress', array('class' => 'form-control')); ?></div>
+					<div class="col-xs-4 col-md-4"><?php echo $this->Form->input('Payment.city', array('class' => 'form-control')); ?></div>
+					<div class="col-xs-2 col-md-2"><?php echo $this->Form->input('Payment.state', array('class' => 'form-control')); ?></div>
+					<div class="col-xs-2 col-md-2"><?php echo $this->Form->input('Payment.zipcode', array('class' => 'form-control', 'label' => 'Postal or Zip Code')); ?></div>
 				</div>
 			</div>
 			<div id="payment_options">
 				<div class="clearfix payment_container">
 					<h1 class="subheader">2. Payment Options</h1>
 					<div class="row">
-						<div class="col-11 col-lg-11">
+						<div class="col-xs-11 col-md-11">
 							<?php if($price['applied'] == FALSE){ ?>
 								<?php echo $this->Form->input('Coupon.code', array('class' => 'form-control')); ?>
 							<?php }else{ ?>
@@ -66,7 +66,7 @@
 								<?php echo $this->Form->hidden('Coupon.code', array('label' => 'Coupon Code', 'class' => 'form-control')); ?>
 							<?php } ?>
 						</div>
-						<div class="col-1 col-lg-1">
+						<div class="col-xs-1 col-md-1">
 							<?php if($price['applied'] == FALSE){ ?>
 								<a href="#" id="applyCoupon">Apply</a>
 							<?php } ?>

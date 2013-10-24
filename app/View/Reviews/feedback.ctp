@@ -8,13 +8,13 @@
 <?php debug($order['Payment']); ?>
 <div id="content" class="wrapper">
 	<div class="row">
-		<div class="col-8 col-lg-8">
+		<div class="col-xs-8 col-md-8">
 			<h1>Seller Summary</h1>
 			<div class="row">
-				<div class="col-4 col-lg-4">
+				<div class="col-xs-4 col-md-4">
 					<a class="thumbnail" href="/users/profile/<?php echo $order['User']['id']; ?>"><?php echo $this->Html->image($order['User']['profilepic']); ?></a>
 				</div>
-				<div class="col-8 col-lg-8">
+				<div class="col-xs-8 col-md-8">
 					<table class="table">
 						<tr>
 							<td>Username</td>
@@ -57,15 +57,15 @@
 				</div>
 			<?php } ?>
 		</div>
-		<div class="orderSummary col-4 col-lg-4">
+		<div class="orderSummary col-xs-4 col-md-4">
 			<h1>Order Summary</h1>
 			<div class="row">
-				<div class="col-4 col-lg-4">
+				<div class="col-xs-4 col-md-4">
 					<a class="thumbnail" href="<?php echo $order['Shop']['full_url']; ?>">
 						<?php echo $this->Html->image($order['Image']['url']); ?>
 					</a>
 				</div>
-				<div class="col-8 col-lg-8">
+				<div class="col-xs-8 col-md-8">
 					<a href="<?php echo $order['Shop']['full_url']; ?>"><?php echo $order['Shop']['name']; ?></a>
 				</div>
 			</div>

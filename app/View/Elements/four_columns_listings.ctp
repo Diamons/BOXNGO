@@ -4,7 +4,7 @@
 					if($i == 0 || $i % 4 == 0): ?>
 						<div class="row">
 					<?php endif; ?>
-						<div class="col-3 col-lg-3">
+						<div class="col-xs-3 col-md-3">
 							<div class="listing">
 								<a class="thumbnail image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $listings[$i]['Shop']['id'];?>/<?php echo $listings[$i]['Shop']['permalink']; ?>">
 								<?php if(!empty($listings[$i]['Image'][0]['url'])){?>

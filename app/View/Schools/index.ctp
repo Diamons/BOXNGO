@@ -22,13 +22,13 @@
 	<div class="row">
 		<div id="map"></div>
 		<div class="row" id="schoolContainer">
-			<div id="schoolGraphics" class="col-3 col-lg-3">
+			<div id="schoolGraphics" class="col-xs-3 col-md-3">
 				<img id="schoolLogo" src="<?php echo $school['School']['emblem']; ?>" />
 				<h1 id="schoolName"><?php echo $school['School']['name']; ?></h1>
 				<div><?php echo $userscount; ?> Users Registered</div>
 				<div><?php echo count($listings); ?> Listings</div>
 			</div>
-			<div class="col-9 col-lg-9">
+			<div class="col-xs-9 col-md-9">
 				<div id="listings">
 					<?php if(!empty($listings)): ?>
 						<?php 
@@ -36,7 +36,7 @@
 								if($i == 0 || $i % 4 == 0): ?>
 									<div class="row">
 								<?php endif; ?>
-									<div class="col-3 col-lg-3">
+									<div class="col-xs-3 col-md-3">
 										<div class="listing">
 											<a class="image_container" href="<?php echo $this->webroot;?>shops/viewlisting/<?php echo $listings[$i]['Shop']['id'];?>">
 											<?php if(!empty($listings[$i]['Image'][0]['url'])){?>

@@ -26,8 +26,8 @@ $this->end();
 	<div style="background: url('/images/schools/concierge/huntercollege.png')" class="concierge_image">
 		<?php echo $this->Form->create("Course", array("id" => "ConciergeSearch", "class" => "custom", "inputDefaults" => array("label" => false))); ?>
 		<div class="row">
-			<div class="col-10 col-lg-10"><?php echo $this->Form->input("Course.query", array("placeholder" => "Search by section, description, and even  professor!")); ?><?php echo $this->Form->input("Course.course_number", array("style" => "display: none;")); ?></div>
-			<div class="col-2 col-lg-2"><?php echo $this->Form->submit("Find my Class"); ?></div>
+			<div class="col-xs-10 col-md-10"><?php echo $this->Form->input("Course.query", array("placeholder" => "Search by section, description, and even  professor!")); ?><?php echo $this->Form->input("Course.course_number", array("style" => "display: none;")); ?></div>
+			<div class="col-xs-2 col-md-2"><?php echo $this->Form->submit("Find my Class"); ?></div>
 		</div>
 		<div class="try">Try it Out: <a href="/concierges/hunter_college/0023">AFPRL 236.00 Section 001 - African Amer Lit with Professor Gregg, Veronica
 </a></div>

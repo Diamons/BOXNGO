@@ -31,23 +31,23 @@ $this->end();
 			<div class="col-lg-6 col-lg-offset-3">
 				<div id="paypalChoice">
 					<div class="form-group">
-						<div class="col-4 col-lg-4">Paypal E-mail Address</div><div class="col-8 col-lg-8"><?php echo $this->Form->input("User.paypal", array("class" => "form-control", "required" => false)); ?></div>
+						<div class="col-xs-4 col-md-4">Paypal E-mail Address</div><div class="col-xs-8 col-md-8"><?php echo $this->Form->input("User.paypal", array("class" => "form-control", "required" => false)); ?></div>
 					</div>
 				</div>
 				<div id="checkChoice">
 					<div class="form-group">
-						<div class="col-4 col-lg-4">First Name</div><div class="col-8 col-lg-8"><?php echo $this->Form->input("User.first_name", array("class" => "form-control")); ?></div>
+						<div class="col-xs-4 col-md-4">First Name</div><div class="col-xs-8 col-md-8"><?php echo $this->Form->input("User.first_name", array("class" => "form-control")); ?></div>
 					</div>
 					<div class="form-group">
-						<div class="col-4 col-lg-4">Last Name</div><div class="col-8 col-lg-8"><?php echo $this->Form->input("User.last_name", array("class" => "form-control")); ?></div>
+						<div class="col-xs-4 col-md-4">Last Name</div><div class="col-xs-8 col-md-8"><?php echo $this->Form->input("User.last_name", array("class" => "form-control")); ?></div>
 					</div>
 					<div class="form-group">
-						<div class="col-4 col-lg-4">Street Address</div><div class="col-8 col-lg-8"><?php echo $this->Form->input("User.streetAddress", array("class" => "form-control")); ?></div>
+						<div class="col-xs-4 col-md-4">Street Address</div><div class="col-xs-8 col-md-8"><?php echo $this->Form->input("User.streetAddress", array("class" => "form-control")); ?></div>
 					</div>
 					<div class="form-group">
-						<div class="col-2 col-lg-2">City</div><div class="col-2 col-lg-2"><?php echo $this->Form->input("User.city", array("class" => "form-control")); ?></div>
-						<div class="col-2 col-lg-2">State</div><div class="col-2 col-lg-2"><?php echo $this->Form->input("User.state", array("class" => "form-control")); ?></div>
-						<div class="col-2 col-lg-2">Zip Code</div><div class="col-2 col-lg-2"><?php echo $this->Form->input("User.zipcode", array("class" => "form-control", "type" => "text")); ?></div>
+						<div class="col-xs-2 col-md-2">City</div><div class="col-xs-2 col-md-2"><?php echo $this->Form->input("User.city", array("class" => "form-control")); ?></div>
+						<div class="col-xs-2 col-md-2">State</div><div class="col-xs-2 col-md-2"><?php echo $this->Form->input("User.state", array("class" => "form-control")); ?></div>
+						<div class="col-xs-2 col-md-2">Zip Code</div><div class="col-xs-2 col-md-2"><?php echo $this->Form->input("User.zipcode", array("class" => "form-control", "type" => "text")); ?></div>
 					</div>
 				</div>
 			</div>

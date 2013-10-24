@@ -41,7 +41,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 		
 		<?php echo $this->Session->flash(); ?>
 		<div id="content" class="wrapper row">
-			<div class="col-3 col-lg-3">
+			<div class="col-xs-3 col-md-3">
 				<ul class="nav nav-pills nav-stacked">
 					<li><a href="/dashboard/myshop">My Shop Items</a></li>
 					<li><a href="/dashboard/myfavorites">My Favorites</a></li>
@@ -55,7 +55,7 @@ $cakeDescription = __d('boxngo', 'BOX\'NGO');
 					<li><a href="/dashboard/earnpoints">Earn Points</a></li>
 				</ul>
 			</div>
-			<div class="col-9 col-lg-9">
+			<div class="col-xs-9 col-md-9">
 				<?php echo $this->fetch('content'); ?>
 			</div>
 		</div>

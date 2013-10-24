@@ -8,7 +8,7 @@ $this->end();
 
 <div id="content" class="wrapper">
 	<div class="row">
-		<div class="userInfo col-2 col-lg-2">
+		<div class="userInfo col-xs-2 col-md-2">
 			<div>
 				<div class="profile_snippet">
 					<div class="bio">
@@ -18,11 +18,11 @@ $this->end();
 				<?php echo $userInfo['User']['display_name']; ?>
 				<div class="data content">
 					<div class="row">
-						<div class="col-6 col-lg-6">
+						<div class="col-xs-6 col-md-6">
 							<?php echo number_format($shopFavorites); ?>
 							<span>Shop Favorites</span>
 						</div>
-						<div class="col-6 col-lg-6">
+						<div class="col-xs-6 col-md-6">
 							<?php echo number_format($shopViews); ?>
 							<span>Shop Views</span>
 						</div>
@@ -32,7 +32,7 @@ $this->end();
 
 			</div>
 		</div>
-		<div id="profile_feed" class="col-10 col-lg-10">
+		<div id="profile_feed" class="col-xs-10 col-md-10">
 			<div class="panel panel-info">
 				<div class="panel-heading">Profile Info</div>
 				<div class="panel-body"><?php if(!empty($userInfo['User']['profile_info'])){ echo nl2br(h($userInfo['User']['profile_info'])); } else { ?>

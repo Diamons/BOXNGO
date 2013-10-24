@@ -64,15 +64,15 @@
 
 </style>
 <div id="content" class="row wrapper">
-	<div class="col-1 col-lg-1s"></div>
-	<div class="col-7 col-lg-7">
+	<div class="col-1 col-lg-1"></div>
+	<div class="col-xs-7 col-md-7">
 		<div class="request">
 			<div class="row post">
-				<div class="user_info col-2 col-lg-2">
+				<div class="user_info col-xs-2 col-md-2">
 					<img class="avatar" src="/images/avataricon.gif" />
 					<div class="name">Shahruk Khan</div>
 				</div>
-				<div class="request_message col-10 col-lg-10">
+				<div class="request_message col-xs-10 col-md-10">
 					<div>
 						//nl2br and h Dear sir, I have a request!
 					</div>
@@ -80,10 +80,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-3 col-lg-3">
+	<div class="col-xs-3 col-md-3">
 		<a href="#" id="newRequest" data-reveal-id="requestForm">Submit New Request</a>
 	</div>
-	<div class="col-1 col-lg-1s"></div>
+	<div class="col-1 col-lg-1"></div>
 </div>
 <div id="requestForm" class="reveal-modal medium">
 	<h2>Request Form</h2>

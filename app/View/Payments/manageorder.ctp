@@ -4,7 +4,7 @@ $this->end();
 ?>
 <div id="content" class="wrapper">
 	<div class="row">
-		<div class="clearfix steps_container col-9 col-lg-9">
+		<div class="clearfix steps_container col-xs-9 col-md-9">
 			<div <?php if($step >=1){ echo "style='background: #47ABE5;'"; }?> class="clearfix">
 				<h1 class="step">STEP 1</h1>
 				<div class="info_panel">
@@ -33,10 +33,10 @@ $this->end();
 						<?php if($step == 2){ ?>
 						<?php echo $this->Form->create('Payments', array('action' => 'manageorder/'.$order['Order']['id'].'/ship', 'inputDefaults' => array('label' => false, 'div' => false))); ?>
 							<div class="row">
-								<div class="col-10 col-lg-10">
+								<div class="col-xs-10 col-md-10">
 									<?php echo $this->Form->input('Order.tracking_code'); ?>
 								</div>
-								<div class="col-2 col-lg-2">
+								<div class="col-xs-2 col-md-2">
 									<?php echo $this->Form->end('Submit'); ?>
 								</div>
 							</div>
@@ -55,7 +55,7 @@ $this->end();
 				</div>
 			<?php } ?>
 		</div>
-		<div id="ordersummary" class="col-3 col-lg-3">
+		<div id="ordersummary" class="col-xs-3 col-md-3">
 			<h1>Order Summary</h1>
 			<div><div class="value"><?php echo $order['Order']['status']; ?></div><b>Status</b></div>
 			<div><div class="value"><?php echo $order['Order']['created']; ?></div> Date Placed </div>
