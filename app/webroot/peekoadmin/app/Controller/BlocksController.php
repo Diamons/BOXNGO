@@ -20,6 +20,7 @@
 		}
 		
 		public function edit($id){
+			$block = $this->Block->findById($id);
 			$brand = $this->Brand->find('first', array('id' => $block['Block']['brand_id']));
 			if($this->request->is('put')){
 				$this->Block->id = $id;
@@ -30,7 +31,6 @@
 					$this->Session->setFlash('Error! Fix below.');
 				}
 			}
-			$block = $this->Block->findById($id);
 			$this->request->data = $block;
 			$this->set('brand', $brand);
 
