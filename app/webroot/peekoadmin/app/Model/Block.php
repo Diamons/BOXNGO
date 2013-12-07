@@ -7,8 +7,8 @@
 				'message' => 'That number is already taken (a block already exists for that number).'
 			),
 			'price' => array(
-				'rule' => 'numeric',
-				'message' => 'Needs to be numeric.'
+				'rule' => 'notEmpty',
+				'message' => 'Needs to be something here.'
 			),
 			'name' => array(
 				'rule' => 'notEmpty',
